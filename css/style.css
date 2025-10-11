@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
-
 /* variable */
 :root {
   --font-color: #505050;
-  --font-sans: "Noto Sans JP", sans-serif;
+  --font-sans: "Yu Mincho", "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
   --main-color: #0D96A0;
   --border-color-gray: #707070;
 }
