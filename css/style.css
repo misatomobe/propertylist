@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /* variable */
 :root {
-  --font-color: #505050;
+  --font-color: #000;
   --font-sans: "Yu Mincho", "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
-  --main-color: #0D96A0;
-  --border-color-gray: #707070;
+  --main-color: #4D9600;
+  --border-color-gray: #55A500;
 }
 
 /* base */
@@ -22,15 +22,14 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 1.8rem;
-  line-height: 1.8333333333;
+  line-height: 1.5625;
   color: var(--font-color);
-  padding-top: 5rem;
 }
 
 @media (max-width: 767px) {
   body {
     font-size: 1.6rem;
-    line-height: 1.875;
+    line-height: 1.5625;
   }
 }
 #container {
@@ -62,7 +61,7 @@ img {
 }
 
 .section-bg {
-  background: rgba(13, 150, 160, 0.1019607843);
+  background: rgba(77, 150, 0, 0.102);
 }
 
 .ib-span {
@@ -70,6 +69,7 @@ img {
 }
 
 /* common-title */
+
 /* header */
 .header {
   width: 100%;
@@ -79,15 +79,15 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
+  -ms-flex-align: center;
+  align-items: center;
+  position: sticky;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .header__inner {
@@ -97,11 +97,11 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 8rem;
 }
 
@@ -110,4 +110,33 @@ img {
   .header__inner {
     padding: 0 3rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (max-width: 767px) {
+   .header__inner {
+    padding: 0 2rem;
+  }
+}
+
+.header__logo a {
+  display: flex;
+  align-items: center;
+  height: 8.5rem;
+  transition: opacity 0.4s;
+}
+
+.header__logo a:hover {
+  opacity: 0.7;
+}
+
+.header__logo-text {
+  font-size: 2rem;
+  line-height: calc(33 / 20);
+  font-weight: 500;
+}
+
+.header__nav ul {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
