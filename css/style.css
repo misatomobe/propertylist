@@ -2,6 +2,7 @@
 /* variable */
 :root {
   --font-color: #000;
+  --font-color02: #fff;
   --font-sans: "Yu Mincho", "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
   --main-color: #4D9600;
   --border-color-gray: #55A500;
@@ -84,25 +85,21 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: sticky;
+  position: fixed; 
   top: 0;
   left: 0;
   z-index: 1000;
+  background: transparent;
 }
 
 .header__inner {
   max-width: 1080px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 0 8rem;
+  box-sizing: border-box;
 }
 
 /* ブレイクポイントは950px */
@@ -133,10 +130,25 @@ img {
   font-size: 2rem;
   line-height: calc(33 / 20);
   font-weight: 500;
+  color: var(--font-color02);
 }
 
 .header__nav ul {
   display: flex;
   align-items: center;
   column-gap: 3rem;
+  color: var(--font-color02);
+}
+
+/* MV */
+.mv {
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.mv__image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
