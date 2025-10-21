@@ -7,8 +7,14 @@
     <meta name="description" content="株式会社北村建設興業は新築工事、リフォームやイノベーション、都市開発・計画のご提案や施工工事を承ります。">
     <meta name="keywords" content="建設業, 土木工事, 建築工事, 土地探し, リフォーム, イノベーション, 都市計画, 都市開発, 公共施設, 安全, 安心, 地域密着, 地元, 高品質, 工事一式, 施工, 設計, 入札">
     <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="https://use.typekit.net/mdz4mgq.css">
+    <!-- splide.css cdn -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- splide.js cdn -->
+    <script src="http://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <!-- ↓container↓ -->
@@ -46,19 +52,27 @@
             <div class="main">
             
         <!-- mv -->
-         <div class="mv">
-            <div class="mv__image">
-                <picture>
-                    <source>
-                    <img src="./images/FirstView_01.jpg" alt="永遠も。瞬間も。あなたと共に。">
-                </picture>
-            </div>
-            <div class="mv__contents">
-                <div class="mv__catch">
-                    <h2>永遠も。瞬間も。<br>あなたと共に。</h2>
+        <div class="mv">
+                <div class="splide" role="group" aria-label="Splideの基本的なHTML">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="./images/FirstView_01.jpg" alt="桜並木を散歩する夫婦">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./images/FirstView_02.jpg" alt="満天の星空">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./images/FirstView_03.jpg" alt="満天の星空">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mv__text">
+                    <p class="mv__catch">永遠も。瞬間も。<br>あなたと共に。
+                    </p>
                 </div>
             </div>
-         </div>
          
          <!-- message（ご挨拶） -->
          <section id="message">
