@@ -199,4 +199,5 @@ img {
   line-height: calc(70 / 40);
   color: var(--font-color02);
   text-align: center;
+  text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
 }
