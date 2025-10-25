@@ -15,6 +15,7 @@
     <!-- splide.js cdn -->
     <script src="http://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
     <script src="./js/script.js" defer></script>
+    <script src="./js/header.js" defer></script>
 </head>
 <body>
     <!-- ↓container↓ -->
@@ -44,6 +45,25 @@
                         </ul>
                     </nav>
                 </div>
+
+                <!-- spハンバーガーメニュー用 -->
+                <div class="header__hamburger sp">
+                    <button class="hamburger-block" class="hamburger">
+                        <span class="hamburger-line"></span>
+                    </button>
+                    <div>
+                        <nav class="sp-nav">
+                            <ul class="sp-nav__lists">
+                                <li><a href="#about">ABOUT</a></li>
+                                <li><a href="#service">SERVICE</a></li>
+                                <li><a href="#works">WORKS</a></li>
+                                <li><a href="#news">NEWS</a></li>
+                                <li><a href="#company">COMPANY</a></li>
+                                <li><a href="#contact">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -57,13 +77,22 @@
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <img src="./images/FirstView_01.jpg" alt="新築イメージ">
+                                <picture>
+                                    <source srcset="./images/FirstView_01.jpg" media="(min-width: 768px)">
+                                    <img src="./images/SP_FirstView-1.jpg" alt="実績写真01">
+                                </picture>
                             </li>
                             <li class="splide__slide">
-                                <img src="./images/FirstView_02.jpg" alt="満天の星空">
+                                <picture>
+                                 <source srcset="./images/FirstView_02.jpg" media="(min-width: 768px)">
+                                    <img src="./images/SP_FirstView-2.jpg" alt="実績写真02">   
+                                </picture>
                             </li>
                             <li class="splide__slide">
-                                <img src="./images/FirstView_03.jpg" alt="満天の星空">
+                                <picture>
+                                 <source srcset="./images/FirstView_03.jpg" media="(min-width: 768px)">
+                                 <img src="./images/SP_FirstView-3.jpg" alt="実績写真03">   
+                                </picture>
                             </li>
                         </ul>
                     </div>
