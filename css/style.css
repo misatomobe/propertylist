@@ -157,10 +157,46 @@ img {
   margin-top: 0;
   position: relative;
   z-index: 1;
+  height: 80rem;
 }
 
-.mv__image img {
+@media (max-width: 767px) {
+  .mv {
+    height: 60.1rem;
+  }
+}
+
+.mv::after {
+  content: '';
+  background-color: rgba(0, 0, 0, .15);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.splide__slide {
   width: 100%;
   height: auto;
-  display: block;
+
+  @media (max-width: 767px) {
+    height: 60.1rem;
+  }
+}
+
+.splide__slide img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.mv__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 4rem;
+  line-height: calc(70 / 40);
+  color: var(--font-color02);
+  text-align: center;
 }
