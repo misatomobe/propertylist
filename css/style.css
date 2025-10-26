@@ -270,11 +270,10 @@ img {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30%;
+  left: 30%;
   display: flex;
-  align-items: center;
-  padding-top: 110px;
+  transform: translate(-50%, -50%); /* 中央基準に補正 */
 }
 
 @media (max-width: 767px) {
@@ -285,7 +284,6 @@ img {
 
 .about__catch {
   writing-mode: vertical-rl;      /* 縦書き（右から左） */
-  justify-content: center; /* 横方向の中央揃え */
   text-orientation: upright;     /* 文字を立てる（縦中横等を制御） */
   line-height: 1.6;              /* 行間（縦書きでは縦方向の間隔） */
 }
