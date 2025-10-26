@@ -108,8 +108,8 @@ img {
   }
 }
 
-/* ブレイクポイントは950px */
-@media (max-width: 950px) {
+/* ブレイクポイントは1030px */
+@media (max-width: 1030px) {
   .header__inner {
     padding: 0 3rem;
   }
@@ -166,10 +166,10 @@ img {
 
 /* MV */
 .mv {
-  margin-top: 0;
   position: relative;
-  z-index: 1;
-  height: 80rem;
+  width: 100%;
+  height: auto; /* ← 高さは画像に合わせる */
+  z-index: 0;
 }
 
 .mv::after {
@@ -182,12 +182,10 @@ img {
   bottom: 0;
 }
 
-
-
 .splide {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
@@ -209,9 +207,18 @@ img {
   }
 }
 
+.splide__track,
+.splide__slide,
 .splide__slide img {
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* ← 全部autoにして画像高さに追従 */
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .splide__track {
@@ -229,16 +236,39 @@ img {
   }  
 }
 
-.mv__text {
+.mv__contents {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  align-items: center;       /* 縦中央 */
+  justify-content: center;   /* 横中央 */
+  text-align: center;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  }
+
+@media (max-width: 767px) {
+  .mv__contents {
+    align-items: flex-end;
+  }
+}
+
+.mv__catch {
   font-size: 4rem;
   line-height: calc(70 / 40);
   color: var(--font-color02);
   text-align: center;
   text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 767px) {
+  .mv__catch {
+    font-size: 3rem;
+    line-height: calc(60 / 30);
+  }
 }
 
 /* about */
