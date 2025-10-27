@@ -39,10 +39,6 @@ body {
   overflow: hidden;
 }
 
-.inner {
-  padding: 8rem;
-}
-
 /* common */
 /* PC,SPの非表示設定 */
 @media (max-width: 767px) {
@@ -55,6 +51,7 @@ body {
     display: none !important;
   }
 }
+
 img {
   width: 100%;
   height: auto;
@@ -64,6 +61,14 @@ img {
 .inner {
   max-width: 880px;
   margin: 0 auto;
+  padding: 8rem;
+}
+
+@media (max-width: 767px) {
+  .inner {
+    max-width: 100%;
+    padding: 5rem 3rem;
+  }
 }
 
 .section-bg {
@@ -72,6 +77,11 @@ img {
 
 .ib-span {
   display: inline-block;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
 }
 
 /* common-title */
@@ -129,6 +139,7 @@ img {
   left: 0;
   z-index: 1000;
   background: transparent;
+  transition: background-color 0.4s, box-shadow 0.4s;
 }
 
 .header__inner {
@@ -341,4 +352,9 @@ img {
   font-size: 3rem;
   font-weight: 500;
   line-height: calc(118 / 30);
+}
+
+/* service */
+.service__contents {
+  margin-top: 6.8rem;
 }
