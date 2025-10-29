@@ -381,7 +381,34 @@ button:hover {
 }
 
 .service__item {
+  position: relative;
   display: flex;
+  background-color: var(--main-color);
   align-items: center;
-  column-gap: calc(40 / 880 * 100%);  
+  column-gap: calc(40 / 880 * 100%);
+  padding: 6rem 0;
+  justify-content: center;  
+}
+
+.service-item__image {
+  width: 70%;
+}
+
+.service-item__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* 左下キャプション */
+.service-item__text01 {
+  position: absolute;
+  bottom: 7rem;
+  left: 10%;
+  color: var(--font-color);
+  font-size: 1.6rem;
+  line-height: calc(25 /16);
+  padding: 4px 10px;
+  border-radius: 3px;
 }
