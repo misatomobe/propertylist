@@ -383,32 +383,59 @@ button:hover {
 .service__item {
   position: relative;
   display: flex;
-  background-color: var(--main-color);
   align-items: center;
   column-gap: calc(40 / 880 * 100%);
-  padding: 6rem 0;
-  justify-content: center;  
 }
 
 .service-item__image {
-  width: 70%;
+  max-width: 60rem;
+  width: 100%;
+  height: 30rem;
+  flex-shrink: 0;
+  z-index: 2;
+  position: relative; /* ← ボックスの基準にする */
 }
 
 .service-item__image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-
 /* 左下キャプション */
-.service-item__text01 {
+.service-item__text01 p {
   position: absolute;
-  bottom: 7rem;
-  left: 10%;
+  margin-top: 12rem;
+  left: 0;
   color: var(--font-color);
   font-size: 1.6rem;
   line-height: calc(25 /16);
-  padding: 4px 10px;
-  border-radius: 3px;
+  padding-top: 1.2rem;
+}
+
+/* 緑のボックス */
+.service-item__text02 {
+  position: absolute;
+  right: 0;
+  width: 50rem;
+  height: 25rem;
+  background-color: var(--main-color);
+  color:var(--font-color02);
+  padding: 5rem 4rem 4.2rem 22rem;
+  font-weight: 400;
+  z-index: 1; /* ← 背面にするために画像より低く */
+  bottom: -120px; /* ← ここをマイナスにすると下にずれる */
+  z-index: 1;
+}
+
+.service-item__text02 h3 {
+  font-size: 2.5rem;
+  line-height: calc(33 / 25);
+  margin-bottom: 1.7rem;
+}
+  
+.service-item__text02 p {
+  font-size: 1.6rem;
+  line-height: calc(25 / 16);
 }
