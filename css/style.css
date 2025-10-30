@@ -59,7 +59,7 @@ img {
 }
 
 .inner {
-  max-width: 880px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -383,8 +383,8 @@ button:hover {
 .service__item {
   position: relative;
   display: flex;
-  align-items: center;
   column-gap: calc(40 / 880 * 100%);
+  margin-bottom: 10rem;
 }
 
 .service-item__image {
@@ -394,6 +394,8 @@ button:hover {
   flex-shrink: 0;
   z-index: 2;
   position: relative; /* ← ボックスの基準にする */
+  aspect-ratio: 2 / 1; /* ← 高さを保つ：600×300比率 */
+  overflow: hidden;
 }
 
 .service-item__image img {
@@ -403,15 +405,18 @@ button:hover {
   display: block;
 }
 
-/* 左下キャプション */
-.service-item__text01 p {
+/* 写真キャプション */
+.service-item__text01 {
   position: absolute;
-  margin-top: 12rem;
+  margin-top: 32rem;
   left: 0;
+  z-index: 2;
+}
+
+.service-item__text01 p {
   color: var(--font-color);
   font-size: 1.6rem;
   line-height: calc(25 /16);
-  padding-top: 1.2rem;
 }
 
 /* 緑のボックス */
