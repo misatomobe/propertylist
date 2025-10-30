@@ -387,10 +387,10 @@ button:hover {
   margin-bottom: 10rem;
 }
 
+/* 写真 */
 .service-item__image {
   max-width: 60rem;
   width: 100%;
-  height: 30rem;
   flex-shrink: 0;
   z-index: 2;
   position: relative; /* ← ボックスの基準にする */
@@ -410,7 +410,7 @@ button:hover {
   position: absolute;
   margin-top: 32rem;
   left: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 .service-item__text01 p {
@@ -422,7 +422,8 @@ button:hover {
 /* 緑のボックス */
 .service-item__text02 {
   position: absolute;
-  right: 0;
+  right: -1.8rem;
+  bottom: -15.5rem;
   width: 50rem;
   height: 25rem;
   background-color: var(--main-color);
