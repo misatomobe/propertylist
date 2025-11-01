@@ -136,6 +136,12 @@ button:hover {
   transition: background-color 0.4s, box-shadow 0.4s;
 }
 
+@media (max-width: 767px) {
+  .header {
+    height: 5rem;
+  }
+}
+
 .header__inner {
   max-width: 1080px;
   width: 100%;
@@ -291,6 +297,8 @@ button:hover {
   text-align: left;
   list-style: none;
   font-size: 1.8rem;
+  line-height: calc(33 /18);
+  font-weight: 400;
 }
 
 .sp-nav__lists a {
