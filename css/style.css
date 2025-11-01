@@ -5,7 +5,8 @@
   --font-color02: #fff;
   --font-sans: "Yu Mincho", "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
   --main-color: #4D9600;
-  --border-color-gray: #55A500;
+  --border-color-green: #55A500;
+  --border-color-grey: #505050;
 }
 
 /* base */
@@ -205,6 +206,99 @@ button:hover {
   opacity: 0.6;
   color: var(--font-color);
   transition: all 0.4s ease;
+}
+
+/* ハンバーガーメニュー（SP） */
+.header__hamburger {
+  position: relative;
+  z-index: 9999;
+}
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 7.2rem;
+  height: 5rem;
+  background: var(--font-color02);
+  border: 1px solid var(--border-color-grey); /* 枠線に修正 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000; /* ヘッダーの上にくるように */
+}
+
+/* 三本線 */
+.hamburger-line,
+.hamburger-line::before,
+.hamburger-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 3.2rem;
+  height: 0.4rem;
+  background: var(--main-color);
+  border-radius: 10px;     /* ← 丸みをつける */
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.hamburger-line::before,
+.hamburger-line::after {
+  content: "";
+  left: 0;
+}
+.hamburger-line::before {
+  top: -1.2rem;     /* 線の間隔 */
+}
+.hamburger-line::after {
+  top: 1.2rem;     /* 線の間隔 */
+}
+
+/* メニューが開いた時の三本線 */
+.hamburger.active .hamburger-line {
+  background-color: transparent;
+}
+.hamburger.active .hamburger-line::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+}
+.hamburger.active .hamburger-line::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+
+/* ナビゲーション（中身） */
+.sp-nav {
+  position: fixed;
+  width: 30rem;
+  top: 7.8rem;
+  right: 0;
+  bottom: 0;
+  border: 2rem solid var(--main-color);
+  overflow: hidden;
+  display: none;
+}
+.sp-nav__lists{
+  margin: 0;
+  padding: 3.6rem;
+  text-align: left;
+  list-style: none;
+  font-size: 1.8rem;
+}
+.sp-nav ul li:not(:last-of-type) {
+  margin-bottom: 36px;
+}
+
+.sp-nav.active {
+  display: block;
+  background: var(--main-color);
 }
 
 /* MV */

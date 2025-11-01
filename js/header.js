@@ -1,7 +1,9 @@
-//ハンバーガーメニュー
-$("#hamburger-block").click( 
-  function() {
-    $(".header-menu").toggle(300)
-  }
-);
+'use strict';
 
+const hamburger = document.querySelector('.hamburger');
+const spNav = document.querySelector('.sp-nav');
+
+hamburger.addEventListener('click', function () {
+  hamburger.classList.toggle('active');
+  spNav.classList.toggle('active');
+});
