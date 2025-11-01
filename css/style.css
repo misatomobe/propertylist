@@ -281,21 +281,24 @@ button:hover {
   top: 7.8rem;
   right: 0;
   bottom: 0;
-  border: 2rem solid var(--main-color);
   overflow: hidden;
   display: none;
 }
 .sp-nav__lists{
   margin: 0;
-  padding: 3.6rem;
+  
   text-align: left;
   list-style: none;
   font-size: 1.8rem;
 }
-.sp-nav ul li:not(:last-of-type) {
-  margin-bottom: 36px;
-}
 
+.sp-nav__lists a {
+  color: var(--font-color02);
+  text-decoration: none;
+  display: block;
+  padding: 1.2rem 0 1.3rem 2rem;
+
+}
 .sp-nav.active {
   display: block;
   background: var(--main-color);
