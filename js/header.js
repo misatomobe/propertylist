@@ -20,3 +20,13 @@ window.addEventListener('scroll', function () {
     header.classList.remove('is-colored');
   }
 });
+
+// メインロゴクリックでトップへスムーズスクロール
+const logoLink = document.querySelector('.header__logo a');
+logoLink.addEventListener('click', function (e) {
+  e.preventDefault(); // 通常のリンク遷移を防止
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // スムーズスクロール
+  });
+});

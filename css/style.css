@@ -113,7 +113,6 @@ button:hover {
 }
 
 
-
 /* header */
 .header {
   width: 100%;
@@ -131,20 +130,18 @@ button:hover {
   position: fixed; 
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10000; /* MVより確実に上に配置 */
   background-color: transparent; /* スクロール前は透明 */
   transition: background-color 0.4s;
+  isolation: isolate; /* ← 背景とのブレンド防止 */
 }
+
 
 .header.active {
   background: var(--main-color);
 }
 
-/* スクロール後に追加されるクラス */
-.header.is-colored {
-  background: var(--main-color); /* あなたのサイトの緑 */
-  opacity: 1; /* 完全不透明に */
-}
+
 
 @media (max-width: 767px) {
   .header {
@@ -330,6 +327,15 @@ button:hover {
 .sp-nav.active {
   display: block;
   background: var(--main-color);
+}
+
+/* スクロール後に追加されるクラス */
+.header.is-colored {
+  background-color: var(--main-color) !important; /* ← 強制的に緑にする */
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  backdrop-filter: none !important;
+  filter: none !important;
 }
 
 /* MV */
