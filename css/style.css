@@ -78,6 +78,36 @@ button:hover {
   cursor: pointer;
 }
 
+/* デフォルトでは両方とも非表示にしておく */
+.sp-br,
+.pc-br {
+  display: none;
+}
+
+/* スマホ（765px以下）では sp-br を表示、pc-br は非表示 */
+@media (max-width: 765px) {
+  .sp-br {
+    display: inline;
+  }
+  .pc-br {
+    display: none;
+  }
+}
+
+/* タブレット・PC（766px以上）では pc-br を表示、sp-br は非表示 */
+@media (min-width: 766px) {
+  .sp-br {
+    display: none;
+  }
+  .pc-br {
+    display: inline;
+  }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
 /* common-title */
 .common-title {
   text-align: center;
@@ -414,6 +444,8 @@ button:hover {
   letter-spacing: calc(4rem * 0.3); /* = 1.2rem */
   color: var(--font-color02);
   text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
+  width: 90%; /* ← これを追加 */
+  max-width: 1000px; /* ← 大きすぎないように制限も付ける */
   }
   
 @media (max-width: 1030px) {
@@ -426,6 +458,12 @@ button:hover {
   .mv__text {
     font-size: 3rem;
     line-height: calc(60 / 30);
+  }
+}
+
+@media (max-width: 330px) {
+  .mv__text {
+    font-size: 2.8rem;
   }
 }
 
