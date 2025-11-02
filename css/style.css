@@ -112,7 +112,6 @@ button:hover {
   letter-spacing: 0.3em;
 }
 
-
 /* header */
 .header {
   width: 100%;
@@ -135,13 +134,9 @@ button:hover {
   transition: background-color 0.4s;
   isolation: isolate; /* ← 背景とのブレンド防止 */
 }
-
-
 .header.active {
   background: var(--main-color);
 }
-
-
 
 @media (max-width: 767px) {
   .header {
@@ -196,6 +191,12 @@ button:hover {
   color: var(--font-color02);
 }
 
+@media (max-width: 1030px) {
+  .header__logo-text {
+    font-size: 1.8rem;
+  }
+}
+
 
 .header__nav ul {
   display: flex;
@@ -216,6 +217,11 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
   transition: opacity 0.4s ease, color 0.4s ease;
+}
+@media (max-width: 1030px) {
+  .header__nav ul a {
+    font-size: 1.4rem;
+  } 
 }
 
 .header__nav ul a:hover {
