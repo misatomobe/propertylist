@@ -348,8 +348,7 @@ button:hover {
 .mv {
   position: relative;
   width: 100%;
-  height: auto; /* ← 高さは画像に合わせる */
-  z-index: 0;
+  overflow: hidden;
 }
 
 .mv::after {
@@ -360,16 +359,13 @@ button:hover {
   right: 0;
   top: 0;
   bottom: 0;
+  z-index: 1; /* ← テキストより下に */
 }
 
 .splide {
   width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
+  height: auto; /* 高さは画像に追従 */
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -378,36 +374,25 @@ button:hover {
   }
 }
 
+.splide__track,
+.splide__list,
 .splide__slide {
   width: 100%;
-  height: auto;
-
-  @media (max-width: 767px) {
-    height: 60.1rem;
-  }
-}
-
-.splide__track,
-.splide__slide,
-.splide__slide img {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* ← 全部autoにして画像高さに追従 */
+  height: auto; /* 固定高さをやめる */
 }
 
 .splide__slide img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: contain; /* ← 全部autoにして画像高さに追従 */
 }
 
 .splide__track {
   position: relative;
-  height: auto;     /* カンプに合わせる高さ */
-  margin-top: 0;  /* headerの高さ分 */
-  min-height: 80rem; /* 必要に応じて調整 */
+  margin-top: 0;
   width: 100%;
-  overflow: hidden; /* 高さは画像の比率に合わせる */
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -416,40 +401,27 @@ button:hover {
   }  
 }
 
-.mv__contents {
+/* テキスト中央配置 */
+.mv__text {
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  align-items: center;       /* 縦中央 */
-  justify-content: center;   /* 横中央 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  text-align: center;
-  z-index: 1000;
-  display: flex;
-  }
-
-@media (max-width: 767px) {
-  .mv__contents {
-    align-items: flex-end;
-  }
-}
-
-.mv__catch {
+  z-index: 2; /* ← 背景の黒いオーバーレイより上 */
   font-size: 4rem;
   line-height: calc(70 / 40);
   color: var(--font-color02);
-  text-align: center;
   text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
-}
+  }
 
 @media (max-width: 767px) {
-  .mv__catch {
+  .mv__text {
     font-size: 3rem;
     line-height: calc(60 / 30);
   }
 }
+
 
 /* about */
 .about {
