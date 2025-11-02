@@ -411,9 +411,16 @@ button:hover {
   z-index: 2; /* ← 背景の黒いオーバーレイより上 */
   font-size: 4rem;
   line-height: calc(70 / 40);
+  letter-spacing: 1.2rem; /* ← 文字サイズの30%相当 */
   color: var(--font-color02);
   text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
   }
+  
+@media (max-width: 1030px) {
+  .mv__text {
+    font-size: 3.5rem;
+  }
+}
 
 @media (max-width: 767px) {
   .mv__text {
