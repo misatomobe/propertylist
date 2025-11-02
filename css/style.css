@@ -132,8 +132,18 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 1000;
-  background: transparent;
-  transition: background-color 0.4s, box-shadow 0.4s;
+  background-color: transparent; /* スクロール前は透明 */
+  transition: background-color 0.4s;
+}
+
+.header.active {
+  background: var(--main-color);
+}
+
+/* スクロール後に追加されるクラス */
+.header.is-colored {
+  background: var(--main-color); /* あなたのサイトの緑 */
+  opacity: 1; /* 完全不透明に */
 }
 
 @media (max-width: 767px) {
@@ -189,6 +199,7 @@ button:hover {
   color: var(--font-color02);
 }
 
+
 .header__nav ul {
   display: flex;
   align-items: center;
@@ -203,15 +214,16 @@ button:hover {
   font-size: 1.8rem;
   line-height: calc(33 / 18);
   font-weight: 400;
-  transition: opacity 0.4s ease, color 0.4s ease;
   justify-content: center;
   color: var(--font-color02);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.4s ease, color 0.4s ease;
 }
 
 .header__nav ul a:hover {
   opacity: 0.6;
-  color: var(--font-color);
-  transition: all 0.4s ease;
+  text-decoration: underline;
 }
 
 /* ハンバーガーメニュー（SP） */
