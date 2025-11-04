@@ -444,7 +444,7 @@ button:hover {
   letter-spacing: calc(4rem * 0.3); /* = 1.2rem */
   color: var(--font-color02);
   text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
-  width: 90%; /* ← これを追加 */
+  width: 90%;
   max-width: 1000px; /* ← 大きすぎないように制限も付ける */
   }
   
@@ -474,13 +474,15 @@ button:hover {
 }
 
 .about__contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 中央基準に補正 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  display: flex;
-  transform: translate(-50%, -50%); /* 中央基準に補正 */
 }
 
 @media (max-width: 767px) {
@@ -495,10 +497,33 @@ button:hover {
   line-height: 1.6;              /* 行間（縦書きでは縦方向の間隔） */
 }
 
+@media (max-width: 767px) {
+  .about__catch {
+    display: flex;
+    flex-direction: column; /* ← 上下方向に並べる */
+  }
+}
+
 .about__catch h2 {
   font-size: 3rem;
-  font-weight: 500;
   line-height: calc(118 / 30);
+  font-weight: 400;
+  letter-spacing: 0.18em; /* 118% に相当 */
+}
+
+@media (max-width: 767px) {
+  .about__catch h2 {
+  font-size: 2.5rem;
+  line-height: calc(119 / 25);
+  letter-spacing: 0.19em; /* 119% に相当 */
+  }
+}
+
+.about__catch p {
+  font-size: 1.8rem;
+  line-height: 5rem; /* ← 行と行の間隔を固定で3remに */
+  letter-spacing: 1em; /* 文字間も少し広げる */
+  font-weight: 400;
 }
 
 /* service */
