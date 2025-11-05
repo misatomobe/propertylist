@@ -493,8 +493,9 @@ button:hover {
 
 .about__catch {
   writing-mode: vertical-rl;      /* 縦書き（右から左） */
-  text-orientation: upright;     /* 文字を立てる（縦中横等を制御） */
-  line-height: 1.6;              /* 行間（縦書きでは縦方向の間隔） */
+  text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
+  align-items: center;
+  padding-right: 25rem;
 }
 
 @media (max-width: 767px) {
@@ -506,9 +507,10 @@ button:hover {
 
 .about__catch h2 {
   font-size: 3rem;
-  line-height: calc(118 / 30);
   font-weight: 400;
-  letter-spacing: 0.18em; /* 118% に相当 */
+  letter-spacing: 0.3em; /* 118% に相当 */
+  display: block;
+  margin-left: 6rem;
 }
 
 @media (max-width: 767px) {
@@ -521,8 +523,8 @@ button:hover {
 
 .about__catch p {
   font-size: 1.8rem;
-  line-height: 5rem; /* ← 行と行の間隔を固定で3remに */
-  letter-spacing: 1em; /* 文字間も少し広げる */
+  line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
+  letter-spacing: 0.8em; /* 文字間も少し広げる */
   font-weight: 400;
 }
 
