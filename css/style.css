@@ -487,7 +487,9 @@ button:hover {
 
 @media (max-width: 767px) {
   .about__contents {
-    align-items: flex-end;
+    position: static;
+    transform: none;
+    align-items: flex-start;
   }
 }
 
@@ -501,7 +503,10 @@ button:hover {
 @media (max-width: 767px) {
   .about__catch {
     display: flex;
-    flex-direction: column; /* ← 上下方向に並べる */
+    justify-content: center;
+    padding-right: 0;
+    height: auto;
+    position: static;
   }
 }
 
@@ -518,6 +523,7 @@ button:hover {
   font-size: 2.5rem;
   line-height: calc(119 / 25);
   letter-spacing: 0.19em; /* 119% に相当 */
+   margin-left: 0;
   }
 }
 
@@ -526,6 +532,14 @@ button:hover {
   line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
   letter-spacing: 0.8em; /* 文字間も少し広げる */
   font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .about__catch p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.5em;
+  }
 }
 
 /* service */
