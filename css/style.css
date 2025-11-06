@@ -642,3 +642,30 @@ button:hover {
   font-size: 1.6rem;
   line-height: calc(25 / 16);
 }
+
+/* footer */
+.footer__copyright {
+  height: 9.2rem;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .footer__copyright {
+    height: 9.2rem;
+  }
+}
+
+.footer__copyright p {
+  color: var(--font-color02);
+  font-size: 2rem;
+  line-height: calc(33 /20);
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .footer__copyright p {
+    line-height: calc(25 /20);
+  }
+}
