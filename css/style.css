@@ -108,6 +108,17 @@ button:hover {
   white-space: nowrap;
 }
 
+/* spサイズで改行 */
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .sp-only {
+    display: inline;
+  }
+}
+
 /* common-title */
 .common-title {
   text-align: center;
@@ -662,6 +673,7 @@ button:hover {
   font-size: 2rem;
   line-height: calc(33 /20);
   font-weight: 400;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
