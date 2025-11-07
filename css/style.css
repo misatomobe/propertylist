@@ -64,6 +64,12 @@ img {
   margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+  .inner {
+    padding: 0 2rem;
+  }
+}
+
 
 .section-bg {
   background: rgba(77, 150, 0, 0.102);
@@ -679,5 +685,18 @@ button:hover {
 @media (max-width: 767px) {
   .footer__copyright p {
     line-height: calc(25 /20);
+  }
+}
+
+.footer__contents {
+  height: 33.8rem;
+  padding: 8rem 17.9rem;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .footer__contents {
+    height: 30rem;
+    padding: 5rem 0;
   }
 }
