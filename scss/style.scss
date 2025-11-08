@@ -261,43 +261,27 @@ button:hover {
       background: $main-color;
       border-radius: 10px;     /* ← 丸みをつける */
       -webkit-transition: .3s;
-      transition: .3s;
+      transition: 0.3s;
+    }
+
+    .hamburger-line::before { top: -1.2rem; }
+    .hamburger-line::after { top: 1.2rem; }
+
+    .hamburger-line::before,
+    .hamburger-line::after {
+      content: "";
+      left: 0;
+    }
+    
+    // メニューが開いた時の三本線
+    &.active {
+      .hamburger-line { background-color: transparent; }
+      .hamburger-line::before { transform: rotate(45deg); top: 0; }
+      .hamburger-line::after { transform: rotate(-45deg); top: 0; }
     }
   }
 }
-
-// ★20251108ここまで
-
-
-.hamburger-line::before,
-.hamburger-line::after {
-  content: "";
-  left: 0;
 }
-.hamburger-line::before {
-  top: -1.2rem;     /* 線の間隔 */
-}
-.hamburger-line::after {
-  top: 1.2rem;     /* 線の間隔 */
-}
-
-/* メニューが開いた時の三本線 */
-.hamburger.active .hamburger-line {
-  background-color: transparent;
-}
-.hamburger.active .hamburger-line::before {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 0;
-}
-.hamburger.active .hamburger-line::after {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 0;
-}
-
 
 /* ナビゲーション（中身） */
 .sp-nav {
@@ -309,34 +293,34 @@ button:hover {
   display: none;
   height: auto;
   bottom: auto;
-}
-
-.sp-nav__lists{
-  margin: 0;
-  text-align: left;
-  list-style: none;
-  font-size: 1.8rem;
-  line-height: calc(33 /18);
-  font-weight: 400;
-}
-
-.sp-nav__lists a {
-  color: var(--font-color02);
-  text-decoration: none;
-  display: block;
-  padding: 1.2rem 0 1.3rem 2rem;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
-}
-
-.sp-nav__lists a:hover {
-  background-color: var(--font-color);
-  color: var(--font-color02);
-  opacity: 0.9;
-}
-
-.sp-nav.active {
-  display: block;
-  background: var(--main-color);
+  
+  &__lists {
+    margin: 0;
+    text-align: left;
+    list-style: none;
+    font-size: 1.8rem;
+    line-height: calc(33 /18);
+    font-weight: 400;
+    
+    a {
+      color: $font-color02;
+      text-decoration: none;
+      display: block;
+      padding: 1.2rem 0 1.3rem 2rem;
+      transition: background-color 0.3s ease, opacity 0.3s ease;
+      
+      &:hover {
+        background-color: $font-color;
+        color: $font-color02;
+        opacity: 0.9;
+      }
+    }
+  }
+  
+  &.active {
+    display: block;
+    background: $main-color;
+  }
 }
 
 /* スクロール後に追加されるクラス */
