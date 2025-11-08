@@ -229,42 +229,46 @@ button:hover {
   }
 }
 
-/* ハンバーガーメニュー（SP） */
-.header__hamburger {
+// ハンバーガーメニュー（SP）
+&__hamburger {
   position: relative;
   z-index: 9999;
+
+  .hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 7.2rem;
+    height: 5rem;
+    background: $font-color02;
+    border: 1px solid $border-color-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    
+    // 三本線
+    .hamburger-line,
+    .hamburger-line::before,
+    .hamburger-line::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 3.2rem;
+      height: 0.4rem;
+      background: $main-color;
+      border-radius: 10px;     /* ← 丸みをつける */
+      -webkit-transition: .3s;
+      transition: .3s;
+    }
+  }
 }
 
-.hamburger {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 7.2rem;
-  height: 5rem;
-  background: var(--font-color02);
-  border: 1px solid var(--border-color-grey); /* 枠線に修正 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000; /* ヘッダーの上にくるように */
-}
+// ★20251108ここまで
 
-/* 三本線 */
-.hamburger-line,
-.hamburger-line::before,
-.hamburger-line::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 3.2rem;
-  height: 0.4rem;
-  background: var(--main-color);
-  border-radius: 10px;     /* ← 丸みをつける */
-  -webkit-transition: .3s;
-  transition: .3s;
-}
+
 .hamburger-line::before,
 .hamburger-line::after {
   content: "";
