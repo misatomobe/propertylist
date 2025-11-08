@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
+// =====================================
 // variable
+// =====================================
 $font-color: #000;
 $font-color02: #fff;
 $font-sans: "Yu Mincho", "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
@@ -8,7 +10,9 @@ $main-color: #4D9600;
 $border-color-green: #55A500;
 $border-color-grey: #505050;
 
+// =====================================
 // base
+// =====================================
 html {
   -webkit-appearance: none;
   -webkit-text-size-adjust: 100%;
@@ -35,7 +39,21 @@ body {
   overflow: hidden;
 }
 
-// common
+// =====================================
+// common（共通設定）
+// =====================================
+  .pc {
+    @media (max-width: 767px) {
+      display: none !important;
+    }
+  }
+
+  .sp {
+    @media (min-width: 768px) {
+      display: none !important;
+    }
+  }
+
 img {
   width: 100%;
   height: auto;
@@ -52,17 +70,6 @@ img {
 }
 
 
-@media (max-width: 767px) {
-  .pc {
-    display: none !important;
-  }
-}
-@media (min-width: 768px) {
-  .sp {
-    display: none !important;
-  }
-}
-
 .section-bg {
   background: rgba(77, 150, 0, 0.102);
 }
@@ -76,6 +83,7 @@ button:hover {
   cursor: pointer;
 }
 
+// 改行制御
 .sp-br,
 .pc-br {
   display: none;
@@ -136,21 +144,17 @@ button:hover {
   }
 }
 
+// =====================================
 // header
+// =====================================
 .header {
   width: 100%;
   height: 8.5rem;
   background: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10000;
@@ -161,7 +165,16 @@ button:hover {
   &.active {
     background: $main-color;
   }
-
+  
+  //  スクロール後に追加されるクラス
+  &.is-colored {
+    background-color: $main-color !important; /* ← 強制的に緑にする */
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+  }
+  
   @media (max-width: 767px) {
     height: 5rem;
   }
@@ -175,8 +188,12 @@ button:hover {
     padding: 0 8rem;
     box-sizing: border-box;
     
-    @media (max-width: 1030px)  { padding: 0 3rem; }
-    @media (max-width: 767px) { padding: 0 2rem; }
+    @media (max-width: 1030px) {
+      padding: 0 3rem;
+    }
+    @media (max-width: 767px) {
+      padding: 0 2rem;
+    }
   }
 
 &__logo {
@@ -186,7 +203,9 @@ button:hover {
   height: 8.5rem;
   transition: all 0.4s ease;
 
-  &:hover { opacity: 0.6; }
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 &-text {
@@ -195,7 +214,9 @@ button:hover {
   font-weight: 400;
   color: $font-color02;
   
-  @media (max-width: 1030px) { font-size: 1.8rem; }
+  @media (max-width: 1030px) {
+    font-size: 1.8rem;
+  }
 }
 }
 
@@ -224,7 +245,9 @@ button:hover {
         text-decoration: underline;
       }
 
-      @media (max-width: 1030px)  { font-size: 1.4rem; } 
+      @media (max-width: 1030px) {
+        font-size: 1.4rem;
+      } 
     }
   }
 }
@@ -260,30 +283,38 @@ button:hover {
       height: 0.4rem;
       background: $main-color;
       border-radius: 10px;     /* ← 丸みをつける */
-      -webkit-transition: .3s;
       transition: 0.3s;
     }
 
-    .hamburger-line::before { top: -1.2rem; }
-    .hamburger-line::after { top: 1.2rem; }
+    .hamburger-line::before {
+      top: -1.2rem;
+    }
 
-    .hamburger-line::before,
     .hamburger-line::after {
-      content: "";
-      left: 0;
+      top: 1.2rem;
     }
     
     // メニューが開いた時の三本線
     &.active {
-      .hamburger-line { background-color: transparent; }
-      .hamburger-line::before { transform: rotate(45deg); top: 0; }
-      .hamburger-line::after { transform: rotate(-45deg); top: 0; }
+      .hamburger-line { 
+        background-color: transparent;
+      }
+      .hamburger-line::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+      .hamburger-line::after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
     }
   }
 }
 }
 
-/* ナビゲーション（中身） */
+// =====================================
+// SPナビゲーション
+// =====================================
 .sp-nav {
   position: fixed;
   width: 30rem;
@@ -323,14 +354,7 @@ button:hover {
   }
 }
 
-/* スクロール後に追加されるクラス */
-.header.is-colored {
-  background-color: var(--main-color) !important; /* ← 強制的に緑にする */
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  backdrop-filter: none !important;
-  filter: none !important;
-}
+
 
 /* MV */
 .mv {
