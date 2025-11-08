@@ -661,35 +661,12 @@ button:hover {
 }
 
 /* footer */
-.footer {
-  
-}
-
-.footer__copyright {
-  height: 9.2rem;
-  background-color: var(--main-color);
+.footer__contents {
+  background-color: var(--font-color02);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-@media (max-width: 767px) {
-  .footer__copyright {
-    height: 9.2rem;
-  }
-}
-
-.footer__copyright p {
-  color: var(--font-color02);
-  font-size: 2rem;
-  line-height: calc(33 /20);
-  font-weight: 400;
-  text-align: center;
-}
-
-@media (max-width: 767px) {
-  .footer__copyright p {
-    line-height: calc(25 /20);
-  }
+  justify-content: center;
 }
 
 .footer__contents {
@@ -708,11 +685,14 @@ button:hover {
 
 .footer__company-name {
   border-bottom: 1px solid var(--font-color);
+  display: block;
+  width: 100%;
 }
 
 .footer__company-name p {
   display: inline-block;
   padding-bottom: 2.8rem;
+  font-size: ;
 }
 
 .footer__nav ul {
@@ -740,5 +720,67 @@ button:hover {
 @media (max-width: 767px) {
   .footer__nav ul a {
     padding: 0 0.5rem; 
+  }
+}
+
+.footer__sns ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__sns ul li a {
+  display: block;
+  padding: 0 1.5rem;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.footer__sns ul li a:hover {
+  transform: scale(1.2);
+  opacity: 0.6;
+}
+
+.footer__sns ul li a .twitter {
+  width: 2.8rem;
+}
+
+.footer__sns ul li a .facebook {
+  width: 2.8rem;
+}
+
+.footer__sns ul li a .youtube {
+  width: 2.234rem;
+}
+
+.footer__sns ul li a .instagram {
+  width: 1.98rem;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9.2rem;
+  background-color: var(--main-color);
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .footer__copyright {
+    height: 9.2rem;
+  }
+}
+
+.footer__copyright p {
+  color: var(--font-color02);
+  font-size: 2rem;
+  line-height: calc(33 /20);
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .footer__copyright p {
+    line-height: calc(25 /20);
   }
 }
