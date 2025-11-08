@@ -153,104 +153,80 @@ button:hover {
   position: fixed; 
   top: 0;
   left: 0;
-  z-index: 10000; /* MVより確実に上に配置 */
-  background-color: transparent; /* スクロール前は透明 */
+  z-index: 10000;
+  background-color: transparent;
   transition: background-color 0.4s;
-  isolation: isolate; /* ← 背景とのブレンド防止 */
-}
-.header.active {
-  background: var(--main-color);
-}
+  isolation: isolate;
 
-@media (max-width: 767px) {
-  .header {
+  &.active {
+    background: $main-color;
+  }
+
+  @media (max-width: 767px) {
     height: 5rem;
   }
-}
-
-.header__inner {
-  max-width: 1080px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 8rem;
-  box-sizing: border-box;
-}
-
-@media (max-width: 767px) {
-  .header__inner {
-    padding: 0.8rem 0 0 2rem;
+  
+  &__inner {
+    max-width: 1080px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem;
+    box-sizing: border-box;
+    
+    @media (max-width: 1030px)  { padding: 0 3rem; }
+    @media (max-width: 767px) { padding: 0 2rem; }
   }
-}
 
-/* ブレイクポイントは1030px */
-@media (max-width: 1030px) {
-  .header__inner {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width: 767px) {
-   .header__inner {
-    padding: 0 2rem;
-  }
-}
-
-.header__logo a {
+&__logo {
+  a {
   display: flex;
   align-items: center;
   height: 8.5rem;
   transition: all 0.4s ease;
+
+  &:hover { opacity: 0.6; }
 }
 
-.header__logo a:hover {
-  opacity: 0.6;
-}
-
-.header__logo-text {
+&-text {
   font-size: 2rem;
   line-height: calc(33 / 20);
   font-weight: 400;
-  color: var(--font-color02);
+  color: $font-color02;
+  
+  @media (max-width: 1030px) { font-size: 1.8rem; }
+}
 }
 
-@media (max-width: 1030px) {
-  .header__logo-text {
-    font-size: 1.8rem;
+&__nav {
+  ul {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    color: $font-color02;
+    
+    a {
+      height: 8.5rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      line-height: calc(33 / 18);
+      font-weight: 400;
+      justify-content: center;
+      color: $font-color02;
+      text-decoration: none;
+      cursor: pointer;
+      transition: opacity 0.4s ease, color 0.4s ease;
+      
+      &:hover {
+        opacity: 0.6;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 1030px)  { font-size: 1.4rem; } 
+    }
   }
-}
-
-
-.header__nav ul {
-  display: flex;
-  align-items: center;
-  column-gap: 3rem;
-  color: var(--font-color02);
-}
-
-.header__nav ul a {
-  height: 8.5rem;
-  display: flex;
-  align-items: center;
-  font-size: 1.8rem;
-  line-height: calc(33 / 18);
-  font-weight: 400;
-  justify-content: center;
-  color: var(--font-color02);
-  text-decoration: none;
-  cursor: pointer;
-  transition: opacity 0.4s ease, color 0.4s ease;
-}
-@media (max-width: 1030px) {
-  .header__nav ul a {
-    font-size: 1.4rem;
-  } 
-}
-
-.header__nav ul a:hover {
-  opacity: 0.6;
-  text-decoration: underline;
 }
 
 /* ハンバーガーメニュー（SP） */
