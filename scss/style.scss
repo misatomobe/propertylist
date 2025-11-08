@@ -355,66 +355,60 @@ button:hover {
 }
 
 
-
-/* MV */
+// =====================================
+// MV
+// =====================================
 .mv {
   position: relative;
   width: 100%;
   overflow: hidden;
-}
+  
+  &::after {
+    content: "";
+    background-color: rgba(0, 0, 0, .15);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1; /* ← テキストより下に */
+  }
 
-.mv::after {
-  content: '';
-  background-color: rgba(0, 0, 0, .15);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1; /* ← テキストより下に */
-}
-
+ // スライダー
 .splide {
   width: 100%;
   height: auto; /* 高さは画像に追従 */
   overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  .splide {
-    align-items: flex-end;
+  
+  &__track,
+  &__list,
+  &__slide {
+    height: auto; /* 固定高さをやめる */
+  }
+  
+  &__slide {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain; /* ← 全部autoにして画像高さに追従 */
+    }
+  }
+  
+  &__track {
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    overflow: hidden;
+    
+    @media (max-width: 767px) {
+      height: 100%;
+    }
   }
 }
 
-.splide__track,
-.splide__list,
-.splide__slide {
-  width: 100%;
-  height: auto; /* 固定高さをやめる */
-}
-
-.splide__slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain; /* ← 全部autoにして画像高さに追従 */
-}
-
-.splide__track {
-  position: relative;
-  margin-top: 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  .splide__track {
-    height: 100%;
-  }  
-}
-
-/* テキスト中央配置 */
-.mv__text {
+// メインテキスト
+&__text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -424,31 +418,25 @@ button:hover {
   font-size: 4rem;
   line-height: calc(70 / 40);
   letter-spacing: calc(4rem * 0.3); /* = 1.2rem */
-  color: var(--font-color02);
+  color: $font-color02;
   text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
   width: 90%;
   max-width: 1000px; /* ← 大きすぎないように制限も付ける */
-  }
-  
-@media (max-width: 1030px) {
-  .mv__text {
+
+  @media (max-width: 1030px) {
     font-size: 3.5rem;
   }
-}
 
-@media (max-width: 767px) {
-  .mv__text {
+  @media (max-width: 767px) {
     font-size: 3rem;
     line-height: calc(60 / 30);
   }
-}
 
-@media (max-width: 330px) {
-  .mv__text {
+  @media (max-width: 330px) {
     font-size: 2.8rem;
   }
 }
-
+}
 
 /* about */
 .about {
