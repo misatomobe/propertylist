@@ -523,6 +523,9 @@ button:hover {
 
 .service {
   padding: 8rem;
+  /* -------------------------------------
+     service-item（中の要素）
+  ------------------------------------- */
 }
 @media (max-width: 767px) {
   .service {
@@ -611,8 +614,16 @@ button:hover {
   font-size: 1.6rem;
   line-height: 1.5625;
 }
-
-.footer__contents {
+@media (max-width: 767px) {
+  .service__item__text02 {
+    right: 0;
+    bottom: -5rem;
+    width: 100%;
+    height: auto;
+    padding: 3rem 2rem;
+  }
+}
+.service .footer__contents {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -633,23 +644,23 @@ button:hover {
   width: 100%;
 }
 @media (max-width: 767px) {
-  .footer__contents {
+  .service .footer__contents {
     height: 30rem;
     padding: 5rem 3.5rem;
   }
 }
-.footer__company-name {
+.service .footer__company-name {
   border-bottom: 1px solid #000;
   display: block;
   width: 100%;
 }
-.footer__company-name p {
+.service .footer__company-name p {
   display: inline-block;
   padding-bottom: 2.8rem;
   font-size: 2rem;
   line-height: 1.65;
 }
-.footer__nav ul {
+.service .footer__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,12 +670,12 @@ button:hover {
   padding: 2.8rem 0;
 }
 @media (max-width: 767px) {
-  .footer__nav ul {
+  .service .footer__nav ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
-.footer__nav ul a {
+.service .footer__nav ul a {
   font-size: 1.8rem;
   line-height: 1.8333333333;
   font-style: 400;
@@ -675,11 +686,11 @@ button:hover {
   padding: 0 2rem;
 }
 @media (max-width: 767px) {
-  .footer__nav ul a {
+  .service .footer__nav ul a {
     padding: 0 0.5rem;
   }
 }
-.footer__sns ul {
+.service .footer__sns ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -690,7 +701,7 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
 }
-.footer__sns ul li a {
+.service .footer__sns ul li a {
   display: block;
   padding: 0 1.5rem;
   -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
@@ -698,24 +709,24 @@ button:hover {
   transition: opacity 0.4s ease, transform 0.4s ease;
   transition: opacity 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
 }
-.footer__sns ul li a:hover {
+.service .footer__sns ul li a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   opacity: 0.6;
 }
-.footer__sns ul li a .twitter {
+.service .footer__sns ul li a .twitter {
   width: 2.8rem;
 }
-.footer__sns ul li a .facebook {
+.service .footer__sns ul li a .facebook {
   width: 2.8rem;
 }
-.footer__sns ul li a .youtube {
+.service .footer__sns ul li a .youtube {
   width: 2.234rem;
 }
-.footer__sns ul li a .instagram {
+.service .footer__sns ul li a .instagram {
   width: 1.98rem;
 }
-.footer__copyright {
+.service .footer__copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -730,11 +741,11 @@ button:hover {
   text-align: center;
 }
 @media (max-width: 767px) {
-  .footer__copyright {
+  .service .footer__copyright {
     height: 9.2rem;
   }
 }
-.footer__copyright p {
+.service .footer__copyright p {
   color: #fff;
   font-size: 2rem;
   line-height: 1.65;
@@ -742,7 +753,7 @@ button:hover {
   text-align: center;
 }
 @media (max-width: 767px) {
-  .footer__copyright p {
+  .service .footer__copyright p {
     line-height: 1.25;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -536,71 +536,81 @@ button:hover {
       row-gap: 5rem;
     }
   }
-  
-  &__item {
-    position: relative;
-    display: flex;
-    column-gap: calc(40 / 880 * 100%);
-    margin-bottom: 10rem;
-    
-    // 写真
-    &__image {
-      max-width: 60rem;
-      width: 100%;
-      flex-shrink: 0;
-      z-index: 2;
-      position: relative; /* ← ボックスの基準にする */
-      aspect-ratio: 2 / 1; /* ← 高さを保つ：600×300比率 */
-      overflow: hidden;
-      
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-    }
-    
-    // 写真キャプション
-    &__text01 {
-      position: absolute;
-      margin-top: 32rem;
-      left: 0;
-      z-index: 3;
-      
-      p {
-        color: $font-color;
-        font-size: 1.6rem;
-        line-height: calc(25 /16);
-      }
-    }
 
-    // 緑のボックス
-    &__text02 {
-      position: absolute;
-      right: -1.8rem;
-      width: 50rem;
-      height: 25rem;
-      background-color: $main-color;
-      color: $font-color02;
-      padding: 5rem 4rem 4.2rem 22rem;
-      font-weight: 400;
-      z-index: 1; /* ← 背面にするために画像より低く */
-      bottom: -120px; /* ← ここをマイナスにすると下にずれる */
-      
-      h3 {
-        font-size: 2.5rem;
-        line-height: calc(33 / 25);
-        margin-bottom: 1.7rem;
-      }
-      
-      p {
-        font-size: 1.6rem;
-        line-height: calc(25 / 16);
-      }
+  /* -------------------------------------
+   service-item（中の要素）
+------------------------------------- */
+&__item {
+  position: relative;
+  display: flex;
+  column-gap: calc(40 / 880 * 100%);
+  margin-bottom: 10rem;
+  
+  // 写真
+  &__image {
+    max-width: 60rem;
+    width: 100%;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative; /* ← ボックスの基準にする */
+    aspect-ratio: 2 / 1; /* ← 高さを保つ：600×300比率 */
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
   }
-}  
+
+   // 写真キャプション
+  &__text01 {
+    position: absolute;
+    margin-top: 32rem;
+    left: 0;
+    z-index: 3;
+    
+    p {
+      color: $font-color;
+      font-size: 1.6rem;
+      line-height: calc(25 /16);
+    }
+  }
+
+  // 緑のボックス
+  &__text02 {
+    position: absolute;
+    right: -1.8rem;
+    width: 50rem;
+    height: 25rem;
+    background-color: $main-color;
+    color: $font-color02;
+    padding: 5rem 4rem 4.2rem 22rem;
+    font-weight: 400;
+    z-index: 1; /* ← 背面にするために画像より低く */
+    bottom: -120px; /* ← ここをマイナスにすると下にずれる */
+    
+    h3 {
+      font-size: 2.5rem;
+      line-height: calc(33 / 25);
+      margin-bottom: 1.7rem;
+    }
+    
+    p {
+      font-size: 1.6rem;
+      line-height: calc(25 / 16);
+    }
+
+     @media (max-width: 767px) {
+        right: 0;
+        bottom: -5rem;
+        width: 100%;
+        height: auto;
+        padding: 3rem 2rem;
+      }
+    }
+  }  
 
 
 // =====================================
@@ -723,5 +733,6 @@ button:hover {
       line-height: calc(25 /20);
     }
   }
+}
 }
 }
