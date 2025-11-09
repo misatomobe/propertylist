@@ -90,13 +90,13 @@ button:hover {
 }
 
 @media (max-width: 765px) {
-  &.sp-br { display: inline; }
-  &.pc-br { display: none; }
+  .sp-br { display: inline; }
+  .pc-br { display: none; }
 }
 
 @media (min-width: 766px) {
-  &.sp-br { display: none; }
-  &.pc-br { display: inline; }
+  .sp-br { display: none; }
+  .pc-br { display: inline; }
 }
 
 .no-wrap {
