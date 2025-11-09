@@ -603,125 +603,125 @@ button:hover {
 }  
 
 
-/* footer */
-.footer__contents {
-  background-color: var(--font-color02);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 33.8rem;
-  padding: 8rem 17.9rem;
-  text-align: center;
-  width: 100%;
-}
+// =====================================
+// footer
+// =====================================
+.footer {
+  &__contents {
+    background-color: $font-color02;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 33.8rem;
+    padding: 8rem 17.9rem;
+    text-align: center;
+    width: 100%;
+    
+    @media (max-width: 767px) {
+      height: 30rem;
+      padding: 5rem 3.5rem;
+    }
+  }
+  
+  &__company-name {
+    border-bottom: 1px solid $font-color;
+    display: block;
+    width: 100%;
+    
+    p {
+      display: inline-block;
+      padding-bottom: 2.8rem;
+      font-size: 2rem;
+      line-height: calc(33 / 20);
+    }
+  }
+  
+  &__nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      padding: 2.8rem 0;
 
-@media (max-width: 767px) {
-  .footer__contents {
-    height: 30rem;
-    padding: 5rem 3.5rem;
+      @media (max-width: 767px) {
+        flex-wrap: wrap;
+      }
+      
+      a {
+        font-size: 1.8rem;
+        line-height: calc(33 / 18);
+        font-style: 400;
+        color: $font-color;
+        transition: opacity 0.4s ease;
+        gap: 5rem;
+        padding: 0 2rem;
+
+        @media (max-width: 767px) {
+          padding: 0 0.5rem; 
+      }
+    }
   }
 }
 
-.footer__company-name {
-  border-bottom: 1px solid var(--font-color);
-  display: block;
-  width: 100%;
-}
+&__sns {
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    li {
+      a {
+        display: block;
+        padding: 0 1.5rem;      
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        
+        &:hover {
+          transform: scale(1.2);
+          opacity: 0.6;
+        }
+        
+        .twitter {
+          width: 2.8rem;
+        }
 
-.footer__company-name p {
-  display: inline-block;
-  padding-bottom: 2.8rem;
-  font-size: 2rem;
-  line-height: calc(33 / 20);
-}
+        .facebook {
+          width: 2.8rem;
+        }
 
-.footer__nav ul {
-  display: flex;
-  justify-content: center;
-  padding: 2.8rem 0;
-}
+        .youtube {
+          width: 2.234rem;
+        }
 
-@media (max-width: 767px) {
-  .footer__nav ul {
-    flex-wrap: wrap;
+        .instagram {
+          width: 1.98rem;
+        }
+      }
+    }
   }
 }
 
-.footer__nav ul a {
-  font-size: 1.8rem;
-  line-height: calc(33 / 18);
-  font-style: 400;
-  color: var(--font-color);
-  transition: opacity 0.4s ease;
-  gap: 5rem;
-  padding: 0 2rem;
-}
-
-@media (max-width: 767px) {
-  .footer__nav ul a {
-    padding: 0 0.5rem; 
-  }
-}
-
-.footer__sns ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer__sns ul li a {
-  display: block;
-  padding: 0 1.5rem;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.footer__sns ul li a:hover {
-  transform: scale(1.2);
-  opacity: 0.6;
-}
-
-.footer__sns ul li a .twitter {
-  width: 2.8rem;
-}
-
-.footer__sns ul li a .facebook {
-  width: 2.8rem;
-}
-
-.footer__sns ul li a .youtube {
-  width: 2.234rem;
-}
-
-.footer__sns ul li a .instagram {
-  width: 1.98rem;
-}
-
-.footer__copyright {
+&__copyright {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 9.2rem;
-  background-color: var(--main-color);
+  background-color: $main-color;
   text-align: center;
-}
 
-@media (max-width: 767px) {
-  .footer__copyright {
+  @media (max-width: 767px) {
     height: 9.2rem;
   }
-}
+  
+  p {
+    color: $font-color02;
+    font-size: 2rem;
+    line-height: calc(33 /20);
+    font-weight: 400;
+    text-align: center;
 
-.footer__copyright p {
-  color: var(--font-color02);
-  font-size: 2rem;
-  line-height: calc(33 /20);
-  font-weight: 400;
-  text-align: center;
-}
-
-@media (max-width: 767px) {
-  .footer__copyright p {
-    line-height: calc(25 /20);
+    @media (max-width: 767px) {
+      line-height: calc(25 /20);
+    }
   }
+}
 }
