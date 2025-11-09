@@ -443,77 +443,70 @@ button:hover {
 // =====================================
 .about {
   position: relative;
-}
-
-.about__contents {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* 中央基準に補正 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100%;
-}
 
-@media (max-width: 767px) {
-  .about__contents {
+  &__contents {
     position: absolute;
-    transform: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 中央基準に補正 */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    top: 0;
-    left: 0;
-    padding: 5rem 0;
-  }
-}
+    width: 100%;
+    height: 100%;
 
-.about__catch {
+    @media (max-width: 767px)  {
+      position: absolute;
+      transform: none;
+      align-items: center;
+      top: 0;
+      left: 0;
+      padding: 5rem 0;
+    }
+  }
+
+  &__catch {
   writing-mode: vertical-rl;      /* 縦書き（右から左） */
   text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
   align-items: center;
   padding-right: 25rem;
-}
 
-@media (max-width: 767px) {
-  .about__catch {
+  @media (max-width: 767px)  {
     display: flex;
     justify-content: center;
     padding-right: 0;
     height: auto;
     position: static;
   }
-}
+  
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.3em; /* 118% に相当 */
+    display: block;
+    margin-left: 6rem;
+    
+    @media (max-width: 767px) {
+      font-size: 2.5rem;
+      letter-spacing: 0.19em; /* 119% に相当 */
+      margin: 0 0 1rem 0;
+    }
+  }
+  
+  p {
+    font-size: 1.8rem;
+    line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
+    letter-spacing: 0.8em; /* 文字間も少し広げる */
+    font-weight: 400;
 
-.about__catch h2 {
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 0.3em; /* 118% に相当 */
-  display: block;
-  margin-left: 6rem;
-}
-
-@media (max-width: 767px) {
-  .about__catch h2 {
-  font-size: 2.5rem;
-  letter-spacing: 0.19em; /* 119% に相当 */
-   margin: 0 0 1rem 0;
+    @media (max-width: 767px) {
+      font-size: 1.5rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.3em;
+    }
   }
 }
-
-.about__catch p {
-  font-size: 1.8rem;
-  line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
-  letter-spacing: 0.8em; /* 文字間も少し広げる */
-  font-weight: 400;
-}
-
-@media (max-width: 767px) {
-  .about__catch p {
-    font-size: 1.5rem;
-    line-height: 2.6rem;
-    letter-spacing: 0.3em;
-  }
 }
 
 /* service */
