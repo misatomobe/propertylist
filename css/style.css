@@ -376,29 +376,29 @@ button:hover {
   bottom: 0;
   z-index: 1; /* ← テキストより下に */
 }
-.mv .splide {
+.mv .slide {
   width: 100%;
   height: auto; /* 高さは画像に追従 */
   overflow: hidden;
 }
-.mv .splide__track, .mv .splide__list, .mv .splide__slide {
+.mv .slide__track, .mv .slide__list, .mv .slide__slide {
   height: auto; /* 固定高さをやめる */
 }
-.mv .splide__slide img {
+.mv .slide__slide img {
   width: 100%;
   height: auto;
   display: block;
   -o-object-fit: contain;
      object-fit: contain; /* ← 全部autoにして画像高さに追従 */
 }
-.mv .splide__track {
+.mv .slide__track {
   position: relative;
   margin-top: 0;
   width: 100%;
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  .mv .splide__track {
+  .mv .slide__track {
     height: 100%;
   }
 }
@@ -593,7 +593,7 @@ button:hover {
   font-size: 1.6rem;
   line-height: 1.5625;
 }
-.service__item__text02 {
+.service__text02 {
   position: absolute;
   right: -1.8rem;
   width: 50rem;
@@ -605,17 +605,17 @@ button:hover {
   z-index: 1; /* ← 背面にするために画像より低く */
   bottom: -120px; /* ← ここをマイナスにすると下にずれる */
 }
-.service__item__text02 h3 {
+.service__text02 h3 {
   font-size: 2.5rem;
   line-height: 1.32;
   margin-bottom: 1.7rem;
 }
-.service__item__text02 p {
+.service__text02 p {
   font-size: 1.6rem;
   line-height: 1.5625;
 }
 @media (max-width: 767px) {
-  .service__item__text02 {
+  .service__text02 {
     right: 0;
     bottom: -5rem;
     width: 100%;
@@ -623,7 +623,8 @@ button:hover {
     padding: 3rem 2rem;
   }
 }
-.service .footer__contents {
+
+.footer__contents {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -644,23 +645,23 @@ button:hover {
   width: 100%;
 }
 @media (max-width: 767px) {
-  .service .footer__contents {
+  .footer__contents {
     height: 30rem;
     padding: 5rem 3.5rem;
   }
 }
-.service .footer__company-name {
+.footer__company-name {
   border-bottom: 1px solid #000;
   display: block;
   width: 100%;
 }
-.service .footer__company-name p {
+.footer__company-name p {
   display: inline-block;
   padding-bottom: 2.8rem;
   font-size: 2rem;
   line-height: 1.65;
 }
-.service .footer__nav ul {
+.footer__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -670,12 +671,12 @@ button:hover {
   padding: 2.8rem 0;
 }
 @media (max-width: 767px) {
-  .service .footer__nav ul {
+  .footer__nav ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
-.service .footer__nav ul a {
+.footer__nav ul a {
   font-size: 1.8rem;
   line-height: 1.8333333333;
   font-style: 400;
@@ -686,11 +687,11 @@ button:hover {
   padding: 0 2rem;
 }
 @media (max-width: 767px) {
-  .service .footer__nav ul a {
+  .footer__nav ul a {
     padding: 0 0.5rem;
   }
 }
-.service .footer__sns ul {
+.footer__sns ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -701,7 +702,7 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
 }
-.service .footer__sns ul li a {
+.footer__sns ul li a {
   display: block;
   padding: 0 1.5rem;
   -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
@@ -709,24 +710,24 @@ button:hover {
   transition: opacity 0.4s ease, transform 0.4s ease;
   transition: opacity 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
 }
-.service .footer__sns ul li a:hover {
+.footer__sns ul li a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   opacity: 0.6;
 }
-.service .footer__sns ul li a .twitter {
+.footer__sns ul li a .twitter {
   width: 2.8rem;
 }
-.service .footer__sns ul li a .facebook {
+.footer__sns ul li a .facebook {
   width: 2.8rem;
 }
-.service .footer__sns ul li a .youtube {
+.footer__sns ul li a .youtube {
   width: 2.234rem;
 }
-.service .footer__sns ul li a .instagram {
+.footer__sns ul li a .instagram {
   width: 1.98rem;
 }
-.service .footer__copyright {
+.footer__copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -741,11 +742,11 @@ button:hover {
   text-align: center;
 }
 @media (max-width: 767px) {
-  .service .footer__copyright {
+  .footer__copyright {
     height: 9.2rem;
   }
 }
-.service .footer__copyright p {
+.footer__copyright p {
   color: #fff;
   font-size: 2rem;
   line-height: 1.65;
@@ -753,7 +754,7 @@ button:hover {
   text-align: center;
 }
 @media (max-width: 767px) {
-  .service .footer__copyright p {
+  .footer__copyright p {
     line-height: 1.25;
   }
 }/*# sourceMappingURL=style.css.map */

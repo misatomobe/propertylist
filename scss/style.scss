@@ -375,7 +375,7 @@ button:hover {
   }
 
  // スライダー
-.splide {
+.slide {
   width: 100%;
   height: auto; /* 高さは画像に追従 */
   overflow: hidden;
@@ -564,7 +564,7 @@ button:hover {
     }
   }
 
-   // 写真キャプション
+  // 写真キャプション
   &__text01 {
     position: absolute;
     margin-top: 32rem;
@@ -577,6 +577,7 @@ button:hover {
       line-height: calc(25 /16);
     }
   }
+}
 
   // 緑のボックス
   &__text02 {
@@ -733,6 +734,5 @@ button:hover {
       line-height: calc(25 /20);
     }
   }
-}
 }
 }
