@@ -548,14 +548,14 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 8rem;
+  row-gap: 12rem;
 }
 @media (max-width: 767px) {
   .service__items {
     row-gap: 5rem;
   }
 }
-.service__item {
+.service .service__item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -565,37 +565,38 @@ button:hover {
           column-gap: 4.5454545455%;
   margin-bottom: 10rem;
 }
-.service__item__image {
+.service .service__item__image {
   max-width: 60rem;
   width: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   z-index: 2;
-  position: relative; /* ← ボックスの基準にする */
-  aspect-ratio: 2/1; /* ← 高さを保つ：600×300比率 */
+  position: relative;
+  aspect-ratio: 2/1;
   overflow: hidden;
 }
-.service__item__image img {
+.service .service__item__image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-.service__item__text01 {
+.service .service__item__text01 {
   position: absolute;
   margin-top: 32rem;
   left: 0;
   z-index: 3;
 }
-.service__item__text01 p {
+.service .service__item__text01 p {
   color: #000;
   font-size: 1.6rem;
   line-height: 1.5625;
 }
-.service__text02 {
+.service .service__item__text02 {
   position: absolute;
   right: -1.8rem;
+  bottom: -120px;
   width: 50rem;
   height: 25rem;
   background-color: #4D9600;
@@ -603,19 +604,18 @@ button:hover {
   padding: 5rem 4rem 4.2rem 22rem;
   font-weight: 400;
   z-index: 1; /* ← 背面にするために画像より低く */
-  bottom: -120px; /* ← ここをマイナスにすると下にずれる */
 }
-.service__text02 h3 {
+.service .service__item__text02 h3 {
   font-size: 2.5rem;
   line-height: 1.32;
   margin-bottom: 1.7rem;
 }
-.service__text02 p {
+.service .service__item__text02 p {
   font-size: 1.6rem;
   line-height: 1.5625;
 }
 @media (max-width: 767px) {
-  .service__text02 {
+  .service .service__item__text02 {
     right: 0;
     bottom: -5rem;
     width: 100%;
