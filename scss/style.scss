@@ -621,6 +621,38 @@ button:hover {
 }
 
 // =====================================
+// works
+// =====================================
+.works {
+  padding: 9.1rem 8rem 9.7rem;
+}
+
+@media (max-width: 767px) {
+  .works {
+    padding: 5rem 2rem 4.2rem;
+  }
+}
+
+.works__contents {
+  margin-top: 6.8rem;
+}
+
+@media (max-width: 767px) {
+  .works__contents {
+    margin-top: 3.8rem;
+  }
+}
+
+.works__items {
+  display: flex;
+  column-gap: 5%;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+
+
+// =====================================
 // footer
 // =====================================
 .footer {

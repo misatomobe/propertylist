@@ -627,6 +627,37 @@ button:hover {
   line-height: 1.5625;
 }
 
+.works {
+  padding: 9.1rem 8rem 9.7rem;
+}
+
+@media (max-width: 767px) {
+  .works {
+    padding: 5rem 2rem 4.2rem;
+  }
+}
+.works__contents {
+  margin-top: 6.8rem;
+}
+
+@media (max-width: 767px) {
+  .works__contents {
+    margin-top: 3.8rem;
+  }
+}
+.works__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 5%;
+     -moz-column-gap: 5%;
+          column-gap: 5%;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .footer__contents {
   background-color: #fff;
   display: -webkit-box;
