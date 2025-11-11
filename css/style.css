@@ -523,10 +523,8 @@ button:hover {
 
 .service {
   padding: 8rem;
-  /* -------------------------------------
-     service-item（中の要素）
-  ------------------------------------- */
 }
+
 @media (max-width: 767px) {
   .service {
     padding: 5rem 3rem;
@@ -535,6 +533,7 @@ button:hover {
 .service__contents {
   margin-top: 6.8rem;
 }
+
 @media (max-width: 767px) {
   .service__contents {
     margin-top: 3.8rem;
@@ -548,14 +547,15 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 12rem;
+  row-gap: 8rem;
 }
+
 @media (max-width: 767px) {
   .service__items {
     row-gap: 5rem;
   }
 }
-.service .service__item {
+.service__item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -565,63 +565,66 @@ button:hover {
           column-gap: 4.5454545455%;
   margin-bottom: 10rem;
 }
-.service .service__item__image {
+
+/* 写真 */
+.service-item__image {
   max-width: 60rem;
   width: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   z-index: 2;
   position: relative;
+  /* ← ボックスの基準にする */
   aspect-ratio: 2/1;
+  /* ← 高さを保つ：600×300比率 */
   overflow: hidden;
 }
-.service .service__item__image img {
+.service-item__image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-.service .service__item__text01 {
+
+/* 写真キャプション */
+.service-item__text01 {
   position: absolute;
   margin-top: 32rem;
   left: 0;
   z-index: 3;
 }
-.service .service__item__text01 p {
+.service-item__text01 p {
   color: #000;
   font-size: 1.6rem;
   line-height: 1.5625;
 }
-.service .service__item__text02 {
+
+/* 緑のボックス */
+.service-item__text02 {
   position: absolute;
   right: -1.8rem;
-  bottom: -120px;
+  bottom: -15.5rem;
   width: 50rem;
   height: 25rem;
   background-color: #4D9600;
   color: #fff;
   padding: 5rem 4rem 4.2rem 22rem;
   font-weight: 400;
-  z-index: 1; /* ← 背面にするために画像より低く */
+  z-index: 1;
+  /* ← 背面にするために画像より低く */
+  bottom: -120px;
+  /* ← ここをマイナスにすると下にずれる */
+  z-index: 1;
 }
-.service .service__item__text02 h3 {
+.service-item__text02 h3 {
   font-size: 2.5rem;
   line-height: 1.32;
   margin-bottom: 1.7rem;
 }
-.service .service__item__text02 p {
+.service-item__text02 p {
   font-size: 1.6rem;
   line-height: 1.5625;
-}
-@media (max-width: 767px) {
-  .service .service__item__text02 {
-    right: 0;
-    bottom: -5rem;
-    width: 100%;
-    height: auto;
-    padding: 3rem 2rem;
-  }
 }
 
 .footer__contents {
