@@ -144,6 +144,12 @@ button:hover {
   }
 }
 
+h4 {
+  font-size: 1.6rem;
+  line-height: calc(25 / 16);
+  
+}
+
 // =====================================
 // header
 // =====================================
@@ -649,6 +655,32 @@ button:hover {
   width: 100%;
   justify-content: flex-start;
 }
+
+@media (max-width: 767px) {
+  .works__items {
+    flex-direction: column;
+    row-gap: 2.2rem;
+  }
+}
+
+.works__item {
+  width: calc((100% - (5% * 3)) / 4);/* gap 3つ分を引いて4等分 */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .works__item {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.works-item__title {
+  margin-top: 1.9rem;
+  text-align: left;
+}
+
 
 
 
