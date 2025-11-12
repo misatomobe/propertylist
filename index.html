@@ -9,11 +9,11 @@
     <meta name="robots" content="noindex">
     <link rel="stylesheet" href="https://use.typekit.net/mdz4mgq.css">
     <!-- splide.css cdn -->
-    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- splide.js cdn -->
-    <script src="http://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
     <script src="./js/header.js" defer></script>
     <script src="./js/script.js" defer></script>
     <script src="./js/works-modal.js" defer></script>
@@ -268,8 +268,11 @@
                 <div class="modal" id="modal">
                     <div class="modal__overlay"></div>
                     <div class="modal__content">
-                        <img src="" alt="" id="modal-img">
-                        <button class="modal__close" id="modal-close">&times;</button>
+                        <button class="modal__close" id="modal-close">×</button>
+                        <div class="modal__img-wrap">
+                            <img src="" alt="" id="modal-img">
+                        </div>
+                        <p id="modal-caption" class="modal__caption"></p>           
                     </div>
                 </div>
             </section>

@@ -683,56 +683,83 @@ h4 {
 
 // モーダルの基本非表示
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   display: none;
+  position: fixed;
+  inset: 0;
   align-items: center;
   justify-content: center;
-  z-index: 999;
-}
+  z-index: 9999;
 
-.modal.is-active {
+  &.is-active {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.modal__overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 // モーダル内の画像
-.modal__content {
-  position: relative;
-  z-index: 2;
-  max-width: 90%;
-  max-height: 90%;
+   &__content {
+    position: relative;
+    z-index: 2;
+    background: var($font-color02);
+    width: 45rem;
+    height: 27.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    @media (max-width: 767px) {
+      width: 31.5rem;
+      height: 21rem;
+    }
+
+    // 画像
+    &__img-wrap img {
+      max-width: 100%;
+      height: auto;
+      border: 5px solid var($font-color02);
+      object-fit: cover;
+    }
+
+    // キャプション
+    &__caption {
+      margin-top: 5rem;
+      font-size: 1.6rem;
+      line-height: calc(25 /16);
+      text-align: left;
+    }
+
+    // 閉じるボタン
+    &__close {
+      position: absolute;
+      top: 8rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var($font-color);
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    @media (max-width: 767px) {
+      &__content {
+        width: 90%;
+        height: auto;
+        padding: 2.1rem;
+      }
+    }
+  }
 }
-
-.modal__content img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-// 閉じるボタン
-.modal__close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 3rem;
-  color: $font-color02;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-
 
 
 // =====================================

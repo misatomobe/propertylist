@@ -1,21 +1,30 @@
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const modalClose = document.getElementById('modal-close');
-const modalOverlay = document.querySelector('.modal__overlay');
-const modalImages = document.querySelectorAll('.js-modal-image');
+// works-modal.js
 
-// 画像クリックでモーダルを開く
-modalImages.forEach(img => {
-  img.addEventListener('click', () => {
-    const imgSrc = img.getAttribute('data-modal');
-    modalImg.src = imgSrc;
-    modal.classList.add('is-active');
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalCaption = document.getElementById('modal-caption');
+  const modalClose = document.getElementById('modal-close');
+  const overlay = modal.querySelector('.modal__overlay');
+
+  // クリック対象の画像を取得
+  const modalImages = document.querySelectorAll('.js-modal-image');
+
+  modalImages.forEach((img) => {
+    img.addEventListener('click', () => {
+      modal.classList.add('is-active');
+      modalImg.src = img.dataset.modal;
+      modalImg.alt = img.alt;
+      modalCaption.textContent = img.alt;
+    });
   });
-});
 
-// 閉じるボタン or 背景クリックで閉じる
-[modalClose, modalOverlay].forEach(el => {
-  el.addEventListener('click', () => {
-    modal.classList.remove('is-active');
+  // 閉じる（×ボタン・オーバーレイクリックで）
+  [modalClose, overlay].forEach((el) => {
+    el.addEventListener('click', () => {
+      modal.classList.remove('is-active');
+      modalImg.src = '';
+      modalCaption.textContent = '';
+    });
   });
 });
