@@ -16,6 +16,7 @@
     <script src="http://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
     <script src="./js/header.js" defer></script>
     <script src="./js/script.js" defer></script>
+    <script src="./js/works-modal.js" defer></script>
 </head>
 <body>
     <!-- ↓container↓ -->
@@ -211,7 +212,12 @@
                                 <div class="works-item__image">
                                     <picture>
                                         <source  media="(min-width: 768px)" srcset="./images/PC_WORKS_01.jpg">
-                                        <img src="./images/SP_WORKS_01.jpg" alt="【新築】長崎県T.O様自宅">
+                                        <img
+                                        src="./images/SP_WORKS_01.jpg"
+                                        alt="【新築】長崎県T.O様自宅"
+                                        data-modal="./images/PC_WORKS_modal_01.jpg"
+                                        class="js-modal-image"
+                                    >
                                     </picture>
                                 </div>
                                 <div class="works-item__title">
