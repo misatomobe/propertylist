@@ -681,7 +681,9 @@ h4 {
   text-align: left;
 }
 
-// モーダルの基本非表示
+// =====================================
+// works-modal
+// =====================================
 .modal {
   display: none;
   position: fixed;
@@ -692,8 +694,6 @@ h4 {
 
   &.is-active {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
   &__overlay {
@@ -706,56 +706,63 @@ h4 {
    &__content {
     position: relative;
     z-index: 2;
-    background: var($font-color02);
+    background: $font-color02;
     width: 45rem;
     height: 27.5rem;
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 1.5rem;
     box-sizing: border-box;
-    z-index: 1000;
 
     @media (max-width: 767px) {
       width: 31.5rem;
-      height: 21rem;
+      height: auto;
+      padding: 2rem;
     }
 
     // 画像
-    &__img-wrap img {
-      max-width: 100%;
-      height: auto;
-      border: 5px solid var($font-color02);
+    &-img-wrap {
+      display: flex;
+      justify-content: center;
+      img {
+      width: 42rem;
+      height: 22rem;
+      border: 5px solid $font-color02;
       object-fit: cover;
+      display: block;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        height: auto;
+      }
     }
+  }
 
     // キャプション
-    &__caption {
-      margin-top: 5rem;
+    &-caption {
+      margin-top: 0.9rem;
       font-size: 1.6rem;
       line-height: calc(25 /16);
       text-align: left;
     }
 
     // 閉じるボタン
-    &__close {
+    &-close {
       position: absolute;
-      top: 8rem;
-      right: 1.2rem;
+      top: 1rem;
+      right: 1rem;
       background: none;
       border: none;
       font-size: 2rem;
-      color: var($font-color);
+      line-height: 1;
+      color: $font-color;
       cursor: pointer;
-      z-index: 3;
-    }
+      transition: color 0.3s;
 
-    @media (max-width: 767px) {
-      &__content {
-        width: 90%;
-        height: auto;
-        padding: 2.1rem;
+      &:hover {
+        color: $main-color;
       }
     }
   }

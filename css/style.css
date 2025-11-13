@@ -708,12 +708,6 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .modal__overlay {
   position: absolute;
@@ -723,12 +717,10 @@ h4 {
 .modal__content {
   position: relative;
   z-index: 2;
-  background: var(#fff);
+  background: #fff;
   width: 45rem;
   height: 27.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -742,44 +734,57 @@ h4 {
   padding: 1.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  z-index: 1000;
 }
 @media (max-width: 767px) {
   .modal__content {
     width: 31.5rem;
-    height: 21rem;
+    height: auto;
+    padding: 2rem;
   }
 }
-.modal__content__img-wrap img {
-  max-width: 100%;
-  height: auto;
-  border: 5px solid var(#fff);
+.modal__content-img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.modal__content-img-wrap img {
+  width: 42rem;
+  height: 22rem;
+  border: 5px solid #fff;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
 }
-.modal__content__caption {
-  margin-top: 5rem;
+@media (max-width: 767px) {
+  .modal__content-img-wrap img {
+    width: 100%;
+    height: auto;
+  }
+}
+.modal__content-caption {
+  margin-top: 0.9rem;
   font-size: 1.6rem;
   line-height: 1.5625;
   text-align: left;
 }
-.modal__content__close {
+.modal__content-close {
   position: absolute;
-  top: 8rem;
-  right: 1.2rem;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
   font-size: 2rem;
-  color: var(#000);
+  line-height: 1;
+  color: #000;
   cursor: pointer;
-  z-index: 3;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
-@media (max-width: 767px) {
-  .modal__content__content {
-    width: 90%;
-    height: auto;
-    padding: 2.1rem;
-  }
+.modal__content-close:hover {
+  color: #4D9600;
 }
 
 .footer__contents {
