@@ -770,10 +770,15 @@ h4 {
   line-height: 1.5625;
   text-align: left;
 }
+@media (max-width: 767px) {
+  .modal__content-caption {
+    margin-top: 0.7rem;
+  }
+}
 .modal__content-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.1rem;
+  right: 0.1rem;
   background: none;
   border: none;
   font-size: 2rem;
