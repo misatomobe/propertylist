@@ -797,7 +797,6 @@ h4 {
 .news__items {
   display: flex;
   column-gap: 5.68%;
-  width: 100%;
   justify-content: flex-start;
 }
 
@@ -809,15 +808,14 @@ h4 {
 }
 
 .news__item {
-  width: calc((100% - (5.68% * 1)) / 2);
-  max-width: 100%;
-  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  column-gap: calc(60 / 920 * 100%);
 }
 
 @media (max-width: 767px) {
   .service__item {
-    flex: 1;
-    width: 100%;
+    row-gap: 5rem;
   }
 }
 
