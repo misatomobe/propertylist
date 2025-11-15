@@ -681,6 +681,26 @@ h4 {
   text-align: left;
 }
 
+.works-item__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover .works-item__image img {
+    opacity: 0.8;
+    transform: scale(1.02);
+    transition: 0.3s;
+  }
+  &:hover .works-item__title h4 {
+    transition: 0.3s;
+  }
+}
+
+.works-item__image img {
+  transition: 0.3s;
+}
+
 // =====================================
 // works-modal
 // =====================================
@@ -811,6 +831,8 @@ h4 {
   flex-direction: column;
 
   @media (max-width: 767px) {
+    width: 100%;
+    height: auto;
     row-gap: 5rem;
   }
 }

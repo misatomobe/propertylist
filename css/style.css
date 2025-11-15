@@ -692,6 +692,29 @@ h4 {
   text-align: left;
 }
 
+.works-item__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.works-item__link:hover .works-item__image img {
+  opacity: 0.8;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.works-item__link:hover .works-item__title h4 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.works-item__image img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -844,6 +867,8 @@ h4 {
 }
 @media (max-width: 767px) {
   .news__topic {
+    width: 100%;
+    height: auto;
     row-gap: 5rem;
   }
 }

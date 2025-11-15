@@ -1,5 +1,3 @@
-// works-modal.js
-
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
@@ -7,11 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.getElementById('modal-close');
   const overlay = modal.querySelector('.modal__overlay');
 
-  // クリック対象の画像を取得
-  const modalImages = document.querySelectorAll('.js-modal-image');
+  // aタグ全体をクリック対象にする
+  const modalLinks = document.querySelectorAll('.works-item__link');
 
-  modalImages.forEach((img) => {
-    img.addEventListener('click', () => {
+  modalLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // ← ページ遷移を防ぐ
+
+      const img = link.querySelector('.js-modal-image'); // 内部の画像を取得
       modal.classList.add('is-active');
       modalImg.src = img.dataset.modal;
       modalImg.alt = img.alt;
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 閉じる（×ボタン・オーバーレイクリックで）
+  // 閉じる処理
   [modalClose, overlay].forEach((el) => {
     el.addEventListener('click', () => {
       modal.classList.remove('is-active');
