@@ -829,11 +829,11 @@ h4 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background: $font-color02;
 
   @media (max-width: 767px) {
     width: 100%;
     height: auto;
-    row-gap: 5rem;
   }
 }
 }
@@ -852,6 +852,27 @@ h4 {
     font-weight: 600;
   }
 }
+
+.news-item {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  column-gap: calc(70 / 430 * 100%);
+  transition: opacity 0.4s ease;
+
+  @media (max-width: 767px) {
+    padding: 3rem 2rem 1.3rem 2rem;
+  }
+}
+
+.news-item:hover {
+  opacity: 0.6;
+}
+
+.news__items article {
+  border-bottom: 0.1rem solid $border-color-green;
+}
+
 
 // =====================================
 // footer
