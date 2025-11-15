@@ -826,7 +826,16 @@ h4 {
   height: 5rem;
   padding-left: 2rem;
   align-items: center;
+  display: flex;
 }
+
+.news-topic__title h4 {
+  font-size: 2rem;
+  line-height: calc(33 / 20);
+  color: $font-color02;
+  font-weight: 600;
+}
+
 
 // =====================================
 // footer
