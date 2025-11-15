@@ -700,14 +700,13 @@ h4 {
 }
 .works-item__link:hover .works-item__image img {
   opacity: 0.8;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .works-item__link:hover .works-item__title h4 {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: #4D9600;
 }
 
 .works-item__image img {

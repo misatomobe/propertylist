@@ -689,11 +689,11 @@ h4 {
 
   &:hover .works-item__image img {
     opacity: 0.8;
-    transform: scale(1.02);
     transition: 0.3s;
   }
   &:hover .works-item__title h4 {
     transition: 0.3s;
+    color: $main-color;
   }
 }
 
