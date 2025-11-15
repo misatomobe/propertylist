@@ -915,7 +915,17 @@ h4 {
 }
 
 .news__items article {
-  border-bottom: 0.1rem solid #55A500;
+  position: relative;
+}
+
+.news__items article::after {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  bottom: 0;
+  height: 0.1rem;
+  background-color: #55A500;
 }
 
 .footer__contents {
