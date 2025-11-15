@@ -928,6 +928,12 @@ h4 {
   background-color: #55A500;
 }
 
+.news-item__date time {
+  font-size: 1.6rem;
+  line-height: 2.0625;
+  font-weight: 500;
+}
+
 .footer__contents {
   background-color: #fff;
   display: -webkit-box;
