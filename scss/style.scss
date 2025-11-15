@@ -777,46 +777,43 @@ h4 {
 // =====================================
 .news {
   padding: 8rem;
-}
 
-@media (max-width: 767px) {
-  .news {
+  @media (max-width: 767px) {
     padding: 5rem 2rem;
   }
-}
-
-.news_contents {
+  
+  &_contents {
   margin-top: 6.8rem;
-}
-
-@media (max-width: 767px) {
-  .news_contents {
+  
+  @media (max-width: 767px) {
     margin-top: 3.8rem;
   }
 }
-.news__items {
-  display: flex;
-  column-gap: 5.68%;
-  justify-content: flex-start;
-}
 
-@media (max-width: 767px) {
-  .news__items {
+// 2つを横並び
+&__items {
+  display: flex;
+  column-gap: calc(60 / 920 * 100%);
+  justify-content: flex-start;
+
+  @media (max-width: 767px) {
     flex-direction: column;
     row-gap: 5rem;
   }
 }
 
-.news__item {
+// 個々のボックス設定
+&__topic {
+  width: 430px;
+  height: 383px;
   display: flex;
-  align-items: center;
-  column-gap: calc(60 / 920 * 100%);
-}
+  justify-content: space-between;
+  flex-direction: column;
 
-@media (max-width: 767px) {
-  .service__item {
+  @media (max-width: 767px) {
     row-gap: 5rem;
   }
+}
 }
 
 .news-topic__title {
@@ -825,15 +822,14 @@ h4 {
   padding-left: 2rem;
   align-items: center;
   display: flex;
+  
+  h4 {
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+    color: $font-color02;
+    font-weight: 600;
+  }
 }
-
-.news-topic__title h4 {
-  font-size: 2rem;
-  line-height: calc(33 / 20);
-  color: $font-color02;
-  font-weight: 600;
-}
-
 
 // =====================================
 // footer
