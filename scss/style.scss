@@ -814,6 +814,7 @@ h4 {
 
   @media (max-width: 767px) {
     flex-direction: column;
+    row-gap: 5rem;
   }
 }
 
@@ -857,7 +858,6 @@ h4 {
 
   @media (max-width: 767px) {
     padding: 3rem 2rem 1.3rem 2rem;
-    column-gap: 1.9rem;
   }
 }
 
@@ -866,10 +866,9 @@ h4 {
 }
 
 .news__items article {
- position: relative;
-}
-
-.news__items article::after {
+  position: relative;
+  
+  &::after {
   content: "";
   position: absolute;
   left: 2rem;
@@ -877,6 +876,11 @@ h4 {
   bottom: 0;
   height: 0.1rem;
   background-color: $border-color-green;
+}
+
+&:last-child::after {
+  content: none;
+}
 }
 
 .news-item__date {
@@ -904,6 +908,11 @@ h4 {
   
   a {
     display: inline-block;
+    transition: opacity 0.3s ease;
+
+    &:hover img {
+      opacity: 0.6;
+    }
   }
 
   img {
