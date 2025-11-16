@@ -1102,3 +1102,17 @@ h4 {
     visibility: visible;
   }
 }
+
+/* --------------------------
+   フェードアップ共通設定
+--------------------------- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+//表示時のクラス
+.fade-up.on {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1206,4 +1206,21 @@ h4 {
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
+}
+
+/* --------------------------
+   フェードアップ共通設定
+--------------------------- */
+.fade-up {
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.on {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */

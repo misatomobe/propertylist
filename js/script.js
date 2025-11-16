@@ -29,3 +29,23 @@ window.addEventListener('scroll', () => {
 	}
 });
 
+// ==============================
+// スクロールアニメーション
+// ==============================
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeUps = document.querySelectorAll(".fade-up");
+
+  const options = {
+    threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("on");
+      }
+    });
+  }, options);
+
+  fadeUps.forEach(el => observer.observe(el));
+});
