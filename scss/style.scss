@@ -63,10 +63,6 @@ img {
 .inner {
   max-width: 920px;
   margin: 0 auto;
-  
-  @media (max-width: 767px) {
-    padding: 0 2rem;
-  }
 }
 
 
@@ -818,14 +814,13 @@ h4 {
 
   @media (max-width: 767px) {
     flex-direction: column;
-    row-gap: 5rem;
   }
 }
 
 // 個々のボックス設定
 &__topic {
   width: 430px;
-  height: 383px;
+  min-height: 383px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -840,7 +835,7 @@ h4 {
 
 .news-topic__title {
   background-color: $main-color;
-  height: 5rem;
+  min-height: 5rem;
   padding-left: 2rem;
   align-items: center;
   display: flex;
@@ -856,12 +851,13 @@ h4 {
 .news-item {
   display: flex;
   align-items: center;
-  padding: 2rem;
   column-gap: calc(70 / 430 * 100%);
   transition: opacity 0.4s ease;
+  padding: 2rem 2rem 1.3rem 2rem;
 
   @media (max-width: 767px) {
     padding: 3rem 2rem 1.3rem 2rem;
+    column-gap: 1.9rem;
   }
 }
 
@@ -883,12 +879,38 @@ h4 {
   background-color: $border-color-green;
 }
 
+.news-item__date {
+  width: 5.3rem;
+}
+
 .news-item__date time {
   font-size: 1.6rem;
   line-height: calc( 33 / 16);
   font-weight: 500;
 }
 
+.news-item__title {
+  font-size: 1.8rem;
+  line-height: calc( 25 / 18);
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.news-item__link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1.7rem 2rem 2rem 0;
+  
+  a {
+    display: inline-block;
+  }
+
+  img {
+    width: 8rem;
+    height: auto;
+  }
+}
 
 // =====================================
 // footer
