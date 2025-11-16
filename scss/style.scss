@@ -1086,6 +1086,13 @@ h4 {
     display: block;
   }
 
+  @media (max-width: 767px) {
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
   &:hover {
     opacity: 1;
   }

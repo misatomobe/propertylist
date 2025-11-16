@@ -1192,6 +1192,14 @@ h4 {
   height: auto;
   display: block;
 }
+@media (max-width: 767px) {
+  .back-to-top {
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
 .back-to-top:hover {
   opacity: 1;
 }
