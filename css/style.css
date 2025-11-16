@@ -1159,4 +1159,43 @@ h4 {
   .footer__copyright p {
     line-height: 1.25;
   }
+}
+
+.back-to-top {
+  position: fixed;
+  right: 6rem;
+  bottom: 6rem;
+  width: 6.8rem;
+  height: 6.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.back-to-top img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.back-to-top:hover {
+  opacity: 1;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */

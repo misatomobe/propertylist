@@ -1058,3 +1058,40 @@ h4 {
   }
 }
 }
+
+// =====================================
+// back-to-top button
+// =====================================
+.back-to-top {
+  position: fixed;
+  right: 6rem;
+  bottom: 6rem;
+  width: 6.8rem;
+  height: 6.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
