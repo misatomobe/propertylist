@@ -32,6 +32,9 @@ window.addEventListener('scroll', () => {
 // ==============================
 // スクロールアニメーション
 // ==============================
+// ==============================
+// スクロールアニメーション（何度でも再生）
+// ==============================
 document.addEventListener("DOMContentLoaded", () => {
   const fadeUps = document.querySelectorAll(".fade-up");
 
@@ -42,7 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        // 画面に入ったら ON
         entry.target.classList.add("on");
+      } else {
+        // 画面外に出たら OFF
+        entry.target.classList.remove("on");
       }
     });
   }, options);

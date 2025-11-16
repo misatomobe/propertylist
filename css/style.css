@@ -96,6 +96,10 @@ button:hover {
   }
 }
 
+a {
+  cursor: pointer;
+}
+
 .common-title {
   text-align: center;
 }
@@ -254,7 +258,6 @@ h4 {
           justify-content: center;
   color: #fff;
   text-decoration: none;
-  cursor: pointer;
   -webkit-transition: opacity 0.4s ease, color 0.4s ease;
   transition: opacity 0.4s ease, color 0.4s ease;
 }
@@ -691,7 +694,6 @@ h4 {
   display: block;
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
 }
 .works-item__link:hover .works-item__image img {
   opacity: 0.8;
@@ -801,7 +803,6 @@ h4 {
   font-size: 2rem;
   line-height: 1;
   color: #000;
-  cursor: pointer;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -1169,7 +1170,6 @@ h4 {
   height: 6.8rem;
   background: none;
   border: none;
-  cursor: pointer;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
@@ -1215,8 +1215,8 @@ h4 {
   opacity: 0;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
-  -webkit-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out;
+  -webkit-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
 }
 
 .fade-up.on {
