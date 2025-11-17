@@ -941,13 +941,88 @@ h4 {
 // company
 // =====================================
 .company {
-  padding: 8rem;
+  padding: 8rem 3rem;
 }
 
 @media (max-width: 767px) {
   .company {
     padding: 5rem 3rem;
   }
+}
+
+// =====================================
+// contact
+// =====================================
+.contact {
+  padding: 8rem;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 5rem 3rem;
+  }
+}
+
+.contact__contents {
+  margin-top: 3.5rem;
+} 
+
+.contact__text p {
+  font-size: 2rem;
+  line-height: calc(30 / 20);
+  font-weight: 500;
+}
+
+form {
+  margin-top: 7rem;
+}
+
+@media (max-width: 767px) {
+  form {
+    margin-top: 4rem;
+  }
+}
+
+.form-area {
+  display: flex;
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .form-area {
+    flex-direction: column;
+    row-gap: 3rem;
+    margin-top: 0;
+  }
+}
+
+.form-area dt {
+  width: 15rem;
+  height: 3.3rem;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  line-height: calc(33 / 20);
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .form-area dt {
+    width: 100%;
+    height: initial;
+  }
+}
+
+.form-area dd {
+  flex: 1;
+}
+
+.form-control {
+  width: 100%;
+  height: 5rem;
+  background: $font-color02;
+  padding: 0 2rem;
+  display: block;
 }
 
 

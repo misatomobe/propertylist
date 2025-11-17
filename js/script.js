@@ -38,21 +38,22 @@ window.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", () => {
   const fadeUps = document.querySelectorAll(".fade-up");
 
-  const options = {
-    threshold: 0.2
-  };
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("on");
+        } else {
+          entry.target.classList.remove("on");
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "0px 0px -10% 0px"
+    }
+  );
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // 画面に入ったら ON
-        entry.target.classList.add("on");
-      } else {
-        // 画面外に出たら OFF
-        entry.target.classList.remove("on");
-      }
-    });
-  }, options);
-
-  fadeUps.forEach(el => observer.observe(el));
+  fadeUps.forEach((el) => observer.observe(el));
 });

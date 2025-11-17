@@ -1028,7 +1028,7 @@ h4 {
 }
 
 .company {
-  padding: 8rem;
+  padding: 8rem 3rem;
 }
 
 @media (max-width: 767px) {
@@ -1036,6 +1036,85 @@ h4 {
     padding: 5rem 3rem;
   }
 }
+.contact {
+  padding: 8rem;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 5rem 3rem;
+  }
+}
+.contact__contents {
+  margin-top: 3.5rem;
+}
+
+.contact__text p {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+form {
+  margin-top: 7rem;
+}
+
+@media (max-width: 767px) {
+  form {
+    margin-top: 4rem;
+  }
+}
+.form-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .form-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 3rem;
+    margin-top: 0;
+  }
+}
+.form-area dt {
+  width: 15rem;
+  height: 3.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  line-height: 1.65;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .form-area dt {
+    width: 100%;
+    height: initial;
+  }
+}
+.form-area dd {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.form-control {
+  width: 100%;
+  height: 5rem;
+  background: #fff;
+  padding: 0 2rem;
+  display: block;
+}
+
 .footer__contents {
   background-color: #fff;
   display: -webkit-box;
