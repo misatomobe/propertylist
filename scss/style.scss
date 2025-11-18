@@ -975,10 +975,8 @@ h4 {
 
 form {
   margin-top: 7rem;
-}
 
-@media (max-width: 767px) {
-  form {
+  @media (max-width: 767px) {
     margin-top: 4rem;
   }
 }
@@ -986,13 +984,10 @@ form {
 .form-area {
   display: flex;
   margin-top: 0;
-}
 
-@media (max-width: 767px) {
-  .form-area {
+  @media (max-width: 767px)  {
     flex-direction: column;
     row-gap: 3rem;
-    margin-top: 0;
   }
 }
 
@@ -1004,12 +999,10 @@ form {
   font-size: 2rem;
   line-height: calc(33 / 20);
   font-weight: bold;
-}
 
-@media (max-width: 767px) {
-  .form-area dt {
+  @media (max-width: 767px) {
     width: 100%;
-    height: initial;
+    height: auto;
   }
 }
 
@@ -1017,13 +1010,71 @@ form {
   flex: 1;
 }
 
-.form-control {
+// --------------------------------------------------
+// 性別（ラジオボタン）横並び
+// --------------------------------------------------
+.form-area:nth-of-type(2) dd {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+// --------------------------------------------------
+// 各フォーム入力のスタイル
+// --------------------------------------------------
+
+//テキスト・メール・テキストエリアなど 
+input[type="text"].form-control,
+input[type="mail"].form-control,
+textarea.form-control {
   width: 100%;
   height: 5rem;
   background: $font-color02;
   padding: 0 2rem;
   display: block;
 }
+
+//ラジオボタン全体
+.radioitem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: calc( 33 / 16);
+  cursor: pointer;
+}
+
+.radioitem:not(:last-of-type) {
+  margin-right: 7.4rem;
+}
+
+// 丸型ラジオボタン
+.radiobutton {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $font-color02;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+// チェックされたときの丸
+.radiobutton:checked::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: $font-color;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 
 
