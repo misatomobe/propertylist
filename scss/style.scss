@@ -991,6 +991,20 @@ form {
   }
 }
 
+.form-area:not(:first-of-type),
+.qa-list,
+.check-area {
+  margin-top: 5.4rem;
+}
+
+@media (max-width: 767px) {
+  .form-area:not(:first-of-type),
+  .qa-list,
+  .check-area {
+    margin-top: 3rem;
+  }
+}
+
 .form-area dt {
   width: 15rem;
   height: 3.3rem;
@@ -1008,6 +1022,14 @@ form {
 
 .form-area dd {
   flex: 1;
+}
+
+.form-control {
+  max-width: 100%;
+  height: 5rem;
+  background: $font-color02;
+  padding: 1.3rem 0 1.2rem 2rem;
+  display: block;
 }
 
 // --------------------------------------------------
@@ -1039,9 +1061,9 @@ textarea.form-control {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 500;
-  line-height: calc( 33 / 16);
+  line-height: calc(25 / 18);
   cursor: pointer;
 }
 
@@ -1065,8 +1087,8 @@ textarea.form-control {
 .radiobutton:checked::before {
   content: "";
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 5px;
+  height: 5px;
   background-color: $font-color;
   border-radius: 50%;
   position: absolute;
