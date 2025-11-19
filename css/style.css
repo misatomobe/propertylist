@@ -1076,7 +1076,7 @@ form {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 0.2rem;
   }
 }
 
@@ -1117,6 +1117,10 @@ form {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.form-area dd .form-control {
+  width: 100%;
 }
 
 .form-control {
