@@ -1221,6 +1221,55 @@ textarea.form-control {
           transform: translate(-50%, -50%);
 }
 
+.privacy-area {
+  display: block;
+}
+
+.privacy-area dt,
+.privacy-area dd {
+  display: block;
+  width: 100%;
+}
+
+.privacy-area dt {
+  margin-bottom: 1rem;
+}
+
+.privacy-box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 80rem;
+  width: 100%;
+  height: 30rem;
+  overflow-y: scroll;
+  background-color: #fff;
+  padding: 4rem 6rem 4rem 4rem;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #e5e5e5;
+}
+.privacy-box::-webkit-scrollbar {
+  width: 8px;
+}
+.privacy-box::-webkit-scrollbar-track {
+  background: #e5e5e5;
+  border-radius: 10px;
+}
+.privacy-box::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.privacy-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 767px) {
+  .privacy-box {
+    max-width: 100%;
+    width: 100%;
+    height: 32.3;
+    padding: 3rem 5rem 3rem 3rem;
+  }
+}
 .footer__contents {
   background-color: #fff;
   display: -webkit-box;
