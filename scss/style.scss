@@ -1220,6 +1220,37 @@ textarea.form-control {
   border: 0.1rem solid $main-color;
 }
 
+// 内容
+textarea.form-control.form-textarea {
+  width: 80rem;
+  height: 20rem;
+  box-sizing: border-box;
+  padding: 1.3rem 2rem;
+}
+
+@media (max-width: 767px) {
+  textarea.form-control.form-textarea {
+    width: 100%;
+  }
+}
+
+.message-area {
+  display: block;
+}
+
+// プライバシーボックス
+.message-area dt,
+.message-area dd {
+  display: block;
+  width: 100%;
+}
+
+.message-area dt {
+  margin-bottom: 1rem;
+}
+
+
+
 // =====================================
 // footer
 // =====================================

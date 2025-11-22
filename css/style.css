@@ -1335,6 +1335,33 @@ textarea.form-control {
   border: 0.1rem solid #4D9600;
 }
 
+textarea.form-control.form-textarea {
+  width: 80rem;
+  height: 20rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.3rem 2rem;
+}
+
+@media (max-width: 767px) {
+  textarea.form-control.form-textarea {
+    width: 100%;
+  }
+}
+.message-area {
+  display: block;
+}
+
+.message-area dt,
+.message-area dd {
+  display: block;
+  width: 100%;
+}
+
+.message-area dt {
+  margin-bottom: 1rem;
+}
+
 .footer__contents {
   background-color: #fff;
   display: -webkit-box;
