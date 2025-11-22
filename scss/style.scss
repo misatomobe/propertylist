@@ -1249,6 +1249,41 @@ textarea.form-control.form-textarea {
   margin-bottom: 1rem;
 }
 
+// 角型ラジオボタン
+.checkboxItem {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  font-size: 1.8rem;
+  line-height: calc(25 / 18);
+  font-weight: 500;
+}
+
+.checkboxItem:not(:last-of-type) {
+  margin-right: 7rem;
+}
+
+.checkbox {
+  appearance: none;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  background-color: $font-color02;
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.3rem;
+  width: 1.2rem;
+  height: 0.6rem;
+  border-bottom: 0.2rem solid $font-color02;
+  border-left: 0.2rem solid $font-color02;
+  transform: rotate(-45deg);
+
+}
 
 
 // =====================================
