@@ -1440,6 +1440,17 @@ textarea.form-control.form-textarea {
     row-gap: 1rem;
   }
 }
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
+}
+
+.accordion__content.is-open {
+  max-height: 200px;
+}
+
 .footer__contents {
   background-color: #fff;
   display: -webkit-box;

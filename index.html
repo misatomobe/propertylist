@@ -491,11 +491,17 @@
                                     </dd>
                                 </dl>
                                 <dl class="qa-list accordion">
-                                    <dt class="qa-title accordion__title">問い合わせ種別</dt>
+                                    <dt class="qa-title accordion__title js-accordion-title">問い合わせ種別</dt>
                                     <dd class="qa-text accordion__content">
-                                        <label><input type="radio" name="inquiry-type" value="資料請求"> 資料請求</label><br>
-                                        <label><input type="radio" name="inquiry-type" value="モデルハウス見学"> モデルハウス見学</label><br>
-                                        <label><input type="radio" name="inquiry-type" value="設計・見積り相談"> 設計・見積り相談</label>
+                                        <label class="accordion-trigger">
+                                            <input type="radio" name="request" value="資料請求"> 資料請求
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="request" value="モデルハウス見学"> モデルハウス見学
+                                        </label><br>
+                                        <label>
+                                            <input type="radio" name="request" value="設計・見積り相談"> 設計・見積り相談
+                                        </label>
                                     </dd>
                                 </dl>
                                 <!-- 内容 -->
@@ -678,5 +684,6 @@
 
     <!-- ↑container↑ -->    
     </div>
+    <script src="./js/accordion.js"></script>
 </body>
 </html>
