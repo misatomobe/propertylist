@@ -1318,18 +1318,34 @@ textarea.form-control.form-textarea {
   }
 }
 
-// アコーディオンメニュー
-.accordion__content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .4s ease;
+//セレクトメニュー
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    appearance: none;
+    border: 0.1rem solid $border-color-grey;
+    border-radius: 0.4rem;
+    background-color: $font-color02;
+  }
+
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none; // クリックをselectに通す
+    img {
+      width: 1.5rem;
+      height: auto;
+    }
+  }
 }
-
-.accordion__content.is-open {
-  max-height: 200px;
-}
-
-
 
 // =====================================
 // footer

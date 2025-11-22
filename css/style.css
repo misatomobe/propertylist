@@ -1440,15 +1440,33 @@ textarea.form-control.form-textarea {
     row-gap: 1rem;
   }
 }
-.accordion__content {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.4s ease;
-  transition: max-height 0.4s ease;
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
-
-.accordion__content.is-open {
-  max-height: 200px;
+.custom-select select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0.1rem solid #505050;
+  border-radius: 0.4rem;
+  background-color: #fff;
+}
+.custom-select .select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+.custom-select .select-arrow img {
+  width: 1.5rem;
+  height: auto;
 }
 
 .footer__contents {

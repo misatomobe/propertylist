@@ -490,18 +490,21 @@
                                         <input type="email" name="your-email" id="your-email" class="form-control" placeholder="例：aaaaaaaa@gmail.com">
                                     </dd>
                                 </dl>
-                                <dl class="qa-list accordion">
-                                    <dt class="qa-title accordion__title js-accordion-title">問い合わせ種別</dt>
-                                    <dd class="qa-text accordion__content">
-                                        <label class="accordion-trigger">
-                                            <input type="radio" name="request" value="資料請求"> 資料請求
-                                        </label><br>
-                                        <label>
-                                            <input type="radio" name="request" value="モデルハウス見学"> モデルハウス見学
-                                        </label><br>
-                                        <label>
-                                            <input type="radio" name="request" value="設計・見積り相談"> 設計・見積り相談
-                                        </label>
+                                <dl class="qa-list">
+                                    <dt>
+                                        問い合わせ種別
+                                    </dt>
+                                    <div>
+                                        <select name="request" id="request">
+                                            <option value="家づくりについて">家づくりについて</option>
+                                            <option value="資料請求">資料請求</option>
+                                            <option value="モデルハウス見学">モデルハウス見学</option>
+                                            <option value="設計・見積り相談">設計・見積り相談</option>
+                                        </select>
+                                        <span class="select-arrow">
+                                            <img src="/images/accordion.svg" alt="矢印">
+                                        </span>    
+                                    </div>
                                     </dd>
                                 </dl>
                                 <!-- 内容 -->
@@ -684,6 +687,5 @@
 
     <!-- ↑container↑ -->    
     </div>
-    <script src="./js/accordion.js"></script>
 </body>
 </html>
