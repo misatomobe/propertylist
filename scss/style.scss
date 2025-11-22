@@ -1175,15 +1175,16 @@ textarea.form-control {
   }
 }
 
-form-submit-area {
+.form-submit-area {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
+  margin-top: 8rem;
 }
 
 @media (max-width: 767px) {
   .form-submit-area {
-    margin-top: 5.1rem;
+    margin-top: 5rem;
   }
 }
 
@@ -1198,7 +1199,6 @@ form-submit-area {
   line-height: calc(33 / 20);
   color: #fff;
   font-weight: 500;
-  cursor: pointer;
   transition: background-color 0.4s ease, color 0.4s ease;
   text-align: center;
   padding-bottom: 0.1rem;
@@ -1217,7 +1217,7 @@ form-submit-area {
 .form-submit:hover {
   background: $font-color02;
   color: $main-color;
-  border: $main-color;
+  border: 0.1rem solid $main-color;
 }
 
 // =====================================

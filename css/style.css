@@ -1281,7 +1281,7 @@ textarea.form-control {
     line-height: 2.0625;
   }
 }
-form-submit-area {
+.form-submit-area {
   margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1289,11 +1289,12 @@ form-submit-area {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 8rem;
 }
 
 @media (max-width: 767px) {
   .form-submit-area {
-    margin-top: 5.1rem;
+    margin-top: 5rem;
   }
 }
 .form-submit {
@@ -1313,7 +1314,6 @@ form-submit-area {
   line-height: 1.65;
   color: #fff;
   font-weight: 500;
-  cursor: pointer;
   -webkit-transition: background-color 0.4s ease, color 0.4s ease;
   transition: background-color 0.4s ease, color 0.4s ease;
   text-align: center;
@@ -1332,7 +1332,7 @@ form-submit-area {
 .form-submit:hover {
   background: #fff;
   color: #4D9600;
-  border: #4D9600;
+  border: 0.1rem solid #4D9600;
 }
 
 .footer__contents {
