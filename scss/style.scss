@@ -9,6 +9,8 @@ $font-sans: "Yu Mincho", "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hirag
 $main-color: #4D9600;
 $border-color-green: #55A500;
 $border-color-grey: #505050;
+$scrollbar-color01: #9B9B9B; // つまみ
+$scrollbar-color02: #E3E3E3; // 背景（トラック）
 
 // =====================================
 // base
@@ -1129,29 +1131,28 @@ textarea.form-control {
   height: 30rem;
   overflow-y: scroll;
   background-color: $font-color02;
-  padding: 4rem 6rem 4rem 4rem;
+  padding: 4rem 5rem 4rem 4rem;
 
   // スクロールバー
   scrollbar-width: thin;
-  scrollbar-color: #888 #e5e5e5;
+  scrollbar-color: $scrollbar-color01 $scrollbar-color02;
 
   // Chrome / Edge / Safari
   &::-webkit-scrollbar {
-    width: 8px;
+    width: 1rem;
   }
 
   &::-webkit-scrollbar-track {
-    background: #e5e5e5;
-    border-radius: 10px;
+    background: $scrollbar-color02;
+    border-radius: 1rem;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+    background: $scrollbar-color01;
   }
 
     &::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: darken($scrollbar-color01, 15%);
   } 
 }
 

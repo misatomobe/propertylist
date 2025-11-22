@@ -1243,23 +1243,22 @@ textarea.form-control {
   height: 30rem;
   overflow-y: scroll;
   background-color: #fff;
-  padding: 4rem 6rem 4rem 4rem;
+  padding: 4rem 5rem 4rem 4rem;
   scrollbar-width: thin;
-  scrollbar-color: #888 #e5e5e5;
+  scrollbar-color: #9B9B9B #E3E3E3;
 }
 .privacy-box::-webkit-scrollbar {
-  width: 8px;
+  width: 1rem;
 }
 .privacy-box::-webkit-scrollbar-track {
-  background: #e5e5e5;
-  border-radius: 10px;
+  background: #E3E3E3;
+  border-radius: 1rem;
 }
 .privacy-box::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
+  background: #9B9B9B;
 }
 .privacy-box::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgb(116.75, 116.75, 116.75);
 }
 
 @media (max-width: 767px) {
