@@ -1329,11 +1329,10 @@ textarea.form-control.form-textarea {
     -moz-appearance: none;
     appearance: none;
     width: 100%;
-    padding: 1rem 3rem 1rem 1rem;
-    font-size: 1.6rem;
+    padding: 1rem 3rem 1rem 2rem;
+    font-size: 1.8rem;
+    line-height: calc(25 / 18);
     appearance: none;
-    border: 0.1rem solid $border-color-grey;
-    border-radius: 0.4rem;
     background-color: $font-color02;
   }
 
@@ -1342,6 +1341,14 @@ textarea.form-control.form-textarea {
    content: "";
    position: absolute;
    top:50%;
+   right: 1rem;
+   transform: translateY(-50%);
+   width: 2rem;
+   height: 2rem;
+   background-image: url('../images/select-btn.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+   pointer-events: none;
   }
   
   .select-arrow {

@@ -1446,15 +1446,29 @@ textarea.form-control.form-textarea {
   width: 100%;
 }
 .custom-select select {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.6rem;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: 0.1rem solid #505050;
-  border-radius: 0.4rem;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: 1rem 3rem 1rem 2rem;
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
+  appearance: none;
   background-color: #fff;
+}
+.custom-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../images/select-btn.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 .custom-select .select-arrow {
   position: absolute;
