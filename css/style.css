@@ -1465,7 +1465,7 @@ textarea.form-control.form-textarea {
   pointer-events: none;
 }
 .custom-select .select-arrow img {
-  width: 1.5rem;
+  width: 0.15rem;
   height: auto;
 }
 
