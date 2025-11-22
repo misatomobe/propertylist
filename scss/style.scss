@@ -1325,19 +1325,29 @@ textarea.form-control.form-textarea {
   width: 100%;
 
   select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 3rem 1rem 1rem;
     font-size: 1.6rem;
     appearance: none;
     border: 0.1rem solid $border-color-grey;
     border-radius: 0.4rem;
     background-color: $font-color02;
   }
+
+  // 開閉アイコン
+  &::after {
+   content: "";
+   position: absolute;
+   top:50%;
+  }
   
   .select-arrow {
     position: absolute;
     top: 50%;
-    right: 1rem;
+    right: 1rem ;
     transform: translateY(-50%);
     pointer-events: none; // クリックをselectに通す
     
