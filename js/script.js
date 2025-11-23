@@ -57,3 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeUps.forEach((el) => observer.observe(el));
 });
+
+// ▼ セレクトバーの矢印アイコン回転
+document.querySelectorAll('.custom-select select').forEach(select => {
+  select.addEventListener('click', () => {
+    select.parentElement.classList.toggle('open');
+  });
+});

@@ -1334,9 +1334,7 @@ textarea.form-control.form-textarea {
     padding: 1.4rem 2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
-    appearance: none;
     background-color: $font-color02;
-    align-items: center;
   }
 
   // 開閉アイコン
@@ -1346,14 +1344,20 @@ textarea.form-control.form-textarea {
    top:50%;
    right: 1rem;
    transform: translateY(-50%);
-   width: 2rem;
-   height: 2rem;
+   width: 1.6rem;
+   height: 1.6rem;
    background-image: url('../images/select-btn.svg');
    background-size: contain;
    background-repeat: no-repeat;
    pointer-events: none;
+   transition: transform 0.3s ease;
   }
-  
+
+  // ▼ open時に回転
+  &.open::after {
+    transform: translateY(-50%) rotate(180deg);
+  } 
+
   .select-arrow {
     position: absolute;
     top: 50%;

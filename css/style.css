@@ -1456,11 +1456,7 @@ textarea.form-control.form-textarea {
   padding: 1.4rem 2rem;
   font-size: 1.8rem;
   line-height: 1.3888888889;
-  appearance: none;
   background-color: #fff;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .custom-select::after {
   content: "";
@@ -1469,12 +1465,20 @@ textarea.form-control.form-textarea {
   right: 1rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   background-image: url("../images/select-btn.svg");
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.custom-select.open::after {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
 }
 .custom-select .select-arrow {
   position: absolute;
