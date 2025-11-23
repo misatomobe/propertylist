@@ -1093,7 +1093,7 @@ form {
     margin-top: 3rem;
   }
 }
-.form-area dt {
+.form-area .qa-list dt {
   width: 15rem;
   height: 3.3rem;
   display: -webkit-box;
@@ -1107,7 +1107,7 @@ form {
   font-weight: bold;
 }
 @media (max-width: 767px) {
-  .form-area dt {
+  .form-area .qa-list dt {
     width: 100%;
     height: auto;
   }
@@ -1450,11 +1450,14 @@ textarea.form-control.form-textarea {
   -moz-appearance: none;
   appearance: none;
   width: 100%;
-  padding: 1rem 3rem 1rem 2rem;
+  padding-left: 2rem;
   font-size: 1.8rem;
   line-height: 1.3888888889;
   appearance: none;
   background-color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .custom-select::after {
   content: "";

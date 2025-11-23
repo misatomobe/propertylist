@@ -1007,7 +1007,7 @@ form {
   }
 }
 
-.form-area dt {
+.form-area .qa-list dt{
   width: 15rem;
   height: 3.3rem;
   display: flex;
@@ -1329,11 +1329,12 @@ textarea.form-control.form-textarea {
     -moz-appearance: none;
     appearance: none;
     width: 100%;
-    padding: 1rem 3rem 1rem 2rem;
+    padding-left: 2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     appearance: none;
     background-color: $font-color02;
+    align-items: center;
   }
 
   // 開閉アイコン
