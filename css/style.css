@@ -1093,8 +1093,9 @@ form {
     margin-top: 3rem;
   }
 }
-.form-area .qa-list dt {
-  width: 15rem;
+.form-area dt,
+.qa-list dt {
+  width: 17rem;
   height: 3.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1105,9 +1106,11 @@ form {
   font-size: 2rem;
   line-height: 1.65;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 @media (max-width: 767px) {
-  .form-area .qa-list dt {
+  .form-area dt,
+  .qa-list dt {
     width: 100%;
     height: auto;
   }
@@ -1450,7 +1453,7 @@ textarea.form-control.form-textarea {
   -moz-appearance: none;
   appearance: none;
   width: 100%;
-  padding-left: 2rem;
+  padding: 1.4rem 2rem;
   font-size: 1.8rem;
   line-height: 1.3888888889;
   appearance: none;

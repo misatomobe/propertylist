@@ -1007,14 +1007,16 @@ form {
   }
 }
 
-.form-area .qa-list dt{
-  width: 15rem;
+.form-area dt,
+.qa-list dt {
+  width: 17rem;
   height: 3.3rem;
   display: flex;
   align-items: center;
   font-size: 2rem;
   line-height: calc(33 / 20);
   font-weight: bold;
+  margin-bottom: 1rem;
 
   @media (max-width: 767px) {
     width: 100%;
@@ -1329,7 +1331,7 @@ textarea.form-control.form-textarea {
     -moz-appearance: none;
     appearance: none;
     width: 100%;
-    padding-left: 2rem;
+    padding: 1.4rem 2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     appearance: none;
