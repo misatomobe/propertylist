@@ -550,6 +550,7 @@ h4 {
   column-gap: 2rem;
   margin-bottom: 10rem;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -565,6 +566,7 @@ h4 {
     aspect-ratio: 2 / 1; // ボックスの基準にする
     overflow: hidden;
     
+    
     @media (max-width: 767px) {
       width: 100%;
       max-width: 315px;
@@ -573,23 +575,23 @@ h4 {
     
     img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
+      object-fit: cover;
     }
   }
   
   // 写真キャプション
   &__text01 {
-    position: absolute;
-    left: 1rem;
-    bottom: 1rem;
-    z-index: 3;
+    position: static;
+    margin-top: 1.2rem;
+    text-align: left;
     
     p {
       color: $font-color;
       font-size: 1.6rem;
       line-height: calc(25 /16);
+      margin: 0;
     }
     
     @media (max-width: 767px) {
@@ -603,9 +605,10 @@ h4 {
 // 緑のボックス（テキスト）
 &__text02 {
   position: absolute;
-  right: 0;           // 親の右端
-  bottom: 0;          // 親の下端
+  right: -20px;           // 親の右端
+  bottom: -100px;          // 親の下端
   width: 500px;         // 親幅に対する割合
+  height: 250px;
   aspect-ratio: 2 / 1; // 高さは幅に応じて自動
   background-color: $main-color;
   color: $font-color02;
