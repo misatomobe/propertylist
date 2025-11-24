@@ -551,27 +551,36 @@ h4 {
   margin-bottom: 10rem;
   flex-wrap: wrap;
   align-items: flex-start;
+  flex-direction: column;
 
+  // PCサイズ（横並び）
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  // SPサイズ（縦並び）
   @media (max-width: 767px) {
     flex-direction: column;
     align-items: center;
   }
-  
-   // 写真
-  &__image {
-    position: relative;
-    z-index: 2;       // 前面
-    width: 55%;       // PC時は親幅の55%
-    max-width: 600px; // PC用の最大幅
-    aspect-ratio: 2 / 1; // ボックスの基準にする
-    overflow: hidden;
-    
-    
+
+  //写真とキャプションのラッパー
+  &__image-wrapper {
+    width: 55%;
+    max-width: 600px;
+
     @media (max-width: 767px) {
       width: 100%;
       max-width: 315px;
-      aspect-ratio: 315 / 220;
     }
+  } 
+  
+   // 写真
+  &__image {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    overflow: hidden;
     
     img {
       width: 100%;
@@ -583,24 +592,16 @@ h4 {
   
   // 写真キャプション
   &__text01 {
-    position: static;
-    margin-top: 1.2rem;
+    margin-top: 2rem;
     text-align: left;
     
     p {
+      margin: 0;
       color: $font-color;
       font-size: 1.6rem;
       line-height: calc(25 /16);
-      margin: 0;
     }
-    
-    @media (max-width: 767px) {
-    position: static;
-    margin-top: 1rem;
-    text-align: left;
-    width: 100%;
   }
-}
 
 // 緑のボックス（テキスト）
 &__text02 {
@@ -616,17 +617,6 @@ h4 {
   font-weight: 400;
   z-index: 1;  // 背面
   
-  h3 {
-    font-size: 2.5rem;
-    line-height: calc(33 / 25);
-    margin-bottom: 1.7rem;
-  }
-
-  p {
-    font-size: 1.6rem;
-    line-height: calc(25 / 16);
-  }
-
   @media (max-width: 767px) {
     position: static;
     width: 100%;
@@ -637,6 +627,17 @@ h4 {
     padding: 2rem;
     z-index: auto;
     text-align: left;
+  }
+  
+  h3 {
+    font-size: 2.5rem;
+    line-height: calc(33 / 25);
+    margin-bottom: 1.7rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
   }
 }
 }
