@@ -550,97 +550,95 @@ h4 {
   column-gap: 2rem;
   margin-bottom: 10rem;
   flex-wrap: wrap;
-  align-items: flex-start;
   flex-direction: column;
 
-  // PCサイズ（横並び）
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
   }
 
-  // SPサイズ（縦並び）
   @media (max-width: 767px) {
     flex-direction: column;
     align-items: center;
   }
 
-  //写真とキャプションのラッパー
+  // 画像ラッパー
   &__image-wrapper {
     width: 55%;
     max-width: 600px;
+    position: relative; // 緑ボックスの絶対配置の基準
+    z-index: 1;
 
     @media (max-width: 767px) {
       width: 100%;
       max-width: 315px;
     }
-  } 
-  
-   // 写真
-  &__image {
-    width: 100%;
-    aspect-ratio: 2 / 1;
-    overflow: hidden;
-    
-    img {
+
+    &__image {
       width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
+      aspect-ratio: 2 / 1;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
     }
   }
-  
-  // 写真キャプション
+
+  // キャプション（画像下）
   &__text01 {
-    margin-top: 2rem;
+    position: static;
+    margin-top: 1rem;
     text-align: left;
-    
+    z-index: 3;
+
     p {
       margin: 0;
       color: $font-color;
       font-size: 1.6rem;
-      line-height: calc(25 /16);
+      line-height: calc(25 / 16);
     }
   }
 
-// 緑のボックス（テキスト）
-&__text02 {
-  position: absolute;
-  right: -20px;           // 親の右端
-  bottom: -100px;          // 親の下端
-  width: 500px;         // 親幅に対する割合
-  height: 250px;
-  aspect-ratio: 2 / 1; // 高さは幅に応じて自動
-  background-color: $main-color;
-  color: $font-color02;
-  padding: 2rem;
-  font-weight: 400;
-  z-index: 1;  // 背面
-  
-  @media (max-width: 767px) {
-    position: static;
-    width: 100%;
-    max-width: 315px;
-    aspect-ratio: 315 /146;
-    margin-top: 1.5rem;
-    height: auto;
+  // 緑のボックス（画像右下に重ねる）
+  &__text02 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+    height: 250px;
+    background-color: $main-color;
+    color: $font-color02;
     padding: 2rem;
-    z-index: auto;
-    text-align: left;
-  }
-  
-  h3 {
-    font-size: 2.5rem;
-    line-height: calc(33 / 25);
-    margin-bottom: 1.7rem;
-  }
+    z-index: 0;
 
-  p {
-    font-size: 1.6rem;
-    line-height: calc(25 / 16);
+    @media (max-width: 767px) {
+      position: static;
+      width: 100%;
+      max-width: 315px;
+      height: auto;
+      margin-top: 1.5rem;
+      padding: 2rem;
+      z-index: auto;
+      text-align: left;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      line-height: calc(33 / 25);
+      margin-bottom: 1.7rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: calc(25 / 16);
+    }
   }
-}
-}
 }
 
 // =====================================

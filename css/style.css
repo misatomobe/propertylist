@@ -599,6 +599,7 @@ h4 {
 .service__item__image-wrapper {
   width: 55%;
   max-width: 600px;
+  position: relative;
 }
 @media (max-width: 767px) {
   .service__item__image-wrapper {
@@ -606,12 +607,14 @@ h4 {
     max-width: 315px;
   }
 }
-.service__item__image {
+.service__item__image-wrapper__image {
   width: 100%;
   aspect-ratio: 2/1;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
-.service__item__image img {
+.service__item__image-wrapper__image img {
   width: 100%;
   height: auto;
   display: block;
@@ -619,8 +622,10 @@ h4 {
      object-fit: cover;
 }
 .service__item__text01 {
-  margin-top: 2rem;
+  position: static;
+  margin-top: 2.4rem;
   text-align: left;
+  z-index: 3;
 }
 .service__item__text01 p {
   margin: 0;
@@ -630,8 +635,8 @@ h4 {
 }
 .service__item__text02 {
   position: absolute;
-  right: -20px;
-  bottom: -100px;
+  right: 0;
+  bottom: -50px;
   width: 500px;
   height: 250px;
   aspect-ratio: 2/1;
@@ -639,7 +644,7 @@ h4 {
   color: #fff;
   padding: 2rem;
   font-weight: 400;
-  z-index: 1;
+  z-index: 0;
 }
 @media (max-width: 767px) {
   .service__item__text02 {
