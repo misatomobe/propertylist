@@ -548,7 +548,7 @@ h4 {
     position: relative;
     display: flex;
     flex-direction: column;
-    z-index: 0; // ← スタッキングコンテキスト
+    z-index: 0;
 
     // 写真・緑ボックスのラッパー
     &__image-wrapper {
@@ -572,9 +572,13 @@ h4 {
       img {
         width: 100%;
         max-width: 600px;
-        height: auto;
+        height: 100%;
         display: block;
         object-fit: cover;
+
+        @media (max-width: 767px) {
+        max-width: 100%;
+        }
       }
     }
 
@@ -631,9 +635,6 @@ h4 {
     }
   }
 }
-
-
-
 
 // =====================================
 // works
@@ -754,6 +755,7 @@ h4 {
     &-img-wrap {
       display: flex;
       justify-content: center;
+
       img {
       width: 42rem;
       height: 22rem;
@@ -1163,7 +1165,8 @@ textarea.form-control {
     border-radius: 1rem;
   }
 
-    &::-webkit-scrollbar-thumb:hover {
+  &::-webkit-scrollbar-thumb:hover {
+    $scrollbar-color01: #9B9B9B;
     background: darken($scrollbar-color01, 15%);
   } 
 }

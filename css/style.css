@@ -591,6 +591,11 @@ h4 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 767px) {
+  .service__item__image img {
+    max-width: 100%;
+  }
+}
 .service__item__text01 {
   margin-top: 2.4rem;
   text-align: left;
