@@ -558,7 +558,6 @@ h4 {
 
       @media (max-width: 767px) {
         width: 100%;
-        max-width: 315px;
       }
     }
 
@@ -623,11 +622,10 @@ h4 {
       @media (max-width: 767px) {
         position: static;
         width: 100%;
-        max-width: 315px;
         height: auto;
         margin-top: 1.5rem;
         padding: 2rem;
-        aspect-ratio: 315 / 171;
+        aspect-ratio: 315 / 146;
         z-index: auto;
       }
     }
