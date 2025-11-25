@@ -528,118 +528,114 @@ h4 {
 
   &__contents {
     margin-top: 6.8rem;
-    
-    @media (max-width: 767px)  {
+
+    @media (max-width: 767px) {
       margin-top: 3.8rem;
     }
   }
 
-&__items {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8rem;
-
-  @media (max-width: 767px) {
-    row-gap: 5rem;
-  }
-}
-
-&__item {
-  position: relative;
-  display: flex;
-  column-gap: 2rem;
-  margin-bottom: 10rem;
-  flex-wrap: wrap;
-  flex-direction: column;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  @media (max-width: 767px) {
+  &__items {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-
-  // 画像ラッパー
-  &__image-wrapper {
-    width: 55%;
-    max-width: 600px;
-    position: relative; // 緑ボックスの絶対配置の基準
-    z-index: 1;
+    row-gap: 12rem;
 
     @media (max-width: 767px) {
-      width: 100%;
-      max-width: 315px;
+      row-gap: 5rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 0; // ← スタッキングコンテキスト
+
+    // 写真・緑ボックスのラッパー
+    &__image-wrapper {
+      width: 55%;
+      max-width: 600px;
+      position: relative;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        max-width: 315px;
+      }
     }
 
+    // 画像
     &__image {
       width: 100%;
       aspect-ratio: 2 / 1;
       overflow: hidden;
       position: relative;
-      z-index: 2;
+      z-index: 2; // 最前面
 
       img {
         width: 100%;
+        max-width: 600px;
         height: auto;
         display: block;
         object-fit: cover;
       }
     }
-  }
 
-  // キャプション（画像下）
-  &__text01 {
-    position: static;
-    margin-top: 1rem;
-    text-align: left;
-    z-index: 3;
-
-    p {
-      margin: 0;
-      color: $font-color;
-      font-size: 1.6rem;
-      line-height: calc(25 / 16);
-    }
-  }
-
-  // 緑のボックス（画像右下に重ねる）
-  &__text02 {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 500px;
-    height: 250px;
-    background-color: $main-color;
-    color: $font-color02;
-    padding: 2rem;
-    z-index: 0;
-
-    @media (max-width: 767px) {
-      position: static;
-      width: 100%;
-      max-width: 315px;
-      height: auto;
-      margin-top: 1.5rem;
-      padding: 2rem;
-      z-index: auto;
+    // 画像下キャプション
+    &__text01 {
+      margin-top: 2.4rem;
       text-align: left;
+      position: relative;
+      z-index: 3;
+
+      p {
+        margin: 0;
+        font-size: 1.6rem;
+        line-height: calc(25 / 16);
+        color: $font-color;
+      }
     }
 
-    h3 {
-      font-size: 2.5rem;
-      line-height: calc(33 / 25);
-      margin-bottom: 1.7rem;
-    }
+    // 緑のボックス
+    &__text02 {
+      position: absolute;
+      right: -410px;  // 必要に応じ調整しやすい位置
+      bottom: -150px;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      padding: 2rem;
+      background-color: $main-color;
+      color: $font-color02;
+      z-index: 1; // ← 背面（画像より下）
+      aspect-ratio: 2 / 1;
 
-    p {
-      font-size: 1.6rem;
-      line-height: calc(25 / 16);
+
+      h3 {
+        font-size: 2.5rem;
+        line-height: calc(33 / 25);
+        margin-bottom: 1.7rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: calc(25 / 16);
+      }
+      
+      @media (max-width: 767px) {
+        position: static;
+        width: 100%;
+        max-width: 315px;
+        height: auto;
+        margin-top: 1.5rem;
+        padding: 2rem;
+        aspect-ratio: 315 / 171;
+        z-index: auto;
+      }
     }
   }
 }
+
+
+
 
 // =====================================
 // works
