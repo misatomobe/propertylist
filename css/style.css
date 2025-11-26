@@ -683,6 +683,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .service__item__text03 h3 {
+    font-size: 2rem;
     /* SPで改行非表示 */
   }
   .service__item__text03 h3 br {

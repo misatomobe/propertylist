@@ -659,13 +659,18 @@ h4 {
   }
 
   @media (max-width: 1030px) {
-    h3 { font-size: 2.3rem; }
+    h3 {
+      font-size: 2.3rem;
+    }
   }
 
   @media (max-width: 767px) {
     h3 {
+      font-size: 2rem;
       /* SPで改行非表示 */
-      br { display: none; }
+      br {
+        display: none;
+      }
     }
   }
 }
