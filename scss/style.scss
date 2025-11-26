@@ -541,11 +541,6 @@ h4 {
   &__items {
     display: flex;
     flex-direction: column;
-    row-gap: 12rem;
-
-    @media (max-width: 767px) {
-      row-gap: 5rem;
-    }
   }
 
   &__item {
@@ -555,6 +550,10 @@ h4 {
     z-index: 0;
     margin-bottom: 8rem;
 
+    @media (max-width: 767px) {
+      margin-bottom: 4rem;
+    }
+
     // 写真・緑ボックスのラッパー
     &__image-wrapper {
       max-width: 65.5%;
@@ -563,7 +562,7 @@ h4 {
 
       @media (max-width: 767px) {
         width: 100%;
-        height: auto;
+        max-width: 100%;
       }
     }
 
@@ -574,6 +573,12 @@ h4 {
       overflow: hidden;
       position: relative;
       z-index: 2; // 最前面
+      
+      @media (max-width: 767px) {
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;   // SPでは比率固定解除
+        }
 
       img {
         width: 100%;
@@ -582,8 +587,9 @@ h4 {
         object-fit: cover;
 
         @media (max-width: 767px) {
-        max-width: 100%;
-        height: auto;
+          width: 100%;
+          height: auto;
+          aspect-ratio: auto;
         }
       }
     }
