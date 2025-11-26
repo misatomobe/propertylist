@@ -565,15 +565,17 @@ h4 {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 0;
+  margin-bottom: 8rem;
 }
 .service__item__image-wrapper {
-  width: 55%;
-  max-width: 600px;
+  max-width: 65.5%;
+  height: auto;
   position: relative;
 }
 @media (max-width: 767px) {
   .service__item__image-wrapper {
     width: 100%;
+    height: auto;
   }
 }
 .service__item__image {
@@ -585,8 +587,7 @@ h4 {
 }
 .service__item__image img {
   width: 100%;
-  max-width: 600px;
-  height: 100%;
+  height: auto;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -594,6 +595,7 @@ h4 {
 @media (max-width: 767px) {
   .service__item__image img {
     max-width: 100%;
+    height: auto;
   }
 }
 .service__item__text01 {
@@ -610,9 +612,8 @@ h4 {
 }
 .service__item__text02 {
   position: absolute;
-  right: -32rem;
-  bottom: -10rem;
-  width: 100%;
+  right: -0.7rem;
+  bottom: -2rem;
   max-width: 50rem;
   height: auto;
   padding: 2rem;

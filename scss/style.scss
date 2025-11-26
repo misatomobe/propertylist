@@ -549,15 +549,17 @@ h4 {
     display: flex;
     flex-direction: column;
     z-index: 0;
+    margin-bottom: 8rem;
 
     // 写真・緑ボックスのラッパー
     &__image-wrapper {
-      width: 55%;
-      max-width: 600px;
+      max-width: 65.5%;
+      height: auto;
       position: relative;
 
       @media (max-width: 767px) {
         width: 100%;
+        height: auto;
       }
     }
 
@@ -571,13 +573,13 @@ h4 {
 
       img {
         width: 100%;
-        max-width: 600px;
-        height: 100%;
+        height: auto;
         display: block;
         object-fit: cover;
 
         @media (max-width: 767px) {
         max-width: 100%;
+        height: auto;
         }
       }
     }
@@ -600,9 +602,8 @@ h4 {
     // 緑のボックス
     &__text02 {
       position: absolute;
-      right: -32rem;
-      bottom: -10rem;
-      width: 100%;
+      right: -0.7rem;
+      bottom: -2rem;
       max-width: 50rem;
       height: auto;
       padding: 2rem;
