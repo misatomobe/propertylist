@@ -604,14 +604,13 @@ h4 {
       position: absolute;
       right: -0.7rem;
       bottom: -2rem;
-      max-width: 50rem;
-      width: 80%;
-      height: auto;
-      padding: 5rem 1rem 4.2rem 0;
+      width: 54.35%;
       background-color: $main-color;
       color: $font-color02;
       z-index: 1; // ← 背面（画像より下）
       aspect-ratio: 2 / 1;
+      overflow: hidden;
+
       
       @media (max-width: 767px) {
         position: static;
@@ -638,10 +637,22 @@ h4 {
   }
 }
 
+/* テキストは絶対配置で外枠に影響させない */
 .service__item__text03 {
-  padding-left: 22rem;
-}
+  position: absolute;
+  inset: 0;
+  padding: 5% 4% 4% 45%;
+  color: $font-color02;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 
+  @media (max-width: 767px) {
+    position: static;
+    margin: 2rem;
+  }
+}
 // =====================================
 // works
 // =====================================

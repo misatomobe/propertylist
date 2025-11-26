@@ -614,14 +614,12 @@ h4 {
   position: absolute;
   right: -0.7rem;
   bottom: -2rem;
-  max-width: 50rem;
-  width: 80%;
-  height: auto;
-  padding: 5rem 1rem 4.2rem 0;
+  width: 54.35%;
   background-color: #4D9600;
   color: #fff;
   z-index: 1;
   aspect-ratio: 2/1;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .service__item__text02 {
@@ -644,8 +642,29 @@ h4 {
   line-height: 1.5625;
 }
 
+/* テキストは絶対配置で外枠に影響させない */
 .service__item__text03 {
-  padding-left: 22rem;
+  position: absolute;
+  inset: 0;
+  padding: 5% 4% 4% 45%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .service__item__text03 {
+    position: static;
+    margin: 2rem;
+  }
 }
 
 .works {
