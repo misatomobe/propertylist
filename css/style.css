@@ -526,6 +526,9 @@ h4 {
 
 .service {
   padding: 8rem;
+  /* ===============================
+     service__item（1アイテム）
+  =============================== */
 }
 @media (max-width: 1030px) {
   .service {
@@ -565,6 +568,14 @@ h4 {
           flex-direction: column;
   z-index: 0;
   margin-bottom: 8rem;
+  /* ---- 画像ラッパー ---- */
+  /* ---- 画像 ---- */
+  /* ---- キャプション ---- */
+  /* ---- 緑のボックス ---- */
+  /* ---- 緑のボックス内のテキスト ---- */
+  /* ===============================
+     modifier: 反転
+  =============================== */
 }
 @media (max-width: 767px) {
   .service__item {
@@ -614,6 +625,9 @@ h4 {
   margin-top: 2.4rem;
   text-align: left;
   position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   z-index: 3;
 }
 @media (max-width: 767px) {
@@ -646,8 +660,6 @@ h4 {
     z-index: auto;
   }
 }
-
-/* テキストは絶対配置で外枠に影響させない */
 .service__item__text03 {
   position: absolute;
   inset: 0;
@@ -664,7 +676,6 @@ h4 {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: left;
-  /* h3 と p は兄弟要素として明確に分ける */
 }
 @media (max-width: 767px) {
   .service__item__text03 {
@@ -691,7 +702,7 @@ h4 {
     margin-bottom: 1.4rem;
     /* SPで改行非表示 */
   }
-  .service__item__text03 h3 br {
+  .service__item__text03 h3 .service__item__pc {
     display: none;
   }
 }
@@ -720,6 +731,36 @@ h4 {
   .service__item__text03 p {
     font-size: 1.4rem;
   }
+}
+.service__item.service__item--reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  /* 緑ボックスの位置反転 */
+  /* キャプション位置 */
+  /* 緑ボックス内テキストを左端に寄せる */
+}
+@media (max-width: 767px) {
+  .service__item.service__item--reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.service__item.service__item--reverse .service__item__text02 {
+  left: -0.5rem;
+  right: auto;
+  bottom: -6rem;
+}
+.service__item.service__item--reverse .service__item__text01 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.service__item.service__item--reverse .service__item__text03 {
+  padding-left: 4%;
 }
 
 .works {

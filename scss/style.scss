@@ -538,6 +538,9 @@ h4 {
     }
   }
 
+  /* ===============================
+     service__item（1アイテム）
+  =============================== */
   &__items {
     display: flex;
     flex-direction: column;
@@ -554,7 +557,7 @@ h4 {
       margin-bottom: 4rem;
     }
 
-    // 写真・緑ボックスのラッパー
+    /* ---- 画像ラッパー ---- */
     &__image-wrapper {
       max-width: 65.5%;
       height: auto;
@@ -566,7 +569,7 @@ h4 {
       }
     }
 
-    // 画像
+    /* ---- 画像 ---- */
     &__image {
       width: 100%;
       aspect-ratio: 2 / 1;
@@ -595,11 +598,12 @@ h4 {
       }
     }
 
-    // 画像下キャプション
+    /* ---- キャプション ---- */
     &__text01 {
       margin-top: 2.4rem;
       text-align: left;
       position: relative;
+      justify-content: flex-start;
       z-index: 3;
 
       @media (max-width: 767px) {
@@ -614,7 +618,7 @@ h4 {
       }
     }
 
-    // 緑のボックス
+    /* ---- 緑のボックス ---- */
     &__text02 {
       position: absolute;
       right: -0.5rem;
@@ -634,68 +638,96 @@ h4 {
         z-index: auto;
       }
     }
-  }
-}
-/* テキストは絶対配置で外枠に影響させない */
-.service__item__text03 {
-  position: absolute;
-  inset: 0;
-  padding: 5% 4% 4% 45%;
-  color: $font-color02;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-
-  @media (max-width: 767px) {
-    position: static;
-    padding: 2rem;
-    height: 100%;
-  }
-
-  /* h3 と p は兄弟要素として明確に分ける */
-  h3 {
-    font-size: 2.5rem;
-    line-height: calc(33 / 25);
-    margin-bottom: 1.7rem;
-    font-weight: 300;
     
-    @media (max-width: 1030px) {
-      font-size: 2.1rem; 
-    }
-
-    @media (max-width: 767px) {
-      font-size: 2rem;
-      line-height: calc(25 / 20);
-      margin-bottom: 1.4rem;
+    /* ---- 緑のボックス内のテキスト ---- */
+    &__text03 {
+      position: absolute;
+      inset: 0;
+      padding: 5% 4% 4% 45%;
+      color: $font-color02;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
       
-      /* SPで改行非表示 */
-      br {
-        display: none;
+      @media (max-width: 767px) {
+        position: static;
+        padding: 2rem;
+        height: 100%;
+      }
+      
+      h3 {
+        font-size: 2.5rem;
+        line-height: calc(33 / 25);
+        margin-bottom: 1.7rem;
+        font-weight: 300;
+        
+        @media (max-width: 1030px) {
+          font-size: 2.1rem; 
+        }
+        
+        @media (max-width: 767px) {
+          font-size: 2rem;
+          line-height: calc(25 / 20);
+          margin-bottom: 1.4rem;
+          
+          /* SPで改行非表示 */
+          .service__item__pc {
+            display: none;
+          }
+        }
+        
+        @media (max-width: 350px) {
+          font-size: 1.8rem;
         }
       }
-
-      @media (max-width: 350px) {
-      font-size: 1.8rem; 
-    }
+      
+      p {
+        font-size: 1.6rem;
+        line-height: calc(25 / 16);
+        font-weight: 300;
+        
+        @media (max-width: 1030px) {
+          font-size: 1.5rem;
+        }
+        
+        @media (max-width: 767px) {
+          font-size: 1.6rem;
+          line-height: calc(25 /16);
+        }
+        
+        @media (max-width: 350px) {
+          font-size: 1.4rem;
+        }
+      }
     }
     
-    p {
-    font-size: 1.6rem;
-    line-height: calc(25 / 16);
-    font-weight: 300;
+    /* ===============================
+       modifier: 反転
+    =============================== */
+    &.service__item--reverse {
+      flex-direction: row-reverse;
+      
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
 
-    @media (max-width: 1030px) {
-      font-size: 1.5rem;
-    }
+      /* 緑ボックスの位置反転 */
+      .service__item__text02 {
+        left: -0.5rem;
+        right: auto;
+        bottom: -6rem;
+      }
 
-    @media (max-width: 767px) {
-      font-size: 1.6rem;
-      line-height: calc(25 /16);
-    }
-
-    @media (max-width: 350px) {
-      font-size: 1.4rem;
+      /* キャプション位置 */
+      .service__item__text01 {
+        justify-content: flex-end;
+      }
+      
+      /* 緑ボックス内テキストを左端に寄せる */
+      .service__item__text03 {
+        padding-left: 4%;
+      }
     }
   }
 }
