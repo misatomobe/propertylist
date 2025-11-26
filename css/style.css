@@ -615,21 +615,13 @@ h4 {
   right: -0.7rem;
   bottom: -2rem;
   max-width: 50rem;
+  width: 80%;
   height: auto;
-  padding: 2rem;
+  padding: 5rem 1rem 4.2rem 0;
   background-color: #4D9600;
   color: #fff;
   z-index: 1;
   aspect-ratio: 2/1;
-}
-.service__item__text02 h3 {
-  font-size: 2.5rem;
-  line-height: 1.32;
-  margin-bottom: 1.7rem;
-}
-.service__item__text02 p {
-  font-size: 1.6rem;
-  line-height: 1.5625;
 }
 @media (max-width: 767px) {
   .service__item__text02 {
@@ -641,6 +633,19 @@ h4 {
     aspect-ratio: 315/146;
     z-index: auto;
   }
+}
+.service__item__text02 h3 {
+  font-size: 2.5rem;
+  line-height: 1.32;
+  margin-bottom: 1.7rem;
+}
+.service__item__text02 p {
+  font-size: 1.6rem;
+  line-height: 1.5625;
+}
+
+.service__item__text03 {
+  padding-left: 22rem;
 }
 
 .works {

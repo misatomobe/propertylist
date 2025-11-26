@@ -605,12 +605,23 @@ h4 {
       right: -0.7rem;
       bottom: -2rem;
       max-width: 50rem;
+      width: 80%;
       height: auto;
-      padding: 2rem;
+      padding: 5rem 1rem 4.2rem 0;
       background-color: $main-color;
       color: $font-color02;
       z-index: 1; // ← 背面（画像より下）
       aspect-ratio: 2 / 1;
+      
+      @media (max-width: 767px) {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 1.5rem;
+        padding: 2rem;
+        aspect-ratio: 315 / 146;
+        z-index: auto;
+      }
 
 
       h3 {
@@ -623,18 +634,12 @@ h4 {
         font-size: 1.6rem;
         line-height: calc(25 / 16);
       }
-      
-      @media (max-width: 767px) {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin-top: 1.5rem;
-        padding: 2rem;
-        aspect-ratio: 315 / 146;
-        z-index: auto;
-      }
     }
   }
+}
+
+.service__item__text03 {
+  padding-left: 22rem;
 }
 
 // =====================================
