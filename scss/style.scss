@@ -580,7 +580,8 @@ h4 {
         aspect-ratio: auto;   // SPでは比率固定解除
         }
 
-      img {
+
+        img {
         width: 100%;
         height: auto;
         display: block;
@@ -644,7 +645,7 @@ h4 {
 
   @media (max-width: 767px) {
     position: static;
-    padding: 2rem;
+    padding: 2%;
   }
 
   /* h3 と p は兄弟要素として明確に分ける */
@@ -653,30 +654,27 @@ h4 {
     line-height: calc(33 / 25);
     margin-bottom: 1.7rem;
     font-weight: 300;
-  }
 
-  p {
+      @media (max-width: 767px) {
+        h3 {
+          font-size: 2rem;
+          line-height: calc(25 / 20);
+          /* SPで改行非表示 */
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+    
+    p {
     font-size: 1.6rem;
     line-height: calc(25 / 16);
     font-weight: 300;
-    @media (max-width: 1030px) {
-      font-size: 1.4rem;
-    }
-  }
 
-  @media (max-width: 1030px) {
-    h3 {
-      font-size: 2.3rem;
-    }
-  }
-
-  @media (max-width: 767px) {
-    h3 {
-      font-size: 2rem;
-      /* SPで改行非表示 */
-      br {
-        display: none;
-      }
+    @media (max-width: 767px) {
+      font-size: 1.6rem;
+      line-height: calc(25 /16);
     }
   }
 }
