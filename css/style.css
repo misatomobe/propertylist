@@ -527,9 +527,14 @@ h4 {
 .service {
   padding: 8rem;
 }
+@media (max-width: 1030px) {
+  .service {
+    padding: 5rem 2rem;
+  }
+}
 @media (max-width: 767px) {
   .service {
-    padding: 5rem 3rem;
+    padding: 5rem 2rem;
   }
 }
 .service__contents {
@@ -612,11 +617,10 @@ h4 {
 }
 .service__item__text02 {
   position: absolute;
-  right: -0.7rem;
+  right: -0.5rem;
   bottom: -2rem;
   width: 54.35%;
   background-color: #4D9600;
-  color: #fff;
   z-index: 1;
   aspect-ratio: 2/1;
   overflow: hidden;
@@ -625,21 +629,10 @@ h4 {
   .service__item__text02 {
     position: static;
     width: 100%;
-    height: auto;
     margin-top: 1.5rem;
-    padding: 2rem;
     aspect-ratio: 315/146;
     z-index: auto;
   }
-}
-.service__item__text02 h3 {
-  font-size: 2.5rem;
-  line-height: 1.32;
-  margin-bottom: 1.7rem;
-}
-.service__item__text02 p {
-  font-size: 1.6rem;
-  line-height: 1.5625;
 }
 
 /* テキストは絶対配置で外枠に影響させない */
@@ -659,11 +652,41 @@ h4 {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: left;
+  /* h3 と p は兄弟要素として明確に分ける */
 }
 @media (max-width: 767px) {
   .service__item__text03 {
     position: static;
-    margin: 2rem;
+    padding: 2rem;
+  }
+}
+.service__item__text03 h3 {
+  font-size: 2.5rem;
+  line-height: 1.32;
+  margin-bottom: 1.7rem;
+  font-weight: 300;
+}
+.service__item__text03 p {
+  font-size: 1.6rem;
+  line-height: 1.5625;
+  font-weight: 300;
+}
+@media (max-width: 1030px) {
+  .service__item__text03 p {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 1030px) {
+  .service__item__text03 h3 {
+    font-size: 2.3rem;
+  }
+}
+@media (max-width: 767px) {
+  .service__item__text03 h3 {
+    /* SPで改行非表示 */
+  }
+  .service__item__text03 h3 br {
+    display: none;
   }
 }
 
