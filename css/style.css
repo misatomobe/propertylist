@@ -534,7 +534,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .service {
-    padding: 5rem 2rem;
+    padding: 5rem 3rem;
   }
 }
 .service__contents {
@@ -616,6 +616,11 @@ h4 {
   position: relative;
   z-index: 3;
 }
+@media (max-width: 767px) {
+  .service__item__text01 {
+    margin-top: 0.5rem;
+  }
+}
 .service__item__text01 p {
   margin: 0;
   font-size: 1.6rem;
@@ -636,7 +641,7 @@ h4 {
   .service__item__text02 {
     position: static;
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 0.6rem;
     aspect-ratio: 315/146;
     z-index: auto;
   }
@@ -665,6 +670,7 @@ h4 {
   .service__item__text03 {
     position: static;
     padding: 2rem;
+    height: 100%;
   }
 }
 .service__item__text03 h3 {
@@ -673,6 +679,27 @@ h4 {
   margin-bottom: 1.7rem;
   font-weight: 300;
 }
+@media (max-width: 1030px) {
+  .service__item__text03 h3 {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 767px) {
+  .service__item__text03 h3 {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin-bottom: 1.4rem;
+    /* SPで改行非表示 */
+  }
+  .service__item__text03 h3 br {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  .service__item__text03 h3 {
+    font-size: 1.8rem;
+  }
+}
 .service__item__text03 p {
   font-size: 1.6rem;
   line-height: 1.5625;
@@ -680,21 +707,18 @@ h4 {
 }
 @media (max-width: 1030px) {
   .service__item__text03 p {
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 1030px) {
-  .service__item__text03 h3 {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .service__item__text03 h3 {
-    font-size: 2rem;
-    /* SPで改行非表示 */
+  .service__item__text03 p {
+    font-size: 1.6rem;
+    line-height: 1.5625;
   }
-  .service__item__text03 h3 br {
-    display: none;
+}
+@media (max-width: 350px) {
+  .service__item__text03 p {
+    font-size: 1.4rem;
   }
 }
 
