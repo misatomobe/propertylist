@@ -610,7 +610,6 @@ h4 {
 .service__item__image img {
   width: 100%;
   height: auto;
-  display: block;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -732,35 +731,54 @@ h4 {
     font-size: 1.4rem;
   }
 }
-.service__item.service__item--reverse {
+.service__item:nth-of-type(2) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  /* 緑ボックスの位置反転 */
+  /* 緑BOXのabsolute解除（反転の時だけ） */
   /* キャプション位置 */
-  /* 緑ボックス内テキストを左端に寄せる */
+  /* このとき text03 の配置も通常モードに */
 }
 @media (max-width: 767px) {
-  .service__item.service__item--reverse {
+  .service__item:nth-of-type(2) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-.service__item.service__item--reverse .service__item__text02 {
-  left: -0.5rem;
+.service__item:nth-of-type(2) .service__item__text02 {
+  position: relative;
+  left: auto;
   right: auto;
-  bottom: -6rem;
+  bottom: auto;
+  width: 54.35%;
+  margin-left: 0;
 }
-.service__item.service__item--reverse .service__item__text01 {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+@media (max-width: 767px) {
+  .service__item:nth-of-type(2) .service__item__text02 {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
-.service__item.service__item--reverse .service__item__text03 {
-  padding-left: 4%;
+.service__item:nth-of-type(2) .service__item__text01 {
+  margin-top: 2.4rem;
+  text-align: left;
+  position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  z-index: 3;
+}
+.service__item:nth-of-type(2).service__item__text03 {
+  position: static;
+  padding: 5% 4% 4% 10%;
+}
+@media (max-width: 767px) {
+  .service__item:nth-of-type(2).service__item__text03 {
+    padding: 2rem;
+  }
 }
 
 .works {

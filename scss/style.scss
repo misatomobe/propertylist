@@ -583,11 +583,9 @@ h4 {
         aspect-ratio: auto;   // SPでは比率固定解除
         }
 
-
         img {
         width: 100%;
         height: auto;
-        display: block;
         object-fit: cover;
 
         @media (max-width: 767px) {
@@ -705,28 +703,45 @@ h4 {
     /* ===============================
        modifier: 反転
     =============================== */
-    &.service__item--reverse {
+    &:nth-of-type(2) {
       flex-direction: row-reverse;
       
       @media (max-width: 767px) {
         flex-direction: column;
       }
 
-      /* 緑ボックスの位置反転 */
+      /* 緑BOXのabsolute解除（反転の時だけ） */
       .service__item__text02 {
-        left: -0.5rem;
+        position: relative;
+        left: auto;
         right: auto;
-        bottom: -6rem;
+        bottom: auto;
+        width: 54.35%;
+        margin-left: 0;
+
+        @media (max-width: 767px) {
+          width: 100%;
+          margin-top: 1rem;
+        }
       }
 
       /* キャプション位置 */
       .service__item__text01 {
-        justify-content: flex-end;
+        margin-top: 2.4rem;
+        text-align: left;
+        position: relative;
+        justify-content: flex-start;
+        z-index: 3;
       }
       
-      /* 緑ボックス内テキストを左端に寄せる */
-      .service__item__text03 {
-        padding-left: 4%;
+      /* このとき text03 の配置も通常モードに */
+      &.service__item__text03 {
+        position: static;
+        padding: 5% 4% 4% 10%;
+
+        @media (max-width: 767px) {
+          padding: 2rem;
+        }
       }
     }
   }
