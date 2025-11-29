@@ -676,6 +676,7 @@ h4 {
     position: static;
     padding: 2rem;
     height: 100%;
+    text-align: left;
   }
 }
 .service__item__text03 h3 {
@@ -721,41 +722,6 @@ h4 {
   }
 }
 
-.service__item:nth-of-type(2) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-.service__item:nth-of-type(2) .service__item__text02 {
-  left: -0.5rem;
-  right: auto;
-}
-.service__item:nth-of-type(2) .service__item__text03 {
-  padding: 5% 45% 4% 4%;
-}
-
-@media (max-width: 767px) {
-  .service__item:nth-of-type(2) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .service__item:nth-of-type(2) .service__item__text02 {
-    position: static;
-    width: 100%;
-    margin-top: 0.6rem;
-    aspect-ratio: 315/146;
-    left: auto;
-    right: auto;
-  }
-  .service__item:nth-of-type(2) .service__item__text03 {
-    position: static;
-    padding: 2rem;
-    height: 100%;
-  }
-}
 .works {
   padding: 9.1rem 8rem 9.7rem;
 }

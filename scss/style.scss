@@ -559,14 +559,13 @@ h4 {
       & > .service__item__text02 {
         left: -0.5rem;
         right: auto;
-      }
 
-      & > .service__item__text02 > .service__item__text03 {
-        padding: 5% 45% 4% 4%;
-        text-align: right;
+        & > .service__item__text03 {
+          padding: 5% 45% 4% 4%;
+          text-align: right;
+        }
       }
     }
-  }
 
     &__image-wrapper {
       max-width: 65.5%;
@@ -666,9 +665,9 @@ h4 {
         @media (max-width: 767px)  { font-size: 1.6rem; }
         @media (max-width: 350px)  { font-size: 1.4rem; }
       }
-    }
-  }
-}
+    } // <-- ここで &__text03 閉じ
+  } // <-- ここで &__item 閉じ
+} // <-- ここで .service 閉じ
 
 // =====================================
 // works
