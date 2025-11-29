@@ -544,13 +544,6 @@ h4 {
 
     @media (max-width: 767px) { margin-bottom: 4rem; }
 
-    // 2番目だけ PC で左右反転
-    @media (min-width: 768px) {
-      &:nth-of-type(2) {
-        flex-direction: row-reverse;
-      }
-    }
-
     &__image-wrapper {
       max-width: 65.5%;
       height: auto;
@@ -610,14 +603,6 @@ h4 {
         aspect-ratio: 315 / 146;
         z-index: auto;
       }
-
-      // 2番目の左右反転
-      @media (min-width: 768px) {
-        .service__item:nth-of-type(2) & {
-          right: auto;
-          left: -0.5rem;
-        }
-      }
     }
 
     &__text03 {
@@ -659,6 +644,37 @@ h4 {
     }
   }
 }
+
+// ===============================
+// 2番目だけ PC サイズで左右反転
+// ===============================
+.service__item:nth-of-type(2) {
+  flex-direction: row-reverse;
+
+  .service__item__text02 {
+    left: -0.5rem;
+    right: auto;
+  }
+
+  .service__item__text03 {
+    padding: 5% 45% 4% 4%;
+  }
+}
+
+@media (max-width: 767px) {
+  .service__item:nth-of-type(2) {
+    flex-direction: column;
+
+    .service__item__text02,
+    .service__item__text03 {
+      left: auto;
+      right: auto;
+      padding: 2rem;
+    }
+  }
+}
+
+
 
 // =====================================
 // works
