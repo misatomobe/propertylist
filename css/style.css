@@ -1130,6 +1130,48 @@ h4 {
     padding: 5rem 3rem;
   }
 }
+.company__contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (max-width: 767px) {
+  .company__contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.company__map iframe {
+  max-width: 60rem;
+  height: 40rem;
+  border: 0;
+  display: block;
+}
+
+.company__info {
+  background-color: #4D9600;
+  color: #fff;
+  padding: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.company__info p,
+.company__info a,
+.company__info span {
+  color: #fff;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
 .contact {
   padding: 8rem 14rem;
 }

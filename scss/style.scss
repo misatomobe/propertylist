@@ -1002,6 +1002,39 @@ h4 {
   }
 }
 
+.company__contents {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+// map
+.company__map iframe {
+  max-width: 60rem;
+  height: 40rem;
+  border: 0;
+  display: block;
+}
+// 緑のボックス
+.company__info {
+  background-color: $main-color;
+  color: $font-color02;
+  padding: 2rem;
+  flex: 1;
+}
+
+.company__info p,
+.company__info a,
+.company__info span {
+  color: $font-color02;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
 // =====================================
 // contact
 // =====================================
