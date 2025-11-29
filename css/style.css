@@ -571,25 +571,6 @@ h4 {
     margin-bottom: 4rem;
   }
 }
-.service__item:nth-of-type(2) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-.service__item:nth-of-type(2) > .service__item__text01 {
-  text-align: right;
-  margin-left: auto;
-  margin-right: 0;
-}
-.service__item:nth-of-type(2) > .service__item__text02 {
-  left: -0.5rem;
-  right: auto;
-}
-.service__item:nth-of-type(2) > .service__item__text02 > .service__item__text03 {
-  padding: 5% 45% 4% 4%;
-  text-align: right;
-}
 .service__item__image-wrapper {
   max-width: 65.5%;
   height: auto;
@@ -624,16 +605,16 @@ h4 {
   text-align: left;
   z-index: 3;
 }
-@media (max-width: 767px) {
-  .service__item__text01 {
-    margin-top: 0.5rem;
-  }
-}
 .service__item__text01 p {
   margin: 0;
   font-size: 1.6rem;
   line-height: 1.5625;
   color: #000;
+}
+@media (max-width: 767px) {
+  .service__item__text01 {
+    margin-top: 0.5rem;
+  }
 }
 .service__item__text02 {
   position: absolute;
@@ -670,14 +651,6 @@ h4 {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: left;
-}
-@media (max-width: 767px) {
-  .service__item__text03 {
-    position: static;
-    padding: 2rem;
-    height: 100%;
-    text-align: left;
-  }
 }
 .service__item__text03 h3 {
   font-size: 2.5rem;
@@ -719,6 +692,35 @@ h4 {
 @media (max-width: 350px) {
   .service__item__text03 p {
     font-size: 1.4rem;
+  }
+}
+@media (max-width: 767px) {
+  .service__item__text03 {
+    position: static;
+    padding: 2rem;
+    height: 100%;
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  .service__item:nth-of-type(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .service__item:nth-of-type(2) > .service__item__text01 {
+    text-align: left;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .service__item:nth-of-type(2) > .service__item__text02 {
+    left: -0.5rem;
+    right: auto;
+  }
+  .service__item:nth-of-type(2) > .service__item__text02 > .service__item__text03 {
+    padding: 5% 45% 4% 4%;
+    text-align: left;
   }
 }
 

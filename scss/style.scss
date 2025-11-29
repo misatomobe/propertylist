@@ -544,29 +544,6 @@ h4 {
 
     @media (max-width: 767px) { margin-bottom: 4rem; }
 
-    // 2番目だけPCで左右反転
-    &:nth-of-type(2) {
-      flex-direction: row-reverse;
-
-      // text01の反転位置調整
-      & > .service__item__text01 {
-        text-align: right;
-        margin-left: auto;
-        margin-right: 0;
-      }
-
-      // text02, text03の反転
-      & > .service__item__text02 {
-        left: -0.5rem;
-        right: auto;
-
-        & > .service__item__text03 {
-          padding: 5% 45% 4% 4%;
-          text-align: right;
-        }
-      }
-    }
-
     &__image-wrapper {
       max-width: 65.5%;
       height: auto;
@@ -594,12 +571,11 @@ h4 {
       @media (max-width: 767px) { aspect-ratio: auto; }
     }
 
+    // キャプション（画像下）
     &__text01 {
       margin-top: 2.4rem;
       text-align: left;
       z-index: 3;
-
-      @media (max-width: 767px) { margin-top: 0.5rem; }
 
       p {
         margin: 0;
@@ -607,8 +583,11 @@ h4 {
         line-height: calc(25 / 16);
         color: $font-color;
       }
+
+      @media (max-width: 767px) { margin-top: 0.5rem; }
     }
 
+    // 緑ボックス
     &__text02 {
       position: absolute;
       right: -0.5rem;
@@ -638,13 +617,6 @@ h4 {
       justify-content: center;
       text-align: left;
 
-      @media (max-width: 767px) {
-        position: static;
-        padding: 2rem;
-        height: 100%;
-        text-align: left;
-      }
-
       h3 {
         font-size: 2.5rem;
         line-height: calc(33 / 25);
@@ -665,9 +637,44 @@ h4 {
         @media (max-width: 767px)  { font-size: 1.6rem; }
         @media (max-width: 350px)  { font-size: 1.4rem; }
       }
-    } 
-  } 
-} 
+
+      @media (max-width: 767px) {
+        position: static;
+        padding: 2rem;
+        height: 100%;
+        text-align: left;
+      }
+    }
+
+    // =====================================
+    // PCサイズで2番目のみ反転
+    // =====================================
+    @media (min-width: 768px) {
+      &:nth-of-type(2) {
+        flex-direction: row-reverse;
+
+        // キャプション下（text01）の左揃え
+        & > .service__item__text01 {
+          text-align: left;
+          margin-left: auto;
+          margin-right: 0;
+        }
+
+        // 緑ボックスの反転とtext03の左揃え
+        & > .service__item__text02 {
+          left: -0.5rem;
+          right: auto;
+
+          & > .service__item__text03 {
+            padding: 5% 45% 4% 4%;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 // =====================================
 // works
