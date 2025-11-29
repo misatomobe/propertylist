@@ -526,9 +526,6 @@ h4 {
 
 .service {
   padding: 8rem;
-  /* ===============================
-     service__item（1アイテム）
-  =============================== */
 }
 @media (max-width: 1030px) {
   .service {
@@ -568,18 +565,18 @@ h4 {
           flex-direction: column;
   z-index: 0;
   margin-bottom: 8rem;
-  /* ---- 画像ラッパー ---- */
-  /* ---- 画像 ---- */
-  /* ---- キャプション ---- */
-  /* ---- 緑のボックス ---- */
-  /* ---- 緑のボックス内のテキスト ---- */
-  /* ===============================
-     modifier: 反転
-  =============================== */
 }
 @media (max-width: 767px) {
   .service__item {
     margin-bottom: 4rem;
+  }
+}
+@media (min-width: 768px) {
+  .service__item:nth-of-type(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 .service__item__image-wrapper {
@@ -600,13 +597,6 @@ h4 {
   position: relative;
   z-index: 2;
 }
-@media (max-width: 767px) {
-  .service__item__image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-  }
-}
 .service__item__image img {
   width: 100%;
   height: auto;
@@ -614,19 +604,13 @@ h4 {
      object-fit: cover;
 }
 @media (max-width: 767px) {
-  .service__item__image img {
-    width: 100%;
-    height: auto;
+  .service__item__image {
     aspect-ratio: auto;
   }
 }
 .service__item__text01 {
   margin-top: 2.4rem;
   text-align: left;
-  position: relative;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   z-index: 3;
 }
 @media (max-width: 767px) {
@@ -657,6 +641,12 @@ h4 {
     margin-top: 0.6rem;
     aspect-ratio: 315/146;
     z-index: auto;
+  }
+}
+@media (min-width: 768px) {
+  .service__item:nth-of-type(2) .service__item__text02 {
+    right: auto;
+    left: -0.5rem;
   }
 }
 .service__item__text03 {
@@ -697,12 +687,7 @@ h4 {
 @media (max-width: 767px) {
   .service__item__text03 h3 {
     font-size: 2rem;
-    line-height: 1.25;
     margin-bottom: 1.4rem;
-    /* SPで改行非表示 */
-  }
-  .service__item__text03 h3 .service__item__pc {
-    display: none;
   }
 }
 @media (max-width: 350px) {
@@ -723,61 +708,11 @@ h4 {
 @media (max-width: 767px) {
   .service__item__text03 p {
     font-size: 1.6rem;
-    line-height: 1.5625;
   }
 }
 @media (max-width: 350px) {
   .service__item__text03 p {
     font-size: 1.4rem;
-  }
-}
-.service__item:nth-of-type(2) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  /* 緑BOXのabsolute解除（反転の時だけ） */
-  /* キャプション位置 */
-  /* このとき text03 の配置も通常モードに */
-}
-@media (max-width: 767px) {
-  .service__item:nth-of-type(2) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-.service__item:nth-of-type(2) .service__item__text02 {
-  position: relative;
-  left: auto;
-  right: auto;
-  bottom: auto;
-  width: 54.35%;
-  margin-left: 0;
-}
-@media (max-width: 767px) {
-  .service__item:nth-of-type(2) .service__item__text02 {
-    width: 100%;
-    margin-top: 1rem;
-  }
-}
-.service__item:nth-of-type(2) .service__item__text01 {
-  margin-top: 2.4rem;
-  text-align: left;
-  position: relative;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  z-index: 3;
-}
-.service__item:nth-of-type(2).service__item__text03 {
-  position: static;
-  padding: 5% 4% 4% 10%;
-}
-@media (max-width: 767px) {
-  .service__item:nth-of-type(2).service__item__text03 {
-    padding: 2rem;
   }
 }
 

@@ -522,25 +522,14 @@ h4 {
 .service {
   padding: 8rem;
 
-  @media (max-width: 1030px) {
-    padding: 5rem 2rem;
-  }
-
-  @media (max-width: 767px) {
-    padding: 5rem 3rem;
-  }
+  @media (max-width: 1030px) { padding: 5rem 2rem; }
+  @media (max-width: 767px)  { padding: 5rem 3rem; }
 
   &__contents {
     margin-top: 6.8rem;
-
-    @media (max-width: 767px) {
-      margin-top: 3.8rem;
-    }
+    @media (max-width: 767px) { margin-top: 3.8rem; }
   }
 
-  /* ===============================
-     service__item（1アイテム）
-  =============================== */
   &__items {
     display: flex;
     flex-direction: column;
@@ -553,11 +542,15 @@ h4 {
     z-index: 0;
     margin-bottom: 8rem;
 
-    @media (max-width: 767px) {
-      margin-bottom: 4rem;
+    @media (max-width: 767px) { margin-bottom: 4rem; }
+
+    // 2番目だけ PC で左右反転
+    @media (min-width: 768px) {
+      &:nth-of-type(2) {
+        flex-direction: row-reverse;
+      }
     }
 
-    /* ---- 画像ラッパー ---- */
     &__image-wrapper {
       max-width: 65.5%;
       height: auto;
@@ -569,44 +562,28 @@ h4 {
       }
     }
 
-    /* ---- 画像 ---- */
     &__image {
       width: 100%;
       aspect-ratio: 2 / 1;
       overflow: hidden;
       position: relative;
-      z-index: 2; // 最前面
-      
-      @media (max-width: 767px) {
-        width: 100%;
-        height: auto;
-        aspect-ratio: auto;   // SPでは比率固定解除
-        }
+      z-index: 2;
 
-        img {
+      img {
         width: 100%;
         height: auto;
         object-fit: cover;
-
-        @media (max-width: 767px) {
-          width: 100%;
-          height: auto;
-          aspect-ratio: auto;
-        }
       }
+
+      @media (max-width: 767px) { aspect-ratio: auto; }
     }
 
-    /* ---- キャプション ---- */
     &__text01 {
       margin-top: 2.4rem;
       text-align: left;
-      position: relative;
-      justify-content: flex-start;
       z-index: 3;
 
-      @media (max-width: 767px) {
-        margin-top: 0.5rem;
-      }
+      @media (max-width: 767px) { margin-top: 0.5rem; }
 
       p {
         margin: 0;
@@ -616,18 +593,16 @@ h4 {
       }
     }
 
-    /* ---- 緑のボックス ---- */
     &__text02 {
       position: absolute;
       right: -0.5rem;
       bottom: -2rem;
       width: 54.35%;
       background-color: $main-color;
-      
-      z-index: 1; // ← 背面（画像より下）
+      z-index: 1;
       aspect-ratio: 2 / 1;
       overflow: hidden;
-      
+
       @media (max-width: 767px) {
         position: static;
         width: 100%;
@@ -635,9 +610,16 @@ h4 {
         aspect-ratio: 315 / 146;
         z-index: auto;
       }
+
+      // 2番目の左右反転
+      @media (min-width: 768px) {
+        .service__item:nth-of-type(2) & {
+          right: auto;
+          left: -0.5rem;
+        }
+      }
     }
-    
-    /* ---- 緑のボックス内のテキスト ---- */
+
     &__text03 {
       position: absolute;
       inset: 0;
@@ -647,101 +629,32 @@ h4 {
       flex-direction: column;
       justify-content: center;
       text-align: left;
-      
+
       @media (max-width: 767px) {
         position: static;
         padding: 2rem;
         height: 100%;
       }
-      
+
       h3 {
         font-size: 2.5rem;
         line-height: calc(33 / 25);
         margin-bottom: 1.7rem;
         font-weight: 300;
-        
-        @media (max-width: 1030px) {
-          font-size: 2.1rem; 
-        }
-        
-        @media (max-width: 767px) {
-          font-size: 2rem;
-          line-height: calc(25 / 20);
-          margin-bottom: 1.4rem;
-          
-          /* SPで改行非表示 */
-          .service__item__pc {
-            display: none;
-          }
-        }
-        
-        @media (max-width: 350px) {
-          font-size: 1.8rem;
-        }
+
+        @media (max-width: 1030px) { font-size: 2.1rem; }
+        @media (max-width: 767px)  { font-size: 2rem; margin-bottom: 1.4rem; }
+        @media (max-width: 350px)  { font-size: 1.8rem; }
       }
-      
+
       p {
         font-size: 1.6rem;
         line-height: calc(25 / 16);
         font-weight: 300;
-        
-        @media (max-width: 1030px) {
-          font-size: 1.5rem;
-        }
-        
-        @media (max-width: 767px) {
-          font-size: 1.6rem;
-          line-height: calc(25 /16);
-        }
-        
-        @media (max-width: 350px) {
-          font-size: 1.4rem;
-        }
-      }
-    }
-    
-    /* ===============================
-       modifier: 反転
-    =============================== */
-    &:nth-of-type(2) {
-      flex-direction: row-reverse;
-      
-      @media (max-width: 767px) {
-        flex-direction: column;
-      }
 
-      /* 緑BOXのabsolute解除（反転の時だけ） */
-      .service__item__text02 {
-        position: relative;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        width: 54.35%;
-        margin-left: 0;
-
-        @media (max-width: 767px) {
-          width: 100%;
-          margin-top: 1rem;
-        }
-      }
-
-      /* キャプション位置 */
-      .service__item__text01 {
-        margin-top: 2.4rem;
-        text-align: left;
-        position: relative;
-        justify-content: flex-start;
-        z-index: 3;
-      }
-      
-      /* このとき text03 の配置も通常モードに */
-      &.service__item__text03 {
-        position: static;
-        padding: 5% 4% 4% 10%;
-
-        @media (max-width: 767px) {
-          padding: 2rem;
-        }
+        @media (max-width: 1030px) { font-size: 1.5rem; }
+        @media (max-width: 767px)  { font-size: 1.6rem; }
+        @media (max-width: 350px)  { font-size: 1.4rem; }
       }
     }
   }
