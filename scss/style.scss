@@ -1010,8 +1010,7 @@ h4 {
 
   &__item {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: block;
     z-index: 0;
     margin-bottom: 8rem;
 
@@ -1019,20 +1018,21 @@ h4 {
 
     &__map-wrapper {
       max-width: 65.5%;
+      width: 100%;
       height: auto;
       position: relative;
+      z-index: 1;
 
       @media (max-width: 767px) {
         width: 100%;
         max-width: 100%;
       }
-    }
     
-    &_map {
+    &__map {
       width: 100%;
       aspect-ratio: 2 / 1;
       overflow: hidden;
-      position: relative;
+      position: absolute;
 
       @media (max-width: 767px) {
         aspect-ratio: 315 / 300;
@@ -1043,19 +1043,18 @@ h4 {
         aspect-ratio: 2 / 1;
         overflow: hidden;
         position: relative;
-        z-index: 2;
       }
     }    
   }
 
     // 緑ボックス
-    .company__item__info {
+    &__info {
       position: absolute;
       right: -0.5rem;
       bottom: -6.2rem;
       width: 54.35%;
       background-color: $main-color;
-      z-index: 1;
+      z-index: 0;
       aspect-ratio: 500 / 262;
       overflow: hidden;
 
@@ -1066,34 +1065,34 @@ h4 {
         aspect-ratio: 315 / 202;
         z-index: auto;
       }
-    }
-
-    &__text {
-      position: absolute;
-      inset: 0;
-      padding: 5% 6% 4.2% 22%;
-      color: $font-color02;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: left;
       
-      // 社名
-      &__name p {
-        font-size: 2rem;
-        line-height: calc(33 / 20);
-        font-weight: 300;
-
-        @media (max-width: 1030px) { font-size: 1.5rem; }
-        @media (max-width: 767px)  { font-size: 1.6rem; }
-        @media (max-width: 350px)  { font-size: 1.4rem; }
-      }
-
-      @media (max-width: 767px) {
-        position: static;
-        padding: 2rem 2rem 1rem 2rem;
-        height: 100%;
+      &__text {
+        position: absolute;
+        inset: 0;
+        padding: 5% 6% 4.2% 22%;
+        color: $font-color02;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: left;
+        
+        // 社名
+        &__name p {
+          font-size: 2rem;
+          line-height: calc(33 / 20);
+          font-weight: 300;
+          
+          @media (max-width: 1030px) { font-size: 1.5rem; }
+          @media (max-width: 767px)  { font-size: 1.6rem; }
+          @media (max-width: 350px)  { font-size: 1.4rem; }
+        }
+        
+        @media (max-width: 767px) {
+          position: static;
+          padding: 2rem 2rem 1rem 2rem;
+          height: 100%;
+          text-align: left;
+        }
       }
     }
   }
