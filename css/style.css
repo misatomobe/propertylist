@@ -1172,6 +1172,8 @@ h4 {
 @media (max-width: 767px) {
   .company__item__map-wrapper {
     max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .company__item__map-wrapper__map {
@@ -1188,9 +1190,11 @@ h4 {
 }
 .company__item__map-wrapper__map iframe {
   width: 100%;
-  aspect-ratio: 2/1;
+  height: auto;
+  aspect-ratio: 315/300;
   overflow: hidden;
   position: relative;
+  display: block;
 }
 .company__item__info {
   position: absolute;
