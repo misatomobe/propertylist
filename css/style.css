@@ -1171,7 +1171,6 @@ h4 {
 }
 @media (max-width: 767px) {
   .company__item__map-wrapper {
-    width: 100%;
     max-width: 100%;
   }
 }
@@ -1184,6 +1183,7 @@ h4 {
 @media (max-width: 767px) {
   .company__item__map-wrapper__map {
     aspect-ratio: 315/300;
+    max-width: 100%;
   }
 }
 .company__item__map-wrapper__map iframe {
@@ -1214,7 +1214,7 @@ h4 {
 .company__item__info__text {
   position: absolute;
   inset: 0;
-  padding: 5% 6% 4.2% 22%;
+  padding: 5% 0% 4.2% 22%;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1227,6 +1227,14 @@ h4 {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: left;
+}
+@media (max-width: 767px) {
+  .company__item__info__text {
+    position: static;
+    padding: 2rem 2rem 1rem 2rem;
+    height: 100%;
+    text-align: left;
+  }
 }
 .company__item__info__text__name p {
   font-size: 2rem;
@@ -1246,14 +1254,6 @@ h4 {
 @media (max-width: 350px) {
   .company__item__info__text__name p {
     font-size: 1.4rem;
-  }
-}
-@media (max-width: 767px) {
-  .company__item__info__text {
-    position: static;
-    padding: 2rem 2rem 1rem 2rem;
-    height: 100%;
-    text-align: left;
   }
 }
 
