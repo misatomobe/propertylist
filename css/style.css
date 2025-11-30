@@ -1196,7 +1196,7 @@ h4 {
 .company__item .company__item__info {
   position: absolute;
   right: -0.5rem;
-  bottom: -2rem;
+  bottom: -6.2rem;
   width: 54.35%;
   background-color: #4D9600;
   z-index: 1;
@@ -1212,7 +1212,7 @@ h4 {
     z-index: auto;
   }
 }
-.company__item__text03 {
+.company__item__text {
   position: absolute;
   inset: 0;
   padding: 5% 4% 4% 45%;
@@ -1229,30 +1229,30 @@ h4 {
           justify-content: center;
   text-align: left;
 }
-.company__item__text03 p {
+.company__item__text p {
   font-size: 1.6rem;
   line-height: 1.5625;
   font-weight: 300;
 }
 @media (max-width: 1030px) {
-  .company__item__text03 p {
+  .company__item__text p {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .company__item__text03 p {
+  .company__item__text p {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 350px) {
-  .company__item__text03 p {
+  .company__item__text p {
     font-size: 1.4rem;
   }
 }
 @media (max-width: 767px) {
-  .company__item__text03 {
+  .company__item__text {
     position: static;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     height: 100%;
     text-align: left;
   }
