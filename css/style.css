@@ -1215,7 +1215,7 @@ h4 {
 .company__item__text {
   position: absolute;
   inset: 0;
-  padding: 5rem 6.7rem 4.2rem 22rem;
+  padding: 5% 6.7% 4.2% 22%;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1229,23 +1229,23 @@ h4 {
           justify-content: center;
   text-align: left;
 }
-.company__item__text p {
-  font-size: 1.6rem;
-  line-height: 1.5625;
+.company__item__text__name p {
+  font-size: 2rem;
+  line-height: 1.65;
   font-weight: 300;
 }
 @media (max-width: 1030px) {
-  .company__item__text p {
+  .company__item__text__name p {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .company__item__text p {
+  .company__item__text__name p {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 350px) {
-  .company__item__text p {
+  .company__item__text__name p {
     font-size: 1.4rem;
   }
 }
