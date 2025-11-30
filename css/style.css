@@ -1200,7 +1200,7 @@ h4 {
   width: 54.35%;
   background-color: #4D9600;
   z-index: 1;
-  aspect-ratio: 2/1;
+  aspect-ratio: 500/262;
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -1215,7 +1215,7 @@ h4 {
 .company__item__text {
   position: absolute;
   inset: 0;
-  padding: 5% 4% 4% 45%;
+  padding: 5rem 6.7rem 4.2rem 22rem;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
