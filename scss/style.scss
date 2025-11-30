@@ -1036,13 +1036,11 @@ h4 {
 
       @media (max-width: 767px) {
         aspect-ratio: 315 / 300;
-        max-width: 100%;
       }
       
       iframe {
         width: 100%;
-        height: auto;
-        aspect-ratio: 315 / 300;
+        height: 100%;
         overflow: hidden;
         position: relative;
         display: block;
