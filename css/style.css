@@ -1172,28 +1172,28 @@ h4 {
 }
 @media (max-width: 767px) {
   .company__item__map-wrapper {
+    width: 100%;
     max-width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 .company__item__map-wrapper__map {
   width: 100%;
-  aspect-ratio: 2/1;
+  height: 0;
   overflow: hidden;
-  position: absolute;
+  aspect-ratio: 3/2;
 }
 @media (max-width: 767px) {
   .company__item__map-wrapper__map {
     aspect-ratio: 315/300;
+    max-width: 100%;
   }
 }
 .company__item__map-wrapper__map iframe {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: relative;
   display: block;
+  position: absolute;
 }
 .company__item__info {
   position: absolute;
