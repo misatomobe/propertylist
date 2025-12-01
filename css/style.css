@@ -704,15 +704,16 @@ h4 {
 }
 @media (min-width: 768px) {
   .service__item:nth-of-type(2) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
-  .service__item:nth-of-type(2) > .service__item__text01 {
-    text-align: left;
-    margin-left: auto;
-    margin-right: 0;
+  .service__item:nth-of-type(2) .service__item__image-wrapper .service__item__text01 {
+    text-align: right;
   }
   .service__item:nth-of-type(2) > .service__item__text02 {
     left: -0.5rem;
