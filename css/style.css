@@ -1164,11 +1164,11 @@ h4 {
   }
 }
 .company__item__map-wrapper {
-  max-width: 65.5%;
   width: 100%;
   height: auto;
   position: relative;
   z-index: 1;
+  aspect-ratio: 3/2;
 }
 @media (max-width: 767px) {
   .company__item__map-wrapper {
@@ -1177,23 +1177,28 @@ h4 {
   }
 }
 .company__item__map-wrapper__map {
+  position: relative;
   width: 100%;
   height: 0;
   overflow: hidden;
-  aspect-ratio: 3/2;
 }
 @media (max-width: 767px) {
   .company__item__map-wrapper__map {
-    aspect-ratio: 315/300;
     max-width: 100%;
   }
 }
 .company__item__map-wrapper__map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  display: block;
-  position: absolute;
+}
+@media (max-width: 767px) {
+  .company__item__map-wrapper__map iframe {
+    max-width: 100%;
+    aspect-ratio: 315/300;
+  }
 }
 .company__item__info {
   position: absolute;
