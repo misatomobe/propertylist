@@ -715,11 +715,11 @@ h4 {
   .service__item:nth-of-type(2) .service__item__image-wrapper .service__item__text01 {
     text-align: right;
   }
-  .service__item:nth-of-type(2) > .service__item__text02 {
+  .service__item:nth-of-type(2) .service__item__text02 {
     left: -0.5rem;
     right: auto;
   }
-  .service__item:nth-of-type(2) > .service__item__text02 > .service__item__text03 {
+  .service__item:nth-of-type(2) .service__item__text02 .service__item__text03 {
     padding: 5% 45% 4% 4%;
     text-align: left;
   }
