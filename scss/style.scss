@@ -651,21 +651,20 @@ h4 {
     // =====================================
     @media (min-width: 768px) {
       &:nth-of-type(2) {
-        flex-direction: row-reverse;
+        flex-direction: column;
+        align-items: flex-end;
 
-        // キャプション下（text01）の左揃え
-        & > .service__item__text01 {
-          text-align: left;
-          margin-left: auto;
-          margin-right: 0;
+         // キャプション反転
+        .service__item__image-wrapper .service__item__text01 {
+          text-align: right;
         }
 
-        // 緑ボックスの反転とtext03の左揃え
-        & > .service__item__text02 {
+        // 緑ボックス反転
+        .service__item__text02 {
           left: -0.5rem;
           right: auto;
-
-          & > .service__item__text03 {
+          
+          .service__item__text03 {
             padding: 5% 45% 4% 4%;
             text-align: left;
           }
@@ -674,6 +673,7 @@ h4 {
     }
   }
 }
+
 
 
 // =====================================
