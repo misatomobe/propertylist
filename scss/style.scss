@@ -478,6 +478,7 @@ h4 {
   text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
   align-items: center;
   padding-right: 25rem;
+  padding-top: 7rem;
 
   @media (max-width: 767px)  {
     display: flex;
@@ -490,7 +491,7 @@ h4 {
   h2 {
     font-size: 3rem;
     font-weight: 400;
-    letter-spacing: 0.3em; /* 118% に相当 */
+    letter-spacing: 0.2em; /* 118% に相当 */
     display: block;
     margin-left: 6rem;
     
