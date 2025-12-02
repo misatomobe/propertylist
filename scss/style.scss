@@ -417,8 +417,8 @@ h4 {
 // メインテキスト
 &__text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 51.5%;
+  left: 50.5%;
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2; /* ← 背景の黒いオーバーレイより上 */
@@ -428,7 +428,7 @@ h4 {
   color: $font-color02;
   text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
   width: 90%;
-  max-width: 1000px; /* ← 大きすぎないように制限も付ける */
+  max-width: 1000px;
 
   @media (max-width: 1030px) {
     font-size: 3.5rem;

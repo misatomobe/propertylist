@@ -407,8 +407,8 @@ h4 {
 }
 .mv__text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 51.5%;
+  left: 50.5%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
@@ -419,7 +419,7 @@ h4 {
   color: #fff;
   text-shadow: 0.4rem 0.2rem 0.2rem rgb(0, 0, 0);
   width: 90%;
-  max-width: 1000px; /* ← 大きすぎないように制限も付ける */
+  max-width: 1000px;
 }
 @media (max-width: 1030px) {
   .mv__text {
