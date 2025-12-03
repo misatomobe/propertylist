@@ -477,7 +477,7 @@ h4 {
   writing-mode: vertical-rl;      /* 縦書き（右から左） */
   text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
   align-items: center;
-  padding-right: 25rem;
+  padding-right: 24rem;
 
   @media (max-width: 767px)  {
     display: flex;
@@ -490,10 +490,10 @@ h4 {
   h2 {
     font-size: 2.8rem;
     font-weight: 400;
-    letter-spacing: 0.15rem; /* 118% に相当 */
+    letter-spacing: 0.5rem; 
     display: block;
-    margin-left: 6rem;
     margin-block-end: 5rem;
+    line-height: 0.21rem;
     
     @media (max-width: 767px) {
       font-size: 2.5rem;
@@ -507,7 +507,6 @@ h4 {
     line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
     letter-spacing: 0.4em; /* 文字間も少し広げる */
     font-weight: 400;
-    
 
     @media (max-width: 767px) {
       font-size: 1.5rem;
