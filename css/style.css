@@ -473,6 +473,10 @@ h4 {
             align-items: center;
   }
 }
+.about__text {
+  -webkit-transform: translateX(-0.1rem);
+          transform: translateX(-0.1rem);
+}
 .about__catch {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
@@ -508,10 +512,6 @@ h4 {
     position: static;
   }
 }
-.about__catch__text {
-  -webkit-transform: translateX(-3rem);
-          transform: translateX(-3rem);
-}
 .about__catch h2 {
   font-size: 3rem;
   font-weight: 400;
@@ -528,7 +528,7 @@ h4 {
 .about__catch p {
   font-size: 1.7rem;
   line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
-  letter-spacing: 0.4em; /* 文字間も少し広げる */
+  letter-spacing: 0.8rem; /* 文字間も少し広げる */
   font-weight: 400;
 }
 @media (max-width: 767px) {
