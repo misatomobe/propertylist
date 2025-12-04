@@ -443,11 +443,6 @@ h4 {
   width: 100%;
 }
 .about__contents {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 中央基準に補正 */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,18 +454,23 @@ h4 {
           align-items: center;
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 767px) {
   .about__contents {
-    position: absolute;
-    -webkit-transform: none;
-            transform: none;
+    position: static;
+    padding: 5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    top: 0;
-    left: 0;
-    padding: 5rem 0;
   }
 }
 .about__catch {
@@ -492,6 +492,8 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
+  -webkit-transform: translateX(-10.5rem);
+          transform: translateX(-10.5rem);
 }
 @media (max-width: 767px) {
   .about__catch {
@@ -506,11 +508,15 @@ h4 {
     position: static;
   }
 }
+.about__catch__text {
+  -webkit-transform: translateX(-3rem);
+          transform: translateX(-3rem);
+}
 .about__catch h2 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 400;
-  letter-spacing: 0.5rem;
-  line-height: 0.21rem;
+  letter-spacing: 0.45rem;
+  line-height: 8.5rem;
 }
 @media (max-width: 767px) {
   .about__catch h2 {
@@ -524,7 +530,6 @@ h4 {
   line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
   letter-spacing: 0.4em; /* 文字間も少し広げる */
   font-weight: 400;
-  margin: 0;
 }
 @media (max-width: 767px) {
   .about__catch p {
@@ -533,7 +538,7 @@ h4 {
     letter-spacing: 0.3em;
   }
 }
-.about__catch br {
+.about__catch p br {
   line-height: 0;
 }
 

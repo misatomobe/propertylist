@@ -453,34 +453,33 @@ h4 {
   width: 100%;
 
   &__contents {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 中央基準に補正 */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    
     @media (max-width: 767px)  {
-      position: absolute;
-      transform: none;
-      align-items: center;
-      top: 0;
-      left: 0;
+      position: static;
       padding: 5rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
-
+  
   &__catch {
-  writing-mode: vertical-rl;      /* 縦書き（右から左） */
-  text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+    writing-mode: vertical-rl;      /* 縦書き（右から左） */
+    text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateX(-10.5rem);
 
   @media (max-width: 767px)  {
     display: flex;
@@ -489,12 +488,16 @@ h4 {
     height: auto;
     position: static;
   }
+
+  &__text {
+    transform: translateX(-3rem);
+  }
   
   h2 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 400;
-    letter-spacing: 0.5rem;
-    line-height: 0.21rem;
+    letter-spacing: 0.45rem;
+    line-height: 8.5rem;
     
     @media (max-width: 767px) {
       font-size: 2.5rem;
@@ -508,7 +511,6 @@ h4 {
     line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
     letter-spacing: 0.4em; /* 文字間も少し広げる */
     font-weight: 400;
-    margin: 0;
 
     @media (max-width: 767px) {
       font-size: 1.5rem;
@@ -516,7 +518,8 @@ h4 {
       letter-spacing: 0.3em;
     }
   }
-  br {
+
+  p br {
     line-height: 0;
   }
 }
