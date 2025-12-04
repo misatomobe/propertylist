@@ -478,10 +478,20 @@ h4 {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl; /* 縦書き（右から左） */
   text-orientation: upright; /* 行間（縦書きでは縦方向の間隔） */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 24rem;
+  gap: 2rem;
 }
 @media (max-width: 767px) {
   .about__catch {
@@ -500,9 +510,6 @@ h4 {
   font-size: 2.8rem;
   font-weight: 400;
   letter-spacing: 0.5rem;
-  display: block;
-  -webkit-margin-after: 5rem;
-          margin-block-end: 5rem;
   line-height: 0.21rem;
 }
 @media (max-width: 767px) {
@@ -517,6 +524,7 @@ h4 {
   line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
   letter-spacing: 0.4em; /* 文字間も少し広げる */
   font-weight: 400;
+  margin: 0;
 }
 @media (max-width: 767px) {
   .about__catch p {
@@ -525,9 +533,8 @@ h4 {
     letter-spacing: 0.3em;
   }
 }
-.about__catch #text {
-  -webkit-margin-after: 1rem;
-          margin-block-end: 1rem;
+.about__catch br {
+  line-height: 0;
 }
 
 .service {
