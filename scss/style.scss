@@ -471,10 +471,6 @@ h4 {
     }
   }
   
-  &__text {
-    transform: translateX(-0.1rem);
-  }
-  
   &__catch {
     writing-mode: vertical-rl;      /* 縦書き（右から左） */
     text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
@@ -505,12 +501,17 @@ h4 {
       margin: 0 0 1rem 0;
     }
   }
-  
-  p {
-    font-size: 1.7rem;
-    line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
-    letter-spacing: 0.8rem; /* 文字間も少し広げる */
-    font-weight: 400;
+
+  &__text {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    transform: translateX(-0.1rem);
+    
+    p {
+      font-size: 1.7rem;
+      line-height: 5rem; /* ← 行と行の間隔を固定で3remに */
+      letter-spacing: 0.8rem; /* 文字間も少し広げる */
+      font-weight: 400;
 
     @media (max-width: 767px) {
       font-size: 1.5rem;
@@ -518,11 +519,6 @@ h4 {
       letter-spacing: 0.3em;
     }
   }
-
-  p br {
-    line-height: 0;
-  }
-}
 }
 
 // =====================================

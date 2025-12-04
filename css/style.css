@@ -473,10 +473,6 @@ h4 {
             align-items: center;
   }
 }
-.about__text {
-  -webkit-transform: translateX(-0.1rem);
-          transform: translateX(-0.1rem);
-}
 .about__catch {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
@@ -525,14 +521,22 @@ h4 {
     margin: 0 0 1rem 0;
   }
 }
-.about__catch p {
+.about__catch__text {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
+  -webkit-transform: translateX(-0.1rem);
+          transform: translateX(-0.1rem);
+}
+.about__catch .about__text p {
   font-size: 1.7rem;
-  line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
+  line-height: 5rem; /* ← 行と行の間隔を固定で3remに */
   letter-spacing: 0.8rem; /* 文字間も少し広げる */
   font-weight: 400;
 }
 @media (max-width: 767px) {
-  .about__catch p {
+  .about__catch .about__text p {
     font-size: 1.5rem;
     line-height: 2.6rem;
     letter-spacing: 0.3em;
