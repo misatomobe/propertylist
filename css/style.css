@@ -407,8 +407,8 @@ h4 {
 }
 .mv__text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 51.5%;
+  left: 50.5%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
@@ -419,7 +419,7 @@ h4 {
   color: #fff;
   text-shadow: 0.4rem 0.2rem 0.2rem rgb(0, 0, 0);
   width: 90%;
-  max-width: 1000px; /* ← 大きすぎないように制限も付ける */
+  max-width: 1000px;
 }
 @media (max-width: 1030px) {
   .mv__text {
@@ -443,34 +443,27 @@ h4 {
   width: 100%;
 }
 .about__contents {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 中央基準に補正 */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 11rem;
 }
 @media (max-width: 767px) {
   .about__contents {
-    position: absolute;
-    -webkit-transform: none;
-            transform: none;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    top: 0;
-    left: 0;
+    position: static;
     padding: 5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0;
   }
 }
 .about__catch {
@@ -478,10 +471,21 @@ h4 {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl; /* 縦書き（右から左） */
   text-orientation: upright; /* 行間（縦書きでは縦方向の間隔） */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 25rem;
+  gap: 6rem;
+  margin: 0;
 }
 @media (max-width: 767px) {
   .about__catch {
@@ -499,9 +503,9 @@ h4 {
 .about__catch h2 {
   font-size: 3rem;
   font-weight: 400;
-  letter-spacing: 0.3em; /* 118% に相当 */
-  display: block;
-  margin-left: 6rem;
+  letter-spacing: 0.45rem;
+  line-height: 1rem;
+  margin: 0;
 }
 @media (max-width: 767px) {
   .about__catch h2 {
@@ -510,14 +514,21 @@ h4 {
     margin: 0 0 1rem 0;
   }
 }
-.about__catch p {
-  font-size: 1.8rem;
-  line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
-  letter-spacing: 0.8em; /* 文字間も少し広げる */
+.about__text {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+.about__text p {
+  font-size: 1.7rem;
+  margin: 0;
+  letter-spacing: 0.8rem;
+  line-height: 5rem;
   font-weight: 400;
 }
 @media (max-width: 767px) {
-  .about__catch p {
+  .about__text p {
     font-size: 1.5rem;
     line-height: 2.6rem;
     letter-spacing: 0.3em;
@@ -1165,7 +1176,6 @@ h4 {
 }
 .company__item__map-wrapper {
   width: 100%;
-  height: auto;
   position: relative;
   z-index: 1;
   aspect-ratio: 3/2;
@@ -1176,6 +1186,7 @@ h4 {
     max-width: 100%;
   }
 }
+<<<<<<< HEAD
 .company__item__map-wrapper__map {
   position: relative;
   width: 100%;
@@ -1199,6 +1210,23 @@ h4 {
     max-width: 100%;
     aspect-ratio: 315/300;
   }
+=======
+.company__item__map {
+  width: 100%;
+  aspect-ratio: 600/400;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .company__item__map {
+    aspect-ratio: 315/300;
+  }
+}
+.company__item__map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+>>>>>>> bb3594385d43a9a384d2a9c5c503b05d4f294604
 }
 .company__item__info {
   position: absolute;
@@ -1222,7 +1250,7 @@ h4 {
 .company__item__info__text {
   position: absolute;
   inset: 0;
-  padding: 5% 0% 4.2% 22%;
+  padding: 5% 0% 4.2% 44%;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;

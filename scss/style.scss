@@ -417,8 +417,8 @@ h4 {
 // メインテキスト
 &__text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 51.5%;
+  left: 50.5%;
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2; /* ← 背景の黒いオーバーレイより上 */
@@ -428,7 +428,7 @@ h4 {
   color: $font-color02;
   text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
   width: 90%;
-  max-width: 1000px; /* ← 大きすぎないように制限も付ける */
+  max-width: 1000px;
 
   @media (max-width: 1030px) {
     font-size: 3.5rem;
@@ -453,67 +453,74 @@ h4 {
   width: 100%;
 
   &__contents {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 中央基準に補正 */
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-
-    @media (max-width: 767px)  {
-      position: absolute;
-      transform: none;
-      align-items: center;
-      top: 0;
-      left: 0;
-      padding: 5rem 0;
-    }
-  }
-
-  &__catch {
-  writing-mode: vertical-rl;      /* 縦書き（右から左） */
-  text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
-  align-items: center;
-  padding-right: 25rem;
-
-  @media (max-width: 767px)  {
-    display: flex;
-    justify-content: center;
-    padding-right: 0;
-    height: auto;
-    position: static;
-  }
-  
-  h2 {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: 0.3em; /* 118% に相当 */
-    display: block;
-    margin-left: 6rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 11rem;
     
-    @media (max-width: 767px) {
-      font-size: 2.5rem;
-      letter-spacing: 0.19em; /* 119% に相当 */
-      margin: 0 0 1rem 0;
+    @media (max-width: 767px)  {
+      position: static;
+      padding: 5rem 0;
+      display: flex;
+      margin-left: 0;
     }
   }
   
-  p {
-    font-size: 1.8rem;
-    line-height: 4rem; /* ← 行と行の間隔を固定で3remに */
-    letter-spacing: 0.8em; /* 文字間も少し広げる */
-    font-weight: 400;
-
-    @media (max-width: 767px) {
-      font-size: 1.5rem;
-      line-height: 2.6rem;
-      letter-spacing: 0.3em;
+  &__catch {
+    writing-mode: vertical-rl;      /* 縦書き（右から左） */
+    text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    margin: 0;
+    
+    @media (max-width: 767px)  {
+      display: flex;
+      justify-content: center;
+      padding-right: 0;
+      height: auto;
+      position: static;
+    }
+    
+    h2 {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.45rem;
+      line-height: 1rem;
+      margin: 0;
+      
+      @media (max-width: 767px) {
+        font-size: 2.5rem;
+        letter-spacing: 0.19em; /* 119% に相当 */
+        margin: 0 0 1rem 0;
+      }
     }
   }
-}
+  
+  &__text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    
+    p {
+      font-size: 1.7rem;
+      margin: 0;
+      letter-spacing: 0.8rem;
+      line-height: 5rem;
+      font-weight: 400;
+      
+      @media (max-width: 767px) {
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        letter-spacing: 0.3em;
+      }
+    }
+  }
 }
 
 // =====================================
@@ -673,6 +680,7 @@ h4 {
     }
   }
 }
+
 
 
 // =====================================
@@ -1021,12 +1029,12 @@ h4 {
     // map-wrapper
     &__map-wrapper {
       width: 100%;
-      height: auto;
       position: relative;
       z-index: 1;
       aspect-ratio: 3 / 2;
 
       @media (max-width: 767px) {
+<<<<<<< HEAD
         width: 100%;
         max-width: 100%;
       }
@@ -1056,6 +1064,28 @@ h4 {
         }
       }
     }
+=======
+        max-width: 100%;
+      }
+    }
+    
+    &__map {
+      width: 100%;
+      aspect-ratio: 600 / 400;
+      overflow: hidden;
+      position: relative;
+
+      @media (max-width: 767px) {
+        aspect-ratio: 315 / 300;
+      }
+      
+      iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }    
+>>>>>>> bb3594385d43a9a384d2a9c5c503b05d4f294604
 
     // 緑ボックス
     &__info {
@@ -1079,7 +1109,7 @@ h4 {
       &__text {
         position: absolute;
         inset: 0;
-        padding: 5% 0% 4.2% 22%;
+        padding: 5% 0% 4.2% 44%;
         color: $font-color02;
         display: flex;
         flex-direction: column;
