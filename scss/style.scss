@@ -494,6 +494,7 @@ h4 {
       font-weight: 400;
       letter-spacing: 0.45rem;
       line-height: 8.5rem;
+      margin: 0;
       
       @media (max-width: 767px) {
         font-size: 2.5rem;
@@ -504,7 +505,7 @@ h4 {
   }
   
   &__text {
-    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
     text-orientation: upright;
     transform: translateX(-0.1rem);
     
@@ -522,6 +523,8 @@ h4 {
     }
   }
 }
+
+.about__catch { outline: 1px solid red; }
 
 // =====================================
 // service
