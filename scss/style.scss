@@ -480,28 +480,29 @@ h4 {
     align-items: center;
     gap: 2rem;
     transform: translateX(-10.5rem);
-
-  @media (max-width: 767px)  {
-    display: flex;
-    justify-content: center;
-    padding-right: 0;
-    height: auto;
-    position: static;
-  }
-  
-  h2 {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: 0.45rem;
-    line-height: 8.5rem;
     
-    @media (max-width: 767px) {
-      font-size: 2.5rem;
-      letter-spacing: 0.19em; /* 119% に相当 */
-      margin: 0 0 1rem 0;
+    @media (max-width: 767px)  {
+      display: flex;
+      justify-content: center;
+      padding-right: 0;
+      height: auto;
+      position: static;
+    }
+    
+    h2 {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.45rem;
+      line-height: 8.5rem;
+      
+      @media (max-width: 767px) {
+        font-size: 2.5rem;
+        letter-spacing: 0.19em; /* 119% に相当 */
+        margin: 0 0 1rem 0;
+      }
     }
   }
-
+  
   &__text {
     writing-mode: vertical-lr;
     text-orientation: upright;
@@ -512,11 +513,12 @@ h4 {
       line-height: 5rem; /* ← 行と行の間隔を固定で3remに */
       letter-spacing: 0.8rem; /* 文字間も少し広げる */
       font-weight: 400;
-
-    @media (max-width: 767px) {
-      font-size: 1.5rem;
-      line-height: 2.6rem;
-      letter-spacing: 0.3em;
+      
+      @media (max-width: 767px) {
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        letter-spacing: 0.3em;
+      }
     }
   }
 }
