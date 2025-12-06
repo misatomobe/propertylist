@@ -579,6 +579,9 @@ h4 {
   z-index: 0;
   margin-bottom: 12.8rem;
 }
+.service__item:last-child {
+  margin-bottom: 5rem;
+}
 @media (max-width: 767px) {
   .service__item {
     margin-bottom: 4rem;
@@ -651,7 +654,7 @@ h4 {
 .service__item__text03 {
   position: absolute;
   inset: 0;
-  padding: 5% 7% 4% 49%;
+  padding: 5% 6% 4% 49%;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
