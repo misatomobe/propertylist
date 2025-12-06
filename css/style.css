@@ -614,7 +614,7 @@ h4 {
   }
 }
 .service__item__text01 {
-  margin-top: 2.4rem;
+  margin-top: 2rem;
   text-align: left;
   z-index: 3;
 }
@@ -631,8 +631,8 @@ h4 {
 }
 .service__item__text02 {
   position: absolute;
-  right: -0.5rem;
-  bottom: -2rem;
+  right: -0.1rem;
+  bottom: -5rem;
   width: 54.35%;
   background-color: #4D9600;
   z-index: 1;
@@ -651,7 +651,7 @@ h4 {
 .service__item__text03 {
   position: absolute;
   inset: 0;
-  padding: 5% 4% 4% 45%;
+  padding: 5% 7% 4% 49%;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
