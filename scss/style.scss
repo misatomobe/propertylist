@@ -460,13 +460,11 @@ h4 {
     position: absolute;
     top: 0;
     left: 0;
-    margin-left: 11rem;
     
     @media (max-width: 767px)  {
       position: static;
       padding: 5rem 0;
       display: flex;
-      margin-left: 0;
     }
   }
   
@@ -477,7 +475,7 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 6rem;
+    gap: 5rem;
     margin: 0;
     
     @media (max-width: 767px)  {
@@ -511,7 +509,7 @@ h4 {
       font-size: 1.7rem;
       margin: 0;
       letter-spacing: 0.8rem;
-      line-height: calc(51 / 17);
+      line-height: calc(50 / 18);
       font-weight: 400;
       
       @media (max-width: 767px) {
@@ -522,6 +520,11 @@ h4 {
     }
   }
 }
+
+.about__contents__inner {
+  padding-left: calc(12.5%);
+}
+
 
 // =====================================
 // service
