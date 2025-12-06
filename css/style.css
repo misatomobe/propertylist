@@ -577,7 +577,7 @@ h4 {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 0;
-  margin-bottom: 8rem;
+  margin-bottom: 12.8rem;
 }
 @media (max-width: 767px) {
   .service__item {
@@ -729,11 +729,11 @@ h4 {
     text-align: right;
   }
   .service__item:nth-of-type(2) .service__item__text02 {
-    left: -0.5rem;
+    left: -0.1rem;
     right: auto;
   }
   .service__item:nth-of-type(2) .service__item__text02 .service__item__text03 {
-    padding: 5% 45% 4% 4%;
+    padding: 5% 49% 4% 8%;
     text-align: left;
   }
 }
