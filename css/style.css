@@ -524,7 +524,7 @@ h4 {
   font-size: 1.7rem;
   margin: 0;
   letter-spacing: 0.8rem;
-  line-height: 5rem;
+  line-height: 3;
   font-weight: 400;
 }
 @media (max-width: 767px) {
