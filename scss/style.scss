@@ -694,7 +694,7 @@ h4 {
 // works
 // =====================================
 .works {
-  padding: 8rem 8rem 9.7rem;
+  padding: 8rem 8rem 10.4rem;
 }
 
 @media (max-width: 767px) {
@@ -891,7 +891,6 @@ h4 {
 // 個々のボックス設定
 &__topic {
   width: 430px;
-  min-height: 383px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -921,10 +920,10 @@ h4 {
 
 .news-item {
   display: flex;
-  align-items: center;
-  column-gap: calc(70 / 430 * 100%);
+  align-items: flex-start;
+  column-gap: calc(58 / 430 * 100%);
   transition: opacity 0.4s ease;
-  padding: 2rem 2rem 1.3rem 2rem;
+  padding: 1.8rem 2.4rem 1rem 2rem;
 
   @media (max-width: 767px) {
     padding: 3rem 2rem 1.3rem 2rem;
@@ -954,18 +953,18 @@ h4 {
 }
 
 .news-item__date {
-  width: 5.3rem;
+  width: 9rem;
 }
 
 .news-item__date time {
   font-size: 1.6rem;
-  line-height: calc( 33 / 16);
+  line-height: calc(33 / 16);
   font-weight: 500;
 }
 
 .news-item__title {
   font-size: 1.8rem;
-  line-height: calc( 25 / 18);
+  line-height: calc(25 / 18);
   font-weight: 500;
   margin-top: 1rem;
 }
