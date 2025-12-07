@@ -1012,12 +1012,17 @@ h4 {
           column-gap: 13.488372093%;
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
-  padding: 1.8rem 2.4rem 1rem 2rem;
+  padding: 1.8rem 2.5rem 1.3rem 2rem;
 }
 @media (max-width: 767px) {
   .news-item {
     padding: 3rem 2rem 1.3rem 2rem;
   }
+}
+
+/* 左右両方の2段目以降に同じpaddingを適用 */
+.news__topic > article:nth-of-type(n+2) .news-item {
+  padding: 1rem 2.2rem 1.2rem 2rem;
 }
 
 .news-item:hover {
