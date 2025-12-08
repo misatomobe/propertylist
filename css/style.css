@@ -1265,23 +1265,47 @@ h4 {
     text-align: left;
   }
 }
-.company__item__info__text__name p {
+.company__item__info__text .company__item__name p {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 300;
+  font-weight: 500;
+  margin-top: 0.1rem;
+  display: block;
 }
 @media (max-width: 1030px) {
-  .company__item__info__text__name p {
+  .company__item__info__text .company__item__name p {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .company__item__info__text__name p {
+  .company__item__info__text .company__item__name p {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 350px) {
-  .company__item__info__text__name p {
+  .company__item__info__text .company__item__name p {
+    font-size: 1.4rem;
+  }
+}
+.company__item__info__text .company__item__address p {
+  font-size: 1.6rem;
+  line-height: 1.5625;
+  font-weight: 500;
+  margin-top: 0.4rem;
+  display: block;
+}
+@media (max-width: 1030px) {
+  .company__item__info__text .company__item__address p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .company__item__info__text .company__item__address p {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 350px) {
+  .company__item__info__text .company__item__address p {
     font-size: 1.4rem;
   }
 }
