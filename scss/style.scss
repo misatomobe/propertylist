@@ -1093,7 +1093,7 @@ h4 {
       &__text {
         position: absolute;
         inset: 0;
-        padding: 0.1% 0 0 44%;
+        padding: 2% 0 0 44%;
         color: $font-color02;
         display: flex;
         flex-direction: column;
@@ -1124,7 +1124,7 @@ h4 {
           font-size: 1.6rem;
           line-height: calc(25 / 16);
           font-weight: 500;
-          margin-top: 0.7rem;
+          margin-top: 0.8rem;
           display: block;
           
           @media (max-width: 1030px) { font-size: 1.5rem; }
@@ -1132,10 +1132,9 @@ h4 {
           @media (max-width: 350px)  { font-size: 1.4rem; }
         }
 
-        .company__item {
-          &__tel {
-            margin-top: 1rem;
-            display: block;
+         // 電話
+        .company__item__tel {
+            margin-top: 1.5rem;
             
             // 電話番号
             span {
@@ -1151,16 +1150,20 @@ h4 {
               position: relative;
               left: -0.5rem;
             }
+          }
+
+          //メール 
+          .company__item__mail {
+            font-size: 1.6rem;
+            line-height: calc(25 / 16);
+            font-weight: 500;
+            display: block;
+            margin-top: 1.2rem;
           } 
         }
-
-        
-
-
       }
     }
   }
-}
 
 // =====================================
 // contact

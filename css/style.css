@@ -1243,7 +1243,7 @@ h4 {
 .company__item__info__text {
   position: absolute;
   inset: 0;
-  padding: 0.1% 0 0 44%;
+  padding: 2% 0 0 44%;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1289,7 +1289,7 @@ h4 {
   font-size: 1.6rem;
   line-height: 1.5625;
   font-weight: 500;
-  margin-top: 0.7rem;
+  margin-top: 0.8rem;
   display: block;
 }
 @media (max-width: 1030px) {
@@ -1308,8 +1308,7 @@ h4 {
   }
 }
 .company__item__info__text .company__item__tel {
-  margin-top: 1rem;
-  display: block;
+  margin-top: 1.5rem;
 }
 .company__item__info__text .company__item__tel span {
   font-size: 1.8rem;
@@ -1322,6 +1321,13 @@ h4 {
   font-weight: 500;
   position: relative;
   left: -0.5rem;
+}
+.company__item__info__text .company__item__mail {
+  font-size: 1.6rem;
+  line-height: 1.5625;
+  font-weight: 500;
+  display: block;
+  margin-top: 1.2rem;
 }
 
 .contact {
