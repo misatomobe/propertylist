@@ -1044,7 +1044,7 @@ h4 {
     @media (max-width: 767px) { margin-bottom: 4rem; }
 
     &__map-wrapper {
-      max-width: 65.5%;
+      max-width: 65.2%;
       width: 100%;
       position: relative;
       z-index: 1;
@@ -1074,9 +1074,9 @@ h4 {
     // 緑ボックス
     &__info {
       position: absolute;
-      right: -0.5rem;
-      bottom: -6.2rem;
-      width: 54.35%;
+      right: 0.1rem;
+      bottom: -6.25rem;
+      width: 54.4%;
       background-color: $main-color;
       z-index: 0;
       aspect-ratio: 500 / 262;
@@ -1093,7 +1093,7 @@ h4 {
       &__text {
         position: absolute;
         inset: 0;
-        padding: 5% 0% 4.2% 44%;
+        padding: 1% 0% 4.2% 44%;
         color: $font-color02;
         display: flex;
         flex-direction: column;
