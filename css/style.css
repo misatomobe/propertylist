@@ -1000,6 +1000,7 @@ h4 {
   font-weight: 600;
 }
 
+/* --- 基本（1段目に適用される padding）--- */
 .news-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1007,9 +1008,9 @@ h4 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-column-gap: 13.488372093%;
-     -moz-column-gap: 13.488372093%;
-          column-gap: 13.488372093%;
+  -webkit-column-gap: 8.1395348837%;
+     -moz-column-gap: 8.1395348837%;
+          column-gap: 8.1395348837%;
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
   padding: 1.8rem 2.5rem 1.3rem 2rem;
@@ -1020,8 +1021,9 @@ h4 {
   }
 }
 
-/* 左右両方の2段目以降に同じpaddingを適用 */
-.news__topic > article:nth-of-type(n+2) .news-item {
+/* --- 2段目・3段目だけ padding を変更（左右どちらもOK） --- */
+.news__topic > article:nth-of-type(2) .news-item,
+.news__topic > article:nth-of-type(3) .news-item {
   padding: 1rem 2.2rem 1.2rem 2rem;
 }
 
@@ -1047,6 +1049,9 @@ h4 {
 
 .news-item__date {
   width: 9rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .news-item__date time {
