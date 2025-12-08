@@ -1132,21 +1132,29 @@ h4 {
           @media (max-width: 350px)  { font-size: 1.4rem; }
         }
 
-        .company__item__tel {
-          margin-top: 1.8rem;
-          display: block;
+        .company__item {
+          &__tel {
+            margin-top: 1rem;
+            display: block;
+            
+            // 電話番号
+            span {
+              font-size: 1.8rem;
+              line-height: calc(25 / 18);
+              font-weight: 500;
+            }
+
+            a {
+              font-size: 2.5rem;
+              line-height: calc(25 / 24);
+              font-weight: 500;
+              position: relative;
+              left: -0.5rem;
+            }
+          } 
         }
 
-        // 電話番号
-        .company__item__tel span{
-          font-size: 1.8rem;
-          line-height: calc(25 / 18);
-          font-weight: 500;
-          
-          @media (max-width: 1030px) { font-size: 1.5rem; }
-          @media (max-width: 767px)  { font-size: 1.6rem; }
-          @media (max-width: 350px)  { font-size: 1.4rem; }
-        }
+        
 
 
       }

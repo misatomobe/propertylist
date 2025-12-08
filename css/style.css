@@ -1308,7 +1308,7 @@ h4 {
   }
 }
 .company__item__info__text .company__item__tel {
-  margin-top: 1.8rem;
+  margin-top: 1rem;
   display: block;
 }
 .company__item__info__text .company__item__tel span {
@@ -1316,20 +1316,12 @@ h4 {
   line-height: 1.3888888889;
   font-weight: 500;
 }
-@media (max-width: 1030px) {
-  .company__item__info__text .company__item__tel span {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 767px) {
-  .company__item__info__text .company__item__tel span {
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 350px) {
-  .company__item__info__text .company__item__tel span {
-    font-size: 1.4rem;
-  }
+.company__item__info__text .company__item__tel a {
+  font-size: 2.5rem;
+  line-height: 1.0416666667;
+  font-weight: 500;
+  position: relative;
+  left: -0.5rem;
 }
 
 .contact {
