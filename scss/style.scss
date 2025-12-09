@@ -1285,7 +1285,7 @@ textarea.form-control {
 .radioitem {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: calc(25 / 18);
@@ -1293,7 +1293,7 @@ textarea.form-control {
 }
 
 .radioitem:not(:last-of-type) {
-  margin-right: 7.4rem;
+  margin-right: 4.5rem;
 }
 
 // 丸型ラジオボタン

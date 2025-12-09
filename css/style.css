@@ -1479,7 +1479,7 @@ textarea.form-control {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.3888888889;
@@ -1487,7 +1487,7 @@ textarea.form-control {
 }
 
 .radioitem:not(:last-of-type) {
-  margin-right: 7.4rem;
+  margin-right: 4.5rem;
 }
 
 .radiobutton {
