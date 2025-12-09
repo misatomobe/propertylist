@@ -1308,7 +1308,7 @@ h4 {
   }
 }
 .company__item__info__text .company__item__tel {
-  margin-top: 1.5rem;
+  margin-top: 1.3rem;
 }
 .company__item__info__text .company__item__tel span {
   font-size: 1.8rem;
@@ -1377,7 +1377,7 @@ form {
 .form-area:not(:first-of-type),
 .qa-list,
 .check-area {
-  margin-top: 5.4rem;
+  margin-top: 4.6rem;
 }
 
 @media (max-width: 767px) {
@@ -1390,7 +1390,7 @@ form {
 .form-area dt,
 .qa-list dt {
   width: 17rem;
-  height: 3.3rem;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1400,7 +1400,6 @@ form {
   font-size: 2rem;
   line-height: 1.65;
   font-weight: bold;
-  margin-bottom: 1rem;
 }
 @media (max-width: 767px) {
   .form-area dt,

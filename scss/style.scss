@@ -1134,7 +1134,7 @@ h4 {
 
          // 電話
         .company__item__tel {
-            margin-top: 1.5rem;
+            margin-top: 1.3rem;
             
             // 電話番号
             span {
@@ -1209,7 +1209,7 @@ form {
 .form-area:not(:first-of-type),
 .qa-list,
 .check-area {
-  margin-top: 5.4rem;
+  margin-top: 4.6rem;
 }
 
 @media (max-width: 767px) {
@@ -1223,13 +1223,12 @@ form {
 .form-area dt,
 .qa-list dt {
   width: 17rem;
-  height: 3.3rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   font-size: 2rem;
   line-height: calc(33 / 20);
   font-weight: bold;
-  margin-bottom: 1rem;
 
   @media (max-width: 767px) {
     width: 100%;
