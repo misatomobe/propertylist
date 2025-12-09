@@ -1207,9 +1207,8 @@ form {
 }
 
 .form-area:not(:first-of-type),
-.qa-list,
 .check-area {
-  margin-top: 4.6rem;
+  margin-top: 4.3rem;
 }
 
 @media (max-width: 767px) {
@@ -1218,6 +1217,11 @@ form {
   .check-area {
     margin-top: 3rem;
   }
+}
+
+.qa-list {
+  margin-top: 5rem;
+  display: flex;
 }
 
 .form-area dt,
@@ -1236,7 +1240,8 @@ form {
   }
 }
 
-.form-area dd {
+.form-area dd,
+.qa-list dd {
   flex: 1;
 }
 
@@ -1544,7 +1549,7 @@ textarea.form-control.form-textarea {
     -moz-appearance: none;
     appearance: none;
     width: 100%;
-    padding: 1.4rem 2rem;
+    padding: 1.25rem 2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     background-color: $font-color02;
@@ -1554,8 +1559,8 @@ textarea.form-control.form-textarea {
   &::after {
    content: "";
    position: absolute;
-   top:50%;
-   right: 1rem;
+   top:55%;
+   right: 2.2rem;
    transform: translateY(-50%);
    width: 1.6rem;
    height: 1.6rem;
