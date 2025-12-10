@@ -1231,6 +1231,10 @@ form {
   margin-top: 5rem;
 }
 
+.check-area dt label {
+  letter-spacing: 0.1em;
+}
+
 .form-area dt,
 .qa-list dt {
   width: 17rem;
@@ -1340,6 +1344,10 @@ textarea.form-control {
   display: block;
 }
 
+.form-area.privacy-area {
+  margin-top: 5rem;
+}
+
 // プライバシーボックス
 .privacy-area dt,
 .privacy-area dd {
@@ -1348,7 +1356,7 @@ textarea.form-control {
 }
 
 .privacy-area dt {
-  margin-bottom: 1rem;
+  height: 4.2rem;
 }
 
 .privacy-box {
@@ -1358,7 +1366,7 @@ textarea.form-control {
   height: 30rem;
   overflow-y: scroll;
   background-color: $font-color02;
-  padding: 4rem 5rem 4rem 4rem;
+  padding: 4.1rem 5rem 4rem 4rem;
 
   // スクロールバー
   scrollbar-width: thin;
@@ -1490,13 +1498,6 @@ textarea.form-control.form-textarea {
   column-gap: 2.5rem;
 }
 
-.checkboxItem:nth-of-type(4n) {
-  margin-right: 0;
-}
-
-.checkboxItem:first-of-type {
-  column-gap: 4rem;
-}
 
 
 @media (max-width: 767px) {
@@ -1535,7 +1536,7 @@ textarea.form-control.form-textarea {
 .check-area dd {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 1.7rem;
+  row-gap: 1.3rem;
   margin-top: 1.5rem;
 }
 
