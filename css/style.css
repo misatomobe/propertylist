@@ -1882,7 +1882,7 @@ textarea.form-control.form-textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  row-gap: 1rem;
+  row-gap: 1.7rem;
 }
 .footer__sns ul li a {
   display: block;
@@ -1904,10 +1904,10 @@ textarea.form-control.form-textarea {
   width: 2.6rem;
 }
 .footer__sns ul li a .youtube {
-  width: 2.5rem;
+  width: 2.6rem;
 }
 .footer__sns ul li a .instagram {
-  width: 1.98rem;
+  width: 2.7rem;
 }
 .footer__copyright {
   display: -webkit-box;
