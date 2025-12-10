@@ -1609,7 +1609,7 @@ textarea.form-control.form-textarea {
     align-items: center;
     justify-content: center;
     height: 33.8rem;
-    padding: 8rem 17.9rem;
+    padding: 8rem 1rem;
     text-align: center;
     width: 100%;
     
@@ -1637,6 +1637,8 @@ textarea.form-control.form-textarea {
       display: flex;
       justify-content: center;
       padding: 2.8rem 0;
+      flex-wrap: nowrap;     // PCでは折り返しなし
+      column-gap: 1rem;
 
       @media (max-width: 767px) {
         flex-wrap: wrap;
@@ -1648,7 +1650,7 @@ textarea.form-control.form-textarea {
         font-style: 400;
         color: $font-color;
         transition: opacity 0.4s ease;
-        gap: 5rem;
+        gap: 4rem;
         padding: 0 2rem;
 
         @media (max-width: 767px) {
@@ -1667,6 +1669,7 @@ textarea.form-control.form-textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+    row-gap: 1rem;
     
     li {
       a {
@@ -1680,15 +1683,15 @@ textarea.form-control.form-textarea {
         }
         
         .twitter {
-          width: 2.8rem;
+          width: 2.6rem;
         }
 
         .facebook {
-          width: 2.8rem;
+          width: 2.6rem;
         }
 
         .youtube {
-          width: 2.234rem;
+          width: 2.5rem;
         }
 
         .instagram {
