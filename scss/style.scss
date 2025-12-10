@@ -1609,7 +1609,7 @@ textarea.form-control.form-textarea {
     align-items: center;
     justify-content: center;
     height: 33.8rem;
-    padding: 8rem 1rem;
+    padding: 8rem 18rem;
     text-align: center;
     width: 100%;
     
@@ -1638,7 +1638,7 @@ textarea.form-control.form-textarea {
       justify-content: center;
       padding: 2.8rem 0;
       flex-wrap: nowrap;     // PCでは折り返しなし
-      column-gap: 1rem;
+      column-gap: 0.2rem;
 
       @media (max-width: 767px) {
         flex-wrap: wrap;

@@ -1813,7 +1813,7 @@ textarea.form-control.form-textarea {
       -ms-flex-pack: center;
           justify-content: center;
   height: 33.8rem;
-  padding: 8rem 1rem;
+  padding: 8rem 18rem;
   text-align: center;
   width: 100%;
 }
@@ -1844,9 +1844,9 @@ textarea.form-control.form-textarea {
   padding: 2.8rem 0;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-column-gap: 1rem;
-     -moz-column-gap: 1rem;
-          column-gap: 1rem;
+  -webkit-column-gap: 0.2rem;
+     -moz-column-gap: 0.2rem;
+          column-gap: 0.2rem;
 }
 @media (max-width: 767px) {
   .footer__nav ul {
