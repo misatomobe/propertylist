@@ -1677,15 +1677,15 @@ textarea.form-control.form-textarea {
       -ms-flex-align: center;
           align-items: center;
   width: 157.5px;
-  margin-right: 1.8rem;
+  margin-right: 4rem;
   white-space: nowrap;
   font-size: 1.8rem;
   line-height: 1.3888888889;
   font-weight: 500;
   white-space: nowrap;
-  -webkit-column-gap: 2rem;
-     -moz-column-gap: 2rem;
-          column-gap: 2rem;
+  -webkit-column-gap: 2.2rem;
+     -moz-column-gap: 2.2rem;
+          column-gap: 2.2rem;
 }
 
 .checkboxItem:nth-of-type(4n) {
@@ -1734,11 +1734,11 @@ textarea.form-control.form-textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  row-gap: 2rem;
+  row-gap: 1.7rem;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 767px) {
