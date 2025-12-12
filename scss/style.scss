@@ -1359,6 +1359,14 @@ textarea.form-control {
   height: 4.2rem;
 }
 
+.privacy-box01 p {
+  line-height: 1.6;
+}
+
+.privacy-box01 {
+  margin-bottom: 3.8rem;
+}
+
 .privacy-box {
   box-sizing: border-box;
   max-width: 80rem;
@@ -1404,7 +1412,7 @@ textarea.form-control {
 
   p {
     font-size: 1.8rem;
-    line-height: calc(31 /18);
+    line-height: calc(33 /18);
     font-weight: 500;
     
     @media (max-width: 767px) {

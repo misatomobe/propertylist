@@ -1553,6 +1553,14 @@ textarea.form-control {
   height: 4.2rem;
 }
 
+.privacy-box01 p {
+  line-height: 1.6;
+}
+
+.privacy-box01 {
+  margin-bottom: 3.8rem;
+}
+
 .privacy-box {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1590,7 +1598,7 @@ textarea.form-control {
   }
   p {
     font-size: 1.8rem;
-    line-height: 1.7222222222;
+    line-height: 1.8333333333;
     font-weight: 500;
   }
 }
