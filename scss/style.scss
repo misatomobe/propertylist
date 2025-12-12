@@ -1638,7 +1638,7 @@ textarea.form-control.form-textarea {
       justify-content: center;
       padding: 2.8rem 0;
       flex-wrap: nowrap;     // PCでは折り返しなし
-      column-gap: 0.2rem;
+      column-gap: 5rem;
 
       @media (max-width: 767px) {
         flex-wrap: wrap;
@@ -1651,7 +1651,6 @@ textarea.form-control.form-textarea {
         color: $font-color;
         transition: opacity 0.4s ease;
         gap: 4rem;
-        padding: 0 2rem;
 
         @media (max-width: 767px) {
           padding: 0 0.5rem;
