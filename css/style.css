@@ -1827,6 +1827,8 @@ textarea.form-control.form-textarea {
   border-bottom: 1px solid #000;
   display: block;
   width: 100%;
+  max-width: 72.2rem;
+  margin: 0 auto;
 }
 .footer__company-name p {
   display: inline-block;

@@ -1623,6 +1623,8 @@ textarea.form-control.form-textarea {
     border-bottom: 1px solid $font-color;
     display: block;
     width: 100%;
+    max-width: 72.2rem;
+    margin: 0 auto;
     
     p {
       display: inline-block;
