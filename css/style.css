@@ -1699,9 +1699,9 @@ textarea.form-control.form-textarea {
   line-height: 1.3888888889;
   font-weight: 500;
   white-space: nowrap;
-  -webkit-column-gap: 2.5rem;
-     -moz-column-gap: 2.5rem;
-          column-gap: 2.5rem;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
 }
 
 @media (max-width: 767px) {
