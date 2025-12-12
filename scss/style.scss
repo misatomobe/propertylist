@@ -1527,6 +1527,7 @@ textarea.form-control.form-textarea {
   height: 2rem;
   border-radius: 0.2rem;
   background-color: $font-color02;
+  flex-shrink: 0;
 }
 
 .checkbox:checked::after {

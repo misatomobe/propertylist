@@ -1725,6 +1725,8 @@ textarea.form-control.form-textarea {
   height: 2rem;
   border-radius: 0.2rem;
   background-color: #fff;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .checkbox:checked::after {
