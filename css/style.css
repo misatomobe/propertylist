@@ -491,7 +491,7 @@ h4 {
   font-size: 3rem;
   font-weight: 400;
   letter-spacing: 0.45rem;
-  line-height: 1;
+  line-height: 0.6;
   margin: 0;
 }
 @media (max-width: 767px) {
@@ -511,7 +511,7 @@ h4 {
   font-size: 1.7rem;
   margin: 0;
   letter-spacing: 0.8rem;
-  line-height: 2.7777777778;
+  line-height: 2.8333333333;
   font-weight: 400;
 }
 @media (max-width: 767px) {
