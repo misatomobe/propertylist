@@ -1373,7 +1373,7 @@ textarea.form-control {
   height: 30rem;
   overflow-y: scroll;
   background-color: $font-color02;
-  padding: 4.1rem 5rem 4rem 4rem;
+  padding: 4.1rem calc(5rem + 10px) 4rem 4rem;
 
   // スクロールバー
   scrollbar-width: thin;
@@ -1381,18 +1381,17 @@ textarea.form-control {
 
   // Chrome / Edge / Safari
   &::-webkit-scrollbar {
-    width: 1rem;
+    width: 10px;
   }
 
   &::-webkit-scrollbar-track {
     background: $scrollbar-color02;
-    border-radius: 1rem;
-    margin: 0;
+    margin: 10px 0;
   }
 
   &::-webkit-scrollbar-thumb {
     background: $scrollbar-color01;
-    border-radius: 1rem;
+    border-radius: 0;
   }
 
   &::-webkit-scrollbar-thumb:hover {

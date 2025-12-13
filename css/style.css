@@ -1569,21 +1569,20 @@ textarea.form-control {
   height: 30rem;
   overflow-y: scroll;
   background-color: #fff;
-  padding: 4.1rem 5rem 4rem 4rem;
+  padding: 4.1rem calc(5rem + 10px) 4rem 4rem;
   scrollbar-width: thin;
   scrollbar-color: #9B9B9B #E3E3E3;
 }
 .privacy-box::-webkit-scrollbar {
-  width: 1rem;
+  width: 10px;
 }
 .privacy-box::-webkit-scrollbar-track {
   background: #E3E3E3;
-  border-radius: 1rem;
-  margin: 0;
+  margin: 10px 0;
 }
 .privacy-box::-webkit-scrollbar-thumb {
   background: #9B9B9B;
-  border-radius: 1rem;
+  border-radius: 0;
 }
 .privacy-box::-webkit-scrollbar-thumb:hover {
   background: rgb(116.75, 116.75, 116.75);
