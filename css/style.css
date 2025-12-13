@@ -413,18 +413,15 @@ h4 {
           transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2; /* ← 背景の黒いオーバーレイより上 */
-  font-size: 4rem;
-  line-height: 1.75;
-  letter-spacing: 1.2rem; /* = 1.2rem */
-  color: #fff;
-  text-shadow: 0.4rem 0.2rem 0.2rem rgb(0, 0, 0);
   width: 90%;
   max-width: 1000px;
 }
-@media (max-width: 767px) {
-  .mv__text {
-    font-size: 9rem;
-  }
+.mv__text p {
+  font-size: 4rem;
+  line-height: 1.75;
+  letter-spacing: 1.2rem;
+  color: #fff;
+  text-shadow: 0.4rem 0.2rem 0.2rem rgb(0, 0, 0);
 }
 
 .about {
@@ -731,7 +728,7 @@ h4 {
 }
 
 .works {
-  padding: 8rem 8rem 10.4rem;
+  padding: 8rem 8rem 9.8rem;
 }
 
 @media (max-width: 767px) {
@@ -752,9 +749,9 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 5%;
-     -moz-column-gap: 5%;
-          column-gap: 5%;
+  -webkit-column-gap: 4.3%;
+     -moz-column-gap: 4.3%;
+          column-gap: 4.3%;
   width: 100%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -771,7 +768,7 @@ h4 {
   }
 }
 .works__item {
-  width: 21.25%; /* gap 3つ分を引いて4等分 */
+  width: 21.775%; /* gap 3つ分を引いて4等分 */
   max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

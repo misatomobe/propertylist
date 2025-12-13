@@ -422,18 +422,17 @@ h4 {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2; /* ← 背景の黒いオーバーレイより上 */
-  font-size: 4rem;
-  line-height: calc(70 / 40);
-  letter-spacing: calc(4rem * 0.3); /* = 1.2rem */
-  color: $font-color02;
-  text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
+  
   width: 90%;
   max-width: 1000px;
 
-  @media (max-width: 767px)  {
-      font-size: 9rem;
-    }
-
+  p {
+    font-size: 4rem;
+    line-height: calc(70 / 40);
+    letter-spacing: calc(4rem * 0.3);
+    color: $font-color02;
+    text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
+  }
 }
 
 }
@@ -687,7 +686,7 @@ h4 {
 // works
 // =====================================
 .works {
-  padding: 8rem 8rem 10.4rem;
+  padding: 8rem 8rem 9.8rem;
 }
 
 @media (max-width: 767px) {
@@ -708,7 +707,7 @@ h4 {
 
 .works__items {
   display: flex;
-  column-gap: 5%;
+  column-gap: 4.3%;
   width: 100%;
   justify-content: flex-start;
 }
@@ -721,7 +720,7 @@ h4 {
 }
 
 .works__item {
-  width: calc((100% - (5% * 3)) / 4);/* gap 3つ分を引いて4等分 */
+  width: calc((100% - (4.3% * 3)) / 4);/* gap 3つ分を引いて4等分 */
   max-width: 100%;
   box-sizing: border-box;
 }
