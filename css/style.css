@@ -445,7 +445,12 @@ h4 {
 }
 @media (max-width: 767px) {
   .about__contents {
-    position: static;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        align-self: center;
     padding: 5rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -475,15 +480,20 @@ h4 {
 }
 @media (max-width: 767px) {
   .about__catch {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-right: 0;
-    height: auto;
-    position: static;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
   }
 }
 .about__catch h2 {
@@ -496,8 +506,11 @@ h4 {
 @media (max-width: 767px) {
   .about__catch h2 {
     font-size: 2.5rem;
-    letter-spacing: 0.19em; /* 119% に相当 */
-    margin: 0 0 1rem 0;
+    letter-spacing: 0.22em; /* 119% に相当 */
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    text-orientation: mixed;
   }
 }
 .about__text {
@@ -505,6 +518,14 @@ h4 {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-orientation: upright;
+}
+@media (max-width: 767px) {
+  .about__text {
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
 }
 .about__text p {
   font-size: 1.7rem;
@@ -517,12 +538,17 @@ h4 {
   .about__text p {
     font-size: 1.5rem;
     line-height: 2.6rem;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.35em;
   }
 }
 
 .about__contents__inner {
   padding-left: 12.5%;
+}
+@media (max-width: 767px) {
+  .about__contents__inner {
+    padding-left: 0;
+  }
 }
 
 .service {
