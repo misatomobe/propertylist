@@ -225,11 +225,6 @@ h4 {
   font-weight: 400;
   color: #fff;
 }
-@media (max-width: 1030px) {
-  .header__logo-text {
-    font-size: 1.8rem;
-  }
-}
 .header__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,6 +417,13 @@ h4 {
   letter-spacing: 1.2rem;
   color: #fff;
   text-shadow: 0.4rem 0.2rem 0.2rem rgb(0, 0, 0);
+}
+@media (max-width: 375px) {
+  .mv__text p {
+    font-size: 3rem;
+    line-height: 2;
+    letter-spacing: 0.81rem;
+  }
 }
 
 .about {

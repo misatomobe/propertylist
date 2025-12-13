@@ -221,10 +221,6 @@ h4 {
   line-height: calc(33 / 20);
   font-weight: 400;
   color: $font-color02;
-  
-  @media (max-width: 1030px) {
-    font-size: 1.8rem;
-  }
 }
 }
 
@@ -432,6 +428,12 @@ h4 {
     letter-spacing: calc(4rem * 0.3);
     color: $font-color02;
     text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
+
+    @media (max-width: 375px) {
+      font-size: 3rem;
+      line-height: calc(60 / 30);
+      letter-spacing: calc(3rem * 0.27);
+    }
   }
 }
 
