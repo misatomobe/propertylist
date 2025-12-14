@@ -604,7 +604,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .service__item {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
 }
 .service__item__image-wrapper {
@@ -688,6 +688,13 @@ h4 {
           justify-content: center;
   text-align: left;
 }
+@media (max-width: 767px) {
+  .service__item__text03 {
+    position: static;
+    padding: 2rem;
+    text-align: left;
+  }
+}
 .service__item__text03 h3 {
   font-size: 2.5rem;
   line-height: 1.32;
@@ -728,14 +735,6 @@ h4 {
 @media (max-width: 350px) {
   .service__item__text03 p {
     font-size: 1.4rem;
-  }
-}
-@media (max-width: 767px) {
-  .service__item__text03 {
-    position: static;
-    padding: 2rem;
-    height: 100%;
-    text-align: left;
   }
 }
 @media (min-width: 768px) {
