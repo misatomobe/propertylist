@@ -1019,7 +1019,7 @@ h4 {
   @media (max-width: 767px) {
     margin-top: 0.8rem;
     letter-spacing: 0.1rem;
-    line-height: 0.1rem;
+    line-height: calc(10 / 18);
   }
 }
 

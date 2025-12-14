@@ -1108,7 +1108,7 @@ h4 {
   .news-item__title {
     margin-top: 0.8rem;
     letter-spacing: 0.1rem;
-    line-height: 0.1rem;
+    line-height: 0.5555555556;
   }
 }
 
