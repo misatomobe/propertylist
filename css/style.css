@@ -606,6 +606,9 @@ h4 {
   .service__item {
     margin-bottom: 5rem;
   }
+  .service__item:nth-of-type(3) {
+    margin-bottom: 1rem;
+  }
 }
 .service__item__image-wrapper {
   max-width: 65.5%;
@@ -667,7 +670,8 @@ h4 {
     position: static;
     width: 100%;
     margin-top: 0.6rem;
-    aspect-ratio: 315/146;
+    aspect-ratio: auto;
+    height: auto;
     z-index: auto;
   }
 }
@@ -691,7 +695,7 @@ h4 {
 @media (max-width: 767px) {
   .service__item__text03 {
     position: static;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     text-align: left;
   }
 }
