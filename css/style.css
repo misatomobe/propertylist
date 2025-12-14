@@ -767,12 +767,12 @@ h4 {
 .works {
   padding: 8rem 8rem 9.8rem;
 }
-
 @media (max-width: 767px) {
   .works {
     padding: 5rem 3rem 4.2rem;
   }
 }
+
 .works__contents {
   margin-top: 7.3rem;
 }

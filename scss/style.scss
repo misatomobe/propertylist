@@ -725,10 +725,8 @@ h4 {
 // =====================================
 .works {
   padding: 8rem 8rem 9.8rem;
-}
 
-@media (max-width: 767px) {
-  .works {
+  @media (max-width: 767px) {
     padding: 5rem 3rem 4.2rem;
   }
 }
