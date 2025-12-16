@@ -958,7 +958,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .news {
-    padding: 5rem 3rem;
+    padding: 5rem 3rem 5.2rem;
   }
 }
 .news_contents {
@@ -1287,7 +1287,7 @@ h4 {
   .company__item__info {
     position: static;
     width: 100%;
-    margin-top: 0.2rem;
+    margin-top: 2rem;
     aspect-ratio: 315/202;
     z-index: auto;
   }

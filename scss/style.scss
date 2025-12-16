@@ -897,7 +897,7 @@ h4 {
   padding: 8rem;
 
   @media (max-width: 767px) {
-    padding: 5rem 3rem;
+    padding: 5rem 3rem 5.2rem;
   }
   
   &_contents {
@@ -1091,7 +1091,9 @@ h4 {
     z-index: 0;
     margin-bottom: 8rem;
 
-    @media (max-width: 767px) { margin-bottom: 4rem; }
+    @media (max-width: 767px) {
+      margin-bottom: 4rem;
+    }
 
     &__map-wrapper {
       max-width: 65.2%;
@@ -1135,7 +1137,7 @@ h4 {
       @media (max-width: 767px) {
         position: static;
         width: 100%;
-        margin-top: 0.2rem;
+        margin-top: 2rem;
         aspect-ratio: 315 / 202;
         z-index: auto;
       }
