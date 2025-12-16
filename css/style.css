@@ -1114,6 +1114,10 @@ h4 {
   .news-item__title p {
     margin-top: 1.2rem;
     line-height: 1.3888888889;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 }
 
