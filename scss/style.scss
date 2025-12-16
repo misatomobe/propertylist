@@ -959,7 +959,7 @@ h4 {
   padding: 1.9rem 2.5rem 1.4rem 2rem;
 
   @media (max-width: 767px) {
-    padding: 2rem 2rem 0 2rem;
+    padding: 2rem 2.1rem 1.1rem 2rem;
     column-gap: 1.9rem;
   }
 }
@@ -968,6 +968,10 @@ h4 {
 .news__topic > article:nth-of-type(2) .news-item,
 .news__topic > article:nth-of-type(3) .news-item {
   padding: 1rem 2rem 1.3rem 2rem;
+
+  @media (max-width: 767px) {
+    padding: 1rem 2.1rem 1.1rem 2rem;
+  }
 }
 
 .news-item:hover {
@@ -1010,16 +1014,15 @@ h4 {
   display: inline-block;
 }
 
-.news-item__title {
+.news-item__title p {
   font-size: 1.8rem;
   line-height: calc(25 / 18);
   font-weight: 500;
   margin-top: 1rem;
 
   @media (max-width: 767px) {
-    margin-top: 0.8rem;
-    letter-spacing: 0.1rem;
-    line-height: calc(10 / 18);
+    margin-top: 1.2rem;
+    line-height: calc(25 / 18);
   }
 }
 
