@@ -1154,39 +1154,48 @@ h4 {
 
         @media (max-width: 767px) {
           position: static;
-          padding: 2rem 2rem 1rem 2rem;
+          padding: 1.8rem 2rem 1rem 2rem;
           height: 100%;
           text-align: left;
         }
         
         // 社名
         .company__item__name p {
-          font-size: 2rem;
-          line-height: calc(33 / 20);
-          font-weight: 500;
-          
-          @media (max-width: 1030px) { font-size: 1.5rem; }
-          @media (max-width: 767px)  { font-size: 1.6rem; }
-          @media (max-width: 350px)  { font-size: 1.4rem; }
+            font-size: 2rem;
+            line-height: calc(33 / 20);
+            font-weight: 500;
+            margin-top: 0.1rem;
+            display: block;
+
+            @media (max-width: 767px) {
+              margin-top: 0;
+            }
         }
 
-        
         // 住所
         .company__item__address p {
           font-size: 1.6rem;
           line-height: calc(25 / 16);
           font-weight: 500;
-          margin-top: 0.8rem;
+          margin-top: 0.6rem;
           display: block;
-          
-          @media (max-width: 1030px) { font-size: 1.5rem; }
-          @media (max-width: 767px)  { font-size: 1.6rem; }
-          @media (max-width: 350px)  { font-size: 1.4rem; }
-        }
+
+          @media (max-width: 767px)  {
+            font-size: 1.6rem;
+            margin-top: 0.7rem;
+            }
+          @media (max-width: 350px)  {
+             font-size: 1.4rem;
+             }
+            }
 
          // 電話
         .company__item__tel {
             margin-top: 1.3rem;
+
+            @media (max-width: 767px) {
+              margin-top: 1rem;
+            }
             
             // 電話番号
             span {
@@ -1211,6 +1220,10 @@ h4 {
             font-weight: 500;
             display: block;
             margin-top: 1.2rem;
+
+            @media (max-width: 767px) {
+              margin-top: 1.3rem;
+            }
           } 
         }
       }
