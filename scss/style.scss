@@ -1072,8 +1072,12 @@ h4 {
 .company {
   padding: 8rem 3rem 6.5rem ;
 
-  @media (max-width: 1030px) { padding: 5rem 2rem; }
-  @media (max-width: 767px)  { padding: 5rem 3rem; }
+  @media (max-width: 1030px) {
+     padding: 5rem 2rem;
+     }
+  @media (max-width: 767px)  {
+     padding: 5rem 3rem 1rem 3rem;
+     }
 
   &__contents {
     margin-top: 6.8rem;
@@ -1154,7 +1158,7 @@ h4 {
 
         @media (max-width: 767px) {
           position: static;
-          padding: 1.8rem 2rem 1rem 2rem;
+          padding: 1.5rem 2rem 1rem 2rem;
           height: 100%;
           text-align: left;
         }
@@ -1163,7 +1167,7 @@ h4 {
         .company__item__name p {
             font-size: 2rem;
             line-height: calc(33 / 20);
-            font-weight: 500;
+            font-weight: 600;
             margin-top: 0.1rem;
             display: block;
 
@@ -1176,7 +1180,7 @@ h4 {
         .company__item__address p {
           font-size: 1.6rem;
           line-height: calc(25 / 16);
-          font-weight: 500;
+          font-weight: 600;
           margin-top: 0.6rem;
           display: block;
 
@@ -1194,20 +1198,20 @@ h4 {
             margin-top: 1.3rem;
 
             @media (max-width: 767px) {
-              margin-top: 1rem;
+              margin-top: 1.2rem;
             }
             
             // 電話番号
             span {
               font-size: 1.8rem;
               line-height: calc(25 / 18);
-              font-weight: 500;
+              font-weight: 600;
             }
 
             a {
               font-size: 2.5rem;
               line-height: calc(25 / 24);
-              font-weight: 500;
+              font-weight: 600;
               position: relative;
               left: -0.5rem;
             }
@@ -1217,12 +1221,12 @@ h4 {
           .company__item__mail {
             font-size: 1.6rem;
             line-height: calc(25 / 16);
-            font-weight: 500;
+            font-weight: 600;
             display: block;
             margin-top: 1.2rem;
 
             @media (max-width: 767px) {
-              margin-top: 1.3rem;
+              margin-top: 1rem;
             }
           } 
         }

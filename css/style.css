@@ -1215,7 +1215,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .company {
-    padding: 5rem 3rem;
+    padding: 5rem 3rem 1rem 3rem;
   }
 }
 .company__contents {
@@ -1312,7 +1312,7 @@ h4 {
 @media (max-width: 767px) {
   .company__item__info__text {
     position: static;
-    padding: 1.8rem 2rem 1rem 2rem;
+    padding: 1.5rem 2rem 1rem 2rem;
     height: 100%;
     text-align: left;
   }
@@ -1320,7 +1320,7 @@ h4 {
 .company__item__info__text .company__item__name p {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 0.1rem;
   display: block;
 }
@@ -1332,7 +1332,7 @@ h4 {
 .company__item__info__text .company__item__address p {
   font-size: 1.6rem;
   line-height: 1.5625;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 0.6rem;
   display: block;
 }
@@ -1352,31 +1352,31 @@ h4 {
 }
 @media (max-width: 767px) {
   .company__item__info__text .company__item__tel {
-    margin-top: 1rem;
+    margin-top: 1.2rem;
   }
 }
 .company__item__info__text .company__item__tel span {
   font-size: 1.8rem;
   line-height: 1.3888888889;
-  font-weight: 500;
+  font-weight: 600;
 }
 .company__item__info__text .company__item__tel a {
   font-size: 2.5rem;
   line-height: 1.0416666667;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   left: -0.5rem;
 }
 .company__item__info__text .company__item__mail {
   font-size: 1.6rem;
   line-height: 1.5625;
-  font-weight: 500;
+  font-weight: 600;
   display: block;
   margin-top: 1.2rem;
 }
 @media (max-width: 767px) {
   .company__item__info__text .company__item__mail {
-    margin-top: 1.3rem;
+    margin-top: 1rem;
   }
 }
 
