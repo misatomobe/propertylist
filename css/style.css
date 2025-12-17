@@ -1312,7 +1312,7 @@ h4 {
 @media (max-width: 767px) {
   .company__item__info__text {
     position: static;
-    padding: 1.5rem 2rem 1rem 2rem;
+    padding: 2.1rem 2rem 1rem 2rem;
     height: 100%;
     text-align: left;
   }
@@ -1392,11 +1392,21 @@ h4 {
 .contact__contents {
   margin-top: 3.5rem;
 }
+@media (max-width: 767px) {
+  .contact__contents {
+    margin-top: 3.7rem;
+  }
+}
 
 .contact__text p {
   font-size: 2rem;
   line-height: 1.5;
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  .contact__text p {
+    line-height: 1.65;
+  }
 }
 
 form {
@@ -1404,7 +1414,7 @@ form {
 }
 @media (max-width: 767px) {
   form {
-    margin-top: 4rem;
+    margin-top: 3.6rem;
   }
 }
 
