@@ -1455,13 +1455,32 @@ form {
 .form-area.message-area {
   margin-top: 4.8rem;
 }
+@media (max-width: 767px) {
+  .form-area.message-area {
+    margin-top: 3rem;
+  }
+}
 
 .check-area {
   margin-top: 5rem;
 }
+@media (max-width: 767px) {
+  .check-area {
+    margin-top: 3rem;
+  }
+}
 
 .check-area dt label {
   letter-spacing: 0.1em;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+@media (max-width: 767px) {
+  .check-area dt label {
+    letter-spacing: 0;
+    font-size: 2rem;
+    line-height: 1.35;
+  }
 }
 
 .form-area dt,
@@ -1840,6 +1859,12 @@ textarea.form-control.form-textarea {
   font-size: 1.8rem;
   line-height: 1.3888888889;
   background-color: #fff;
+}
+@media (max-width: 767px) {
+  .custom-select select {
+    font-size: 1.6rem;
+    line-height: 1.5625;
+  }
 }
 .custom-select::after {
   content: "";

@@ -1302,14 +1302,30 @@ form {
 
 .form-area.message-area {
   margin-top: 4.8rem;
+
+  @media (max-width: 767px) {
+    margin-top: 3rem;
+  }
 }
 
 .check-area {
   margin-top: 5rem;
+
+  @media (max-width: 767px) {
+    margin-top: 3rem;
+  }
 }
 
 .check-area dt label {
   letter-spacing: 0.1em;
+  font-size: 2rem;
+  line-height: calc(33 / 20);
+  
+  @media (max-width: 767px) {
+    letter-spacing: 0;
+    font-size: 2rem;
+    line-height: calc(27 / 20);
+  }
 }
 
 .form-area dt,
@@ -1649,6 +1665,11 @@ textarea.form-control.form-textarea {
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     background-color: $font-color02;
+
+    @media (max-width: 767px) {
+      font-size: 1.6rem;
+    line-height: calc(25 / 16);
+    }
   }
 
   // 開閉アイコン
