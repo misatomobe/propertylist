@@ -1687,6 +1687,24 @@ textarea.form-control.form-textarea {
   }
 }
 
+// スマホ時：お問い合わせ種別（qa-list）を横並び
+@media (max-width: 767px) {
+  .qa-list {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  .qa-list dt{
+    width: 100%;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .qa-list dd {
+    flex: 1;
+  }
+}
+
 // =====================================
 // footer
 // =====================================
