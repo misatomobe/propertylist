@@ -1446,6 +1446,10 @@ textarea.form-control {
 
 .form-area.privacy-area {
   margin-top: 5rem;
+
+  @media (max-width: 767px) {
+    margin-top: 3rem;
+  }
 }
 
 // プライバシーボックス
@@ -1605,8 +1609,10 @@ textarea.form-control.form-textarea {
 
 @media (max-width: 767px) {
   .checkboxItem {
-    width: calc((100% - 1rem) / 2);
-    margin-right: 1rem;
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+    width: calc((100% - 1.8rem) / 2);
+    margin-right: 0.9rem;
     column-gap: 1rem;
   }
 
@@ -1646,7 +1652,8 @@ textarea.form-control.form-textarea {
 
 @media (max-width: 767px) {
   .check-area dd {
-    row-gap: 1rem;
+    row-gap: 0.5rem;
+    margin-top: 0;
   }
 }
 
