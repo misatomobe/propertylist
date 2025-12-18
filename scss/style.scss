@@ -1383,10 +1383,18 @@ textarea.form-control {
   font-weight: 500;
   line-height: calc(25 / 18);
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    gap: 1.2rem;
+  }
 }
 
 .radioitem:not(:last-of-type) {
   margin-right: 4.5rem;
+
+  @media (max-width: 767px) {
+    margin-right: 4rem;
+  }
 }
 
 // 丸型ラジオボタン
@@ -1502,10 +1510,8 @@ textarea.form-control {
   display: flex;
   justify-content: center;
   margin-top: 8rem;
-}
 
-@media (max-width: 767px) {
-  .form-submit-area {
+  @media (max-width: 767px)  {
     margin-top: 5rem;
   }
 }
@@ -1659,6 +1665,25 @@ textarea.form-control.form-textarea {
    background-repeat: no-repeat;
    pointer-events: none;
    transition: transform 0.3s ease;
+  }
+}
+
+// スマホ時：性別だけ dt + dd を横並び
+@media (max-width: 767px) {
+  .form-area:nth-of-type(2) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-area:nth-of-type(2) dt {
+    width: 6rem;
+    margin-bottom: 0;
+    margin-right: 2.7rem;
+  }
+
+  .form-area:nth-of-type(2) dd {
+    flex: 1;
+    gap: 0;
   }
 }
 

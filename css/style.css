@@ -1563,9 +1563,19 @@ textarea.form-control {
   line-height: 1.3888888889;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .radioitem {
+    gap: 1.2rem;
+  }
+}
 
 .radioitem:not(:last-of-type) {
   margin-right: 4.5rem;
+}
+@media (max-width: 767px) {
+  .radioitem:not(:last-of-type) {
+    margin-right: 4rem;
+  }
 }
 
 .radiobutton {
@@ -1677,12 +1687,12 @@ textarea.form-control {
           justify-content: center;
   margin-top: 8rem;
 }
-
 @media (max-width: 767px) {
   .form-submit-area {
     margin-top: 5rem;
   }
 }
+
 .form-submit {
   width: 30rem;
   height: 5rem;
@@ -1850,6 +1860,28 @@ textarea.form-control.form-textarea {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
+@media (max-width: 767px) {
+  .form-area:nth-of-type(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form-area:nth-of-type(2) dt {
+    width: 6rem;
+    margin-bottom: 0;
+    margin-right: 2.7rem;
+  }
+  .form-area:nth-of-type(2) dd {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    gap: 0;
+  }
+}
 .footer__contents {
   background-color: #fff;
   display: -webkit-box;
