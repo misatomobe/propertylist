@@ -1461,6 +1461,10 @@ textarea.form-control {
 
 .privacy-area dt {
   height: 4.2rem;
+
+  @media (max-width: 767px) {
+    height: 3rem;
+  }
 }
 
 .privacy-box01 p {
@@ -1509,8 +1513,8 @@ textarea.form-control {
   .privacy-box {
     max-width: 100%;
     width: 100%;
-    height: 32.3;
-    padding: 3rem 5rem 3rem 3rem;
+    height: 32.3rem;
+    padding: 3.5rem 5rem 3rem 3rem;
   }
 
   p {
