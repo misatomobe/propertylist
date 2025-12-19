@@ -1971,6 +1971,7 @@ textarea.form-control.form-textarea {
   .footer__contents {
     height: 30rem;
     padding: 5rem 3.5rem;
+    height: 35rem;
   }
 }
 .footer__company-name {
