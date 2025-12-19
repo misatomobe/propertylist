@@ -1584,7 +1584,7 @@ textarea.form-control {
 }
 @media (max-width: 767px) {
   .radioitem {
-    gap: 1.2rem;
+    gap: 1rem;
   }
 }
 
@@ -1906,7 +1906,7 @@ textarea.form-control.form-textarea {
   .form-area:nth-of-type(2) dt {
     width: 6rem;
     margin-bottom: 0;
-    margin-right: 2.7rem;
+    margin-right: 3rem;
   }
   .form-area:nth-of-type(2) dd {
     -webkit-box-flex: 1;
