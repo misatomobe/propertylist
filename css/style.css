@@ -1471,14 +1471,11 @@ form {
 }
 
 .check-area dt label {
-  letter-spacing: 0.1em;
   font-size: 2rem;
   line-height: 1.65;
 }
 @media (max-width: 767px) {
   .check-area dt label {
-    letter-spacing: 0;
-    font-size: 2rem;
     line-height: 1.35;
   }
 }
@@ -1856,7 +1853,7 @@ textarea.form-control.form-textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 1.3rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 767px) {
