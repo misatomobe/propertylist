@@ -1759,9 +1759,8 @@ textarea.form-control.form-textarea {
     width: 100%;
     
     @media (max-width: 767px) {
-      height: 30rem;
-      padding: 5rem 3.5rem;
-      height: 35rem;
+      height: auto;
+      padding: 5rem 3rem;
     }
   }
   
@@ -1774,9 +1773,13 @@ textarea.form-control.form-textarea {
     
     p {
       display: inline-block;
-      padding-bottom: 2.8rem;
+      margin-bottom: 2.8rem;
       font-size: 2rem;
       line-height: calc(33 / 20);
+
+      @media (max-width: 767px) {
+        margin-bottom: 2rem;
+      }
     }
   }
   
@@ -1790,6 +1793,7 @@ textarea.form-control.form-textarea {
 
       @media (max-width: 767px) {
         flex-wrap: wrap;
+        padding: 2rem 0;
       }
       
       a {

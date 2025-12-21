@@ -1969,9 +1969,8 @@ textarea.form-control.form-textarea {
 }
 @media (max-width: 767px) {
   .footer__contents {
-    height: 30rem;
-    padding: 5rem 3.5rem;
-    height: 35rem;
+    height: auto;
+    padding: 5rem 3rem;
   }
 }
 .footer__company-name {
@@ -1983,9 +1982,14 @@ textarea.form-control.form-textarea {
 }
 .footer__company-name p {
   display: inline-block;
-  padding-bottom: 2.8rem;
+  margin-bottom: 2.8rem;
   font-size: 2rem;
   line-height: 1.65;
+}
+@media (max-width: 767px) {
+  .footer__company-name p {
+    margin-bottom: 2rem;
+  }
 }
 .footer__nav ul {
   display: -webkit-box;
@@ -2005,6 +2009,7 @@ textarea.form-control.form-textarea {
   .footer__nav ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 2rem 0;
   }
 }
 .footer__nav ul a {
