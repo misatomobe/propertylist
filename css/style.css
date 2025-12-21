@@ -262,7 +262,7 @@ h4 {
 }
 @media (max-width: 1030px) {
   .header__nav ul a {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 .header__hamburger {
@@ -513,6 +513,11 @@ h4 {
     text-orientation: mixed;
   }
 }
+@media (max-width: 370px) {
+  .about__catch h2 {
+    font-size: 2.3rem;
+  }
+}
 .about__text {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
@@ -539,6 +544,11 @@ h4 {
     font-size: 1.5rem;
     line-height: 2.6rem;
     letter-spacing: 0.35em;
+  }
+}
+@media (max-width: 370px) {
+  .about__text p {
+    font-size: 1.2rem;
   }
 }
 
