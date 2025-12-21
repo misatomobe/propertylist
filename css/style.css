@@ -1322,8 +1322,8 @@ h4 {
 @media (max-width: 767px) {
   .company__item__info__text {
     position: static;
-    padding: 2.3rem 2rem 1rem 2rem;
-    height: 100%;
+    padding: 2rem;
+    height: auto;
     text-align: left;
   }
 }
@@ -1380,7 +1380,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .company__item__info__text .company__item__mail {
-    margin-top: 1.1rem;
+    margin-top: 0.6rem;
   }
 }
 
