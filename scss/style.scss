@@ -1171,11 +1171,11 @@ h4 {
 
         @media (max-width: 767px) {
           position: static;
-          padding: 2.1rem 2rem 1rem 2rem;
+          padding: 2.3rem 2rem 1rem 2rem;
           height: 100%;
           text-align: left;
         }
-        
+
         // 社名
         .company__item__name p {
             font-size: 2rem;
@@ -1198,13 +1198,9 @@ h4 {
           display: block;
 
           @media (max-width: 767px)  {
-            font-size: 1.6rem;
             margin-top: 0.7rem;
             }
-          @media (max-width: 350px)  {
-             font-size: 1.4rem;
-             }
-            }
+          }
 
          // 電話
         .company__item__tel {
@@ -1239,7 +1235,7 @@ h4 {
             margin-top: 1.2rem;
 
             @media (max-width: 767px) {
-              margin-top: 1rem;
+              margin-top: 1.1rem;
             }
           } 
         }
