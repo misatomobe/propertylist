@@ -1299,6 +1299,7 @@ h4 {
     width: 100%;
     margin-top: 2rem;
     aspect-ratio: 315/202;
+    height: auto;
     z-index: auto;
   }
 }
