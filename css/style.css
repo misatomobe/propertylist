@@ -2045,6 +2045,11 @@ textarea.form-control.form-textarea {
           align-items: center;
   row-gap: 1.7rem;
 }
+@media (max-width: 767px) {
+  .footer__sns ul {
+    row-gap: 2rem;
+  }
+}
 .footer__sns ul li a {
   display: block;
   padding: 0 1.5rem;
@@ -2061,14 +2066,34 @@ textarea.form-control.form-textarea {
 .footer__sns ul li a .twitter {
   width: 2.6rem;
 }
+@media (max-width: 767px) {
+  .footer__sns ul li a .twitter {
+    width: 2.8rem;
+  }
+}
 .footer__sns ul li a .facebook {
   width: 2.6rem;
+}
+@media (max-width: 767px) {
+  .footer__sns ul li a .facebook {
+    width: 2.8rem;
+  }
 }
 .footer__sns ul li a .youtube {
   width: 2.6rem;
 }
+@media (max-width: 767px) {
+  .footer__sns ul li a .youtube {
+    width: 2.8rem;
+  }
+}
 .footer__sns ul li a .instagram {
   width: 2.7rem;
+}
+@media (max-width: 767px) {
+  .footer__sns ul li a .instagram {
+    width: 2.8rem;
+  }
 }
 .footer__copyright {
   display: -webkit-box;

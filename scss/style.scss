@@ -1823,6 +1823,10 @@ textarea.form-control.form-textarea {
     justify-content: center;
     align-items: center;
     row-gap: 1.7rem;
+
+    @media (max-width: 767px) {
+      row-gap: 2rem;
+    }
     
     li {
       a {
@@ -1837,18 +1841,34 @@ textarea.form-control.form-textarea {
         
         .twitter {
           width: 2.6rem;
+
+          @media (max-width: 767px) {
+            width: 2.8rem;
+          }
         }
 
         .facebook {
           width: 2.6rem;
+
+           @media (max-width: 767px) {
+            width: 2.8rem;
+          }
         }
 
         .youtube {
           width: 2.6rem;
+
+           @media (max-width: 767px) {
+            width: 2.8rem;
+          }
         }
 
         .instagram {
           width: 2.7rem;
+
+           @media (max-width: 767px) {
+            width: 2.8rem;
+          }
         }
       }
     }
