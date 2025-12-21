@@ -1417,6 +1417,11 @@ textarea.form-control {
   @media (max-width: 767px) {
     gap: 1rem;
   }
+
+  @media (max-width: 370px) {
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+  }
 }
 
 .radioitem:not(:last-of-type) {
@@ -1642,6 +1647,14 @@ textarea.form-control.form-textarea {
 
   .checkboxItem:nth-of-type(2n) {
     margin-right: 0;
+  }
+}
+
+  @media (max-width: 370px) {
+  .checkboxItem {
+    font-size: 1.4rem;
+    line-height: calc(25 / 14);
+    column-gap: 0.9rem;
   }
 }
 

@@ -1588,6 +1588,12 @@ textarea.form-control {
     gap: 1rem;
   }
 }
+@media (max-width: 370px) {
+  .radioitem {
+    font-size: 1.6rem;
+    line-height: 1.5625;
+  }
+}
 
 .radioitem:not(:last-of-type) {
   margin-right: 4.5rem;
@@ -1822,6 +1828,15 @@ textarea.form-control.form-textarea {
   }
   .checkboxItem:nth-of-type(2n) {
     margin-right: 0;
+  }
+}
+@media (max-width: 370px) {
+  .checkboxItem {
+    font-size: 1.4rem;
+    line-height: 1.7857142857;
+    -webkit-column-gap: 0.9rem;
+       -moz-column-gap: 0.9rem;
+            column-gap: 0.9rem;
   }
 }
 .checkbox {
