@@ -685,11 +685,17 @@ h4 {
         line-height: calc(25 / 16);
         font-weight: 300;
 
-        @media (max-width: 1030px) { font-size: 1.5rem; }
-        @media (max-width: 767px)  { font-size: 1.6rem; }
-        @media (max-width: 350px)  { font-size: 1.4rem; }
-      }
-    }
+        @media (max-width: 1030px) {
+           font-size: 1.5rem;
+           }
+        @media (max-width: 767px)  {
+           font-size: 1.6rem;
+           }
+        @media (max-width: 350px)  {
+           font-size: 1.4rem;
+           }
+          }
+        }
 
     // =====================================
     // PCサイズで2番目のみ反転
@@ -776,6 +782,7 @@ h4 {
     margin-top: 1rem;
   }
 }
+
 
 .works-item__link {
   display: block;
@@ -1167,7 +1174,7 @@ h4 {
         .company__item__name p {
             font-size: 2rem;
             line-height: calc(33 / 20);
-            font-weight: 600;
+            font-weight: 300;
             margin-top: 0.1rem;
             display: block;
 
@@ -1180,7 +1187,7 @@ h4 {
         .company__item__address p {
           font-size: 1.6rem;
           line-height: calc(25 / 16);
-          font-weight: 600;
+          font-weight: 300;
           margin-top: 0.6rem;
           display: block;
 

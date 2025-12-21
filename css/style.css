@@ -1320,7 +1320,7 @@ h4 {
 .company__item__info__text .company__item__name p {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 600;
+  font-weight: 300;
   margin-top: 0.1rem;
   display: block;
 }
@@ -1332,7 +1332,7 @@ h4 {
 .company__item__info__text .company__item__address p {
   font-size: 1.6rem;
   line-height: 1.5625;
-  font-weight: 600;
+  font-weight: 300;
   margin-top: 0.6rem;
   display: block;
 }
