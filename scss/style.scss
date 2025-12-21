@@ -1655,10 +1655,8 @@ textarea.form-control.form-textarea {
   flex-wrap: wrap;
   row-gap: 1.3rem;
   margin-top: 1rem;
-}
 
-@media (max-width: 767px) {
-  .check-area dd {
+  @media (max-width: 767px) {
     row-gap: 0.5rem;
     margin-top: 0;
   }
