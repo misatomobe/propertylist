@@ -544,8 +544,12 @@ h4 {
 .service {
   padding: 8rem;
 
-  @media (max-width: 1030px) { padding: 5rem 2rem; }
-  @media (max-width: 767px)  { padding: 5rem 3rem; }
+  @media (max-width: 1030px) {
+     padding: 5rem 2rem;
+     }
+  @media (max-width: 767px)  {
+     padding: 5rem 3rem;
+     }
 
   &__contents {
     margin-top: 6.8rem;
@@ -603,8 +607,10 @@ h4 {
         object-fit: cover;
       }
 
-      @media (max-width: 767px) { aspect-ratio: auto; }
-    }
+      @media (max-width: 767px) {
+         aspect-ratio: auto;
+         }
+        }
 
     // キャプション（画像下）
     &__text01 {
@@ -666,7 +672,7 @@ h4 {
         font-size: 2.5rem;
         line-height: calc(33 / 25);
         margin-bottom: 1.7rem;
-        font-weight: 300;
+        font-weight: 500;
 
         @media (max-width: 1030px) {
           font-size: 2.1rem;
@@ -683,7 +689,7 @@ h4 {
       p {
         font-size: 1.6rem;
         line-height: calc(25 / 16);
-        font-weight: 300;
+        font-weight: 500;
 
         @media (max-width: 1030px) {
            font-size: 1.5rem;
@@ -1174,7 +1180,7 @@ h4 {
         .company__item__name p {
             font-size: 2rem;
             line-height: calc(33 / 20);
-            font-weight: 300;
+            font-weight: 500;
             margin-top: 0.1rem;
             display: block;
 
@@ -1187,7 +1193,7 @@ h4 {
         .company__item__address p {
           font-size: 1.6rem;
           line-height: calc(25 / 16);
-          font-weight: 300;
+          font-weight: 500;
           margin-top: 0.6rem;
           display: block;
 
@@ -1212,13 +1218,13 @@ h4 {
             span {
               font-size: 1.8rem;
               line-height: calc(25 / 18);
-              font-weight: 600;
+              font-weight: 500;
             }
 
             a {
               font-size: 2.5rem;
               line-height: calc(25 / 24);
-              font-weight: 600;
+              font-weight: 500;
               position: relative;
               left: -0.5rem;
             }
@@ -1228,7 +1234,7 @@ h4 {
           .company__item__mail {
             font-size: 1.6rem;
             line-height: calc(25 / 16);
-            font-weight: 600;
+            font-weight: 500;
             display: block;
             margin-top: 1.2rem;
 
