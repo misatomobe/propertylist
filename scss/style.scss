@@ -221,10 +221,6 @@ h4 {
   line-height: calc(33 / 20);
   font-weight: 400;
   color: $font-color02;
-  
-  @media (max-width: 1030px) {
-    font-size: 1.8rem;
-  }
 }
 }
 
@@ -240,7 +236,7 @@ h4 {
       display: flex;
       align-items: center;
       font-size: 1.8rem;
-      line-height: calc(33 / 18);
+      line-height: calc(18 / 18);
       font-weight: 400;
       justify-content: center;
       color: $font-color02;
@@ -253,7 +249,7 @@ h4 {
       }
 
       @media (max-width: 1030px) {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       } 
     }
   }
@@ -386,7 +382,7 @@ h4 {
   width: 100%;
   height: auto; /* 高さは画像に追従 */
   overflow: hidden;
-  
+
   &__track,
   &__list,
   &__slide {
@@ -422,27 +418,25 @@ h4 {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2; /* ← 背景の黒いオーバーレイより上 */
-  font-size: 4rem;
-  line-height: calc(70 / 40);
-  letter-spacing: calc(4rem * 0.3); /* = 1.2rem */
-  color: $font-color02;
-  text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
+  
   width: 90%;
   max-width: 1000px;
 
-  @media (max-width: 1030px) {
-    font-size: 3.5rem;
-  }
+  p {
+    font-size: 4rem;
+    line-height: calc(70 / 40);
+    letter-spacing: calc(4rem * 0.3);
+    color: $font-color02;
+    text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
 
-  @media (max-width: 767px) {
-    font-size: 3rem;
-    line-height: calc(60 / 30);
-  }
-
-  @media (max-width: 330px) {
-    font-size: 2.8rem;
+    @media (max-width: 375px) {
+      font-size: 3rem;
+      line-height: calc(60 / 30);
+      letter-spacing: calc(3rem * 0.27);
+    }
   }
 }
+
 }
 
 // =====================================
@@ -451,7 +445,7 @@ h4 {
 .about {
   position: relative;
   width: 100%;
-
+  
   &__contents {
     display: flex;
     align-items: center;
@@ -460,16 +454,16 @@ h4 {
     position: absolute;
     top: 0;
     left: 0;
-    margin-left: 11rem;
     
     @media (max-width: 767px)  {
-      position: static;
-      padding: 5rem 0;
+      flex-direction: column;
+      align-self: center;
+      padding-top: 5rem;
       display: flex;
-      margin-left: 0;
     }
   }
   
+
   &__catch {
     writing-mode: vertical-rl;      /* 縦書き（右から左） */
     text-orientation: upright;     /* 行間（縦書きでは縦方向の間隔） */
@@ -477,28 +471,33 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 6rem;
+    gap: 5rem;
     margin: 0;
     
     @media (max-width: 767px)  {
+      writing-mode: horizontal-tb;
       display: flex;
-      justify-content: center;
-      padding-right: 0;
-      height: auto;
-      position: static;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
     }
     
     h2 {
       font-size: 3rem;
       font-weight: 400;
       letter-spacing: 0.45rem;
-      line-height: 1rem;
+      line-height: 0.6;
       margin: 0;
       
       @media (max-width: 767px) {
         font-size: 2.5rem;
-        letter-spacing: 0.19em; /* 119% に相当 */
-        margin: 0 0 1rem 0;
+        letter-spacing: 0.22em; /* 119% に相当 */
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+
+      @media (max-width: 370px) {
+        font-size: 2.3rem;
       }
     }
   }
@@ -506,20 +505,44 @@ h4 {
   &__text {
     writing-mode: vertical-rl;
     text-orientation: upright;
-    
+
+    @media (max-width: 767px) {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
     p {
       font-size: 1.7rem;
       margin: 0;
       letter-spacing: 0.8rem;
-      line-height: 5rem;
+      line-height: calc(51 / 18);
       font-weight: 400;
       
       @media (max-width: 767px) {
         font-size: 1.5rem;
         line-height: 2.6rem;
-        letter-spacing: 0.3em;
+        letter-spacing: 0.35em;
+      }
+
+      @media (max-width: 370px) {
+        font-size: 1.2rem;
       }
     }
+  }
+}
+
+.about__contents__inner {
+  padding-left: calc(12.5%);
+
+  @media (max-width:767px) {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .about__image {
+    aspect-ratio: 375 /584;
+    overflow: hidden;
   }
 }
 
@@ -529,12 +552,19 @@ h4 {
 .service {
   padding: 8rem;
 
-  @media (max-width: 1030px) { padding: 5rem 2rem; }
-  @media (max-width: 767px)  { padding: 5rem 3rem; }
+  @media (max-width: 1030px) {
+     padding: 5rem 2rem;
+     }
+  @media (max-width: 767px)  {
+     padding: 5rem 3rem;
+     }
 
   &__contents {
     margin-top: 6.8rem;
-    @media (max-width: 767px) { margin-top: 3.8rem; }
+
+    @media (max-width: 767px) {
+      margin-top: 3.8rem;
+    }
   }
 
   &__items {
@@ -547,9 +577,19 @@ h4 {
     display: flex;
     flex-direction: column;
     z-index: 0;
-    margin-bottom: 8rem;
+    margin-bottom: 12.8rem;
 
-    @media (max-width: 767px) { margin-bottom: 4rem; }
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+
+    @media (max-width: 767px) { 
+      margin-bottom: 5rem;
+
+       &:nth-of-type(3) {
+        margin-bottom: 0;
+        }
+      }
 
     &__image-wrapper {
       max-width: 65.5%;
@@ -575,12 +615,14 @@ h4 {
         object-fit: cover;
       }
 
-      @media (max-width: 767px) { aspect-ratio: auto; }
-    }
+      @media (max-width: 767px) {
+         aspect-ratio: auto;
+         }
+        }
 
     // キャプション（画像下）
     &__text01 {
-      margin-top: 2.4rem;
+      margin-top: 2rem;
       text-align: left;
       z-index: 3;
 
@@ -591,14 +633,16 @@ h4 {
         color: $font-color;
       }
 
-      @media (max-width: 767px) { margin-top: 0.5rem; }
+      @media (max-width: 767px) { 
+        margin-top: 0.5rem;
+      }
     }
 
     // 緑ボックス
     &__text02 {
       position: absolute;
-      right: -0.5rem;
-      bottom: -2rem;
+      right: -0.1rem;
+      bottom: -5rem;
       width: 54.35%;
       background-color: $main-color;
       z-index: 1;
@@ -609,7 +653,8 @@ h4 {
         position: static;
         width: 100%;
         margin-top: 0.6rem;
-        aspect-ratio: 315 / 146;
+        aspect-ratio: auto;
+        height: auto;
         z-index: auto;
       }
     }
@@ -617,41 +662,54 @@ h4 {
     &__text03 {
       position: absolute;
       inset: 0;
-      padding: 5% 4% 4% 45%;
+      padding: 5% 6% 4% 49%;
       color: $font-color02;
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: left;
 
+      // スマホサイズ共通
+      @media (max-width: 767px) {
+        position: static;
+        padding: 2rem 2rem 1rem 2rem;
+        text-align: left;
+      }
+
       h3 {
         font-size: 2.5rem;
         line-height: calc(33 / 25);
         margin-bottom: 1.7rem;
-        font-weight: 300;
+        font-weight: 500;
 
-        @media (max-width: 1030px) { font-size: 2.1rem; }
-        @media (max-width: 767px)  { font-size: 2rem; margin-bottom: 1.4rem; }
-        @media (max-width: 350px)  { font-size: 1.8rem; }
+        @media (max-width: 1030px) {
+          font-size: 2.1rem;
+        }
+        @media (max-width: 767px)  { 
+          font-size: 2rem;
+          margin-bottom: 1.4rem;
+        }
+        @media (max-width: 350px)  { 
+          font-size: 1.8rem;
+        }
       }
 
       p {
         font-size: 1.6rem;
         line-height: calc(25 / 16);
-        font-weight: 300;
+        font-weight: 500;
 
-        @media (max-width: 1030px) { font-size: 1.5rem; }
-        @media (max-width: 767px)  { font-size: 1.6rem; }
-        @media (max-width: 350px)  { font-size: 1.4rem; }
-      }
-
-      @media (max-width: 767px) {
-        position: static;
-        padding: 2rem;
-        height: 100%;
-        text-align: left;
-      }
-    }
+        @media (max-width: 1030px) {
+           font-size: 1.5rem;
+           }
+        @media (max-width: 767px)  {
+           font-size: 1.6rem;
+           }
+        @media (max-width: 350px)  {
+           font-size: 1.4rem;
+           }
+          }
+        }
 
     // =====================================
     // PCサイズで2番目のみ反転
@@ -668,11 +726,11 @@ h4 {
 
         // 緑ボックス反転
         .service__item__text02 {
-          left: -0.5rem;
+          left: -0.1rem;
           right: auto;
           
           .service__item__text03 {
-            padding: 5% 45% 4% 4%;
+            padding: 5% 49% 4% 8%;
             text-align: left;
           }
         }
@@ -682,33 +740,30 @@ h4 {
 }
 
 
-
 // =====================================
 // works
 // =====================================
 .works {
-  padding: 9.1rem 8rem 9.7rem;
-}
+  padding: 8rem 8rem 9.8rem;
 
-@media (max-width: 767px) {
-  .works {
-    padding: 5rem 2rem 4.2rem;
+  @media (max-width: 767px) {
+    padding: 5rem 3rem 4.2rem;
   }
 }
 
 .works__contents {
-  margin-top: 6.8rem;
+  margin-top: 7.3rem;
 }
 
 @media (max-width: 767px) {
   .works__contents {
-    margin-top: 3.8rem;
+    margin-top: 4.1rem;
   }
 }
 
 .works__items {
   display: flex;
-  column-gap: 5%;
+  column-gap: 4.3%;
   width: 100%;
   justify-content: flex-start;
 }
@@ -721,7 +776,7 @@ h4 {
 }
 
 .works__item {
-  width: calc((100% - (5% * 3)) / 4);/* gap 3つ分を引いて4等分 */
+  width: calc((100% - (4.3% * 3)) / 4);/* gap 3つ分を引いて4等分 */
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -736,7 +791,12 @@ h4 {
 .works-item__title {
   margin-top: 1.9rem;
   text-align: left;
+
+  @media (max-width: 767px)  {
+    margin-top: 1rem;
+  }
 }
+
 
 .works-item__link {
   display: block;
@@ -755,6 +815,9 @@ h4 {
 
 .works-item__image img {
   transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 // =====================================
@@ -832,8 +895,8 @@ h4 {
     // 閉じるボタン
     &-close {
       position: absolute;
-      top: 0.1rem;
-      right: 0.1rem;
+      top: 0.3rem;
+      right: 0.2rem;
       background: none;
       border: none;
       font-size: 2rem;
@@ -855,14 +918,14 @@ h4 {
   padding: 8rem;
 
   @media (max-width: 767px) {
-    padding: 5rem 2rem;
+    padding: 5rem 3rem 5.2rem;
   }
   
   &_contents {
   margin-top: 6.8rem;
   
   @media (max-width: 767px) {
-    margin-top: 3.8rem;
+    margin-top: 3.6rem;
   }
 }
 
@@ -881,12 +944,11 @@ h4 {
 // 個々のボックス設定
 &__topic {
   width: 430px;
-  min-height: 383px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   background: $font-color02;
-
+  
   @media (max-width: 767px) {
     width: 100%;
     height: auto;
@@ -909,15 +971,27 @@ h4 {
   }
 }
 
+/* --- 基本（1段目に適用される padding）--- */
 .news-item {
   display: flex;
-  align-items: center;
-  column-gap: calc(70 / 430 * 100%);
+  align-items: flex-start;
+  column-gap: calc(35 / 430 * 100%);
   transition: opacity 0.4s ease;
-  padding: 2rem 2rem 1.3rem 2rem;
+  padding: 1.9rem 2.5rem 1.4rem 2rem;
 
   @media (max-width: 767px) {
-    padding: 3rem 2rem 1.3rem 2rem;
+    padding: 2rem 2rem 1.1rem 2rem;
+    column-gap: 1.9rem;
+  }
+}
+
+/* --- 2段目・3段目だけ padding を変更（左右どちらもOK） --- */
+.news__topic > article:nth-of-type(2) .news-item,
+.news__topic > article:nth-of-type(3) .news-item {
+  padding: 1rem 2rem 1.3rem 2rem;
+
+  @media (max-width: 767px) {
+    padding: 1rem 2rem 1.1rem 2rem;
   }
 }
 
@@ -944,20 +1018,37 @@ h4 {
 }
 
 .news-item__date {
-  width: 5.3rem;
+  width: 9rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  @media (max-width: 767px) {
+    width: 5.3rem;
+  }
 }
 
 .news-item__date time {
   font-size: 1.6rem;
-  line-height: calc( 33 / 16);
+  line-height: calc(33 / 16);
   font-weight: 500;
+  margin-top: 0.4rem;
+  display: inline-block;
 }
 
-.news-item__title {
+.news-item__title p {
   font-size: 1.8rem;
-  line-height: calc( 25 / 18);
+  line-height: calc(25 / 18);
   font-weight: 500;
   margin-top: 1rem;
+
+  @media (max-width: 767px) {
+    margin-top: 1.2rem;
+    line-height: calc(25 / 18);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
 }
 
 .news-item__link {
@@ -1003,10 +1094,14 @@ h4 {
 // company
 // =====================================
 .company {
-  padding: 8rem 3rem;
+  padding: 8rem 3rem 6.5rem ;
 
-  @media (max-width: 1030px) { padding: 5rem 2rem; }
-  @media (max-width: 767px)  { padding: 5rem 3rem; }
+  @media (max-width: 1030px) {
+     padding: 5rem 2rem;
+     }
+  @media (max-width: 767px)  {
+     padding: 5rem 3rem 1rem 3rem;
+     }
 
   &__contents {
     margin-top: 6.8rem;
@@ -1024,10 +1119,16 @@ h4 {
     z-index: 0;
     margin-bottom: 8rem;
 
-    @media (max-width: 767px) { margin-bottom: 4rem; }
+    @media (max-width: 767px) {
+      margin-bottom: 4rem;
+    }
 
     // map-wrapper
     &__map-wrapper {
+<<<<<<< HEAD
+=======
+      max-width: 65.2%;
+>>>>>>> origin/develop001
       width: 100%;
       position: relative;
       z-index: 1;
@@ -1090,9 +1191,9 @@ h4 {
     // 緑ボックス
     &__info {
       position: absolute;
-      right: -0.5rem;
-      bottom: -6.2rem;
-      width: 54.35%;
+      right: 0.1rem;
+      bottom: -6.25rem;
+      width: 54.4%;
       background-color: $main-color;
       z-index: 0;
       aspect-ratio: 500 / 262;
@@ -1101,15 +1202,18 @@ h4 {
       @media (max-width: 767px) {
         position: static;
         width: 100%;
-        margin-top: 0.2rem;
-        aspect-ratio: 315 / 202;
+        margin-top: 2rem;
+        height: auto;
         z-index: auto;
+        overflow: visible;
+        display: flex;
+        align-items: center;
       }
 
       &__text {
         position: absolute;
         inset: 0;
-        padding: 5% 0% 4.2% 44%;
+        padding: 2% 0 0 44%;
         color: $font-color02;
         display: flex;
         flex-direction: column;
@@ -1118,12 +1222,15 @@ h4 {
 
         @media (max-width: 767px) {
           position: static;
-          padding: 2rem 2rem 1rem 2rem;
-          height: 100%;
+          padding: 2rem 2rem 0.8rem 2rem;
+          height: auto;
           text-align: left;
+          display: flex;
+          justify-content: center;
         }
 
         // 社名
+<<<<<<< HEAD
         &__name {
           p {
             font-size: 2rem;
@@ -1134,11 +1241,73 @@ h4 {
             @media (max-width: 767px)  { font-size: 1.6rem; }
             @media (max-width: 350px)  { font-size: 1.4rem; }
           }
+=======
+        .company__item__name p {
+            font-size: 2rem;
+            line-height: calc(33 / 20);
+            font-weight: 500;
+            margin-top: 0.1rem;
+            display: block;
+
+            @media (max-width: 767px) {
+              margin-top: 0;
+            }
+        }
+
+        // 住所
+        .company__item__address p {
+          font-size: 1.6rem;
+          line-height: calc(25 / 16);
+          font-weight: 500;
+          margin-top: 0.6rem;
+          display: block;
+
+          @media (max-width: 767px)  {
+            margin-top: 0.7rem;
+            }
+          }
+
+         // 電話
+        .company__item__tel {
+            margin-top: 1.3rem;
+
+            @media (max-width: 767px) {
+              margin-top: 1.2rem;
+            }
+            
+            // 電話番号
+            span {
+              font-size: 1.8rem;
+              line-height: calc(25 / 18);
+              font-weight: 500;
+            }
+
+            a {
+              font-size: 2.5rem;
+              line-height: calc(25 / 24);
+              font-weight: 500;
+              position: relative;
+              left: -0.5rem;
+            }
+          }
+
+          //メール 
+          .company__item__mail {
+            font-size: 1.6rem;
+            line-height: calc(25 / 16);
+            font-weight: 500;
+            display: block;
+            margin-top: 1.2rem;
+
+            @media (max-width: 767px) {
+              margin-top: 0.6rem;
+            }
+          } 
+>>>>>>> origin/develop001
         }
       }
     }
   }
-}
 
 // =====================================
 // contact
@@ -1155,19 +1324,27 @@ h4 {
 
 .contact__contents {
   margin-top: 3.5rem;
+
+  @media (max-width: 767px) {
+    margin-top: 3.7rem;
+  }
 } 
 
 .contact__text p {
   font-size: 2rem;
   line-height: calc(30 / 20);
   font-weight: 500;
+
+  @media (max-width: 767px) {
+    line-height: calc(33 / 20);
+  }
 }
 
 form {
-  margin-top: 7rem;
+  margin-top: 7.2rem;
 
   @media (max-width: 767px) {
-    margin-top: 4rem;
+    margin-top: 3.6rem;
   }
 }
 
@@ -1181,10 +1358,8 @@ form {
   }
 }
 
-.form-area:not(:first-of-type),
-.qa-list,
-.check-area {
-  margin-top: 5.4rem;
+.form-area:not(:first-of-type) {
+  margin-top: 4.3rem;
 }
 
 @media (max-width: 767px) {
@@ -1195,16 +1370,45 @@ form {
   }
 }
 
+.qa-list {
+  margin-top: 5rem;
+  display: flex;
+}
+
+.form-area.message-area {
+  margin-top: 4.8rem;
+
+  @media (max-width: 767px) {
+    margin-top: 3rem;
+  }
+}
+
+.check-area {
+  margin-top: 5rem;
+
+  @media (max-width: 767px) {
+    margin-top: 3rem;
+  }
+}
+
+.check-area dt label {
+  font-size: 2rem;
+  line-height: calc(33 / 20);
+  
+  @media (max-width: 767px) {
+    line-height: calc(27 / 20);
+  }
+}
+
 .form-area dt,
 .qa-list dt {
   width: 17rem;
-  height: 3.3rem;
+  height: 4.7rem;
   display: flex;
   align-items: center;
   font-size: 2rem;
   line-height: calc(33 / 20);
   font-weight: bold;
-  margin-bottom: 1rem;
 
   @media (max-width: 767px) {
     width: 100%;
@@ -1212,7 +1416,8 @@ form {
   }
 }
 
-.form-area dd {
+.form-area dd,
+.qa-list dd {
   flex: 1;
 }
 
@@ -1261,15 +1466,28 @@ textarea.form-control {
 .radioitem {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2.1rem;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: calc(25 / 18);
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 370px) {
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+  }
 }
 
 .radioitem:not(:last-of-type) {
-  margin-right: 7.4rem;
+  margin-right: 4.5rem;
+
+  @media (max-width: 767px) {
+    margin-right: 4rem;
+  }
 }
 
 // 丸型ラジオボタン
@@ -1303,6 +1521,14 @@ textarea.form-control {
   display: block;
 }
 
+.form-area.privacy-area {
+  margin-top: 5rem;
+
+  @media (max-width: 767px) {
+    margin-top: 3rem;
+  }
+}
+
 // プライバシーボックス
 .privacy-area dt,
 .privacy-area dd {
@@ -1311,7 +1537,25 @@ textarea.form-control {
 }
 
 .privacy-area dt {
-  margin-bottom: 1rem;
+  height: 4.2rem;
+
+  @media (max-width: 767px) {
+    height: 3rem;
+  }
+}
+
+.privacy-box01 p {
+  font-size: 1.8rem;
+  line-height: calc(31 / 18);
+
+  @media (max-width: 767px) {
+    font-size: 1.6rem;
+    line-height: calc(33 / 16);
+  }
+}
+
+.privacy-box01 {
+  margin-bottom: 3.8rem;
 }
 
 .privacy-box {
@@ -1321,7 +1565,7 @@ textarea.form-control {
   height: 30rem;
   overflow-y: scroll;
   background-color: $font-color02;
-  padding: 4rem 5rem 4rem 4rem;
+  padding: 4.1rem calc(5rem + 10px) 4rem 4rem;
 
   // スクロールバー
   scrollbar-width: thin;
@@ -1329,18 +1573,17 @@ textarea.form-control {
 
   // Chrome / Edge / Safari
   &::-webkit-scrollbar {
-    width: 1rem;
+    width: 10px;
   }
 
   &::-webkit-scrollbar-track {
     background: $scrollbar-color02;
-    border-radius: 1rem;
-    margin: 0;
+    margin: 10px 0;
   }
 
   &::-webkit-scrollbar-thumb {
     background: $scrollbar-color01;
-    border-radius: 1rem;
+    border-radius: 0;
   }
 
   &::-webkit-scrollbar-thumb:hover {
@@ -1353,13 +1596,13 @@ textarea.form-control {
   .privacy-box {
     max-width: 100%;
     width: 100%;
-    height: 32.3;
+    height: 32.3rem;
     padding: 3rem 5rem 3rem 3rem;
   }
 
   p {
     font-size: 1.8rem;
-    line-height: calc(31 /18);
+    line-height: calc(33 /18);
     font-weight: 500;
     
     @media (max-width: 767px) {
@@ -1374,16 +1617,14 @@ textarea.form-control {
   display: flex;
   justify-content: center;
   margin-top: 8rem;
-}
 
-@media (max-width: 767px) {
-  .form-submit-area {
+  @media (max-width: 767px)  {
     margin-top: 5rem;
   }
 }
 
 .form-submit {
-  width: 20rem;
+  width: 30rem;
   height: 5rem;
   background: $main-color;
   display: flex;
@@ -1403,7 +1644,7 @@ textarea.form-control {
   .form-submit {
     max-width: 335px;
     width: 100%;
-    height: 4.1rem;
+    height: 5rem;
     font-size: 2rem;
   }
 }
@@ -1439,16 +1680,12 @@ textarea.form-control.form-textarea {
   width: 100%;
 }
 
-.message-area dt {
-  margin-bottom: 1rem;
-}
-
 // 角型ラジオボタン
 .checkboxItem {
   display: flex;
   align-items: center;
   width: calc((1080px - 3 * 150px) / 4);
-  margin-right: 1.8rem;
+  margin-right: 4.2rem;
   white-space: nowrap;
   font-size: 1.8rem;
   line-height: calc(25 / 18);
@@ -1457,20 +1694,25 @@ textarea.form-control.form-textarea {
   column-gap: 2rem;
 }
 
-.checkboxItem:nth-of-type(4n) {
-  margin-right: 0;
-}
-
-
 @media (max-width: 767px) {
   .checkboxItem {
-    width: calc((100% - 1rem) / 2);
-    margin-right: 1rem;
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+    width: calc((100% - 1.8rem) / 2);
+    margin-right: 0.9rem;
     column-gap: 1rem;
   }
 
   .checkboxItem:nth-of-type(2n) {
     margin-right: 0;
+  }
+}
+
+  @media (max-width: 370px) {
+  .checkboxItem {
+    font-size: 1.4rem;
+    line-height: calc(25 / 14);
+    column-gap: 0.9rem;
   }
 }
 
@@ -1481,6 +1723,7 @@ textarea.form-control.form-textarea {
   height: 2rem;
   border-radius: 0.2rem;
   background-color: $font-color02;
+  flex-shrink: 0;
 }
 
 .checkbox:checked::after {
@@ -1498,14 +1741,12 @@ textarea.form-control.form-textarea {
 .check-area dd {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 2rem;
-  justify-content: flex-start;
+  row-gap: 1.3rem;
   margin-top: 1rem;
-}
 
-@media (max-width: 767px) {
-  .check-area dd {
-    row-gap: 1rem;
+  @media (max-width: 767px) {
+    row-gap: 0.5rem;
+    margin-top: 0;
   }
 }
 
@@ -1520,18 +1761,23 @@ textarea.form-control.form-textarea {
     -moz-appearance: none;
     appearance: none;
     width: 100%;
-    padding: 1.4rem 2rem;
+    padding: 1.25rem 2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     background-color: $font-color02;
+
+    @media (max-width: 767px) {
+      font-size: 1.6rem;
+    line-height: calc(25 / 16);
+    }
   }
 
   // 開閉アイコン
   &::after {
    content: "";
    position: absolute;
-   top:50%;
-   right: 1rem;
+   top:55%;
+   right: 2.2rem;
    transform: translateY(-50%);
    width: 1.6rem;
    height: 1.6rem;
@@ -1541,23 +1787,42 @@ textarea.form-control.form-textarea {
    pointer-events: none;
    transition: transform 0.3s ease;
   }
+}
 
-  // ▼ open時に回転
-  &.open::after {
-    transform: translateY(-50%) rotate(180deg);
-  } 
+// スマホ時：性別だけ dt + dd を横並び
+@media (max-width: 767px) {
+  .form-area:nth-of-type(2) {
+    flex-direction: row;
+    align-items: center;
+  }
 
-  .select-arrow {
-    position: absolute;
-    top: 50%;
-    right: 1rem ;
-    transform: translateY(-50%);
-    pointer-events: none; // クリックをselectに通す
-    
-    img {
-      width:0.15rem;
-      height: auto;
-    }
+  .form-area:nth-of-type(2) dt {
+    width: 6rem;
+    margin-bottom: 0;
+    margin-right: 3rem;
+  }
+
+  .form-area:nth-of-type(2) dd {
+    flex: 1;
+    gap: 0;
+  }
+}
+
+// スマホ時：お問い合わせ種別（qa-list）を横並び
+@media (max-width: 767px) {
+  .qa-list {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  .qa-list dt{
+    width: 100%;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .qa-list dd {
+    flex: 1;
   }
 }
 
@@ -1572,13 +1837,13 @@ textarea.form-control.form-textarea {
     align-items: center;
     justify-content: center;
     height: 33.8rem;
-    padding: 8rem 17.9rem;
+    padding: 8rem 18rem;
     text-align: center;
     width: 100%;
     
     @media (max-width: 767px) {
-      height: 30rem;
-      padding: 5rem 3.5rem;
+      height: auto;
+      padding: 5rem 3rem;
     }
   }
   
@@ -1586,12 +1851,18 @@ textarea.form-control.form-textarea {
     border-bottom: 1px solid $font-color;
     display: block;
     width: 100%;
+    max-width: 72.2rem;
+    margin: 0 auto;
     
     p {
       display: inline-block;
-      padding-bottom: 2.8rem;
+      margin-bottom: 2.8rem;
       font-size: 2rem;
       line-height: calc(33 / 20);
+
+      @media (max-width: 767px) {
+        margin-bottom: 2rem;
+      }
     }
   }
   
@@ -1600,9 +1871,14 @@ textarea.form-control.form-textarea {
       display: flex;
       justify-content: center;
       padding: 2.8rem 0;
+      flex-wrap: nowrap;     // PCでは折り返しなし
+      column-gap: 5rem;
 
       @media (max-width: 767px) {
         flex-wrap: wrap;
+        column-gap: 1.8rem;
+        row-gap: 0.8rem;
+        padding: 2rem 0 2.5rem 0;
       }
       
       a {
@@ -1611,8 +1887,7 @@ textarea.form-control.form-textarea {
         font-style: 400;
         color: $font-color;
         transition: opacity 0.4s ease;
-        gap: 5rem;
-        padding: 0 2rem;
+        gap: 4rem;
 
         @media (max-width: 767px) {
           padding: 0 0.5rem;
@@ -1630,6 +1905,11 @@ textarea.form-control.form-textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+    row-gap: 1.7rem;
+
+    @media (max-width: 767px) {
+      row-gap: 2rem;
+    }
     
     li {
       a {
@@ -1643,19 +1923,35 @@ textarea.form-control.form-textarea {
         }
         
         .twitter {
-          width: 2.8rem;
+          width: 2.6rem;
+
+          @media (max-width: 767px) {
+            width: 2.8rem;
+          }
         }
 
         .facebook {
-          width: 2.8rem;
+          width: 2.6rem;
+
+           @media (max-width: 767px) {
+            width: 2.8rem;
+          }
         }
 
         .youtube {
-          width: 2.234rem;
+          width: 2.6rem;
+
+           @media (max-width: 767px) {
+            width: 2.8rem;
+          }
         }
 
         .instagram {
-          width: 1.98rem;
+          width: 2.7rem;
+
+           @media (max-width: 767px) {
+            width: 2.8rem;
+          }
         }
       }
     }
