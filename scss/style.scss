@@ -1090,9 +1090,6 @@ h4 {
 // =====================================
 // company
 // =====================================
-// =====================================
-// company
-// =====================================
 .company {
   padding: 8rem 3rem 6.5rem ;
 
@@ -1123,49 +1120,13 @@ h4 {
       margin-bottom: 4rem;
     }
 
-    // map-wrapper
     &__map-wrapper {
-<<<<<<< HEAD
-=======
       max-width: 65.2%;
->>>>>>> origin/develop001
       width: 100%;
       position: relative;
       z-index: 1;
-      aspect-ratio: 3 / 2;
 
       @media (max-width: 767px) {
-<<<<<<< HEAD
-        width: 100%;
-        max-width: 100%;
-      }
-
-      // map
-      &__map {
-        position: relative;
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-
-        @media (max-width: 767px) {
-          max-width: 100%;
-        }
-
-        iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-
-          @media (max-width: 767px) {
-            max-width: 100%;
-            aspect-ratio: 315 / 300;
-          }
-        }
-      }
-    }
-=======
         max-width: 100%;
       }
     }
@@ -1186,7 +1147,6 @@ h4 {
         display: block;
       }
     }    
->>>>>>> bb3594385d43a9a384d2a9c5c503b05d4f294604
 
     // 緑ボックス
     &__info {
@@ -1209,7 +1169,7 @@ h4 {
         display: flex;
         align-items: center;
       }
-
+      
       &__text {
         position: absolute;
         inset: 0;
@@ -1230,18 +1190,6 @@ h4 {
         }
 
         // 社名
-<<<<<<< HEAD
-        &__name {
-          p {
-            font-size: 2rem;
-            line-height: calc(33 / 20);
-            font-weight: 300;
-
-            @media (max-width: 1030px) { font-size: 1.5rem; }
-            @media (max-width: 767px)  { font-size: 1.6rem; }
-            @media (max-width: 350px)  { font-size: 1.4rem; }
-          }
-=======
         .company__item__name p {
             font-size: 2rem;
             line-height: calc(33 / 20);
@@ -1303,7 +1251,6 @@ h4 {
               margin-top: 0.6rem;
             }
           } 
->>>>>>> origin/develop001
         }
       }
     }
