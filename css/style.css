@@ -1644,6 +1644,44 @@ textarea.form-control {
           transform: translate(-50%, -50%);
 }
 
+.privacy-frame {
+  background-color: #fff;
+  height: 30rem;
+}
+@media (max-width: 767px) {
+  .privacy-frame {
+    height: auto;
+  }
+}
+
+.privacy-scroll {
+  max-width: 80rem;
+  width: 100%;
+  height: 30rem;
+  overflow-y: auto;
+  padding: 4rem 6rem 4rem 4rem;
+  scrollbar-width: thin;
+  scrollbar-color: #9B9B9B #E3E3E3;
+}
+.privacy-scroll::-webkit-scrollbar {
+  width: 1rem;
+}
+.privacy-scroll::-webkit-scrollbar-track {
+  background: #E3E3E3;
+  margin: 1rem 0;
+}
+.privacy-scroll::-webkit-scrollbar-thumb {
+  background: #9B9B9B;
+}
+.privacy-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgb(116.75, 116.75, 116.75);
+}
+@media (max-width: 767px) {
+  .privacy-scroll {
+    height: 32.3rem;
+  }
+}
+
 .privacy-area {
   display: block;
 }
@@ -1684,55 +1722,30 @@ textarea.form-control {
 }
 
 .privacy-box01 {
-  margin-bottom: 3.8rem;
+  margin-bottom: 2.8rem;
 }
 
 .privacy-box {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  max-width: 80rem;
-  width: 100%;
-  height: 30rem;
-  overflow-y: scroll;
-  background-color: #fff;
-  padding: 4.1rem calc(5rem + 10px) 4rem 4rem;
-  scrollbar-width: thin;
-  scrollbar-color: #9B9B9B #E3E3E3;
 }
-.privacy-box::-webkit-scrollbar {
-  width: 10px;
-}
-.privacy-box::-webkit-scrollbar-track {
-  background: #E3E3E3;
-  margin: 10px 0;
-}
-.privacy-box::-webkit-scrollbar-thumb {
-  background: #9B9B9B;
-  border-radius: 0;
-}
-.privacy-box::-webkit-scrollbar-thumb:hover {
-  background: rgb(116.75, 116.75, 116.75);
-}
-
 @media (max-width: 767px) {
   .privacy-box {
-    max-width: 100%;
-    width: 100%;
-    height: 32.3rem;
     padding: 3rem 5rem 3rem 3rem;
   }
-  p {
-    font-size: 1.8rem;
-    line-height: 1.8333333333;
-    font-weight: 500;
-  }
 }
-@media (max-width: 767px) and (max-width: 767px) {
-  p {
+.privacy-box p {
+  font-size: 1.8rem;
+  line-height: 1.7222222222;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .privacy-box p {
     font-size: 1.6rem;
     line-height: 2.0625;
   }
 }
+
 .form-submit-area {
   margin-top: 5rem;
   display: -webkit-box;

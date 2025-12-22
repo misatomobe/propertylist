@@ -1464,6 +1464,47 @@ textarea.form-control {
 }
 
 // 個人情報保護方針
+.privacy-frame {
+  background-color: $font-color02;
+  height: 30rem;
+
+  @media (max-width: 767px) {
+    height: auto;
+  }
+}
+
+.privacy-scroll {
+  max-width: 80rem;
+  width: 100%;
+  height: 30rem;
+  overflow-y: auto;
+  padding: 4rem 6rem 4rem 4rem;
+
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-color01 $scrollbar-color02;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-color02;
+    margin: 1rem 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-color01;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($scrollbar-color01, 15%);
+  }
+
+  @media (max-width: 767px) {
+    height: 32.3rem;
+  }
+}
+
 .privacy-area {
   display: block;
 }
@@ -1502,54 +1543,19 @@ textarea.form-control {
 }
 
 .privacy-box01 {
-  margin-bottom: 3.8rem;
+  margin-bottom: 2.8rem;
 }
 
 .privacy-box {
   box-sizing: border-box;
-  max-width: 80rem;
-  width: 100%;
-  height: 30rem;
-  overflow-y: scroll;
-  background-color: $font-color02;
-  padding: 4.1rem calc(5rem + 10px) 4rem 4rem;
-
-  // スクロールバー
-  scrollbar-width: thin;
-  scrollbar-color: $scrollbar-color01 $scrollbar-color02;
-
-  // Chrome / Edge / Safari
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: $scrollbar-color02;
-    margin: 10px 0;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar-color01;
-    border-radius: 0;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    $scrollbar-color01: #9B9B9B;
-    background: darken($scrollbar-color01, 15%);
-  } 
-}
-
-@media (max-width: 767px) {
-  .privacy-box {
-    max-width: 100%;
-    width: 100%;
-    height: 32.3rem;
+  
+  @media (max-width: 767px) {
     padding: 3rem 5rem 3rem 3rem;
   }
 
-  p {
+    p {
     font-size: 1.8rem;
-    line-height: calc(33 /18);
+    line-height: calc(31 / 18);
     font-weight: 500;
     
     @media (max-width: 767px) {
