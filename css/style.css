@@ -1298,9 +1298,15 @@ h4 {
     position: static;
     width: 100%;
     margin-top: 2rem;
-    aspect-ratio: 315/202;
     height: auto;
     z-index: auto;
+    overflow: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .company__item__info__text {
@@ -1323,9 +1329,15 @@ h4 {
 @media (max-width: 767px) {
   .company__item__info__text {
     position: static;
-    padding: 2rem;
+    padding: 2rem 2rem 0.8rem 2rem;
     height: auto;
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .company__item__info__text .company__item__name p {

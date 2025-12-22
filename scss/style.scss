@@ -1163,9 +1163,11 @@ h4 {
         position: static;
         width: 100%;
         margin-top: 2rem;
-        aspect-ratio: 315 / 202;
         height: auto;
         z-index: auto;
+        overflow: visible;
+        display: flex;
+        align-items: center;
       }
       
       &__text {
@@ -1180,9 +1182,11 @@ h4 {
 
         @media (max-width: 767px) {
           position: static;
-          padding: 2rem;
+          padding: 2rem 2rem 0.8rem 2rem;
           height: auto;
           text-align: left;
+          display: flex;
+          justify-content: center;
         }
 
         // 社名
