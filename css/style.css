@@ -1653,6 +1653,7 @@ textarea.form-control {
 }
 @media (max-width: 767px) {
   .privacy-frame {
+    padding: 2rem;
     height: 32.3rem;
   }
 }
@@ -1683,7 +1684,12 @@ textarea.form-control {
 }
 @media (max-width: 767px) {
   .privacy-scroll {
-    height: auto;
+    max-height: 32.3rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 
@@ -1729,6 +1735,7 @@ textarea.form-control {
 .privacy-box01 p {
   font-size: 1.8rem;
   line-height: 1.7222222222;
+  overflow-wrap: anywhere;
 }
 @media (max-width: 767px) {
   .privacy-box01 p {
@@ -1749,6 +1756,7 @@ textarea.form-control {
   font-size: 1.8rem;
   line-height: 1.7222222222;
   font-weight: 500;
+  overflow-wrap: anywhere;
 }
 @media (max-width: 767px) {
   .privacy-box p {

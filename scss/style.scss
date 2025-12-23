@@ -1471,6 +1471,7 @@ textarea.form-control {
   box-sizing: border-box;
 
   @media (max-width: 767px) {
+    padding: 2rem;
     height: 32.3rem;
   }
 }
@@ -1505,9 +1506,14 @@ textarea.form-control {
   }
 
   @media (max-width: 767px) {
-    height: auto;
+    max-height: 32.3rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
+
 
 .privacy-inner {
   box-sizing: border-box;
@@ -1548,6 +1554,7 @@ textarea.form-control {
 .privacy-box01 p {
   font-size: 1.8rem;
   line-height: calc(31 / 18);
+  overflow-wrap: anywhere;
 
   @media (max-width: 767px) {
     font-size: 1.6rem;
@@ -1562,11 +1569,11 @@ textarea.form-control {
 .privacy-box {
   box-sizing: border-box;
 
-
     p {
     font-size: 1.8rem;
     line-height: calc(31 / 18);
     font-weight: 500;
+    overflow-wrap: anywhere;
     
     @media (max-width: 767px) {
       font-size: 1.6rem;
@@ -1788,6 +1795,7 @@ textarea.form-control.form-textarea {
     flex: 1;
   }
 }
+
 
 // =====================================
 // footer
