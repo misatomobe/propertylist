@@ -1393,7 +1393,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .company__item__info__text .company__item__mail {
-    margin-top: 0.6rem;
+    margin-top: 1.8rem;
   }
 }
 
@@ -1683,8 +1683,7 @@ textarea.form-control {
 }
 @media (max-width: 767px) {
   .privacy-scroll {
-    max-width: 100%;
-    overflow-x: hidden;
+    height: auto;
   }
 }
 
