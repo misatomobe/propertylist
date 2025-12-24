@@ -1520,7 +1520,7 @@ textarea.form-control {
   padding: 3.5rem 4rem 4rem 4rem;
 
   @media (max-width: 767px) {
-    padding: 2rem;
+    padding: 1.5rem 2.5rem 2rem 1.1rem;
   }
 }
 
@@ -1564,6 +1564,10 @@ textarea.form-control {
 
 .privacy-box01 {
   margin-bottom: 2.8rem;
+
+  @media (max-width: 767px) {
+    margin-bottom: 3rem;
+  }
 }
 
 .privacy-box {
@@ -1589,7 +1593,7 @@ textarea.form-control {
   margin-top: 8rem;
 
   @media (max-width: 767px)  {
-    margin-top: 5rem;
+    margin-top: 5.1rem;
   }
 }
 
