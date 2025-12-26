@@ -608,11 +608,13 @@ h4 {
       position: relative;
       z-index: 2;
       aspect-ratio: 2 / 1;
+      height: auto;
+      object-fit: cover;
 
       img {
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: 100%;
+        object-fit: cover;
       }
 
       @media (max-width: 767px) {
