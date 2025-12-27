@@ -1340,7 +1340,8 @@ form {
   }
 }
 
-.check-area dt label {
+.check-area dt label,
+.check-area dt p {
   font-size: 2rem;
   line-height: calc(33 / 20);
   

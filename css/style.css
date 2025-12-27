@@ -1490,12 +1490,14 @@ form {
   }
 }
 
-.check-area dt label {
+.check-area dt label,
+.check-area dt p {
   font-size: 2rem;
   line-height: 1.65;
 }
 @media (max-width: 767px) {
-  .check-area dt label {
+  .check-area dt label,
+  .check-area dt p {
     line-height: 1.35;
   }
 }
