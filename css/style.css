@@ -914,7 +914,7 @@ h4 {
   .modal__content {
     width: 31.5rem;
     height: auto;
-    padding: 2rem;
+    padding: 2rem 2rem 1.4rem 2rem;
   }
 }
 .modal__content-img-wrap {
@@ -947,7 +947,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .modal__content-caption {
-    margin-top: 0.7rem;
+    margin-top: 0.6rem;
   }
 }
 .modal__content-close {
