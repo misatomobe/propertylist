@@ -1470,8 +1470,10 @@ textarea.form-control {
 .privacy-frame {
   background-color: $font-color02;
   height: 30rem;
-  padding: 1rem 1.5rem 1rem 0;
+  padding: 0;
   box-sizing: border-box;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 
   @media (max-width: 767px) {
     padding: 2rem;
@@ -1480,13 +1482,14 @@ textarea.form-control {
 }
 
 .privacy-scroll {
-  max-width: 80rem;
+  max-width: none;
   width: 100%;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  overflow: visible;
 
-  padding: 0;
+  padding: 2rem 2.5rem 2rem 0;
   box-sizing: border-box;
 
   scrollbar-width: thin;
