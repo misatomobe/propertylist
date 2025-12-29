@@ -2073,22 +2073,12 @@ textarea.form-control.form-textarea {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2.8rem 0;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-column-gap: 6.8%;
-     -moz-column-gap: 6.8%;
-          column-gap: 6.8%;
-  max-width: 72.2rem;
-}
-@media (max-width: 1030px) {
-  .footer__nav ul {
-    -webkit-column-gap: 4%;
-       -moz-column-gap: 4%;
-            column-gap: 4%;
-  }
-  .footer__nav ul .footer__nav a {
-    font-size: 1.3rem;
-  }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 2.4rem;
+     -moz-column-gap: 2.4rem;
+          column-gap: 2.4rem;
+  row-gap: 0.8rem;
 }
 @media (max-width: 767px) {
   .footer__nav ul {
@@ -2101,6 +2091,9 @@ textarea.form-control.form-textarea {
     padding: 2rem 0 2.5rem 0;
   }
 }
+.footer__nav ul li {
+  text-align: center;
+}
 .footer__nav ul a {
   font-size: 1.8rem;
   line-height: 1.8333333333;
@@ -2108,22 +2101,15 @@ textarea.form-control.form-textarea {
   color: #000;
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
-  gap: 4rem;
-  white-space: nowrap;
-}
-@media (max-width: 1030px) {
-  .footer__nav ul a {
-    font-size: 1.3rem;
-  }
-}
-@media (max-width: 767px) {
-  .footer__nav ul a {
-    padding: 0 0.5rem;
-    font-size: 1.8rem;
-  }
+  white-space: normal;
 }
 .footer__nav ul a:hover {
   opacity: 0.6;
+}
+@media (max-width: 767px) {
+  .footer__nav ul a {
+    padding: 0 0.4rem;
+  }
 }
 .footer__sns ul {
   display: -webkit-box;
@@ -2187,7 +2173,7 @@ textarea.form-control.form-textarea {
     width: 2.8rem;
   }
 }
-.footer__copyright {
+.footer__sns ul__copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2202,11 +2188,11 @@ textarea.form-control.form-textarea {
   text-align: center;
 }
 @media (max-width: 767px) {
-  .footer__copyright {
+  .footer__sns ul__copyright {
     height: 9.2rem;
   }
 }
-.footer__copyright p {
+.footer__sns ul__copyright p {
   color: #fff;
   font-size: 2rem;
   line-height: 1.65;
@@ -2214,7 +2200,7 @@ textarea.form-control.form-textarea {
   text-align: center;
 }
 @media (max-width: 767px) {
-  .footer__copyright p {
+  .footer__sns ul__copyright p {
     line-height: 1.25;
   }
 }
