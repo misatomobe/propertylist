@@ -1855,14 +1855,13 @@ textarea.form-control.form-textarea {
       max-width: 72.2rem;
 
       /* 1030px：間隔をさらに縮める */
-      @media (max-width: 1030px) {
-        column-gap: 4%;
+      @media (max-width: 1079px) {
+        column-gap: 3%;
         }
       
       @media (max-width: 900px) {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.8rem 1.6rem;
       }
 
       @media (max-width: 767px) {
@@ -1881,12 +1880,13 @@ textarea.form-control.form-textarea {
         gap: 4rem;
         white-space: nowrap;
 
-        @media (max-width: 1030px) {
-          font-size: 1.5rem;
+        @media (max-width: 1079px) {
+          font-size: 1.4rem;
+          gap: 2.5rem;
         }
 
         @media (max-width: 767px) {
-          padding: 0 0.5rem;
+          padding: 0 0.4rem;
           font-size: 1.8rem;
       }
 
