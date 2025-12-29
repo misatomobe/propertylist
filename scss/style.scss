@@ -1864,7 +1864,7 @@ textarea.form-control.form-textarea {
         justify-content: center;
         gap: 0.8rem 1.6rem;
       }
-      
+
       @media (max-width: 767px) {
         flex-wrap: wrap;
         column-gap: 1.8rem;
@@ -1882,7 +1882,7 @@ textarea.form-control.form-textarea {
         white-space: nowrap;
 
         @media (max-width: 1030px) {
-          font-size: 1.6rem;
+          font-size: 1.5rem;
         }
 
         @media (max-width: 767px) {
