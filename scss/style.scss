@@ -604,14 +604,16 @@ h4 {
 
     &__image {
       width: 100%;
-      aspect-ratio: 2 / 1;
       overflow: hidden;
       position: relative;
       z-index: 2;
+      aspect-ratio: 2 / 1;
+      height: auto;
+      object-fit: cover;
 
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
       }
 
@@ -858,7 +860,7 @@ h4 {
     @media (max-width: 767px) {
       width: 31.5rem;
       height: auto;
-      padding: 2rem;
+      padding: 2rem 2rem 1.7rem 2rem;
     }
 
     // 画像
@@ -888,7 +890,7 @@ h4 {
       text-align: left;
 
       @media (max-width: 767px) {
-        margin-top: 0.7rem;
+        margin-top: 0.6rem;
       }
     }
 
@@ -1248,7 +1250,7 @@ h4 {
             margin-top: 1.2rem;
 
             @media (max-width: 767px) {
-              margin-top: 0.6rem;
+              margin-top: 1.8rem;
             }
           } 
         }
@@ -1338,7 +1340,8 @@ form {
   }
 }
 
-.check-area dt label {
+.check-area dt label,
+.check-area dt p {
   font-size: 2rem;
   line-height: calc(33 / 20);
   
@@ -1355,7 +1358,7 @@ form {
   align-items: center;
   font-size: 2rem;
   line-height: calc(33 / 20);
-  font-weight: bold;
+  font-weight: 500;
 
   @media (max-width: 767px) {
     width: 100%;
@@ -1400,7 +1403,7 @@ form {
 
 //テキスト・メール・テキストエリアなど 
 input[type="text"].form-control,
-input[type="mail"].form-control,
+input[type="email"].form-control,
 textarea.form-control {
   width: 100%;
   height: 5rem;
@@ -1464,6 +1467,70 @@ textarea.form-control {
 }
 
 // 個人情報保護方針
+.privacy-frame {
+  background-color: $font-color02;
+  height: 30rem;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+
+  @media (max-width: 767px) {
+    padding: 2rem;
+    height: 32.3rem;
+  }
+}
+
+.privacy-scroll {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow: visible;
+
+  padding: 2rem 2.5rem 2rem 0;
+  box-sizing: border-box;
+
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-color01 $scrollbar-color02;
+
+  &::-webkit-scrollbar {
+    width: 1.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-color02;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-color01;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($scrollbar-color01, 15%);
+  }
+
+  @media (max-width: 767px) {
+    max-height: 32.3rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem 2.5rem 2rem 0;
+  }
+}
+
+
+.privacy-inner {
+  box-sizing: border-box;
+  padding: 2rem 4rem 4rem 4rem;
+
+  @media (max-width: 767px) {
+    padding: 0 1.5rem 2rem 1.1rem;
+  }
+}
+
 .privacy-area {
   display: block;
 }
@@ -1494,6 +1561,7 @@ textarea.form-control {
 .privacy-box01 p {
   font-size: 1.8rem;
   line-height: calc(31 / 18);
+  overflow-wrap: anywhere;
 
   @media (max-width: 767px) {
     font-size: 1.6rem;
@@ -1502,55 +1570,21 @@ textarea.form-control {
 }
 
 .privacy-box01 {
-  margin-bottom: 3.8rem;
+  margin-bottom: 2.8rem;
+
+  @media (max-width: 767px) {
+    margin-bottom: 3rem;
+  }
 }
 
 .privacy-box {
   box-sizing: border-box;
-  max-width: 80rem;
-  width: 100%;
-  height: 30rem;
-  overflow-y: scroll;
-  background-color: $font-color02;
-  padding: 4.1rem calc(5rem + 10px) 4rem 4rem;
 
-  // スクロールバー
-  scrollbar-width: thin;
-  scrollbar-color: $scrollbar-color01 $scrollbar-color02;
-
-  // Chrome / Edge / Safari
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: $scrollbar-color02;
-    margin: 10px 0;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar-color01;
-    border-radius: 0;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    $scrollbar-color01: #9B9B9B;
-    background: darken($scrollbar-color01, 15%);
-  } 
-}
-
-@media (max-width: 767px) {
-  .privacy-box {
-    max-width: 100%;
-    width: 100%;
-    height: 32.3rem;
-    padding: 3rem 5rem 3rem 3rem;
-  }
-
-  p {
+    p {
     font-size: 1.8rem;
-    line-height: calc(33 /18);
+    line-height: calc(31 / 18);
     font-weight: 500;
+    overflow-wrap: anywhere;
     
     @media (max-width: 767px) {
       font-size: 1.6rem;
@@ -1560,13 +1594,12 @@ textarea.form-control {
 }
 
 .form-submit-area {
-  margin-top: 5rem;
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
-  margin-top: 8rem;
 
   @media (max-width: 767px)  {
-    margin-top: 5rem;
+    margin-top: 5.1rem;
   }
 }
 
@@ -1604,16 +1637,10 @@ textarea.form-control {
 
 // 内容
 textarea.form-control.form-textarea {
-  width: 80rem;
+  width: 100%;
   height: 20rem;
   box-sizing: border-box;
   padding: 1.3rem 2rem;
-}
-
-@media (max-width: 767px) {
-  textarea.form-control.form-textarea {
-    width: 100%;
-  }
 }
 
 .message-area {
@@ -1773,6 +1800,7 @@ textarea.form-control.form-textarea {
   }
 }
 
+
 // =====================================
 // footer
 // =====================================
@@ -1806,6 +1834,7 @@ textarea.form-control.form-textarea {
       margin-bottom: 2.8rem;
       font-size: 2rem;
       line-height: calc(33 / 20);
+      font-weight: 500;
 
       @media (max-width: 767px) {
         margin-bottom: 2rem;
@@ -1814,12 +1843,17 @@ textarea.form-control.form-textarea {
   }
   
   &__nav {
+    width: 100%;
+    max-width: 72.2rem;
+    margin: 0 auto;
+    
     ul {
       display: flex;
       justify-content: center;
       padding: 2.8rem 0;
-      flex-wrap: nowrap;     // PCでは折り返しなし
+      flex-wrap: wrap;
       column-gap: 5rem;
+      row-gap: 0.8rem;
 
       @media (max-width: 767px) {
         flex-wrap: wrap;
@@ -1827,109 +1861,93 @@ textarea.form-control.form-textarea {
         row-gap: 0.8rem;
         padding: 2rem 0 2.5rem 0;
       }
+
+      li {
+        text-align: center;
+      }
       
       a {
         font-size: 1.8rem;
         line-height: calc(33 / 18);
-        font-style: 400;
+        font-weight: 500;
         color: $font-color;
         transition: opacity 0.4s ease;
-        gap: 4rem;
-
-        @media (max-width: 767px) {
-          padding: 0 0.5rem;
-      }
+        white-space: normal;
 
       &:hover {
         opacity: 0.6;
       }
+
+       @media (max-width: 767px) {
+          padding: 0 0.4rem;
+        }
+      }
     }
   }
-}
-
-&__sns {
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    row-gap: 1.7rem;
-
-    @media (max-width: 767px) {
-      row-gap: 2rem;
-    }
-    
-    li {
-      a {
-        display: block;
-        padding: 0 1.5rem;      
-        transition: opacity 0.4s ease, transform 0.4s ease;
-        
-        &:hover {
-          transform: scale(1.2);
-          opacity: 0.6;
-        }
-        
-        .twitter {
-          width: 2.6rem;
-
-          @media (max-width: 767px) {
-            width: 2.8rem;
+  
+  &__sns {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      row-gap: 1.7rem;
+      
+      @media (max-width: 767px) {
+        row-gap: 2rem;
+      }
+      
+      li {
+        a {
+          display: block;
+          padding: 0 1.5rem;      
+          transition: opacity 0.4s ease, transform 0.4s ease;
+          
+          &:hover {
+            transform: scale(1.2);
+            opacity: 0.6;
           }
-        }
 
-        .facebook {
-          width: 2.6rem;
-
-           @media (max-width: 767px) {
-            width: 2.8rem;
-          }
-        }
-
-        .youtube {
-          width: 2.6rem;
-
-           @media (max-width: 767px) {
-            width: 2.8rem;
-          }
-        }
-
-        .instagram {
-          width: 2.7rem;
-
-           @media (max-width: 767px) {
-            width: 2.8rem;
+          .twitter,
+          .facebook,
+          .youtube,
+          .instagram {
+            width: 2.6rem;
+            
+            @media (max-width: 767px) {
+              width: 2.8rem;
+            }
           }
         }
       }
     }
   }
-}
-
-&__copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 9.2rem;
-  background-color: $main-color;
-  text-align: center;
-
-  @media (max-width: 767px) {
-    height: 9.2rem;
-  }
   
-  p {
-    color: $font-color02;
-    font-size: 2rem;
-    line-height: calc(33 /20);
-    font-weight: 400;
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9.2rem;
+    background-color: $main-color;
     text-align: center;
-
+    
     @media (max-width: 767px) {
-      line-height: calc(25 /20);
+      height: 9.2rem;
+    }
+    
+    p {
+      color: $font-color02;
+      font-size: 2rem;
+      line-height: calc(33 /20);
+      font-weight: 500;
+      text-align: center;
+          
+      @media (max-width: 767px) {
+        line-height: calc(25 /20);
+      }
     }
   }
 }
-}
+
 
 // =====================================
 // back-to-top button
