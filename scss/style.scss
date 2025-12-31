@@ -1517,6 +1517,7 @@ textarea.form-control {
     overflow-x: hidden;
     width: 100%;
     box-sizing: border-box;
+    padding: 1.5rem 2.5rem 2rem 0;
   }
 }
 
@@ -1526,7 +1527,7 @@ textarea.form-control {
   padding: 2rem 4rem 4rem 4rem;
 
   @media (max-width: 767px) {
-    padding: 1.5rem 2.5rem 2rem 1.1rem;
+    padding: 0 1.5rem 2rem 1.1rem;
   }
 }
 
