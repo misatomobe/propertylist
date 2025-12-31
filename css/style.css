@@ -2075,9 +2075,9 @@ textarea.form-control.form-textarea {
   padding: 2.8rem 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 2.4rem;
-     -moz-column-gap: 2.4rem;
-          column-gap: 2.4rem;
+  -webkit-column-gap: 5rem;
+     -moz-column-gap: 5rem;
+          column-gap: 5rem;
   row-gap: 0.8rem;
 }
 @media (max-width: 767px) {
