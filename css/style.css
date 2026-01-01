@@ -1747,12 +1747,7 @@ textarea.form-control {
 }
 
 .privacy-box01 {
-  margin-bottom: 2.8rem;
-}
-@media (max-width: 767px) {
-  .privacy-box01 {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 3rem;
 }
 
 .privacy-box {
