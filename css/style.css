@@ -1677,6 +1677,11 @@ textarea.form-control {
 .privacy-scroll::-webkit-scrollbar-thumb {
   background: #9B9B9B;
 }
+@media (max-width: 767px) {
+  .privacy-scroll::-webkit-scrollbar-thumb {
+    min-height: 30px;
+  }
+}
 .privacy-scroll::-webkit-scrollbar-thumb:hover {
   background: rgb(116.75, 116.75, 116.75);
 }

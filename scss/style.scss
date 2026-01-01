@@ -1494,6 +1494,10 @@ textarea.form-control {
 
   &::-webkit-scrollbar-thumb {
     background: $scrollbar-color01;
+
+    @media (max-width: 767px) {
+      min-height: 30px;
+    }
   }
 
   &::-webkit-scrollbar-thumb:hover {
@@ -1507,7 +1511,6 @@ textarea.form-control {
     padding: 1.5rem 2.5rem 2rem 0;
   }
 }
-
 
 .privacy-inner {
   box-sizing: border-box;
