@@ -1652,34 +1652,24 @@ textarea.form-control {
 .privacy-frame {
   background-color: #fff;
   height: 30rem;
-  padding: 0;
+  padding: 1rem 1rem 1rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-y: auto;
-  scrollbar-gutter: stable;
 }
 @media (max-width: 767px) {
   .privacy-frame {
-    padding: 2rem;
+    padding: 1rem 1rem 2rem 2rem;
     height: 32.3rem;
   }
 }
 
 .privacy-scroll {
-  max-width: none;
-  width: 100%;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  overflow: visible;
-  padding: 2rem 2.5rem 2rem 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  scrollbar-width: thin;
-  scrollbar-color: #9B9B9B #E3E3E3;
 }
 .privacy-scroll::-webkit-scrollbar {
-  width: 1.5rem;
+  width: 10px;
 }
 .privacy-scroll::-webkit-scrollbar-track {
   background: #E3E3E3;
@@ -1687,14 +1677,17 @@ textarea.form-control {
 .privacy-scroll::-webkit-scrollbar-thumb {
   background: #9B9B9B;
 }
+@media (max-width: 767px) {
+  .privacy-scroll::-webkit-scrollbar-thumb {
+    min-height: 30px;
+  }
+}
 .privacy-scroll::-webkit-scrollbar-thumb:hover {
   background: rgb(116.75, 116.75, 116.75);
 }
 @media (max-width: 767px) {
   .privacy-scroll {
     max-height: 32.3rem;
-    overflow-y: auto;
-    overflow-x: hidden;
     width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1705,11 +1698,11 @@ textarea.form-control {
 .privacy-inner {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 2rem 4rem 4rem 4rem;
+  padding: 3rem 4rem 4rem 4rem;
 }
 @media (max-width: 767px) {
   .privacy-inner {
-    padding: 0 1.5rem 2rem 1.1rem;
+    padding: 1rem 1.5rem 2rem 1.1rem;
   }
 }
 
@@ -1754,12 +1747,7 @@ textarea.form-control {
 }
 
 .privacy-box01 {
-  margin-bottom: 2.8rem;
-}
-@media (max-width: 767px) {
-  .privacy-box01 {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 3rem;
 }
 
 .privacy-box {
