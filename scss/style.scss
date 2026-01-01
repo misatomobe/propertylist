@@ -1474,8 +1474,8 @@ textarea.form-control {
   box-sizing: border-box;
 
   @media (max-width: 767px) {
-    padding: 1rem 1rem 2rem 2rem;
     height: 32.3rem;
+    padding: 1rem 1rem 2.3rem 0;
   }
 }
 
@@ -1517,7 +1517,7 @@ textarea.form-control {
   padding: 3rem 4rem 4rem 4rem;
 
   @media (max-width: 767px) {
-    padding: 1rem 1.5rem 2rem 1.1rem;
+    padding: 1rem 1.5rem 2.5rem 3rem;
   }
 }
 
