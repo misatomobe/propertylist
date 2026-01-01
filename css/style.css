@@ -1652,11 +1652,9 @@ textarea.form-control {
 .privacy-frame {
   background-color: #fff;
   height: 30rem;
-  padding: 0;
+  padding: 1rem 1.5rem 1rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-y: auto;
-  scrollbar-gutter: stable;
 }
 @media (max-width: 767px) {
   .privacy-frame {
@@ -1666,17 +1664,9 @@ textarea.form-control {
 }
 
 .privacy-scroll {
-  max-width: none;
-  width: 100%;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  overflow: visible;
-  padding: 2rem 2.5rem 2rem 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  scrollbar-width: thin;
-  scrollbar-color: #9B9B9B #E3E3E3;
 }
 .privacy-scroll::-webkit-scrollbar {
   width: 1.5rem;
