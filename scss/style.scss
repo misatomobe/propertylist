@@ -1470,11 +1470,11 @@ textarea.form-control {
 .privacy-frame {
   background-color: $font-color02;
   height: 30rem;
-  padding: 1rem 1.5rem 1rem 0;
+  padding: 1rem 1rem 1rem 0;
   box-sizing: border-box;
 
   @media (max-width: 767px) {
-    padding: 2rem;
+    padding: 1rem 1rem 2rem 2rem;
     height: 32.3rem;
   }
 }
@@ -1485,7 +1485,7 @@ textarea.form-control {
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
-    width: 1.5rem;
+    width: 10px;
   }
 
   &::-webkit-scrollbar-track {
@@ -1502,8 +1502,6 @@ textarea.form-control {
 
   @media (max-width: 767px) {
     max-height: 32.3rem;
-    overflow-y: auto;
-    overflow-x: hidden;
     width: 100%;
     box-sizing: border-box;
     padding: 1.5rem 2.5rem 2rem 0;
@@ -1513,10 +1511,10 @@ textarea.form-control {
 
 .privacy-inner {
   box-sizing: border-box;
-  padding: 2rem 4rem 4rem 4rem;
+  padding: 3rem 4rem 4rem 4rem;
 
   @media (max-width: 767px) {
-    padding: 0 1.5rem 2rem 1.1rem;
+    padding: 1rem 1.5rem 2rem 1.1rem;
   }
 }
 
