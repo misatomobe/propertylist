@@ -49,6 +49,15 @@ img {
   margin: 0 auto;
 }
 
+section {
+  scroll-margin-top: 8rem;
+}
+@media (max-width: 767px) {
+  section {
+    scroll-margin-top: 5rem;
+  }
+}
+
 .section-bg {
   background: rgba(77, 150, 0, 0.102);
 }
