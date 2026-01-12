@@ -183,6 +183,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  padding: 0 8rem;
   top: 0;
   left: 0;
   z-index: 10000;
@@ -226,7 +227,10 @@ h4 {
 
 &__logo {
   a {
-  display: flex;
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+    font-weight: 500;
+    display: block;
   align-items: center;
   height: 8rem;
   transition: all 0.4s ease;
