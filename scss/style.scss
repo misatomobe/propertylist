@@ -222,6 +222,7 @@ h4 {
     }
     @media (max-width: 767px) {
       padding: 0 2rem;
+      height: 5rem;
     }
   }
 
@@ -231,9 +232,13 @@ h4 {
     line-height: calc(33 / 20);
     font-weight: 500;
     display: block;
-  align-items: center;
-  height: 8rem;
-  transition: all 0.4s ease;
+    align-items: center;
+    height: 8rem;
+    transition: all 0.4s ease;
+
+    @media (max-width: 767px) {
+      height: 5rem;
+    }
 
   &:hover {
     opacity: 0.7;
@@ -254,27 +259,27 @@ h4 {
     align-items: center;
     column-gap: 3rem;
     color: $font-color02;
-    
-    a {
-      height: 8rem;
-      display: flex;
-      align-items: center;
-      font-size: 1.8rem;
-      line-height: calc(18 / 18);
-      font-weight: 400;
-      justify-content: center;
-      color: $font-color02;
-      text-decoration: none;
-      transition: opacity 0.4s ease, color 0.4s ease;
-      
-      &:hover {
-        opacity: 0.7;
-        text-decoration: underline;
+    li {
+      a {
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        line-height: calc(18 / 18);
+        font-weight: 500;
+        color: $font-color02;
+        text-decoration: none;
+        transition: opacity 0.4s ease, color 0.4s ease;
+        
+        &:hover {
+          opacity: 0.7;
+          text-decoration: underline;
+        }
+        
+        @media (max-width: 1030px) {
+          font-size: 1.3rem;
+        } 
       }
-
-      @media (max-width: 1030px) {
-        font-size: 1.3rem;
-      } 
     }
   }
 }
@@ -283,7 +288,7 @@ h4 {
 &__hamburger {
   position: relative;
   z-index: 9999;
-
+  
   .hamburger {
     position: fixed;
     top: 0;
@@ -291,7 +296,6 @@ h4 {
     width: 7.2rem;
     height: 5rem;
     background: $font-color02;
-    border: 1px solid $border-color-grey;
     display: flex;
     align-items: center;
     justify-content: center;
