@@ -9,16 +9,12 @@ html {
 
 body {
   font-family: "Yu Mincho", "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
+  font-size: 1.6rem;
+  line-height: 1.5625;
   font-weight: 500;
   font-style: medium;
-  font-size: 1.8rem;
-  line-height: 1.5625;
   color: #000;
-}
-@media (max-width: 767px) {
-  body {
-    font-size: 1.6rem;
-  }
+  letter-spacing: 0;
 }
 
 #container {
@@ -31,13 +27,11 @@ body {
     display: none !important;
   }
 }
-
 @media (min-width: 768px) {
   .sp {
     display: none !important;
   }
 }
-
 img {
   width: 100%;
   height: auto;
@@ -45,7 +39,7 @@ img {
 }
 
 .inner {
-  max-width: 920px;
+  max-width: 92rem;
   margin: 0 auto;
 }
 
@@ -157,13 +151,14 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  padding: 0 8rem;
   top: 0;
   left: 0;
   z-index: 10000;
@@ -171,6 +166,11 @@ h4 {
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
   isolation: isolate;
+}
+@media (max-width: 1030px) {
+  .header {
+    padding: 0;
+  }
 }
 .header.active {
   background: #4D9600;
@@ -191,6 +191,7 @@ h4 {
 .header__inner {
   max-width: 1080px;
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,7 +201,7 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 8rem;
+  margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -214,16 +215,34 @@ h4 {
     padding: 0 2rem;
   }
 }
-.header__logo a {
+.header__logo {
+  margin: 0;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 8rem;
+}
+.header__logo a {
+  font-size: 2rem;
+  line-height: 1.65;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .header__logo a {
+    height: 5rem;
+  }
 }
 .header__logo a:hover {
   opacity: 0.7;
@@ -246,7 +265,7 @@ h4 {
           column-gap: 3rem;
   color: #fff;
 }
-.header__nav ul a {
+.header__nav ul li a {
   height: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,21 +275,18 @@ h4 {
           align-items: center;
   font-size: 1.8rem;
   line-height: 1;
-  font-weight: 400;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  font-weight: 500;
   color: #fff;
   text-decoration: none;
   -webkit-transition: opacity 0.4s ease, color 0.4s ease;
   transition: opacity 0.4s ease, color 0.4s ease;
 }
-.header__nav ul a:hover {
+.header__nav ul li a:hover {
   opacity: 0.7;
   text-decoration: underline;
 }
 @media (max-width: 1030px) {
-  .header__nav ul a {
+  .header__nav ul li a {
     font-size: 1.3rem;
   }
 }
@@ -285,7 +301,6 @@ h4 {
   width: 7.2rem;
   height: 5rem;
   background: #fff;
-  border: 1px solid #505050;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,9 +353,13 @@ h4 {
   top: 5rem;
   right: 0;
   overflow: hidden;
-  display: none;
-  height: auto;
-  bottom: auto;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  z-index: 9998;
 }
 .sp-nav__lists {
   margin: 0;
@@ -366,6 +385,8 @@ h4 {
 .sp-nav.active {
   display: block;
   background: #4D9600;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .mv {
