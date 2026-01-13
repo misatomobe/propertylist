@@ -8,6 +8,7 @@ hamburger.addEventListener('click', function () {
   spNav.classList.toggle('active');
 });
 
+
 // ヘッダーの背景変更
 window.addEventListener('scroll', function () {
   const header = document.querySelector('.header');
@@ -28,5 +29,15 @@ logoLink.addEventListener('click', function (e) {
   window.scrollTo({
     top: 0,
     behavior: 'smooth' // スムーズスクロール
+  });
+});
+
+// ドロワー内リンククリックで閉じる
+const spNavLinks = document.querySelectorAll('.sp-nav a');
+
+spNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    spNav.classList.remove('active');
+    hamburger.classList.remove('active');
   });
 });
