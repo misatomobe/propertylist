@@ -276,11 +276,29 @@ h4 {
         color: $font-color02;
         text-decoration: none;
         transition: opacity 0.4s ease, color 0.4s ease;
+        position: relative;
         
         &:hover {
           opacity: 0.7;
-          text-decoration: underline;
         }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 2.2rem;
+          width: 70%;
+          height: 1px;
+          background-color: $scrollbar-color02;
+          transform: translateX(-50%) scaleX(0);
+          transform-origin: center;
+          transition: transform 0.7s ease;
+        }
+
+        &:hover::after {
+          transform: translateX(-50%) scaleX(1);
+        }
+
         
         @media (max-width: 1030px) {
           font-size: 1.3rem;
@@ -404,7 +422,7 @@ h4 {
   
   &::after {
     content: "";
-    background-color: rgba(0, 0, 0, .15);
+    background-color: #00000026;
     position: absolute;
     left: 0;
     right: 0;
@@ -1832,7 +1850,7 @@ textarea.form-control.form-textarea {
 // footer
 // =====================================
 .footer {
-  &__contents {
+  &__main {
     background-color: $font-color02;
     display: flex;
     flex-direction: column;
@@ -1842,10 +1860,16 @@ textarea.form-control.form-textarea {
     padding: 8rem 18rem;
     text-align: center;
     width: 100%;
-    
-    @media (max-width: 767px) {
+    @include sp {
       height: auto;
       padding: 5rem 3rem;
+    }
+
+    .inner {
+      width: 72.2rem;
+      @include sp {
+        width: 31.5rem;
+      }
     }
   }
   
@@ -1856,14 +1880,13 @@ textarea.form-control.form-textarea {
     max-width: 72.2rem;
     margin: 0 auto;
     
-    p {
+    h2 {
       display: inline-block;
       margin-bottom: 2.8rem;
       font-size: 2rem;
       line-height: calc(33 / 20);
       font-weight: 500;
-
-      @media (max-width: 767px) {
+      @include sp {
         margin-bottom: 2rem;
       }
     }
@@ -1881,8 +1904,7 @@ textarea.form-control.form-textarea {
       flex-wrap: wrap;
       column-gap: 5rem;
       row-gap: 0.8rem;
-
-      @media (max-width: 767px) {
+      @include sp {
         flex-wrap: wrap;
         column-gap: 1.8rem;
         row-gap: 0.8rem;
@@ -1904,13 +1926,13 @@ textarea.form-control.form-textarea {
       &:hover {
         opacity: 0.6;
       }
-
-       @media (max-width: 767px) {
-          padding: 0 0.4rem;
-        }
+      
+      @include sp {
+        padding: 0 0.4rem;
       }
     }
   }
+}
   
   &__sns {
     ul {
@@ -1918,8 +1940,7 @@ textarea.form-control.form-textarea {
       justify-content: center;
       align-items: center;
       row-gap: 1.7rem;
-      
-      @media (max-width: 767px) {
+      @include sp {
         row-gap: 2rem;
       }
       
@@ -1939,8 +1960,7 @@ textarea.form-control.form-textarea {
           .youtube,
           .instagram {
             width: 2.6rem;
-            
-            @media (max-width: 767px) {
+            @include sp {
               width: 2.8rem;
             }
           }
@@ -1956,8 +1976,7 @@ textarea.form-control.form-textarea {
     height: 9.2rem;
     background-color: $main-color;
     text-align: center;
-    
-    @media (max-width: 767px) {
+    @include sp {
       height: 9.2rem;
     }
     
@@ -1967,8 +1986,7 @@ textarea.form-control.form-textarea {
       line-height: calc(33 /20);
       font-weight: 500;
       text-align: center;
-          
-      @media (max-width: 767px) {
+      @include sp {
         line-height: calc(25 /20);
       }
     }

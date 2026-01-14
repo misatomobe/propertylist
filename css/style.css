@@ -280,10 +280,31 @@ h4 {
   text-decoration: none;
   -webkit-transition: opacity 0.4s ease, color 0.4s ease;
   transition: opacity 0.4s ease, color 0.4s ease;
+  position: relative;
 }
 .header__nav ul li a:hover {
   opacity: 0.7;
-  text-decoration: underline;
+}
+.header__nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2.2rem;
+  width: 70%;
+  height: 1px;
+  background-color: #E3E3E3;
+  -webkit-transform: translateX(-50%) scaleX(0);
+          transform: translateX(-50%) scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.7s ease;
+  transition: -webkit-transform 0.7s ease;
+  transition: transform 0.7s ease;
+  transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+}
+.header__nav ul li a:hover::after {
+  -webkit-transform: translateX(-50%) scaleX(1);
+          transform: translateX(-50%) scaleX(1);
 }
 @media (max-width: 1030px) {
   .header__nav ul li a {
@@ -396,7 +417,7 @@ h4 {
 }
 .mv::after {
   content: "";
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.1490196078);
   position: absolute;
   left: 0;
   right: 0;
@@ -2038,7 +2059,7 @@ textarea.form-control.form-textarea {
             flex: 1;
   }
 }
-.footer__contents {
+.footer__main {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2059,9 +2080,17 @@ textarea.form-control.form-textarea {
   width: 100%;
 }
 @media (max-width: 767px) {
-  .footer__contents {
+  .footer__main {
     height: auto;
     padding: 5rem 3rem;
+  }
+}
+.footer__main .inner {
+  width: 72.2rem;
+}
+@media (max-width: 767px) {
+  .footer__main .inner {
+    width: 31.5rem;
   }
 }
 .footer__company-name {
@@ -2071,7 +2100,7 @@ textarea.form-control.form-textarea {
   max-width: 72.2rem;
   margin: 0 auto;
 }
-.footer__company-name p {
+.footer__company-name h2 {
   display: inline-block;
   margin-bottom: 2.8rem;
   font-size: 2rem;
@@ -2079,7 +2108,7 @@ textarea.form-control.form-textarea {
   font-weight: 500;
 }
 @media (max-width: 767px) {
-  .footer__company-name p {
+  .footer__company-name h2 {
     margin-bottom: 2rem;
   }
 }
