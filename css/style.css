@@ -174,7 +174,7 @@ h4 {
   }
 }
 .header.active {
-  background: #4D9600;
+  background-color: #4D9600;
 }
 .header.is-colored {
   background-color: #4D9600 !important; /* ← 強制的に緑にする */
