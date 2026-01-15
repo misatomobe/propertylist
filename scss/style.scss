@@ -175,7 +175,7 @@ h4 {
 .header {
   width: 100%;
   height: 8rem;
-  background: transparent;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -184,9 +184,9 @@ h4 {
   top: 0;
   left: 0;
   z-index: 10000;
-  background-color: transparent;
   transition: background-color 0.4s;
-  isolation: isolate;
+  opacity: 1;
+  filter: none;  
 
   @media (max-width:1030px) {
     padding: 0;

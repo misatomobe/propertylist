@@ -15,7 +15,7 @@ window.addEventListener('scroll', function () {
   const aboutSection = document.querySelector('#about');
   const aboutTop = aboutSection.offsetTop;
 
-  if (window.scrollY >= aboutTop - 50) {
+  if (window.scrollY >= aboutTop) {
     header.classList.add('is-colored');
   } else {
     header.classList.remove('is-colored');
