@@ -79,7 +79,7 @@ img {
 section {
   scroll-margin-top: 8rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     scroll-margin-top: 5rem;
   }
 }
@@ -120,7 +120,7 @@ button:hover {
 
 .sp-only {
   display: none;
-  @media (max-width: 767px) {
+  @include sp {
     display: inline;
   }
 }
@@ -205,7 +205,7 @@ h4 {
     filter: none !important;
   }
   
-  @media (max-width: 767px) {
+  @include sp {
     height: 5rem;
   }
   
@@ -222,7 +222,8 @@ h4 {
     @media (max-width: 1030px) {
       padding: 0 3rem;
     }
-    @media (max-width: 767px) {
+
+    @include sp {
       padding: 0 2rem;
     }
   }
@@ -242,7 +243,7 @@ h4 {
     transition: all 0.4s ease;
     height: 100%;
 
-    @media (max-width: 767px) {
+    @include sp {
       height: 5rem;
     }
 
@@ -299,7 +300,6 @@ h4 {
           transform: translateX(-50%) scaleX(1);
         }
 
-        
         @media (max-width: 1030px) {
           font-size: 1.3rem;
         } 
@@ -487,14 +487,13 @@ h4 {
     top: 0;
     left: 0;
     
-    @media (max-width: 767px)  {
+    @include sp {
       flex-direction: column;
       align-self: center;
       padding-top: 5rem;
       display: flex;
     }
   }
-  
 
   &__catch {
     writing-mode: vertical-rl;      /* 縦書き（右から左） */
@@ -506,7 +505,7 @@ h4 {
     gap: 5rem;
     margin: 0;
     
-    @media (max-width: 767px)  {
+   @include sp {
       writing-mode: horizontal-tb;
       display: flex;
       flex-direction: column;
@@ -521,7 +520,7 @@ h4 {
       line-height: 0.6;
       margin: 0;
       
-      @media (max-width: 767px) {
+      @include sp {
         font-size: 2.5rem;
         letter-spacing: 0.22em; /* 119% に相当 */
         writing-mode: vertical-rl;
@@ -538,7 +537,7 @@ h4 {
     writing-mode: vertical-rl;
     text-orientation: upright;
 
-    @media (max-width: 767px) {
+    @include sp {
       writing-mode: vertical-rl;
       text-orientation: mixed;
     }
@@ -550,7 +549,7 @@ h4 {
       line-height: calc(51 / 18);
       font-weight: 400;
       
-      @media (max-width: 767px) {
+      @include sp {
         font-size: 1.5rem;
         line-height: 2.6rem;
         letter-spacing: 0.35em;
@@ -566,12 +565,12 @@ h4 {
 .about__contents__inner {
   padding-left: calc(12.5%);
 
-  @media (max-width:767px) {
+  @include sp {
     padding-left: 0;
   }
 }
 
-@media (max-width: 767px) {
+@include sp {
   .about__image {
     aspect-ratio: 375 /584;
     overflow: hidden;
