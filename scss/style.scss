@@ -430,12 +430,18 @@ h4 {
   }
 
   // スライダー
-  .slide {
+  .splide {
     position: relative;
     z-index: 0;
     width: 100%;
     height: auto;
     overflow: hidden;
+  }
+
+  .splide__track,
+  .splide__list,
+  .splide__slide {
+    height: 100%;
   }
 
   .mv__text {
@@ -448,7 +454,9 @@ h4 {
     text-align: center;
     z-index: 10;
     pointer-events: none;
-    h2 {
+  }
+  
+  h2.mv__catch {
       font-size: 4rem;
       font-weight: 600;
       line-height: calc(70 / 40);
@@ -463,9 +471,6 @@ h4 {
       }
     }
   }
-}
-
-
 // =====================================
 // about
 // =====================================
