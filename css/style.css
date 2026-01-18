@@ -548,6 +548,7 @@ h4 {
   width: 60rem;
   height: auto;
   position: relative;
+  z-index: 10;
 }
 @media (max-width: 767px) {
   .service__item__image-area {
@@ -646,43 +647,26 @@ h4 {
     font-size: 1.8rem;
   }
 }
-.service__item__title__text {
+.service__item__text {
   margin-top: 1.7rem;
   position: relative;
 }
-.service__item__title__text p {
+.service__item__text p {
   font-weight: 600;
 }
 @media (max-width: 1030px) {
-  .service__item__title__text p {
+  .service__item__text p {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .service__item__title__text p {
+  .service__item__text p {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 350px) {
-  .service__item__title__text p {
+  .service__item__text p {
     font-size: 1.4rem;
-  }
-}
-@media (min-width: 768px) {
-  .service__item:nth-of-type(2) {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .service__item:nth-of-type(2) .service__item__image-wrapper .service__item__text01 {
-    text-align: right;
-  }
-  .service__item:nth-of-type(2) .service__item__text-area {
-    left: -0.1rem;
-    right: auto;
-  }
-  .service__item:nth-of-type(2) .service__item__text-area .service__item__text03 {
-    padding: 5% 49% 4% 8%;
-    text-align: left;
   }
 }
 

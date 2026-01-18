@@ -623,6 +623,7 @@ h4 {
       width: 60rem;
       height: auto;
       position: relative;
+      z-index: 10;
 
       @include sp {
         width: 100%;
@@ -647,8 +648,8 @@ h4 {
 
       @include sp {
          aspect-ratio: auto;
-         }
         }
+      }
 
     // キャプション（画像下）
     &__capture {
@@ -720,11 +721,12 @@ h4 {
           font-size: 1.8rem;
         }
       }
-
-      &__text {
-        margin-top: 1.7rem;
-        position: relative;
-       
+    }
+    
+    &__text {
+      margin-top: 1.7rem;
+      position: relative;
+      
       p {
         font-weight: 600;
 
@@ -737,32 +739,6 @@ h4 {
         @media (max-width: 350px)  {
            font-size:
             1.4rem;
-        }
-      }
-    }
-  }
-    // =====================================
-    // PCサイズで2番目のみ反転
-    // =====================================
-    @media (min-width: 768px) {
-      &:nth-of-type(2) {
-        flex-direction: column;
-        align-items: flex-end;
-
-         // キャプション反転
-        .service__item__image-wrapper .service__item__text01 {
-          text-align: right;
-        }
-
-        // 緑ボックス反転
-        .service__item__text-area {
-          left: -0.1rem;
-          right: auto;
-          
-          .service__item__text03 {
-            padding: 5% 49% 4% 8%;
-            text-align: left;
-          }
         }
       }
     }
