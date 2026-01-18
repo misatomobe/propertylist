@@ -586,14 +586,14 @@ h4 {
   @media (max-width: 1030px) {
      padding: 5rem 2rem;
      }
-  @media (max-width: 767px)  {
+  @include sp {
      padding: 5rem 3rem;
      }
 
   &__contents {
     margin-top: 6.8rem;
 
-    @media (max-width: 767px) {
+   @include sp {
       margin-top: 3.8rem;
     }
   }
@@ -604,17 +604,14 @@ h4 {
   }
 
   &__item {
-    position: relative;
     display: flex;
-    flex-direction: column;
-    z-index: 0;
-    margin-bottom: 12.8rem;
+    align-items: flex-start;
 
     &:last-child {
       margin-bottom: 5rem;
     }
 
-    @media (max-width: 767px) { 
+    @include sp { 
       margin-bottom: 5rem;
 
        &:nth-of-type(3) {
@@ -622,12 +619,12 @@ h4 {
         }
       }
 
-    &__image-wrapper {
-      max-width: 65.5%;
+    &__image-area {
+      width: 60rem;
       height: auto;
       position: relative;
 
-      @media (max-width: 767px) {
+      @include sp {
         width: 100%;
         max-width: 100%;
       }
@@ -648,13 +645,13 @@ h4 {
         object-fit: cover;
       }
 
-      @media (max-width: 767px) {
+      @include sp {
          aspect-ratio: auto;
          }
         }
 
     // キャプション（画像下）
-    &__text01 {
+    &__capture {
       margin-top: 2rem;
       text-align: left;
       z-index: 3;
@@ -663,23 +660,31 @@ h4 {
         margin: 0;
       }
 
-      @media (max-width: 767px) { 
+      @include sp { 
         margin-top: 0.5rem;
       }
     }
 
     // 緑ボックス
-    &__text02 {
-      position: absolute;
-      right: -0.1rem;
-      bottom: -5rem;
-      width: 54.35%;
-      background-color: $main-color;
-      z-index: 1;
-      aspect-ratio: 2 / 1;
-      overflow: hidden;
+    &__text-area {
+      flex: 1;
+      margin-top: 14.6rem;
+      padding: 5rem 4rem 4.2rem;
+      padding-right: 0;
+      background-color: #f66;
+      color: $font-color02;
+      position: relative;
+      &::before {
+        content: '';
+        width: 50rem;
+        height: 100%;
+        background-color: $main-color;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
 
-      @media (max-width: 767px) {
+      @include sp {
         position: static;
         width: 100%;
         margin-top: 0.6rem;
@@ -689,18 +694,11 @@ h4 {
       }
     }
 
-    &__text03 {
-      position: absolute;
-      inset: 0;
-      padding: 5% 6% 4% 49%;
-      color: $font-color02;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: left;
+    &__title {
+      position: relative;
 
       // スマホサイズ共通
-      @media (max-width: 767px) {
+      @include sp {
         position: static;
         padding: 2rem 2rem 1rem 2rem;
         text-align: left;
@@ -709,8 +707,7 @@ h4 {
       h3 {
         font-size: 2.5rem;
         line-height: calc(33 / 25);
-        margin-bottom: 1.7rem;
-        font-weight: 500;
+        font-weight: 600;
 
         @media (max-width: 1030px) {
           font-size: 2.1rem;
@@ -724,10 +721,12 @@ h4 {
         }
       }
 
+      &__text {
+        margin-top: 1.7rem;
+        position: relative;
+       
       p {
-        font-size: 1.6rem;
-        line-height: calc(25 / 16);
-        font-weight: 500;
+        font-weight: 600;
 
         @media (max-width: 1030px) {
            font-size: 1.5rem;
@@ -736,11 +735,12 @@ h4 {
            font-size: 1.6rem;
            }
         @media (max-width: 350px)  {
-           font-size: 1.4rem;
-           }
-          }
+           font-size:
+            1.4rem;
         }
-
+      }
+    }
+  }
     // =====================================
     // PCサイズで2番目のみ反転
     // =====================================
@@ -755,7 +755,7 @@ h4 {
         }
 
         // 緑ボックス反転
-        .service__item__text02 {
+        .service__item__text-area {
           left: -0.1rem;
           right: auto;
           

@@ -530,11 +530,8 @@ h4 {
   flex-direction: column;
 }
 .service__item {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  z-index: 0;
-  margin-bottom: 12.8rem;
+  align-items: flex-start;
 }
 .service__item:last-child {
   margin-bottom: 5rem;
@@ -547,13 +544,13 @@ h4 {
     margin-bottom: 0;
   }
 }
-.service__item__image-wrapper {
-  max-width: 65.5%;
+.service__item__image-area {
+  width: 60rem;
   height: auto;
   position: relative;
 }
 @media (max-width: 767px) {
-  .service__item__image-wrapper {
+  .service__item__image-area {
     width: 100%;
     max-width: 100%;
   }
@@ -577,34 +574,39 @@ h4 {
     aspect-ratio: auto;
   }
 }
-.service__item__text01 {
+.service__item__capture {
   margin-top: 2rem;
   text-align: left;
   z-index: 3;
 }
-.service__item__text01 p {
+.service__item__capture p {
   margin: 0;
-  font-size: 1.6rem;
-  line-height: 1.5625;
-  color: #000;
 }
 @media (max-width: 767px) {
-  .service__item__text01 {
+  .service__item__capture {
     margin-top: 0.5rem;
   }
 }
-.service__item__text02 {
-  position: absolute;
-  right: -0.1rem;
-  bottom: -5rem;
-  width: 54.35%;
+.service__item__text-area {
+  flex: 1;
+  margin-top: 14.6rem;
+  padding: 5rem 4rem 4.2rem;
+  padding-right: 0;
+  background-color: #f66;
+  color: #fff;
+  position: relative;
+}
+.service__item__text-area::before {
+  content: "";
+  width: 50rem;
+  height: 100%;
   background-color: #4D9600;
-  z-index: 1;
-  aspect-ratio: 2/1;
-  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 @media (max-width: 767px) {
-  .service__item__text02 {
+  .service__item__text-area {
     position: static;
     width: 100%;
     margin-top: 0.6rem;
@@ -613,62 +615,56 @@ h4 {
     z-index: auto;
   }
 }
-.service__item__text03 {
-  position: absolute;
-  inset: 0;
-  padding: 5% 6% 4% 49%;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
+.service__item__title {
+  position: relative;
 }
 @media (max-width: 767px) {
-  .service__item__text03 {
+  .service__item__title {
     position: static;
     padding: 2rem 2rem 1rem 2rem;
     text-align: left;
   }
 }
-.service__item__text03 h3 {
+.service__item__title h3 {
   font-size: 2.5rem;
   line-height: 1.32;
-  margin-bottom: 1.7rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 @media (max-width: 1030px) {
-  .service__item__text03 h3 {
+  .service__item__title h3 {
     font-size: 2.1rem;
   }
 }
 @media (max-width: 767px) {
-  .service__item__text03 h3 {
+  .service__item__title h3 {
     font-size: 2rem;
     margin-bottom: 1.4rem;
   }
 }
 @media (max-width: 350px) {
-  .service__item__text03 h3 {
+  .service__item__title h3 {
     font-size: 1.8rem;
   }
 }
-.service__item__text03 p {
-  font-size: 1.6rem;
-  line-height: 1.5625;
-  font-weight: 500;
+.service__item__title__text {
+  margin-top: 1.7rem;
+  position: relative;
+}
+.service__item__title__text p {
+  font-weight: 600;
 }
 @media (max-width: 1030px) {
-  .service__item__text03 p {
+  .service__item__title__text p {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .service__item__text03 p {
+  .service__item__title__text p {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 350px) {
-  .service__item__text03 p {
+  .service__item__title__text p {
     font-size: 1.4rem;
   }
 }
@@ -680,11 +676,11 @@ h4 {
   .service__item:nth-of-type(2) .service__item__image-wrapper .service__item__text01 {
     text-align: right;
   }
-  .service__item:nth-of-type(2) .service__item__text02 {
+  .service__item:nth-of-type(2) .service__item__text-area {
     left: -0.1rem;
     right: auto;
   }
-  .service__item:nth-of-type(2) .service__item__text02 .service__item__text03 {
+  .service__item:nth-of-type(2) .service__item__text-area .service__item__text03 {
     padding: 5% 49% 4% 8%;
     text-align: left;
   }
