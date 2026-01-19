@@ -528,6 +528,7 @@ h4 {
 .service__items {
   display: flex;
   flex-direction: column;
+  row-gap: 8rem;
 }
 .service__item {
   display: flex;
@@ -668,6 +669,17 @@ h4 {
   .service__item__text p {
     font-size: 1.4rem;
   }
+}
+
+.service__items > .service__item:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+.service__items > .service__item:nth-of-type(2) .service__item__capture {
+  text-align: right;
+}
+.service__items > .service__item:nth-of-type(2) .service__item__text-area::before {
+  right: initial;
+  left: 0;
 }
 
 .works {
