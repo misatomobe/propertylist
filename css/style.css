@@ -531,8 +531,19 @@ h4 {
   row-gap: 8rem;
 }
 .service__item {
+  position: relative;
   display: flex;
   align-items: flex-start;
+}
+.service__item::after {
+  content: "";
+  position: absolute;
+  top: 14.6rem;
+  right: 0;
+  width: 60.5%;
+  height: calc(100% - 14.6rem);
+  background-color: #4D9600;
+  z-index: 1;
 }
 .service__item:last-child {
   margin-bottom: 5rem;
@@ -546,7 +557,7 @@ h4 {
   }
 }
 .service__item__image-area {
-  width: 60rem;
+  max-width: 60.5%;
   height: auto;
   position: relative;
   z-index: 10;
@@ -594,18 +605,9 @@ h4 {
   margin-top: 14.6rem;
   padding: 5rem 4rem 4.2rem;
   padding-right: 0;
-  background-color: #f66;
   color: #fff;
   position: relative;
-}
-.service__item__text-area::before {
-  content: "";
-  width: 50rem;
-  height: 100%;
-  background-color: #4D9600;
-  position: absolute;
-  top: 0;
-  right: 0;
+  z-index: 2;
 }
 @media (max-width: 767px) {
   .service__item__text-area {

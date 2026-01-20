@@ -605,8 +605,21 @@ h4 {
   }
 
   &__item {
+    position: relative;
     display: flex;
     align-items: flex-start;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 14.6rem;
+      right: 0;
+      width: 57.3%;
+      aspect-ratio: 2 / 1;
+      max-width: 50rem;
+      background-color: $main-color;
+      z-index: 1;
+    }
 
     &:last-child {
       margin-bottom: 5rem;
@@ -621,7 +634,7 @@ h4 {
       }
 
     &__image-area {
-      width: 60rem;
+      max-width: 60.5%;
       height: auto;
       position: relative;
       z-index: 10;
@@ -673,18 +686,9 @@ h4 {
       margin-top: 14.6rem;
       padding: 5rem 4rem 4.2rem;
       padding-right: 0;
-      background-color: #f66;
       color: $font-color02;
       position: relative;
-      &::before {
-        content: '';
-        width: 50rem;
-        height: 100%;
-        background-color: $main-color;
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
+      z-index: 2;
 
       @include sp {
         position: static;
@@ -695,6 +699,7 @@ h4 {
         z-index: auto;
       }
     }
+  }
 
     &__title {
       position: relative;
