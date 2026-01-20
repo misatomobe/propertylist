@@ -540,8 +540,9 @@ h4 {
   position: absolute;
   top: 14.6rem;
   right: 0;
-  width: 60.5%;
-  height: calc(100% - 14.6rem);
+  width: 57.3%;
+  aspect-ratio: 2/1;
+  max-width: 50rem;
   background-color: #4D9600;
   z-index: 1;
 }
