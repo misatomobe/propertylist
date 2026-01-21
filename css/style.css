@@ -680,6 +680,25 @@ h4 {
   text-align: right;
 }
 
+@media (max-width: 767px) {
+  .service__item {
+    flex-direction: column;
+  }
+  .service__item::after {
+    display: none;
+  }
+  .service__items > .service__item:nth-of-type(even) {
+    flex-direction: column;
+  }
+  .service__items > .service__item:nth-of-type(even) .service__item__capture {
+    text-align: left;
+  }
+  .service__item__text-area {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: #4D9600;
+  }
+}
 .works {
   padding: 8rem 8rem 9.8rem;
 }

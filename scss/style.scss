@@ -749,17 +749,41 @@ h4 {
 
 // 2つめのブロックを反転
 .service__items {
-  > .service__item {
-    &:nth-of-type(even) {
+  > .service__item:nth-of-type(even) {
       flex-direction: row-reverse;
+
       &::after {
         right: auto;
         left: 0;
       }
+
       .service__item__capture {
         text-align: right;
       }
     }
+  }
+
+// スマホサイズのときに一列に
+@include sp {
+  .service__item {
+    flex-direction: column;
+
+    &::after {
+      display: none;
+    }
+  }
+  
+  .service__items > .service__item:nth-of-type(even) {
+    flex-direction: column;
+  
+  .service__item__capture {
+    text-align: left;
+  }
+
+  .service__item__text-area {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: $main-color;
   }
 }
 
