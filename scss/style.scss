@@ -582,10 +582,6 @@ h4 {
 // =====================================
 .service {
   padding: 8rem;
-
-  @media (max-width: 1030px) {
-     padding: 5rem 2rem;
-     }
   @include sp {
      padding: 5rem 3rem;
      }
@@ -612,9 +608,9 @@ h4 {
     &::after {
       content: '';
       position: absolute;
-      top: 14.6rem;
+      top: 14.4rem;
       right: 0;
-      width: 57.3%;
+      width: 60%;
       aspect-ratio: 2 / 1;
       max-width: 50rem;
       background-color: $main-color;
@@ -634,7 +630,7 @@ h4 {
       }
 
     &__image-area {
-      max-width: 60.5%;
+      max-width: 65.2%;
       height: auto;
       position: relative;
       z-index: 10;
@@ -684,7 +680,7 @@ h4 {
     &__text-area {
       flex: 1;
       margin-top: 14.6rem;
-      padding: 5rem 4rem 4.2rem;
+      padding: 5rem 6.8rem 4.2rem;
       padding-right: 0;
       color: $font-color02;
       position: relative;
@@ -754,16 +750,14 @@ h4 {
 // 2つめのブロックを反転
 .service__items {
   > .service__item {
-    &:nth-of-type(2) {
+    &:nth-of-type(even) {
       flex-direction: row-reverse;
+      &::after {
+        right: auto;
+        left: 0;
+      }
       .service__item__capture {
         text-align: right;
-      }
-      .service__item__text-area {
-        &::before {
-          right: initial;
-          left: 0;
-        }
       }
     }
   }

@@ -507,11 +507,6 @@ h4 {
 .service {
   padding: 8rem;
 }
-@media (max-width: 1030px) {
-  .service {
-    padding: 5rem 2rem;
-  }
-}
 @media (max-width: 767px) {
   .service {
     padding: 5rem 3rem;
@@ -538,9 +533,9 @@ h4 {
 .service__item::after {
   content: "";
   position: absolute;
-  top: 14.6rem;
+  top: 14.4rem;
   right: 0;
-  width: 57.3%;
+  width: 60%;
   aspect-ratio: 2/1;
   max-width: 50rem;
   background-color: #4D9600;
@@ -558,7 +553,7 @@ h4 {
   }
 }
 .service__item__image-area {
-  max-width: 60.5%;
+  max-width: 65.2%;
   height: auto;
   position: relative;
   z-index: 10;
@@ -604,7 +599,7 @@ h4 {
 .service__item__text-area {
   flex: 1;
   margin-top: 14.6rem;
-  padding: 5rem 4rem 4.2rem;
+  padding: 5rem 6.8rem 4.2rem;
   padding-right: 0;
   color: #fff;
   position: relative;
@@ -674,15 +669,15 @@ h4 {
   }
 }
 
-.service__items > .service__item:nth-of-type(2) {
+.service__items > .service__item:nth-of-type(even) {
   flex-direction: row-reverse;
 }
-.service__items > .service__item:nth-of-type(2) .service__item__capture {
-  text-align: right;
-}
-.service__items > .service__item:nth-of-type(2) .service__item__text-area::before {
-  right: initial;
+.service__items > .service__item:nth-of-type(even)::after {
+  right: auto;
   left: 0;
+}
+.service__items > .service__item:nth-of-type(even) .service__item__capture {
+  text-align: right;
 }
 
 .works {
