@@ -760,6 +760,10 @@ h4 {
       .service__item__capture {
         text-align: right;
       }
+
+      .service__item__text-area {
+        padding: 5rem 4rem 4.2rem;
+      }
     }
   }
 
@@ -775,6 +779,7 @@ h4 {
   
   .service__items > .service__item:nth-of-type(even) {
     flex-direction: column;
+  }
   
   .service__item__capture {
     text-align: left;
@@ -880,23 +885,22 @@ h4 {
   z-index: 9999;
 
   &.is-active {
-  display: flex;
-}
+    display: flex;
+  }
 
   &__overlay {
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.7);
-}
+  }
 
-// モーダル内の画像
-   &__content {
+  &__content {
     position: relative;
     z-index: 2;
     background: $font-color02;
     width: 45rem;
     height: 27.5rem;
-    display: block;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -906,33 +910,31 @@ h4 {
     @media (max-width: 767px) {
       width: 31.5rem;
       height: auto;
-      padding: 2rem 2rem 1.7rem 2rem;
+      padding: 2rem 2rem 1.7rem;
     }
 
-    // 画像
     &-img-wrap {
       display: flex;
       justify-content: center;
 
       img {
-      width: 42rem;
-      height: 22rem;
-      border: 5px solid $font-color02;
-      object-fit: cover;
-      display: block;
+        width: 42rem;
+        height: 22rem;
+        border: 5px solid $font-color02;
+        object-fit: cover;
+        display: block;
 
-      @media (max-width: 767px) {
-        width: 100%;
-        height: auto;
+        @media (max-width: 767px) {
+          width: 100%;
+          height: auto;
+        }
       }
     }
-  }
 
-    // キャプション
     &-caption {
       margin-top: 0.9rem;
       font-size: 1.6rem;
-      line-height: calc(25 /16);
+      line-height: calc(25 / 16);
       text-align: left;
 
       @media (max-width: 767px) {
@@ -940,7 +942,6 @@ h4 {
       }
     }
 
-    // 閉じるボタン
     &-close {
       position: absolute;
       top: 0.3rem;
@@ -958,6 +959,7 @@ h4 {
     }
   }
 }
+
 
 // =====================================
 // news
@@ -1852,6 +1854,7 @@ textarea.form-control.form-textarea {
     padding: 8rem 18rem;
     text-align: center;
     width: 100%;
+
     @include sp {
       height: auto;
       padding: 5rem 3rem;
@@ -1859,36 +1862,38 @@ textarea.form-control.form-textarea {
 
     .inner {
       width: 72.2rem;
+
       @include sp {
         width: 31.5rem;
       }
     }
   }
-  
+
   &__company-name {
     border-bottom: 1px solid $font-color;
     display: block;
     width: 100%;
     max-width: 72.2rem;
     margin: 0 auto;
-    
+
     h2 {
       display: inline-block;
       margin-bottom: 2.8rem;
       font-size: 2rem;
       line-height: calc(33 / 20);
       font-weight: 500;
+
       @include sp {
         margin-bottom: 2rem;
       }
     }
   }
-  
+
   &__nav {
     width: 100%;
     max-width: 72.2rem;
     margin: 0 auto;
-    
+
     ul {
       display: flex;
       justify-content: center;
@@ -1896,17 +1901,17 @@ textarea.form-control.form-textarea {
       flex-wrap: wrap;
       column-gap: 5rem;
       row-gap: 0.8rem;
+
       @include sp {
-        flex-wrap: wrap;
         column-gap: 1.8rem;
         row-gap: 0.8rem;
-        padding: 2rem 0 2.5rem 0;
+        padding: 2rem 0 2.5rem;
       }
 
       li {
         text-align: center;
       }
-      
+
       a {
         font-size: 1.8rem;
         line-height: calc(33 / 18);
@@ -1915,33 +1920,34 @@ textarea.form-control.form-textarea {
         transition: opacity 0.4s ease;
         white-space: normal;
 
-      &:hover {
-        opacity: 0.6;
-      }
-      
-      @include sp {
-        padding: 0 0.4rem;
+        &:hover {
+          opacity: 0.6;
+        }
+
+        @include sp {
+          padding: 0 0.4rem;
+        }
       }
     }
   }
-}
-  
+
   &__sns {
     ul {
       display: flex;
       justify-content: center;
       align-items: center;
       row-gap: 1.7rem;
+
       @include sp {
         row-gap: 2rem;
       }
-      
+
       li {
         a {
           display: block;
-          padding: 0 1.5rem;      
+          padding: 0 1.5rem;
           transition: opacity 0.4s ease, transform 0.4s ease;
-          
+
           &:hover {
             transform: scale(1.2);
             opacity: 0.6;
@@ -1952,6 +1958,7 @@ textarea.form-control.form-textarea {
           .youtube,
           .instagram {
             width: 2.6rem;
+
             @include sp {
               width: 2.8rem;
             }
@@ -1960,7 +1967,7 @@ textarea.form-control.form-textarea {
       }
     }
   }
-  
+
   &__copyright {
     display: flex;
     justify-content: center;
@@ -1968,22 +1975,24 @@ textarea.form-control.form-textarea {
     height: 9.2rem;
     background-color: $main-color;
     text-align: center;
+
     @include sp {
       height: 9.2rem;
     }
-    
+
     p {
       color: $font-color02;
       font-size: 2rem;
-      line-height: calc(33 /20);
+      line-height: calc(33 / 20);
       font-weight: 500;
-      text-align: center;
+
       @include sp {
-        line-height: calc(25 /20);
+        line-height: calc(25 / 20);
       }
     }
   }
 }
+
 
 
 // =====================================
@@ -2029,9 +2038,7 @@ textarea.form-control.form-textarea {
   }
 }
 
-/* --------------------------
-   フェードアップ共通設定
---------------------------- */
+//フェードアップ共通設定
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
