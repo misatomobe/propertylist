@@ -50,6 +50,18 @@ body {
   }
 }
 
+@mixin tablet {
+  @media (max-width: 1030px) {
+    @content;
+  }
+}
+
+@mixin sp-small {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
 // =====================================
 // common（共通設定）
 // =====================================
@@ -188,7 +200,7 @@ h4 {
   opacity: 1;
   filter: none;  
 
-  @media (max-width:1030px) {
+  @include tablet {
     padding: 0;
   }
 
@@ -219,7 +231,7 @@ h4 {
     margin: 0 auto;
     box-sizing: border-box;
     
-    @media (max-width: 1030px) {
+    @include tablet {
       padding: 0 3rem;
     }
 
@@ -300,7 +312,7 @@ h4 {
           transform: translateX(-50%) scaleX(1);
         }
 
-        @media (max-width: 1030px) {
+        @include tablet {
           font-size: 1.3rem;
         } 
       }
@@ -464,7 +476,7 @@ h4 {
       color: $font-color02;
       text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
 
-      @media (max-width: 375px) {
+      @include sp {
         font-size: 3rem;
         line-height: calc(60 / 30);
         letter-spacing: calc(3rem * 0.27);
@@ -710,14 +722,14 @@ h4 {
         line-height: calc(33 / 25);
         font-weight: 600;
 
-        @media (max-width: 1030px) {
+        @include tablet {
           font-size: 2.1rem;
         }
-        @media (max-width: 767px)  { 
+        @include sp  { 
           font-size: 2rem;
           margin-bottom: 1.4rem;
         }
-        @media (max-width: 350px)  { 
+        @include sp-small  { 
           font-size: 1.8rem;
         }
       }
@@ -734,13 +746,13 @@ h4 {
       p {
         font-weight: 600;
 
-        @media (max-width: 1030px) {
+        @include tablet {
            font-size: 1.5rem;
            }
-        @media (max-width: 767px)  {
+        @include sp {
            font-size: 1.6rem;
            }
-        @media (max-width: 350px)  {
+        @include sp-small {
            font-size:
             1.4rem;
         }
@@ -806,7 +818,7 @@ h4 {
 .works {
   padding: 8rem 8rem 9.8rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     padding: 5rem 3rem 4.2rem;
   }
 }
@@ -815,7 +827,7 @@ h4 {
   margin-top: 7.3rem;
 }
 
-@media (max-width: 767px) {
+@include sp {
   .works__contents {
     margin-top: 4.1rem;
   }
@@ -828,7 +840,7 @@ h4 {
   justify-content: flex-start;
 }
 
-@media (max-width: 767px) {
+@include sp {
   .works__items {
     flex-direction: column;
     row-gap: 2.2rem;
@@ -841,7 +853,7 @@ h4 {
   box-sizing: border-box;
 }
 
-@media (max-width: 767px) {
+@include sp {
   .works__item {
     flex: 1;
     width: 100%;
@@ -852,7 +864,7 @@ h4 {
   margin-top: 1.9rem;
   text-align: left;
 
-  @media (max-width: 767px)  {
+  @include sp {
     margin-top: 1rem;
   }
 }
@@ -914,7 +926,7 @@ h4 {
     padding: 1.5rem;
     box-sizing: border-box;
 
-    @media (max-width: 767px) {
+    @include sp {
       width: 31.5rem;
       height: auto;
       padding: 2rem 2rem 1.7rem;
@@ -931,7 +943,7 @@ h4 {
         object-fit: cover;
         display: block;
 
-        @media (max-width: 767px) {
+        @include sp {
           width: 100%;
           height: auto;
         }
@@ -944,7 +956,7 @@ h4 {
       line-height: calc(25 / 16);
       text-align: left;
 
-      @media (max-width: 767px) {
+      @include sp {
         margin-top: 0.6rem;
       }
     }
@@ -974,14 +986,14 @@ h4 {
 .news {
   padding: 8rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     padding: 5rem 3rem 5.2rem;
   }
   
   &_contents {
   margin-top: 6.8rem;
   
-  @media (max-width: 767px) {
+  @include sp {
     margin-top: 3.6rem;
   }
 }
@@ -992,7 +1004,7 @@ h4 {
   column-gap: calc(60 / 920 * 100%);
   justify-content: flex-start;
 
-  @media (max-width: 767px) {
+  @include sp {
     flex-direction: column;
     row-gap: 5rem;
   }
@@ -1006,7 +1018,7 @@ h4 {
   flex-direction: column;
   background: $font-color02;
   
-  @media (max-width: 767px) {
+  @include sp {
     width: 100%;
     height: auto;
   }
@@ -1036,7 +1048,7 @@ h4 {
   transition: opacity 0.4s ease;
   padding: 1.9rem 2.5rem 1.4rem 2rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     padding: 2rem 2rem 1.1rem 2rem;
     column-gap: 1.9rem;
   }
@@ -1047,7 +1059,7 @@ h4 {
 .news__topic > article:nth-of-type(3) .news-item {
   padding: 1rem 2rem 1.3rem 2rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     padding: 1rem 2rem 1.1rem 2rem;
   }
 }
@@ -1079,7 +1091,7 @@ h4 {
   flex-shrink: 0;
   white-space: nowrap;
 
-  @media (max-width: 767px) {
+  @include sp {
     width: 5.3rem;
   }
 }
@@ -1098,7 +1110,7 @@ h4 {
   font-weight: 500;
   margin-top: 1rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     margin-top: 1.2rem;
     line-height: calc(25 / 18);
     display: -webkit-box;
@@ -1150,16 +1162,18 @@ h4 {
 .company {
   padding: 8rem 3rem 6.5rem ;
 
-  @media (max-width: 1030px) {
+  @include tablet {
      padding: 5rem 2rem;
      }
-  @media (max-width: 767px)  {
+  @include sp {
      padding: 5rem 3rem 1rem 3rem;
      }
 
   &__contents {
     margin-top: 6.8rem;
-    @media (max-width: 767px) { margin-top: 3.8rem; }
+    @include sp {
+      margin-top: 3.8rem;
+    }
   }
 
   &__items {
@@ -1173,7 +1187,7 @@ h4 {
     z-index: 0;
     margin-bottom: 8rem;
 
-    @media (max-width: 767px) {
+    @include sp {
       margin-bottom: 4rem;
     }
 
@@ -1183,7 +1197,7 @@ h4 {
       position: relative;
       z-index: 1;
 
-      @media (max-width: 767px) {
+      @include sp {
         max-width: 100%;
       }
     }
@@ -1194,7 +1208,7 @@ h4 {
       overflow: hidden;
       position: relative;
 
-      @media (max-width: 767px) {
+      @include sp {
         aspect-ratio: 315 / 300;
       }
       
@@ -1216,7 +1230,7 @@ h4 {
       aspect-ratio: 500 / 262;
       overflow: hidden;
 
-      @media (max-width: 767px) {
+      @include sp {
         position: static;
         width: 100%;
         margin-top: 2rem;
@@ -1237,7 +1251,7 @@ h4 {
         justify-content: center;
         text-align: left;
 
-        @media (max-width: 767px) {
+        @include sp {
           position: static;
           padding: 2rem 2rem 0.8rem 2rem;
           height: auto;
@@ -1254,7 +1268,7 @@ h4 {
             margin-top: 0.1rem;
             display: block;
 
-            @media (max-width: 767px) {
+            @include sp {
               margin-top: 0;
             }
         }
@@ -1267,7 +1281,7 @@ h4 {
           margin-top: 0.6rem;
           display: block;
 
-          @media (max-width: 767px)  {
+          @include sp {
             margin-top: 0.7rem;
             }
           }
@@ -1276,7 +1290,7 @@ h4 {
         .company__item__tel {
             margin-top: 1.3rem;
 
-            @media (max-width: 767px) {
+            @include sp {
               margin-top: 1.2rem;
             }
             
@@ -1304,7 +1318,7 @@ h4 {
             display: block;
             margin-top: 1.2rem;
 
-            @media (max-width: 767px) {
+            @include sp {
               margin-top: 1.8rem;
             }
           } 
@@ -1320,7 +1334,7 @@ h4 {
   padding: 8rem 14rem;
 }
 
-@media (max-width: 767px) {
+@include sp {
   .contact {
     padding: 5rem 3rem;
   }
@@ -1329,7 +1343,7 @@ h4 {
 .contact__contents {
   margin-top: 3.5rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     margin-top: 3.7rem;
   }
 } 
@@ -1339,7 +1353,7 @@ h4 {
   line-height: calc(30 / 20);
   font-weight: 500;
 
-  @media (max-width: 767px) {
+  @include sp {
     line-height: calc(33 / 20);
   }
 }
@@ -1347,7 +1361,7 @@ h4 {
 form {
   margin-top: 7.2rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     margin-top: 3.6rem;
   }
 }
@@ -1356,7 +1370,7 @@ form {
   display: flex;
   margin-top: 0;
 
-  @media (max-width: 767px)  {
+  @include sp {
     flex-direction: column;
     row-gap: 0.2rem;
   }
@@ -1366,7 +1380,7 @@ form {
   margin-top: 4.3rem;
 }
 
-@media (max-width: 767px) {
+@include sp {
   .form-area:not(:first-of-type),
   .qa-list,
   .check-area {
@@ -1382,7 +1396,7 @@ form {
 .form-area.message-area {
   margin-top: 4.8rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     margin-top: 3rem;
   }
 }
@@ -1390,7 +1404,7 @@ form {
 .check-area {
   margin-top: 5rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     margin-top: 3rem;
   }
 }
@@ -1400,7 +1414,7 @@ form {
   font-size: 2rem;
   line-height: calc(33 / 20);
   
-  @media (max-width: 767px) {
+  @include sp {
     line-height: calc(27 / 20);
   }
 }
@@ -1415,7 +1429,7 @@ form {
   line-height: calc(33 / 20);
   font-weight: 500;
 
-  @media (max-width: 767px) {
+  @include sp {
     width: 100%;
     height: auto;
   }
@@ -1477,7 +1491,7 @@ textarea.form-control {
   line-height: calc(25 / 18);
   cursor: pointer;
 
-  @media (max-width: 767px) {
+  @include sp {
     gap: 1rem;
   }
 
@@ -1490,7 +1504,7 @@ textarea.form-control {
 .radioitem:not(:last-of-type) {
   margin-right: 4.5rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     margin-right: 4rem;
   }
 }
@@ -1528,7 +1542,7 @@ textarea.form-control {
   padding: 1rem 1rem 1rem 0;
   box-sizing: border-box;
 
-  @media (max-width: 767px) {
+  @include sp {
     height: 32.3rem;
     padding: 1rem 1rem 2.3rem 0;
   }
@@ -1550,7 +1564,7 @@ textarea.form-control {
   &::-webkit-scrollbar-thumb {
     background: $scrollbar-color01;
 
-    @media (max-width: 767px) {
+    @include sp {
       min-height: 30px;
     }
   }
@@ -1559,7 +1573,7 @@ textarea.form-control {
     background: darken($scrollbar-color01, 15%);
   }
 
-  @media (max-width: 767px) {
+  @include sp {
     max-height: 32.3rem;
     width: 100%;
     box-sizing: border-box;
@@ -1571,7 +1585,7 @@ textarea.form-control {
   box-sizing: border-box;
   padding: 3rem 4rem 4rem 4rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     padding: 1rem 1.5rem 2.5rem 3rem;
   }
 }
@@ -1583,7 +1597,7 @@ textarea.form-control {
 .form-area.privacy-area {
   margin-top: 5rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     margin-top: 3rem;
   }
 }
@@ -1598,7 +1612,7 @@ textarea.form-control {
 .privacy-area dt {
   height: 4.2rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     height: 3rem;
   }
 }
@@ -1608,7 +1622,7 @@ textarea.form-control {
   line-height: calc(31 / 18);
   overflow-wrap: anywhere;
 
-  @media (max-width: 767px) {
+  @include sp {
     font-size: 1.6rem;
     line-height: calc(33 / 16);
   }
@@ -1632,7 +1646,7 @@ textarea.form-control {
     font-weight: 500;
     overflow-wrap: anywhere;
     
-    @media (max-width: 767px) {
+    @include sp {
       font-size: 1.6rem;
       line-height: calc(33 /16);
     }
@@ -1644,7 +1658,7 @@ textarea.form-control {
   display: flex;
   justify-content: center;
 
-  @media (max-width: 767px)  {
+  @include sp {
     margin-top: 5.1rem;
   }
 }
@@ -1666,7 +1680,7 @@ textarea.form-control {
   border: 0.1rem solid $main-color;
 }
 
-@media (max-width: 767px) {
+@include sp {
   .form-submit {
     max-width: 335px;
     width: 100%;
@@ -1714,7 +1728,7 @@ textarea.form-control.form-textarea {
   column-gap: 2rem;
 }
 
-@media (max-width: 767px) {
+@include sp {
   .checkboxItem {
     font-size: 1.6rem;
     line-height: calc(25 / 16);
@@ -1764,7 +1778,7 @@ textarea.form-control.form-textarea {
   row-gap: 1.3rem;
   margin-top: 1rem;
 
-  @media (max-width: 767px) {
+  @include sp {
     row-gap: 0.5rem;
     margin-top: 0;
   }
@@ -1786,7 +1800,7 @@ textarea.form-control.form-textarea {
     line-height: calc(25 / 18);
     background-color: $font-color02;
 
-    @media (max-width: 767px) {
+    @include sp {
       font-size: 1.6rem;
     line-height: calc(25 / 16);
     }
@@ -1810,7 +1824,7 @@ textarea.form-control.form-textarea {
 }
 
 // スマホ時：性別だけ dt + dd を横並び
-@media (max-width: 767px) {
+@include sp {
   .form-area:nth-of-type(2) {
     flex-direction: row;
     align-items: center;
@@ -1829,7 +1843,7 @@ textarea.form-control.form-textarea {
 }
 
 // スマホ時：お問い合わせ種別（qa-list）を横並び
-@media (max-width: 767px) {
+@include sp {
   .qa-list {
     flex-direction: column;
     margin-top: 3rem;
@@ -2028,7 +2042,7 @@ textarea.form-control.form-textarea {
     display: block;
   }
 
-  @media (max-width: 767px) {
+  @include sp {
     right: 2rem;
     bottom: 2rem;
     width: 4rem;
