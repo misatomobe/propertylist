@@ -610,6 +610,11 @@ h4 {
   position: relative;
   z-index: 2;
 }
+@media (max-width: 1030px) {
+  .service__item__text-area {
+    padding: 1%;
+  }
+}
 @media (max-width: 767px) {
   .service__item__text-area {
     position: static;
@@ -695,7 +700,7 @@ h4 {
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-  padding: 5rem 0 4.2rem 6.8rem;
+  padding: 5rem 6.8rem 4.2rem 4rem;
 }
 @media (max-width: 767px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {
