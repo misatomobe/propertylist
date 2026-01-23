@@ -695,11 +695,11 @@ h4 {
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-  padding: 5rem 4rem 4.2rem;
+  padding: 5rem 0 4.2rem 6.8rem;
 }
 @media (max-width: 767px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-    padding: 2rem;
+    padding: 2rem 2rem 1.1rem;
   }
 }
 
