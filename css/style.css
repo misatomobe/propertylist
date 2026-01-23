@@ -525,6 +525,11 @@ h4 {
   flex-direction: column;
   row-gap: 8rem;
 }
+@media (max-width: 767px) {
+  .service__items {
+    row-gap: 5rem;
+  }
+}
 .service__item {
   position: relative;
   display: flex;
@@ -546,7 +551,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .service__item {
-    margin-bottom: 5rem;
+    margin-bottom: 0;
   }
   .service__item:nth-of-type(3) {
     margin-bottom: 0;
@@ -612,17 +617,11 @@ h4 {
     aspect-ratio: auto;
     height: auto;
     z-index: auto;
+    padding: 2rem 2rem 1.2rem;
   }
 }
 .service__item__title {
   position: relative;
-}
-@media (max-width: 767px) {
-  .service__item__title {
-    position: static;
-    padding: 2rem 2rem 1rem 2rem;
-    text-align: left;
-  }
 }
 .service__item__title h3 {
   font-size: 2.5rem;
@@ -671,6 +670,11 @@ h4 {
 .service__items > .service__item:nth-of-type(even) {
   flex-direction: row-reverse;
 }
+@media (max-width: 767px) {
+  .service__items > .service__item:nth-of-type(even) {
+    flex-direction: column;
+  }
+}
 .service__items > .service__item:nth-of-type(even)::after {
   right: auto;
   left: 0;
@@ -678,8 +682,18 @@ h4 {
 .service__items > .service__item:nth-of-type(even) .service__item__capture {
   text-align: right;
 }
+@media (max-width: 767px) {
+  .service__items > .service__item:nth-of-type(even) .service__item__capture {
+    text-align: left;
+  }
+}
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
   padding: 5rem 4rem 4.2rem;
+}
+@media (max-width: 767px) {
+  .service__items > .service__item:nth-of-type(even) .service__item__text-area {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 767px) {
