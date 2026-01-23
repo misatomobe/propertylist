@@ -677,6 +677,7 @@ h4 {
 
       @include sp { 
         margin-top: 0.5rem;
+        text-align: left;
       }
     }
 
@@ -696,7 +697,8 @@ h4 {
         aspect-ratio: auto;
         height: auto;
         z-index: auto;
-        padding: 2rem 2rem 1.2rem;
+        padding: 2rem 2rem 1.1rem;
+        background-color: $main-color;
       }
     }
 
@@ -725,6 +727,10 @@ h4 {
     &__text {
       margin-top: 1.7rem;
       position: relative;
+
+      @include sp {
+        margin-top: 1rem;
+      }
       
       p {
         font-weight: 600;
@@ -791,12 +797,6 @@ h4 {
   
   .service__item__capture {
     text-align: left;
-  }
-
-  .service__item__text-area {
-    margin-top: 1rem;
-    padding: 2rem;
-    background-color: $main-color;
   }
 }
 

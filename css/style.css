@@ -599,6 +599,7 @@ h4 {
 @media (max-width: 767px) {
   .service__item__capture {
     margin-top: 0.5rem;
+    text-align: left;
   }
 }
 .service__item__text-area {
@@ -617,7 +618,8 @@ h4 {
     aspect-ratio: auto;
     height: auto;
     z-index: auto;
-    padding: 2rem 2rem 1.2rem;
+    padding: 2rem 2rem 1.1rem;
+    background-color: #4D9600;
   }
 }
 .service__item__title {
@@ -647,6 +649,11 @@ h4 {
 .service__item__text {
   margin-top: 1.7rem;
   position: relative;
+}
+@media (max-width: 767px) {
+  .service__item__text {
+    margin-top: 1rem;
+  }
 }
 .service__item__text p {
   font-weight: 600;
@@ -708,11 +715,6 @@ h4 {
   }
   .service__item__capture {
     text-align: left;
-  }
-  .service__item__text-area {
-    margin-top: 1rem;
-    padding: 2rem;
-    background-color: #4D9600;
   }
 }
 .works {
