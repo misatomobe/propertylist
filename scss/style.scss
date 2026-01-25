@@ -33,6 +33,12 @@ body {
   letter-spacing: 0;
 }
 
+body.is-fixed {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
 #container {
   width: 100%;
   overflow: hidden;
@@ -609,7 +615,7 @@ h4 {
   &__items {
     display: flex;
     flex-direction: column;
-    row-gap: calc(8rem * 0.85);
+    row-gap: 8rem;
 
     @include sp {
       row-gap: 5rem;
@@ -703,7 +709,7 @@ h4 {
       z-index: 2;
 
       @include tablet {
-        padding: 4rem 0 3.5rem 0;
+        padding: 4.5rem 0 3.5rem 0;
         padding-left: calc(6.8rem * 0.2);
       }
 
