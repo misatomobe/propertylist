@@ -523,7 +523,7 @@ h4 {
 .service__items {
   display: flex;
   flex-direction: column;
-  row-gap: 8rem;
+  row-gap: 6.8rem;
 }
 @media (max-width: 767px) {
   .service__items {
@@ -612,7 +612,8 @@ h4 {
 }
 @media (max-width: 1030px) {
   .service__item__text-area {
-    padding: 1%;
+    padding: 4rem 0 3.5rem 0;
+    padding-left: 1.36rem;
   }
 }
 @media (max-width: 767px) {
@@ -637,7 +638,7 @@ h4 {
 }
 @media (max-width: 1030px) {
   .service__item__title h3 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 767px) {
@@ -665,7 +666,7 @@ h4 {
 }
 @media (max-width: 1030px) {
   .service__item__text p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 @media (max-width: 767px) {
@@ -700,7 +701,12 @@ h4 {
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-  padding: 5rem 6.8rem 4.2rem 4rem;
+  padding: 5rem 6.8rem 4.2rem 2rem;
+}
+@media (max-width: 1030px) and (max-width: 1030px) {
+  .service__items > .service__item:nth-of-type(even) .service__item__text-area {
+    padding: 4rem 0 3.5rem 3rem;
+  }
 }
 @media (max-width: 767px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {

@@ -609,7 +609,7 @@ h4 {
   &__items {
     display: flex;
     flex-direction: column;
-    row-gap: 8rem;
+    row-gap: calc(8rem * 0.85);
 
     @include sp {
       row-gap: 5rem;
@@ -703,7 +703,8 @@ h4 {
       z-index: 2;
 
       @include tablet {
-        padding: 1%;
+        padding: 4rem 0 3.5rem 0;
+        padding-left: calc(6.8rem * 0.2);
       }
 
       @include sp {
@@ -727,7 +728,7 @@ h4 {
         font-weight: 600;
 
         @include tablet {
-          font-size: 2.1rem;
+          font-size: 1.8rem;
         }
         @include sp  { 
           font-size: 2rem;
@@ -751,7 +752,7 @@ h4 {
         font-weight: 600;
 
         @include tablet {
-           font-size: 1.5rem;
+           font-size: 1.4rem;
            }
         @include sp {
            font-size: 1.6rem;
@@ -787,7 +788,13 @@ h4 {
       }
 
       .service__item__text-area {
-        padding: 5rem 6.8rem 4.2rem 4rem;
+        padding: 5rem 6.8rem 4.2rem 2rem;
+
+        @include tablet {
+           @include tablet {
+        padding: 4rem 0 3.5rem 3rem;
+      }
+        }
 
         @include sp {
           padding: 2rem 2rem 1.1rem;
