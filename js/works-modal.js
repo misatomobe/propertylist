@@ -4,42 +4,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalCaption = document.getElementById('modal-caption');
   const modalClose = document.getElementById('modal-close');
   const overlay = modal.querySelector('.modal__overlay');
-
-  // aタグ全体をクリック対象にする
   const modalLinks = document.querySelectorAll('.works-item__link');
 
-  let scrollpos = 0;
+  let scrollPos = 0;
 
-  modalLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault(); // ← ページ遷移を防ぐ
+  modalLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const img = link.querySelector('.js-modal-image');
 
-      const img = link.querySelector('.js-modal-image'); // 内部の画像を取得
+      // 1. スクロールバーの幅を計算（画面幅 - bodyの幅）
+      const scrollbarWidth = window.innerWidth - document.body.clientWidth;
 
-      // 固定背景
+      // 2. 現在の位置を記憶
       scrollPos = window.scrollY;
+
+      // 3. bodyを固定し、ガタつき防止のpaddingを入れる
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.classList.add('is-fixed');
       document.body.style.top = `-${scrollPos}px`;
 
-      modal.classList.add('is-active');
       modalImg.src = img.dataset.modal;
       modalImg.alt = img.alt;
       modalCaption.textContent = img.alt;
+      modal.classList.add('is-active');
     });
   });
 
-  // 閉じる処理
-  [modalClose, overlay].forEach((el) => {
-    el.addEventListener('click', () => {
-      modal.classList.remove('is-active');
+  function closeModal() {
+    modal.classList.remove('is-active');
 
-      // 背景固定解除
-      document.body.classList.remove('is-fixed');
-      document.body.style.top = '';
-      window.scrollTo(0, scrollPos);
+    // 4. 固定を解除し、paddingも戻す
+    document.body.classList.remove('is-fixed');
+    document.body.style.top = '';
+    document.body.style.paddingRight = ''; // ここでリセット
 
-      modalImg.src = '';
-      modalCaption.textContent = '';
-    });
-  });
+    // 5. 記憶していた位置まで一気に戻す
+    window.scrollTo(0, scrollPos);
+
+    modalImg.src = '';
+    modalCaption.textContent = '';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
 });
