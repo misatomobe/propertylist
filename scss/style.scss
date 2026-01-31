@@ -1036,19 +1036,27 @@ h4 {
   }
   
   &_contents {
-  margin-top: 6.8rem;
-  @include sp {
-    margin-top: 3.6rem;
+    margin-top: 6.8rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    
+    @include sp {
+      margin-top: 3.8rem;
+      flex-direction: column;
+      row-gap: 5rem;
+    }
+  }
+  &__blocks {
+    width: 100%;
+    max-width: 43rem;
   }
 }
-&__blocks {
 
-}
 // 個々のブロック設定
 .news-block {
-  width: 43rem;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   background: $font-color02;
   &__title {
@@ -1085,28 +1093,6 @@ h4 {
       margin-top: 0.7rem;
     }
   }
-  
-  @include sp {
-    width: 100%;
-    height: auto;
-  }
-}
-
-// 2つを横並び
-&__items {
-  display: flex;
-  column-gap: calc(60 / 920 * 100%);
-  justify-content: flex-start;
-
-  @include sp {
-    flex-direction: column;
-    row-gap: 5rem;
-  }
-}
-}
-
-.news-item:hover {
-  opacity: 0.6;
 }
 
 .news-item__date time {
