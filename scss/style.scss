@@ -1066,6 +1066,9 @@ h4 {
       font-weight: 600;
     }
   }
+  &__contents {
+    
+  }
   
   @include sp {
     width: 100%;
@@ -1126,7 +1129,6 @@ h4 {
     overflow: hidden;
   }
 }
-
 
 .news-block__link {
   display: flex;
