@@ -954,6 +954,9 @@ h4 {
   line-height: 1.65;
   font-weight: 600;
 }
+.news .news-block__contents {
+  padding: 1.1rem 2rem 2.4rem;
+}
 @media (max-width: 767px) {
   .news .news-block {
     width: 100%;
