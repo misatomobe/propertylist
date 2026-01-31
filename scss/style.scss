@@ -1055,7 +1055,6 @@ h4 {
     width: 100%;
     height: 5rem;
     background-color: $main-color;
-    padding-top: 1.2rem;
     padding-left: 2rem;
     color: $font-color02;
     align-items: center;
@@ -1069,13 +1068,29 @@ h4 {
   &__contents {
     padding: 1.1rem 2rem 2.4rem;
   }
+  .news-block-item {
+    padding: 1.3rem 0;
+    display: flex;
+    column-gap: 6.5rem;
+    border-bottom: 0.1rem solid $border-color-green;
+    &__date {
+      line-height: calc(33 / 16);
+      h4 {
+        font-size: 1.8rem;
+        line-height: calc(25 / 18);
+      }
+    }
+    &__title {
+      flex: 1;
+      margin-top: 0.7rem;
+    }
+  }
   
   @include sp {
     width: 100%;
     height: auto;
   }
 }
-
 
 // 2つを横並び
 &__items {
@@ -1092,18 +1107,6 @@ h4 {
 
 .news-item:hover {
   opacity: 0.6;
-}
-
-
-
-.news-item__date {
-  width: 9rem;
-  flex-shrink: 0;
-  white-space: nowrap;
-
-  @include sp {
-    width: 5.3rem;
-  }
 }
 
 .news-item__date time {
@@ -1143,6 +1146,7 @@ h4 {
     display: block;
     margin-right: 3.3rem;
     position: relative;
+    transition: transform .5s;
     .arrow {
       width: 8rem;
       height: 0.1rem;
@@ -1169,6 +1173,9 @@ h4 {
         top: -1.2rem;
         right: 1.2rem;
       }
+    }
+    &:hover {
+      transform: translateX(1rem);
     }
   }
 }
