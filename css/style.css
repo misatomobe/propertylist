@@ -963,11 +963,11 @@ h4 {
   padding-left: 2rem;
   align-items: center;
   display: flex;
+  color: #fff;
 }
-.news-topic__title h4 {
+.news-topic__title h3 {
   font-size: 2rem;
   line-height: 1.65;
-  color: #fff;
   font-weight: 600;
 }
 
@@ -1057,12 +1057,43 @@ h4 {
 .news-item__link {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  margin: 1.7rem 2rem 2rem 0;
+  margin: 1.7rem;
 }
 .news-item__link a {
-  display: inline-block;
-  transition: opacity 0.3s ease;
+  font-size: 2rem;
+  line-height: 1.65;
+  font-weight: 600;
+  color: #55A500;
+  display: block;
+  margin-right: 3.3rem;
+  position: relative;
+}
+.news-item__link a .arrow {
+  width: 8rem;
+  height: 0.1rem;
+  background-color: #55A500;
+  position: absolute;
+  bottom: 0.4rem;
+  left: 0;
+}
+.news-item__link a .arrow span {
+  width: 1.7rem;
+  height: 0.1rem;
+  background-color: #55A500;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(45deg);
+  transform-origin: right center;
+}
+.news-item__link a .arrow::before {
+  content: "";
+  width: 0.1rem;
+  height: 1.8rem;
+  background-color: #55A500;
+  position: absolute;
+  top: -1.2rem;
+  right: 1.2rem;
 }
 .news-item__link a:hover img {
   opacity: 0.6;

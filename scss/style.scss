@@ -1077,11 +1077,11 @@ h4 {
   padding-left: 2rem;
   align-items: center;
   display: flex;
+  color: $font-color02;
   
-  h4 {
+  h3 {
     font-size: 2rem;
     line-height: calc(33 / 20);
-    color: $font-color02;
     font-weight: 600;
   }
 }
@@ -1169,12 +1169,43 @@ h4 {
 .news-item__link {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  margin: 1.7rem 2rem 2rem 0;
+  margin: 1.7rem;
   
   a {
-    display: inline-block;
-    transition: opacity 0.3s ease;
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+    font-weight: 600;
+    color: $border-color-green;
+    display: block;
+    margin-right: 3.3rem;
+    position: relative;
+    .arrow {
+      width: 8rem;
+      height: 0.1rem;
+      background-color: $border-color-green;
+      position: absolute;
+      bottom: 0.4rem;
+      left: 0;
+      span {
+        width: 1.7rem;
+        height: 0.1rem;
+        background-color: $border-color-green;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotate(45deg);
+        transform-origin: right center;
+      }
+      &::before {
+        content: '';
+        width: 0.1rem;
+        height: 1.8rem;
+        background-color: $border-color-green;
+        position: absolute;
+        top: -1.2rem;
+        right: 1.2rem;
+      }
+    }
 
     &:hover img {
       opacity: 0.6;
