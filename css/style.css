@@ -1094,6 +1094,7 @@ h4 {
 }
 .company .company-item {
   display: flex;
+  align-items: flex-start;
 }
 .company .company-item__map {
   width: 60rem;
@@ -1105,6 +1106,16 @@ h4 {
 }
 .company .company-item__info {
   flex: 1;
+  background: #f66;
+  margin-top: 20rem;
+  padding: 4.9rem 4rem 4.2rem;
+  padding-right: 0;
+  font-weight: 600;
+  color: #fff;
+}
+.company .company-item__name p {
+  font-size: 2rem;
+  line-height: 1.65;
 }
 
 .contact {

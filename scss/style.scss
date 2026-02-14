@@ -1198,6 +1198,7 @@ h4 {
   }
   .company-item {
     display: flex;
+    align-items: flex-start;
     &__map {
       width: 60rem;
       iframe {
@@ -1208,6 +1209,18 @@ h4 {
     }
     &__info {
       flex: 1;
+      background: #f66;
+      margin-top: 20rem;
+      padding: 4.9rem 4rem 4.2rem;
+      padding-right: 0;
+      font-weight: 600;
+      color: $font-color02;
+    }
+    &__name {
+      p {
+        font-size: 2rem;
+        line-height: calc(33 / 20);
+      }
     }
   }
 }
