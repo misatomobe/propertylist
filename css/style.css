@@ -1104,30 +1104,28 @@ h4 {
   }
 }
 .company .company-item__map {
-  width: 60rem;
+  width: 65.3%;
+  max-width: 60rem;
   position: relative;
   z-index: 10;
+  aspect-ratio: 3/2;
 }
 @media (max-width: 767px) {
   .company .company-item__map {
     width: 100%;
+    aspect-ratio: 315/300;
   }
 }
 .company .company-item__map iframe {
   width: 100%;
-  height: auto;
-  aspect-ratio: 600/400;
-}
-@media (max-width: 767px) {
-  .company .company-item__map iframe {
-    aspect-ratio: 315/300;
-  }
+  height: 100%;
 }
 .company .company-item__info {
   flex: 1;
-  background: #f66;
-  margin-top: 20rem;
-  padding: 4.9rem 4rem 4.2rem;
+  width: 50%;
+  max-width: 60rem;
+  margin-top: 12%;
+  padding: 6%;
   padding-right: 0;
   font-weight: 600;
   color: #fff;
@@ -1151,6 +1149,7 @@ h4 {
 @media (max-width: 767px) {
   .company .company-item__info::before {
     width: 100%;
+    max-width: 100%;
   }
 }
 .company .company-item__info-inner {

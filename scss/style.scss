@@ -1205,26 +1205,26 @@ h4 {
       row-gap: 2rem;
     }
     &__map {
-      width: 60rem;
+      width: 65.3%;
+      max-width: 60rem;
       position: relative;
       z-index: 10;
+      aspect-ratio: 3 / 2;
       @include sp {
         width: 100%;
+        aspect-ratio: 315 / 300;
       }
       iframe {
         width: 100%;
-        height: auto;
-        aspect-ratio: 600 / 400;
-        @include sp {
-          aspect-ratio: 315 / 300;
-        }
+        height: 100%;
       }
     }
     &__info {
       flex: 1;
-      background: #f66;
-      margin-top: 20rem;
-      padding: 4.9rem 4rem 4.2rem;
+      width: 50%;
+      max-width: 60rem;
+      margin-top: 12%;
+      padding: 6%;
       padding-right: 0;
       font-weight: 600;
       color: $font-color02;
@@ -1243,6 +1243,7 @@ h4 {
         right: 0;
         @include sp {
           width: 100%;
+          max-width: 100%;
         }
       }
     }
