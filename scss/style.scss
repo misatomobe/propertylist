@@ -1196,157 +1196,21 @@ h4 {
       margin-top: 3.8rem;
     }
   }
-
-  &__items {
+  .company-item {
     display: flex;
-    flex-direction: column;
-  }
-
-  &__item {
-    position: relative;
-    display: block;
-    z-index: 0;
-    margin-bottom: 8rem;
-
-    @include sp {
-      margin-bottom: 4rem;
-    }
-
-    &__map-wrapper {
-      max-width: 65.2%;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-
-      @include sp {
-        max-width: 100%;
-      }
-    }
-    
     &__map {
-      width: 100%;
-      aspect-ratio: 600 / 400;
-      overflow: hidden;
-      position: relative;
-
-      @include sp {
-        aspect-ratio: 315 / 300;
-      }
-      
+      width: 60rem;
       iframe {
         width: 100%;
-        height: 100%;
-        display: block;
-      }
-    }    
-
-    // 緑ボックス
-    &__info {
-      position: absolute;
-      right: 0.1rem;
-      bottom: -6.25rem;
-      width: 54.4%;
-      background-color: $main-color;
-      z-index: 0;
-      aspect-ratio: 500 / 262;
-      overflow: hidden;
-
-      @include sp {
-        position: static;
-        width: 100%;
-        margin-top: 2rem;
         height: auto;
-        z-index: auto;
-        overflow: visible;
-        display: flex;
-        align-items: center;
-      }
-      
-      &__text {
-        position: absolute;
-        inset: 0;
-        padding: 2% 0 0 44%;
-        color: $font-color02;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: left;
-
-        @include sp {
-          position: static;
-          padding: 2rem 2rem 0.8rem 2rem;
-          height: auto;
-          text-align: left;
-          display: flex;
-          justify-content: center;
-        }
-
-        // 社名
-        .company__item__name p {
-            font-size: 2rem;
-            line-height: calc(33 / 20);
-            font-weight: 500;
-            margin-top: 0.1rem;
-            display: block;
-
-            @include sp {
-              margin-top: 0;
-            }
-        }
-
-        // 住所
-        .company__item__address p {
-          font-size: 1.6rem;
-          line-height: calc(25 / 16);
-          font-weight: 500;
-          margin-top: 0.6rem;
-          display: block;
-
-          @include sp {
-            margin-top: 0.7rem;
-            }
-          }
-
-         // 電話
-        .company__item__tel {
-            margin-top: 1.3rem;
-
-            @include sp {
-              margin-top: 1.2rem;
-            }
-            
-            // 電話番号
-            span {
-              font-size: 1.8rem;
-              line-height: calc(25 / 18);
-              font-weight: 500;
-            }
-
-            a {
-              font-size: 2.5rem;
-              line-height: calc(25 / 24);
-              font-weight: 500;
-              position: relative;
-              left: -0.5rem;
-            }
-          }
-
-          //メール 
-          .company__item__mail {
-            font-size: 1.6rem;
-            line-height: calc(25 / 16);
-            font-weight: 500;
-            display: block;
-            margin-top: 1.2rem;
-
-            @include sp {
-              margin-top: 1.8rem;
-            }
-          } 
-        }
+        aspect-ratio: 600 / 400;
       }
     }
+    &__info {
+      flex: 1;
+    }
   }
+}
 
 // =====================================
 // contact
