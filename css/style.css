@@ -1075,14 +1075,9 @@ h4 {
 .company {
   padding: 8rem 3rem 6.5rem;
 }
-@media (max-width: 1030px) {
-  .company {
-    padding: 5rem 2rem;
-  }
-}
 @media (max-width: 767px) {
   .company {
-    padding: 5rem 3rem 1rem;
+    padding: 5rem 3rem;
   }
 }
 .company__contents {
@@ -1113,6 +1108,14 @@ h4 {
   right: 0;
   width: 54.5%;
   aspect-ratio: 500/262;
+}
+@media (max-width: 767px) {
+  .company .company-item::before {
+    position: static;
+    width: 100%;
+    aspect-ratio: auto;
+    height: auto;
+  }
 }
 .company .company-item__map {
   width: 65.3%;
@@ -1146,6 +1149,10 @@ h4 {
   .company .company-item__info {
     margin-top: 0;
     padding: 1.9rem 2rem 1.2rem;
+    background: #4D9600;
+    aspect-ratio: 315/202;
+    width: 100%;
+    height: auto;
   }
 }
 .company .company-item__info-inner {

@@ -1185,12 +1185,8 @@ h4 {
 .company {
   padding: 8rem 3rem 6.5rem;
 
-  @include tablet {
-    padding: 5rem 2rem;
-  }
-
   @include sp {
-    padding: 5rem 3rem 1rem;
+    padding: 5rem 3rem;
   }
 
   &__contents {
@@ -1220,6 +1216,12 @@ h4 {
       right: 0;
       width: 54.5%;
       aspect-ratio: 500 / 262;
+      @include sp {
+        position: static;
+        width: 100%;
+        aspect-ratio: auto;
+        height: auto;
+      }
     }
 
     &__map {
@@ -1254,6 +1256,10 @@ h4 {
       @include sp {
         margin-top: 0;
         padding: 1.9rem 2rem 1.2rem;
+        background: $main-color;
+        aspect-ratio: 315 / 202;
+        width: 100%;
+        height: auto;
       }
     }
 
