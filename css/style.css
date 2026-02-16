@@ -1082,7 +1082,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .company {
-    padding: 5rem 3rem 1rem 3rem;
+    padding: 5rem 3rem 1rem;
   }
 }
 .company__contents {
@@ -1096,19 +1096,29 @@ h4 {
 .company .company-item {
   display: flex;
   align-items: flex-start;
+  position: relative;
 }
 @media (max-width: 767px) {
   .company .company-item {
     flex-direction: column;
-    align-items: initial;
     row-gap: 2rem;
   }
+}
+.company .company-item::before {
+  content: "";
+  position: absolute;
+  background: #4D9600;
+  z-index: 0;
+  top: 42%;
+  right: 0;
+  width: 54.5%;
+  aspect-ratio: 500/262;
 }
 .company .company-item__map {
   width: 65.3%;
   max-width: 60rem;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   aspect-ratio: 3/2;
 }
 @media (max-width: 767px) {
@@ -1125,31 +1135,17 @@ h4 {
   flex: 1;
   width: 50%;
   margin-top: 21%;
-  padding: 6% 4.5% 5.5%;
-  padding-right: 0;
+  padding: 6% 4.5% 5.5% 4.5%;
   font-weight: 600;
   color: #fff;
   position: relative;
+  z-index: 1;
   aspect-ratio: 500/262;
 }
 @media (max-width: 767px) {
   .company .company-item__info {
     margin-top: 0;
     padding: 1.9rem 2rem 1.2rem;
-  }
-}
-.company .company-item__info::before {
-  content: "";
-  inset: 0;
-  background: #4D9600;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-@media (max-width: 767px) {
-  .company .company-item__info::before {
-    width: 100%;
-    max-width: 100%;
   }
 }
 .company .company-item__info-inner {
@@ -1165,7 +1161,7 @@ h4 {
 .company .company-item__tel {
   margin-top: 1.2rem;
 }
-.company .company-item__tel p span {
+.company .company-item__tel span {
   font-size: 2.5rem;
   line-height: 1;
 }
