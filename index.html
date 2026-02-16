@@ -537,15 +537,14 @@
                                 </dl>
                                 <dl class="qa-list">
                                     <dt>
-                                        問い合わせ種別
+                                        <label for="kinds">問い合わせ種別</label>
                                     </dt>
                                     <dd>
                                         <div class="form-area custom-select">
-                                            <select name="request" id="request">
+                                            <select name="kinds" id="kinds" class="form-control">
                                                 <option value="家づくりについて">家づくりについて</option>
                                                 <option value="資料請求">資料請求</option>
-                                                <option value="モデルハウス見学">モデルハウス見学</option>
-                                                <option value="設計・見積り相談">設計・見積り相談</option>
+                                                <option value="その他">その他</option>
                                             </select>   
                                         </div>
                                     </dd>
@@ -553,10 +552,10 @@
                                 <!-- 内容 -->
                                 <dl class="form-area message-area">
                                     <dt>
-                                        <label for="your-message">内容 *</label>
+                                        <label for="your-content">内容 *</label>
                                     </dt>
                                     <dd>
-                                        <textarea name="your-message" id="your-message" class="form-control form-textarea" cols="30" rows="10" required></textarea>
+                                        <textarea name="your-content" id="your-content" class="form-control form-textarea" cols="30" rows="10" required></textarea>
                                     </dd>
                                 </dl>
                                 <!-- チェックボックス -->
