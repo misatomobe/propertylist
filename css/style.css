@@ -1177,12 +1177,11 @@ h4 {
 }
 
 .contact {
-  padding: 8rem 14rem;
+  padding: 8rem 0 8rem;
 }
-
 @media (max-width: 767px) {
   .contact {
-    padding: 5rem 3rem;
+    padding: 5rem 0 5rem;
   }
 }
 .contact__contents {
@@ -1193,18 +1192,6 @@ h4 {
     margin-top: 3.7rem;
   }
 }
-
-.contact__text p {
-  font-size: 2rem;
-  line-height: 1.5;
-  font-weight: 500;
-}
-@media (max-width: 767px) {
-  .contact__text p {
-    line-height: 1.65;
-  }
-}
-
 form {
   margin-top: 7.2rem;
 }

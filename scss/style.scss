@@ -1296,42 +1296,31 @@ h4 {
 // contact
 // =====================================
 .contact {
-  padding: 8rem 14rem;
-}
-
-@include sp {
-  .contact {
-    padding: 5rem 3rem;
+  padding: 8rem 0 8rem;
+  @include sp {
+    padding: 5rem 0 5rem;
   }
-}
-
-.contact__contents {
+  &__contents {
   margin-top: 3.5rem;
-
   @include sp {
     margin-top: 3.7rem;
   }
-} 
-
-.contact__text p {
-  font-size: 2rem;
-  line-height: calc(30 / 20);
-  font-weight: 500;
-
-  @include sp {
+}
+&__text {
+  p {
+    font-size: 2rem;
     line-height: calc(33 / 20);
+    font-weight: 500;
   }
 }
-
-form {
+&__form-block {
   margin-top: 7.2rem;
-
   @include sp {
     margin-top: 3.6rem;
   }
 }
 
-.form-area {
+.form-flex {
   display: flex;
   margin-top: 0;
 
