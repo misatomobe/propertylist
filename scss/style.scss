@@ -1340,7 +1340,7 @@ h4 {
       background: #fff;
       padding: 0 2rem;
       &::placeholder {
-        coloer: #A0A0A0;
+        color: #A0A0A0;
       }
     }
     .form-textarea {
@@ -1358,6 +1358,32 @@ h4 {
     dd {
       flex: 1;
       margin-top: 0;
+    }
+  }
+  // radio
+  .form-radio {
+    display: flex;
+    column-gap: 7.4rem;
+    .radio-item {
+      display: flex;
+      input[type="radio"] {
+        & + span {
+          display: block;
+          padding-left: 4rem;
+          position: relative;
+          &::before {
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%); 
+          }
+        }
+      }
     }
   }
 }
