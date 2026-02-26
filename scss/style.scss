@@ -1382,8 +1382,39 @@ h4 {
             left: 0;
             transform: translateY(-50%); 
           }
+          &::after {
+            content: '';
+            width: 0.6rem;
+            height: 0.6rem;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0.7rem;
+            transform: translateY(-50%);
+            display: none;
+          }
+        }
+        &:checked + span {
+          &::after {
+            display: block;
+          }
         }
       }
+    }
+  }
+  .form-select {
+    position: relative;
+    &::before {
+      content: '';
+      width: 2rem;
+      height: 1.6rem;
+      background: $main-color;
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-50%);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
     }
   }
 }
@@ -1486,75 +1517,6 @@ h4 {
   display: flex;
   gap: 3rem;
   align-items: center;
-}
-
-// --------------------------------------------------
-// 各フォーム入力のスタイル
-// --------------------------------------------------
-
-//テキスト・メール・テキストエリアなど 
-input[type="text"].form-control,
-input[type="email"].form-control,
-textarea.form-control {
-  width: 100%;
-  height: 5rem;
-  background: $font-color02;
-  padding: 0 2rem;
-  display: block;
-}
-
-//ラジオボタン全体
-.radioitem {
-  display: flex;
-  align-items: center;
-  gap: 2.1rem;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: calc(25 / 18);
-  cursor: pointer;
-
-  @include sp {
-    gap: 1rem;
-  }
-
-  @media (max-width: 370px) {
-    font-size: 1.6rem;
-    line-height: calc(25 / 16);
-  }
-}
-
-.radioitem:not(:last-of-type) {
-  margin-right: 4.5rem;
-
-  @include sp {
-    margin-right: 4rem;
-  }
-}
-
-// 丸型ラジオボタン
-.radiobutton {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: $font-color02;
-  position: relative;
-  border: none;
-  cursor: pointer;
-}
-
-// チェックされたときの丸
-.radiobutton:checked::before {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 5px;
-  background-color: $font-color;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 // 個人情報保護方針
