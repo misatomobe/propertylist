@@ -1334,18 +1334,20 @@ h4 {
     }
     dd {
       margin-top: 1rem;
-    .form-control {
-      width: 100%;
-      height: 5rem;
-      background: #fff;
-      padding: 0 2rem;
-      &::placeholder {
-        color: #A0A0A0;
+      
+      .form-control {
+        width: 100%;
+        height: 5rem;
+        background: #fff;
+        padding: 0 2rem;
+        &::placeholder {
+          color: #A0A0A0;
+        }
       }
-    }
-    .form-textarea {
-      height: 20rem;
-      padding: 2rem;
+      .form-textarea {
+        height: 20rem;
+        padding: 2rem;
+      }
     }
   }
 }
@@ -1508,15 +1510,6 @@ h4 {
 .form-control::placeholder {
   color: $border-color-grey;
   opacity: 1;
-}
-
-// --------------------------------------------------
-// 性別（ラジオボタン）横並び
-// --------------------------------------------------
-.form-area:nth-of-type(2) dd {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
 }
 
 // 個人情報保護方針

@@ -1184,6 +1184,14 @@ h4 {
     padding: 5rem 0 5rem;
   }
 }
+.contact .inner {
+  width: 80rem;
+}
+@media (max-width: 767px) {
+  .contact .inner {
+    width: 31.5rem;
+  }
+}
 .contact__contents {
   margin-top: 3.5rem;
 }
@@ -1192,21 +1200,112 @@ h4 {
     margin-top: 3.7rem;
   }
 }
-form {
+.contact__text p {
+  font-size: 2rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+.contact__form-block {
   margin-top: 7.2rem;
 }
 @media (max-width: 767px) {
-  form {
+  .contact__form-block {
     margin-top: 3.6rem;
   }
 }
+.contact__form-block dl:not(:first-of-type) {
+  margin-top: 5rem;
+}
+.contact__form-block dl dt {
+  font-size: 2rem;
+  line-height: 1.65;
+}
+.contact__form-block dl dd {
+  margin-top: 1rem;
+}
+.contact__form-block dl dd .form-control {
+  width: 100%;
+  height: 5rem;
+  background: #fff;
+  padding: 0 2rem;
+}
+.contact__form-block dl dd .form-control::placeholder {
+  color: #A0A0A0;
+}
+.contact__form-block dl dd .form-textarea {
+  height: 20rem;
+  padding: 2rem;
+}
+.contact .form-flex {
+  display: flex;
+  align-items: center;
+}
+.contact .form-flex dt {
+  width: 17rem;
+}
+.contact .form-flex dd {
+  flex: 1;
+  margin-top: 0;
+}
+.contact .form-radio {
+  display: flex;
+  column-gap: 7.4rem;
+}
+.contact .form-radio .radio-item {
+  display: flex;
+}
+.contact .form-radio .radio-item input[type=radio] + span {
+  display: block;
+  padding-left: 4rem;
+  position: relative;
+}
+.contact .form-radio .radio-item input[type=radio] + span::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.contact .form-radio .radio-item input[type=radio] + span::after {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0.7rem;
+  transform: translateY(-50%);
+  display: none;
+}
+.contact .form-radio .radio-item input[type=radio]:checked + span::after {
+  display: block;
+}
+.contact .form-select {
+  position: relative;
+}
+.contact .form-select::before {
+  content: "";
+  width: 2rem;
+  height: 1.6rem;
+  background: #4D9600;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
 
-.form-area {
+.form-flex {
   display: flex;
   margin-top: 0;
 }
 @media (max-width: 767px) {
-  .form-area {
+  .form-flex {
     flex-direction: column;
     row-gap: 0.2rem;
   }
@@ -1296,76 +1395,6 @@ form {
 .form-control::placeholder {
   color: #505050;
   opacity: 1;
-}
-
-.form-area:nth-of-type(2) dd {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-}
-
-input[type=text].form-control,
-input[type=email].form-control,
-textarea.form-control {
-  width: 100%;
-  height: 5rem;
-  background: #fff;
-  padding: 0 2rem;
-  display: block;
-}
-
-.radioitem {
-  display: flex;
-  align-items: center;
-  gap: 2.1rem;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.3888888889;
-  cursor: pointer;
-}
-@media (max-width: 767px) {
-  .radioitem {
-    gap: 1rem;
-  }
-}
-@media (max-width: 370px) {
-  .radioitem {
-    font-size: 1.6rem;
-    line-height: 1.5625;
-  }
-}
-
-.radioitem:not(:last-of-type) {
-  margin-right: 4.5rem;
-}
-@media (max-width: 767px) {
-  .radioitem:not(:last-of-type) {
-    margin-right: 4rem;
-  }
-}
-
-.radiobutton {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: relative;
-  border: none;
-  cursor: pointer;
-}
-
-.radiobutton:checked::before {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 5px;
-  background-color: #000;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .privacy-frame {
