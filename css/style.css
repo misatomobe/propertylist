@@ -1305,16 +1305,16 @@ h4 {
   flex-wrap: wrap;
   row-gap: 1.5rem;
 }
-.contact .form-checkbox .radio-item {
+.contact .form-checkbox .checkbox-item {
   display: flex;
   width: 25%;
 }
-.contact .form-checkbox .radio-item input[type=radio] + span {
+.contact .form-checkbox .checkbox-item input[type=checkbox] + span {
   display: block;
   padding-left: 4rem;
   position: relative;
 }
-.contact .form-checkbox .radio-item input[type=radio] + span::before {
+.contact .form-checkbox .checkbox-item input[type=checkbox] + span::before {
   content: "";
   width: 2rem;
   height: 2rem;
@@ -1324,7 +1324,7 @@ h4 {
   left: 0;
   transform: translateY(-50%);
 }
-.contact .form-checkbox .radio-item input[type=radio] + span::after {
+.contact .form-checkbox .checkbox-item input[type=checkbox] + span::after {
   content: "";
   width: 1.8rem;
   height: 0.8rem;
@@ -1337,7 +1337,7 @@ h4 {
   transform: translateY(-50%);
   display: none;
 }
-.contact .form-checkbox .radio-item input[type=radio]:checked + span::after {
+.contact .form-checkbox .checkbox-item input[type=checkbox]:checked + span::after {
   display: block;
 }
 
