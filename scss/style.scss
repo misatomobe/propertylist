@@ -1465,6 +1465,7 @@ h4 {
       }
     }
   }
+  // privacy-policy
   .privacy-policy {
     padding: 1rem;
     background: #fff;
@@ -1493,10 +1494,23 @@ h4 {
       }
     }
   }
+  // submit-btn
+  .submit-btn {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    button {
+      width: 30rem;
+      height: 5rem;
+      background: $main-color;
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 600;
+      display: grid;
+      place-content: center;
+    }
+  }
 }
-
-// 個人情報保護方針
-
 
 // =====================================
 // footer

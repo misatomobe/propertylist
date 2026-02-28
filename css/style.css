@@ -1367,6 +1367,21 @@ h4 {
 .contact .privacy-policy__contents h3:not(:first-of-type) {
   margin-top: 3.1rem;
 }
+.contact .submit-btn {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+}
+.contact .submit-btn button {
+  width: 30rem;
+  height: 5rem;
+  background: #4D9600;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  place-content: center;
+}
 
 .footer__main {
   background-color: #fff;
