@@ -1447,14 +1447,13 @@ h4 {
           &::after {
             content: '';
             width: 1.8rem;
-            height: .8rem;
+            height: 1rem;
             border-left: .4rem solid $main-color;
             border-bottom: .3rem solid $main-color;
-            border-radius: 50%;
             position: absolute;
-            top: 50%;
-            left: 0.7rem;
-            transform: translateY(-50%);
+            top: 45%;
+            left: 0.1rem;
+            transform: translateY(-50%) rotate(-55deg);
             display: none;
           }
         }
@@ -1466,186 +1465,19 @@ h4 {
       }
     }
   }
+  .privacy-policy {
+    padding: 1rem;
+    background: #fff;
+    &__inner {
+      background: #ddd;
+    }
+    &__contents {
+
+    }
+  }
 }
 
 // 個人情報保護方針
-.privacy-frame {
-  background-color: $font-color02;
-  height: 30rem;
-  padding: 1rem 1rem 1rem 0;
-  box-sizing: border-box;
-
-  @include sp {
-    height: 32.3rem;
-    padding: 1rem 1rem 2.3rem 0;
-  }
-}
-
-.privacy-scroll {
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: $scrollbar-color02;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar-color01;
-
-    @include sp {
-      min-height: 30px;
-    }
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: darken($scrollbar-color01, 15%);
-  }
-
-  @include sp {
-    max-height: 32.3rem;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 1.5rem 2.5rem 2rem 0;
-  }
-}
-
-.privacy-inner {
-  box-sizing: border-box;
-  padding: 3rem 4rem 4rem 4rem;
-
-  @include sp {
-    padding: 1rem 1.5rem 2.5rem 3rem;
-  }
-}
-
-.privacy-area {
-  display: block;
-}
-
-.form-area.privacy-area {
-  margin-top: 5rem;
-
-  @include sp {
-    margin-top: 3rem;
-  }
-}
-
-// プライバシーボックス
-.privacy-area dt,
-.privacy-area dd {
-  display: block;
-  width: 100%;
-}
-
-.privacy-area dt {
-  height: 4.2rem;
-
-  @include sp {
-    height: 3rem;
-  }
-}
-
-.privacy-box01 p {
-  font-size: 1.8rem;
-  line-height: calc(31 / 18);
-  overflow-wrap: anywhere;
-
-  @include sp {
-    font-size: 1.6rem;
-    line-height: calc(33 / 16);
-  }
-}
-
-.privacy-box01 {
-  margin-bottom: 3rem;
-
-  ul {
-    list-style: disc;
-    padding-left: 1.5em;
-  }
-}
-
-.privacy-box {
-  box-sizing: border-box;
-
-    p {
-    font-size: 1.8rem;
-    line-height: calc(31 / 18);
-    font-weight: 500;
-    overflow-wrap: anywhere;
-    
-    @include sp {
-      font-size: 1.6rem;
-      line-height: calc(33 /16);
-    }
-  }
-}
-
-.form-submit-area {
-  margin-top: 8rem;
-  display: flex;
-  justify-content: center;
-
-  @include sp {
-    margin-top: 5.1rem;
-  }
-}
-
-.form-submit {
-  width: 30rem;
-  height: 5rem;
-  background: $main-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  line-height: calc(33 / 20);
-  color: #fff;
-  font-weight: 500;
-  transition: background-color 0.4s ease, color 0.4s ease;
-  text-align: center;
-  padding-bottom: 0.1rem;
-  border: 0.1rem solid $main-color;
-}
-
-@include sp {
-  .form-submit {
-    max-width: 335px;
-    width: 100%;
-    height: 5rem;
-    font-size: 2rem;
-  }
-}
-
-.form-submit:hover {
-  background: $font-color02;
-  color: $main-color;
-  border: 0.1rem solid $main-color;
-}
-
-// 内容
-textarea.form-control.form-textarea {
-  width: 100%;
-  height: 20rem;
-  box-sizing: border-box;
-  padding: 1.3rem 2rem;
-}
-
-.message-area {
-  display: block;
-}
-
-// プライバシーボックス
-.message-area dt,
-.message-area dd {
-  display: block;
-  width: 100%;
-}
 
 
 // =====================================
