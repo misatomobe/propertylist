@@ -1344,11 +1344,30 @@ h4 {
   background: #fff;
 }
 .contact .privacy-policy__inner {
-  background: #ddd;
   width: 100%;
   height: 28rem;
   overflow-y: scroll;
 }
+.contact .privacy-policy__inner::-webkit-scrollbar {
+  width: 1rem;
+  background: #E3E3E3;
+}
+.contact .privacy-policy__inner::-webkit-scrollbar-thumb {
+  background: #9B9B9B;
+  height: 3rem;
+}
+.contact .privacy-policy__contents {
+  padding: 3rem;
+  line-height: 1.9375;
+}
+.contact .privacy-policy__contents h3 {
+  font-size: 1.8rem;
+  line-height: 1.7222222222;
+}
+.contact .privacy-policy__contents h3:not(:first-of-type) {
+  margin-top: 3.1rem;
+}
+
 .footer__main {
   background-color: #fff;
   display: flex;
