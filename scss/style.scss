@@ -1470,6 +1470,9 @@ h4 {
     background: #fff;
     &__inner {
       background: #ddd;
+      width: 100%;
+      height: 28rem;
+      overflow-y: scroll;
     }
     &__contents {
 

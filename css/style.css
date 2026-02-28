@@ -1345,6 +1345,9 @@ h4 {
 }
 .contact .privacy-policy__inner {
   background: #ddd;
+  width: 100%;
+  height: 28rem;
+  overflow-y: scroll;
 }
 .footer__main {
   background-color: #fff;
