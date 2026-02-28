@@ -1405,6 +1405,7 @@ h4 {
       }
     }
   }
+  // select
   .form-select {
     position: relative;
     &::before {
@@ -1417,99 +1418,9 @@ h4 {
       right: 2rem;
       transform: translateY(-50%);
       clip-path: polygon(0 0, 100% 0, 50% 100%);
+      pointer-events: none;
     }
   }
-}
-
-.form-flex {
-  display: flex;
-  margin-top: 0;
-
-  @include sp {
-    flex-direction: column;
-    row-gap: 0.2rem;
-  }
-}
-
-.form-area:not(:first-of-type) {
-  margin-top: 4.3rem;
-}
-
-@include sp {
-  .form-area:not(:first-of-type),
-  .qa-list,
-  .check-area {
-    margin-top: 3rem;
-  }
-}
-
-.qa-list {
-  margin-top: 5rem;
-  display: flex;
-}
-
-.form-area.message-area {
-  margin-top: 4.8rem;
-
-  @include sp {
-    margin-top: 3rem;
-  }
-}
-
-.check-area {
-  margin-top: 5rem;
-
-  @include sp {
-    margin-top: 3rem;
-  }
-}
-
-.check-area dt label,
-.check-area dt p {
-  font-size: 2rem;
-  line-height: calc(33 / 20);
-  
-  @include sp {
-    line-height: calc(27 / 20);
-  }
-}
-
-.form-area dt,
-.qa-list dt {
-  width: 17rem;
-  height: 4.7rem;
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  line-height: calc(33 / 20);
-  font-weight: 500;
-
-  @include sp {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.form-area dd,
-.qa-list dd {
-  flex: 1;
-}
-
-.form-area dd .form-control {
-  width: 100%;
-}
-
-.form-control {
-  max-width: 100%;
-  height: 5rem;
-  background: $font-color02;
-  padding: 1.3rem 0 1.2rem 2rem;
-  display: block;
-}
-
-.form-control::placeholder {
-  color: $border-color-grey;
-  opacity: 1;
 }
 
 // 個人情報保護方針
@@ -1761,44 +1672,6 @@ textarea.form-control.form-textarea {
   }
 }
 
-//セレクトメニュー
-.custom-select {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 100%;
-    padding: 1.25rem 2rem;
-    font-size: 1.8rem;
-    line-height: calc(25 / 18);
-    background-color: $font-color02;
-
-    @include sp {
-      font-size: 1.6rem;
-    line-height: calc(25 / 16);
-    }
-  }
-
-  // 開閉アイコン
-  &::after {
-   content: "";
-   position: absolute;
-   top:55%;
-   right: 2.2rem;
-   transform: translateY(-50%);
-   width: 1.6rem;
-   height: 1.6rem;
-   background-image: url('../images/select-btn.svg');
-   background-size: contain;
-   background-repeat: no-repeat;
-   pointer-events: none;
-   transition: transform 0.3s ease;
-  }
-}
 
 // スマホ時：性別だけ dt + dd を横並び
 @include sp {
