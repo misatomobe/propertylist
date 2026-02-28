@@ -1421,6 +1421,51 @@ h4 {
       pointer-events: none;
     }
   }
+  // checkbox
+  .form-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    .radio-item {
+      display: flex;
+      width: 25%;
+      input[type="radio"] {
+        & + span {
+          display: block;
+          padding-left: 4rem;
+          position: relative;
+          &::before {
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%); 
+          }
+          &::after {
+            content: '';
+            width: 1.8rem;
+            height: .8rem;
+            border-left: .4rem solid $main-color;
+            border-bottom: .3rem solid $main-color;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0.7rem;
+            transform: translateY(-50%);
+            display: none;
+          }
+        }
+        &:checked + span {
+          &::after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }
 
 // 個人情報保護方針
@@ -1600,114 +1645,6 @@ textarea.form-control.form-textarea {
 .message-area dd {
   display: block;
   width: 100%;
-}
-
-// 角型ラジオボタン
-.checkboxItem {
-  display: flex;
-  align-items: center;
-  width: calc((1080px - 3 * 150px) / 4);
-  margin-right: 4.2rem;
-  white-space: nowrap;
-  font-size: 1.8rem;
-  line-height: calc(25 / 18);
-  font-weight: 500;
-  white-space: nowrap;
-  column-gap: 2rem;
-}
-
-@include sp {
-  .checkboxItem {
-    font-size: 1.6rem;
-    line-height: calc(25 / 16);
-    width: calc((100% - 1.8rem) / 2);
-    margin-right: 0.9rem;
-    column-gap: 1rem;
-  }
-
-  .checkboxItem:nth-of-type(2n) {
-    margin-right: 0;
-  }
-}
-
-  @media (max-width: 370px) {
-  .checkboxItem {
-    font-size: 1.4rem;
-    line-height: calc(25 / 14);
-    column-gap: 0.9rem;
-  }
-}
-
-.checkbox {
-  appearance: none;
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.2rem;
-  background-color: $font-color02;
-  flex-shrink: 0;
-}
-
-.checkbox:checked::after {
-  content: "";
-  position: absolute;
-  top: 0.5rem;
-  left: 0.3rem;
-  width: 1.2rem;
-  height: 0.6rem;
-  border-bottom: 0.2rem solid $font-color;
-  border-left: 0.2rem solid $font-color;
-  transform: rotate(-45deg);
-}
-
-.check-area dd {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 1.3rem;
-  margin-top: 1rem;
-
-  @include sp {
-    row-gap: 0.5rem;
-    margin-top: 0;
-  }
-}
-
-
-// スマホ時：性別だけ dt + dd を横並び
-@include sp {
-  .form-area:nth-of-type(2) {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .form-area:nth-of-type(2) dt {
-    width: 6rem;
-    margin-bottom: 0;
-    margin-right: 3rem;
-  }
-
-  .form-area:nth-of-type(2) dd {
-    flex: 1;
-    gap: 0;
-  }
-}
-
-// スマホ時：お問い合わせ種別（qa-list）を横並び
-@include sp {
-  .qa-list {
-    flex-direction: column;
-    margin-top: 3rem;
-  }
-
-  .qa-list dt{
-    width: 100%;
-    margin-bottom: 0;
-    flex-shrink: 0;
-  }
-
-  .qa-list dd {
-    flex: 1;
-  }
 }
 
 
