@@ -1210,11 +1210,16 @@ h4 {
 }
 @media (max-width: 767px) {
   .contact__form-block {
-    margin-top: 3.6rem;
+    margin-top: 4rem;
   }
 }
 .contact__form-block dl:not(:first-of-type) {
   margin-top: 5rem;
+}
+@media (max-width: 767px) {
+  .contact__form-block dl:not(:first-of-type) {
+    margin-top: 3rem;
+  }
 }
 .contact__form-block dl dt {
   font-size: 2rem;
@@ -1222,6 +1227,11 @@ h4 {
 }
 .contact__form-block dl dd {
   margin-top: 1rem;
+}
+@media (max-width: 767px) {
+  .contact__form-block dl dd {
+    margin-top: 0;
+  }
 }
 .contact__form-block dl dd .form-control {
   width: 100%;
@@ -1240,6 +1250,11 @@ h4 {
   display: flex;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .contact .form-flex {
+    display: block;
+  }
+}
 .contact .form-flex dt {
   width: 17rem;
 }
@@ -1247,9 +1262,26 @@ h4 {
   flex: 1;
   margin-top: 0;
 }
+@media (max-width: 767px) {
+  .contact .form-flex.sp-flex {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .contact .form-flex.sp-flex dt {
+    width: 9rem;
+  }
+}
+@media (max-width: 767px) {
+  .contact .form-flex.sp-flex .form-radio {
+    column-gap: 3rem;
+  }
+}
 .contact .form-radio {
   display: flex;
   column-gap: 7.4rem;
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
 }
 .contact .form-radio .radio-item {
   display: flex;
@@ -1287,6 +1319,8 @@ h4 {
 }
 .contact .form-select {
   position: relative;
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
 }
 .contact .form-select::before {
   content: "";
@@ -1304,6 +1338,8 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   row-gap: 1.5rem;
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
 }
 .contact .form-checkbox .checkbox-item {
   display: flex;
