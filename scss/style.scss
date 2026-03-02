@@ -1508,6 +1508,12 @@ h4 {
       font-weight: 600;
       display: grid;
       place-content: center;
+      border: 0.1rem solid $main-color;
+      transition: all .4s;
+      &:hover {
+        background: #fff;
+        color: $main-color;
+      }
     }
   }
 }
