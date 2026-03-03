@@ -1322,6 +1322,9 @@ h4 {
   font-size: 1.8rem;
   line-height: 1.3888888889;
 }
+.contact .form-select select {
+  line-height: 5rem;
+}
 @media (max-width: 767px) {
   .contact .form-select {
     font-size: 1.6rem;
