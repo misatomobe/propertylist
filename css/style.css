@@ -1500,29 +1500,26 @@ h4 {
     width: 31.5rem;
   }
 }
-.footer__company-name {
+.footer__logo {
+  padding-bottom: 2.8rem;
   border-bottom: 1px solid #000;
-  display: block;
-  width: 100%;
-  max-width: 72.2rem;
-  margin: 0 auto;
+  text-align: center;
 }
-.footer__company-name h2 {
+.footer__logo h2 {
   display: inline-block;
-  margin-bottom: 2.8rem;
   font-size: 2rem;
   line-height: 1.65;
   font-weight: 500;
 }
 @media (max-width: 767px) {
-  .footer__company-name h2 {
+  .footer__logo h2 {
     margin-bottom: 2rem;
   }
 }
 .footer__nav {
+  margin-top: 2.8rem;
   width: 100%;
   max-width: 72.2rem;
-  margin: 0 auto;
 }
 .footer__nav ul {
   display: flex;
@@ -1542,7 +1539,7 @@ h4 {
 .footer__nav ul li {
   text-align: center;
 }
-.footer__nav ul a {
+.footer__nav ul li a {
   font-size: 1.8rem;
   line-height: 1.8333333333;
   font-weight: 500;
@@ -1550,19 +1547,22 @@ h4 {
   transition: opacity 0.4s ease;
   white-space: normal;
 }
-.footer__nav ul a:hover {
+.footer__nav ul li a:hover {
   opacity: 0.6;
 }
 @media (max-width: 767px) {
-  .footer__nav ul a {
+  .footer__nav ul li a {
     padding: 0 0.4rem;
   }
+}
+.footer__sns {
+  margin-top: 2.6rem;
 }
 .footer__sns ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  row-gap: 1.7rem;
+  column-gap: 3rem;
 }
 @media (max-width: 767px) {
   .footer__sns ul {
@@ -1571,6 +1571,7 @@ h4 {
 }
 .footer__sns ul li a {
   display: block;
+  width: 2.8rem;
   padding: 0 1.5rem;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
