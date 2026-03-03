@@ -1594,12 +1594,12 @@ h4 {
   }
 }
 .footer__copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   height: 9.2rem;
-  background-color: #4D9600;
-  text-align: center;
+  background: #4D9600;
+  color: #fff;
+  display: grid;
+  place-content: center;
 }
 @media (max-width: 767px) {
   .footer__copyright {
@@ -1607,9 +1607,7 @@ h4 {
   }
 }
 .footer__copyright p {
-  color: #fff;
   font-size: 2rem;
-  line-height: 1.65;
   font-weight: 500;
 }
 @media (max-width: 767px) {
