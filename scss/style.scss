@@ -1435,6 +1435,9 @@ h4 {
     position: relative;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
+    @include sp {
+      font-size: 1.6rem;
+    }
     &::before {
       content: '';
       width: 2rem;
@@ -1455,14 +1458,25 @@ h4 {
     row-gap: 1.5rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
+    @include sp {
+      font-size: 1.6rem;
+      line-height: calc(25 / 16);
+      row-gap: 0.5rem;
+    }
     .checkbox-item {
       display: flex;
       width: 25%;
+      @include sp {
+        width: 50%;
+      }
       input[type="checkbox"] {
         & + span {
           display: block;
           padding-left: 4rem;
           position: relative;
+          @include sp {
+            padding-left: 3rem;
+          }
           &::before {
             content: '';
             width: 2rem;
@@ -1502,6 +1516,9 @@ h4 {
       width: 100%;
       height: 28rem;
       overflow-y: scroll;
+      @include sp {
+        height: 30.3rem;
+      }
       &::-webkit-scrollbar {
         width: 1rem;
         background: $scrollbar-color02;
@@ -1514,12 +1531,19 @@ h4 {
     &__contents {
       padding: 3rem;
       line-height: calc(31 / 16);
+      @include sp {
+        padding: 2rem;
+      }
       h3 {
         font-size: 1.8rem;
         line-height: calc(31 / 18);
         &:not(:first-of-type) {
           margin-top: 3.1rem;
         }
+      }
+      li {
+        padding-left: 1rem;
+        text-indent: -1em;
       }
     }
   }
@@ -1528,6 +1552,9 @@ h4 {
     margin-top: 8rem;
     display: flex;
     justify-content: center;
+    @include sp {
+      margin-top: 5rem;
+    }
     button {
       width: 30rem;
       height: 5rem;
@@ -1539,6 +1566,9 @@ h4 {
       place-content: center;
       border: 0.1rem solid $main-color;
       transition: all .4s;
+      @include sp {
+        width: 31.5rem;
+      }
       &:hover {
         background: #fff;
         color: $main-color;
