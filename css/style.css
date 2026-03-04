@@ -1521,17 +1521,21 @@ h4 {
   width: 100%;
   max-width: 72.2rem;
 }
+@media (max-width: 767px) {
+  .footer__nav {
+    margin-top: 2rem;
+  }
+}
 .footer__nav ul {
   display: flex;
   justify-content: center;
-  padding: 2.8rem 0;
-  flex-wrap: wrap;
   column-gap: 5rem;
   row-gap: 0.8rem;
 }
 @media (max-width: 767px) {
   .footer__nav ul {
-    column-gap: 1.8rem;
+    flex-wrap: wrap;
+    column-gap: 3rem;
     row-gap: 0.8rem;
     padding: 2rem 0 2.5rem;
   }
@@ -1557,6 +1561,11 @@ h4 {
 }
 .footer__sns {
   margin-top: 2.6rem;
+}
+@media (max-width: 767px) {
+  .footer__sns {
+    width: 2.8rem;
+  }
 }
 .footer__sns ul {
   display: flex;
@@ -1585,14 +1594,6 @@ h4 {
 .footer__sns ul li a .instagram {
   width: 2.6rem;
 }
-@media (max-width: 767px) {
-  .footer__sns ul li a .twitter,
-  .footer__sns ul li a .facebook,
-  .footer__sns ul li a .youtube,
-  .footer__sns ul li a .instagram {
-    width: 2.8rem;
-  }
-}
 .footer__copyright {
   width: 100%;
   height: 9.2rem;
@@ -1600,6 +1601,7 @@ h4 {
   color: #fff;
   display: grid;
   place-content: center;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .footer__copyright {
@@ -1608,7 +1610,6 @@ h4 {
 }
 .footer__copyright p {
   font-size: 2rem;
-  font-weight: 500;
 }
 @media (max-width: 767px) {
   .footer__copyright p {

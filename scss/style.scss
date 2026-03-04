@@ -1627,20 +1627,20 @@ h4 {
     margin-top: 2.8rem;
     width: 100%;
     max-width: 72.2rem;
+    @include sp {
+      margin-top: 2rem;
+    }
     ul {
       display: flex;
       justify-content: center;
-      padding: 2.8rem 0;
-      flex-wrap: wrap;
       column-gap: 5rem;
       row-gap: 0.8rem;
-
       @include sp {
-        column-gap: 1.8rem;
+        flex-wrap: wrap;
+        column-gap: 3rem;
         row-gap: 0.8rem;
         padding: 2rem 0 2.5rem;
       }
-
       li {
         text-align: center;
         a {
@@ -1662,6 +1662,9 @@ h4 {
   }
   &__sns {
     margin-top: 2.6rem;
+    @include sp {
+      width: 2.8rem;
+    }
     ul {
       display: flex;
       justify-content: center;
@@ -1681,16 +1684,11 @@ h4 {
             transform: scale(1.2);
             opacity: 0.6;
           }
-
           .twitter,
           .facebook,
           .youtube,
           .instagram {
             width: 2.6rem;
-
-            @include sp {
-              width: 2.8rem;
-            }
           }
         }
       }
@@ -1704,15 +1702,12 @@ h4 {
     color: $font-color02;
     display: grid;
     place-content: center;
+    text-align: center;
     @include sp {
       height: 9.2rem;
     }
-
     p {
-
       font-size: 2rem;
-      font-weight: 500;
-
       @include sp {
         line-height: calc(25 / 20);
       }
