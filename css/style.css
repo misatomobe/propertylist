@@ -1482,7 +1482,7 @@ h4 {
   align-items: center;
   justify-content: center;
   height: 33.8rem;
-  padding: 8rem 18rem;
+  padding: 8rem 0;
   text-align: center;
   width: 100%;
 }

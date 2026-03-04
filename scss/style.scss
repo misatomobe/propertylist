@@ -1592,7 +1592,7 @@ h4 {
     align-items: center;
     justify-content: center;
     height: 33.8rem;
-    padding: 8rem 18rem;
+    padding: 8rem 0;
     text-align: center;
     width: 100%;
     @include sp {
@@ -1606,7 +1606,6 @@ h4 {
       }
     }
   }
-
   &__logo {
     padding-bottom: 2.8rem;
     border-bottom: 1px solid $font-color;
@@ -1616,7 +1615,6 @@ h4 {
       font-size: 2rem;
       line-height: calc(33 / 20);
       font-weight: 500;
-
       @include sp {
         margin-bottom: 2rem;
       }
