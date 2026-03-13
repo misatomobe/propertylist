@@ -43,24 +43,28 @@ body.is-fixed {
   overflow: hidden;
 }
 
+// スマホサイズ
 @mixin sp {
   @media (max-width: 767px) {
     @content;
   }
 }
 
+// PCサイズ
 @mixin pc {
   @media (min-width: 768px) {
     @content;
   }
 }
 
+// タブレットサイズ
 @mixin tablet {
   @media (max-width: 1030px) {
     @content;
   }
 }
 
+// スマホ（小）サイズ
 @mixin sp-small {
   @media (max-width: 350px) {
     @content;
@@ -1599,7 +1603,7 @@ h4 {
       height: auto;
       padding: 5rem 3rem;
     }
-    .inner {
+    .footer__inner {
       width: 72.2rem;
       @include sp {
         width: 31.5rem;
@@ -1641,6 +1645,9 @@ h4 {
       }
       li {
         text-align: center;
+        @include sp {
+          width: calc((100% - 6rem) / 3);
+        }
         a {
           font-size: 1.8rem;
           line-height: calc(33 / 18);
@@ -1648,11 +1655,13 @@ h4 {
           color: $font-color;
           transition: opacity 0.4s ease;
           white-space: normal;
+          display: block;
           &:hover {
             opacity: 0.6;
           }
           @include sp {
             padding: 0 0.4rem;
+            white-space: nowrap;
           }
         }
       }
@@ -1660,9 +1669,6 @@ h4 {
   }
   &__sns {
     margin-top: 2.6rem;
-    @include sp {
-      width: 2.8rem;
-    }
     ul {
       display: flex;
       justify-content: center;
