@@ -1492,14 +1492,6 @@ h4 {
     padding: 5rem 3rem;
   }
 }
-.footer__main .footer__inner {
-  width: 72.2rem;
-}
-@media (max-width: 767px) {
-  .footer__main .footer__inner {
-    width: 31.5rem;
-  }
-}
 .footer__logo {
   padding-bottom: 2.8rem;
   border-bottom: 1px solid #000;
@@ -1546,6 +1538,8 @@ h4 {
 @media (max-width: 767px) {
   .footer__nav ul li {
     width: calc((100% - 6rem) / 3);
+    display: flex;
+    justify-content: center;
   }
 }
 .footer__nav ul li a {
@@ -1556,6 +1550,8 @@ h4 {
   transition: opacity 0.4s ease;
   white-space: normal;
   display: block;
+  text-align: center;
+  white-space: nowrap;
 }
 .footer__nav ul li a:hover {
   opacity: 0.6;
@@ -1564,6 +1560,11 @@ h4 {
   .footer__nav ul li a {
     padding: 0 0.4rem;
     white-space: nowrap;
+  }
+}
+@media (max-width: 350px) {
+  .footer__nav ul li a {
+    font-size: 1.5rem;
   }
 }
 .footer__sns {
@@ -1581,9 +1582,10 @@ h4 {
   }
 }
 .footer__sns ul li a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 2.8rem;
-  padding: 0 1.5rem;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .footer__sns ul li a:hover {
