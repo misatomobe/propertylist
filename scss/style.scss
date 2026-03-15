@@ -1176,7 +1176,7 @@ h4 {
 // company
 // =====================================
 .company {
-  padding: 8rem 3rem 6.5rem;
+  padding: 8rem 3rem 7rem;
 
   @include sp {
     padding: 5rem 3rem;
@@ -1238,8 +1238,8 @@ h4 {
     &__info {
       flex: 1;
       width: 50%;
-      margin-top: 21%;
-      padding: 6% 4.5% 5.5% 4.5%;
+      margin-top: 21.6%;
+      padding: 5.5% 4.5% 5.5% 4.5%;
       font-weight: 600;
       color: $font-color02;
       position: relative;
@@ -1270,7 +1270,7 @@ h4 {
     }
 
     &__tel {
-      margin-top: 1.2rem;
+      margin-top: 1.3rem;
 
       span {
         font-size: 2.5rem;
@@ -1279,7 +1279,7 @@ h4 {
     }
 
     &__mail {
-      margin-top: 1.9rem;
+      margin-top: 1.8rem;
     }
   }
 }

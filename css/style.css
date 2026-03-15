@@ -1059,7 +1059,7 @@ h4 {
 }
 
 .company {
-  padding: 8rem 3rem 6.5rem;
+  padding: 8rem 3rem 7rem;
 }
 @media (max-width: 767px) {
   .company {
@@ -1123,8 +1123,8 @@ h4 {
 .company .company-item__info {
   flex: 1;
   width: 50%;
-  margin-top: 21%;
-  padding: 6% 4.5% 5.5% 4.5%;
+  margin-top: 21.6%;
+  padding: 5.5% 4.5% 5.5% 4.5%;
   font-weight: 600;
   color: #fff;
   position: relative;
@@ -1152,14 +1152,14 @@ h4 {
   margin-top: 0.7rem;
 }
 .company .company-item__tel {
-  margin-top: 1.2rem;
+  margin-top: 1.3rem;
 }
 .company .company-item__tel span {
   font-size: 2.5rem;
   line-height: 1;
 }
 .company .company-item__mail {
-  margin-top: 1.9rem;
+  margin-top: 1.8rem;
 }
 
 .contact {
