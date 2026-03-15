@@ -1042,7 +1042,7 @@ h4 {
   }
   
   &_contents {
-    margin-top: 6.8rem;
+    margin-top: 6.6rem;
     display: flex;
     justify-content: space-between;
     gap: 4rem;
@@ -1091,9 +1091,9 @@ h4 {
     padding: 1.1rem 2rem 2.4rem;
   }
   .news-block-item {
-    padding: 1.3rem 0;
+    padding: 1.2rem 0;
     display: flex;
-    column-gap: 6.5rem;
+    column-gap: 7rem;
     border-bottom: 0.1rem solid $border-color-green;
     @include sp {
       column-gap: 1.9rem;
@@ -1112,7 +1112,7 @@ h4 {
   }
 }
 
-.news-item__date time {
+.news-bloc-item__date time {
   font-size: 1.6rem;
   line-height: calc(33 / 16);
   font-weight: 500;
@@ -1120,11 +1120,10 @@ h4 {
   display: inline-block;
 }
 
-.news-item__title p {
+.news-block-item__title h4 {
   font-size: 1.8rem;
   line-height: calc(25 / 18);
   font-weight: 500;
-  margin-top: 1rem;
 
   @include sp {
     margin-top: 1.2rem;
@@ -1139,7 +1138,7 @@ h4 {
 .news-block__link {
   display: flex;
   justify-content: flex-end;
-  margin: 1.7rem;
+  margin: 1.8rem 0 0 1.7rem;
   
   a {
     font-size: 2rem;
