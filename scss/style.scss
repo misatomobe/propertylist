@@ -1343,6 +1343,8 @@ h4 {
         height: 5rem;
         background: #fff;
         padding: 0 2rem;
+        font-size: 1.8rem;
+        line-height: calc( 25 / 18 );
         &::placeholder {
           color: #A0A0A0;
         }
