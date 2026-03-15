@@ -1003,11 +1003,11 @@ h4 {
   margin-top: 0.7rem;
 }
 
-.news-bloc-item__date time {
+.news-block-item__date time {
   font-size: 1.6rem;
   line-height: 2.0625;
   font-weight: 500;
-  margin-top: 0.4rem;
+  margin-top: 0.2rem;
   display: inline-block;
 }
 
@@ -1019,7 +1019,6 @@ h4 {
 @media (max-width: 767px) {
   .news-block-item__title h4 {
     margin-top: 1.2rem;
-    line-height: 1.3888888889;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
