@@ -709,9 +709,9 @@ h4 {
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-  padding: 5rem 6.8rem 4.2rem 2rem;
+  padding: 5rem 2rem 4.2rem 4.2rem;
 }
-@media (max-width: 1030px) and (max-width: 1030px) {
+@media (max-width: 1030px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {
     padding: 4rem 0 3.5rem 3rem;
   }
