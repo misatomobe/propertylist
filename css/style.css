@@ -1158,6 +1158,9 @@ h4 {
   font-size: 2.5rem;
   line-height: 1;
 }
+.company .company-item__tel a {
+  margin-left: 0.5rem;
+}
 .company .company-item__mail {
   margin-top: 1.8rem;
 }
