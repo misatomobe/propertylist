@@ -1211,7 +1211,7 @@ h4 {
     margin-top: 3rem;
   }
 }
-.contact__form-block dl dl.form-checkbox {
+.contact__form-block dl .checkbox-group {
   margin-top: 4rem;
 }
 .contact__form-block dl dt {
