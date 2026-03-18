@@ -1239,6 +1239,8 @@ h4 {
 }
 .contact__form-block dd .form-control::placeholder {
   color: #A0A0A0;
+  font-size: 1.6rem;
+  line-height: 0.9615384615;
 }
 .contact__form-block dd .form-textarea {
   height: 20rem;
@@ -1272,7 +1274,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .contact .form-flex.sp-flex .form-radio {
-    column-gap: 3rem;
+    column-gap: 4rem;
   }
 }
 .contact .form-radio {
@@ -1288,6 +1290,11 @@ h4 {
   display: block;
   padding-left: 4rem;
   position: relative;
+}
+@media (max-width: 767px) {
+  .contact .form-radio .radio-item input[type=radio] + span {
+    padding-left: 3rem;
+  }
 }
 .contact .form-radio .radio-item input[type=radio] + span::before {
   content: "";

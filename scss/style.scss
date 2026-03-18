@@ -1223,7 +1223,6 @@ h4 {
       position: relative;
       z-index: 1;
       aspect-ratio: 3 / 2;
-
       @include sp {
         width: 100%;
         aspect-ratio: 315 / 300;
@@ -1245,7 +1244,6 @@ h4 {
       position: relative;
       z-index: 1;
       aspect-ratio: 500 / 262;
-
       @include sp {
         margin-top: 0;
         padding: 1.9rem 2rem 1rem;
@@ -1350,6 +1348,8 @@ h4 {
       line-height: calc(25 / 18);
       &::placeholder {
         color: #A0A0A0;
+        font-size: 1.6rem;
+        line-height: calc(25 / 26);
       }
     }
     .form-textarea {
@@ -1382,7 +1382,7 @@ h4 {
     }
     .form-radio {
       @include sp {
-        column-gap: 3rem;
+        column-gap: 4rem;
       }
     }
   }
@@ -1400,6 +1400,9 @@ h4 {
           display: block;
           padding-left: 4rem;
           position: relative;
+          @include sp {
+            padding-left: 3rem;
+          }
           &::before {
             content: '';
             width: 2rem;
