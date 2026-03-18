@@ -1662,12 +1662,11 @@ h4 {
         flex-wrap: wrap;
         column-gap: 1.9rem;
         row-gap: 0.3rem;
-        padding: 2rem 0 2.5rem;
+        padding: 2rem 0 2.3rem;
       }
       li {
         text-align: center;
         @include sp {
-          width: calc((100% - 6rem) / 3);
           display: flex;
           justify-content: center;
         }
@@ -1684,7 +1683,7 @@ h4 {
             opacity: 0.6;
           }
           @include sp {
-            padding: 0 0.4rem;
+            padding: 0 0.49rem;
             white-space: nowrap;
           }
           @include sp-small {
@@ -1696,6 +1695,9 @@ h4 {
   }
   &__sns {
     margin-top: 2.6rem;
+    @include sp {
+      margin-top: 0;
+    }
     ul {
       display: flex;
       justify-content: center;
@@ -1744,6 +1746,7 @@ h4 {
       font-weight: 500;
       @include sp {
         line-height: calc(25 / 20);
+        padding-top: 0.2rem;
       }
     }
   }
