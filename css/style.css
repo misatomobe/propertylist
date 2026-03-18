@@ -1237,6 +1237,12 @@ h4 {
   font-size: 1.8rem;
   line-height: 1.3888888889;
 }
+@media (max-width: 767px) {
+  .contact__form-block dd .form-control {
+    font-size: 1.6rem;
+    line-height: 0.9615384615;
+  }
+}
 .contact__form-block dd .form-control::placeholder {
   color: #A0A0A0;
   font-size: 1.6rem;
