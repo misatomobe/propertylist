@@ -1326,9 +1326,9 @@ h4 {
       margin-top: 3rem;
     }
   }
-
-  & dl.checkbox-group:not(:first-of-type) {
-    margin-top: 4rem !important;
+  
+  dl.checkbox-group {
+    margin-top: 4rem;
   }
 
   dt {

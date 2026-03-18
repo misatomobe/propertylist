@@ -1211,22 +1211,22 @@ h4 {
     margin-top: 3rem;
   }
 }
-.contact__form-block dl .checkbox-group {
+.contact__form-block dl.checkbox-group {
   margin-top: 4rem;
 }
-.contact__form-block dl dt {
+.contact__form-block dt {
   font-size: 2rem;
   line-height: 1.65;
 }
-.contact__form-block dl dd {
+.contact__form-block dd {
   margin-top: 1rem;
 }
 @media (max-width: 767px) {
-  .contact__form-block dl dd {
+  .contact__form-block dd {
     margin-top: 0;
   }
 }
-.contact__form-block dl dd .form-control {
+.contact__form-block dd .form-control {
   width: 100%;
   height: 5rem;
   background: #fff;
@@ -1234,10 +1234,10 @@ h4 {
   font-size: 1.8rem;
   line-height: 1.3888888889;
 }
-.contact__form-block dl dd .form-control::placeholder {
+.contact__form-block dd .form-control::placeholder {
   color: #A0A0A0;
 }
-.contact__form-block dl dd .form-textarea {
+.contact__form-block dd .form-textarea {
   height: 20rem;
   padding: 2rem;
 }
