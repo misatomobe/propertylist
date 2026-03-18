@@ -1715,6 +1715,8 @@ h4 {
     }
     p {
       font-size: 2rem;
+      line-height: calc(33 / 20);
+      font-weight: 500;
       @include sp {
         line-height: calc(25 / 20);
       }

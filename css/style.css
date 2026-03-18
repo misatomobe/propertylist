@@ -1611,6 +1611,8 @@ h4 {
 }
 .footer__copyright p {
   font-size: 2rem;
+  line-height: 1.65;
+  font-weight: 500;
 }
 @media (max-width: 767px) {
   .footer__copyright p {
