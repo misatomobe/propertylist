@@ -363,6 +363,10 @@ h4 {
       transition: 0.3s;
     }
 
+    .hamburger-line {
+      top: 42%;
+    }
+
     .hamburger-line::before {
       top: -1.2rem;
     }

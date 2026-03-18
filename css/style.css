@@ -298,6 +298,9 @@ h4 {
   border-radius: 10px; /* ← 丸みをつける */
   transition: 0.3s;
 }
+.header__hamburger .hamburger .hamburger-line {
+  top: 42%;
+}
 .header__hamburger .hamburger .hamburger-line::before {
   top: -1.2rem;
 }
