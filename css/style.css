@@ -1074,7 +1074,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .company__contents {
-    margin-top: 3.8rem;
+    margin-top: 2rem;
   }
 }
 .company .company-item {
@@ -1085,7 +1085,7 @@ h4 {
 @media (max-width: 767px) {
   .company .company-item {
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 1.9rem;
   }
 }
 .company .company-item::before {
@@ -1137,7 +1137,7 @@ h4 {
 @media (max-width: 767px) {
   .company .company-item__info {
     margin-top: 0;
-    padding: 1.9rem 2rem 1.2rem;
+    padding: 1.9rem 2rem 1rem;
     background: #4D9600;
     aspect-ratio: 315/202;
     width: 100%;
