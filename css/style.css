@@ -631,7 +631,7 @@ h4 {
   .service__item__text-area {
     position: static;
     width: 100%;
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
     aspect-ratio: auto;
     height: auto;
     z-index: auto;
