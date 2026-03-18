@@ -1433,6 +1433,10 @@ h4 {
 .contact .privacy-policy__contents h3:not(:first-of-type) {
   margin-top: 3.1rem;
 }
+.contact .privacy-policy__contents p {
+  font-size: 1.8rem;
+  line-height: 1.7222222222;
+}
 .contact .privacy-policy__contents li {
   padding-left: 1rem;
   text-indent: -1em;
