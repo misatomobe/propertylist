@@ -1532,6 +1532,11 @@ h4 {
   border-bottom: 1px solid #000;
   text-align: center;
 }
+@media (max-width: 767px) {
+  .footer__logo {
+    padding-bottom: 0;
+  }
+}
 .footer__logo h2 {
   display: inline-block;
   font-size: 2rem;
@@ -1540,7 +1545,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__logo h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
   }
 }
 .footer__nav {
@@ -1550,7 +1555,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__nav {
-    margin-top: 2rem;
+    margin-top: 0.3rem;
   }
 }
 .footer__nav ul {
@@ -1562,8 +1567,8 @@ h4 {
 @media (max-width: 767px) {
   .footer__nav ul {
     flex-wrap: wrap;
-    column-gap: 3rem;
-    row-gap: 0.8rem;
+    column-gap: 1.9rem;
+    row-gap: 0.3rem;
     padding: 2rem 0 2.5rem;
   }
 }

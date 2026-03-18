@@ -1632,13 +1632,16 @@ h4 {
     padding-bottom: 2.8rem;
     border-bottom: 1px solid $font-color;
     text-align: center;
+    @include sp {
+      padding-bottom: 0;
+    }
     h2 {
       display: inline-block;
       font-size: 2rem;
       line-height: calc(33 / 20);
       font-weight: 500;
       @include sp {
-        margin-bottom: 2rem;
+        margin-bottom: 1.8rem;
       }
     }
   }
@@ -1648,7 +1651,7 @@ h4 {
     width: 100%;
     max-width: 72.2rem;
     @include sp {
-      margin-top: 2rem;
+      margin-top: 0.3rem;
     }
     ul {
       display: flex;
@@ -1657,8 +1660,8 @@ h4 {
       row-gap: 0.8rem;
       @include sp {
         flex-wrap: wrap;
-        column-gap: 3rem;
-        row-gap: 0.8rem;
+        column-gap: 1.9rem;
+        row-gap: 0.3rem;
         padding: 2rem 0 2.5rem;
       }
       li {
