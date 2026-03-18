@@ -1327,6 +1327,9 @@ h4 {
   
   dl.checkbox-group {
     margin-top: 4rem;
+    @include sp {
+      margin-top: 2rem;
+    }
   }
 
   dt {

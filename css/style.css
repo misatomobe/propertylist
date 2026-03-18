@@ -1217,6 +1217,11 @@ h4 {
 .contact__form-block dl.checkbox-group {
   margin-top: 4rem;
 }
+@media (max-width: 767px) {
+  .contact__form-block dl.checkbox-group {
+    margin-top: 2rem;
+  }
+}
 .contact__form-block dt {
   font-size: 2rem;
   line-height: 1.65;
