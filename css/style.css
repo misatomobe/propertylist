@@ -1448,12 +1448,18 @@ h4 {
 }
 @media (max-width: 767px) {
   .contact .privacy-policy__contents {
-    padding: 2rem;
+    padding: 2rem 3rem 2rem 2rem;
   }
 }
 .contact .privacy-policy__contents h3 {
   font-size: 1.8rem;
   line-height: 1.7222222222;
+}
+@media (max-width: 767px) {
+  .contact .privacy-policy__contents h3 {
+    font-size: 1.6rem;
+    line-height: 2.0625;
+  }
 }
 .contact .privacy-policy__contents h3:not(:first-of-type) {
   margin-top: 3.1rem;
@@ -1461,6 +1467,12 @@ h4 {
 .contact .privacy-policy__contents p {
   font-size: 1.8rem;
   line-height: 1.7222222222;
+}
+@media (max-width: 767px) {
+  .contact .privacy-policy__contents p {
+    font-size: 1.6rem;
+    line-height: 2.0625;
+  }
 }
 .contact .privacy-policy__contents li {
   padding-left: 1rem;
