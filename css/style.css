@@ -1007,7 +1007,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .news-block .news-block-item__title h4 {
-    margin-top: 1.2rem;
+    margin-top: 0;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
