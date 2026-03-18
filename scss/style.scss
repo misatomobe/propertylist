@@ -381,12 +381,12 @@ h4 {
         background-color: transparent;
       }
       .hamburger-line::before {
-        transform: rotate(45deg);
-        top: 0;
+        transform: rotate(45deg) translateX(-0.1rem) translateY(0.1rem);
+        top: 0.2rem;
       }
       .hamburger-line::after {
-        transform: rotate(-45deg);
-        top: 0;
+        transform: rotate(-45deg) translateX(-0.1rem) translateY(-0.1rem);
+        top: 0.2rem;
       }
     }
   }
