@@ -58,8 +58,8 @@ body.is-fixed {
 }
 
 // タブレットサイズ
-@mixin tablet {
-  @media (max-width: 1030px) {
+@mixin tab-only {
+  @media (min-width: 768px) and (max-width: 1030px) {
     @content;
   }
 }
@@ -210,7 +210,7 @@ h4 {
   opacity: 1;
   filter: none;  
 
-  @include tablet {
+  @include tab-only() {
     padding: 0;
   }
 
@@ -593,6 +593,9 @@ h4 {
 
 .about__contents__inner {
   padding-left: calc(12.5%);
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
 
   @include sp {
     padding-left: 0;
@@ -1225,6 +1228,7 @@ h4 {
       aspect-ratio: 3 / 2;
       @include sp {
         width: 100%;
+        max-width: 100%;
         aspect-ratio: 315 / 300;
       }
 
@@ -1261,6 +1265,9 @@ h4 {
     &__name p {
       font-size: 2rem;
       line-height: calc(33 / 20);
+      @include tab-only {
+        font-size: 1.6rem;
+      }
     }
 
     &__address {
@@ -1273,6 +1280,9 @@ h4 {
       span {
         font-size: 2.5rem;
         line-height: 1;
+        @include tab-only {
+          font-size: 2rem;
+        }
       }
       a {
         margin-left: 0.5rem;
