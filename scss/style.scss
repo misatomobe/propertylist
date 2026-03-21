@@ -222,7 +222,7 @@ h4 {
   opacity: 1;
   filter: none;  
 
-  @include tab-only() {
+  @include tab-only {
     padding: 0;
   }
 
@@ -253,7 +253,7 @@ h4 {
     margin: 0 auto;
     box-sizing: border-box;
     
-    @include tablet {
+    @include tab-only  {
       padding: 0 3rem;
     }
 
@@ -334,7 +334,7 @@ h4 {
           transform: translateX(-50%) scaleX(1);
         }
 
-        @include tablet {
+        @include tab-only  {
           font-size: 1.3rem;
         } 
       }
@@ -734,7 +734,7 @@ h4 {
       position: relative;
       z-index: 2;
 
-      @include tablet {
+      @media (max-width: 1030px) {
         padding: 3.5rem 0 3.5rem 0;
         padding-left: calc(6.8rem * 0.1);
       }
@@ -759,7 +759,7 @@ h4 {
         line-height: calc(33 / 25);
         font-weight: 600;
 
-        @include tablet {
+        @include tab-only {
           font-size: 1.8rem;
         }
         @include sp  { 
@@ -783,7 +783,7 @@ h4 {
       p {
         font-weight: 600;
 
-        @include tablet {
+        @include tab-only {
            font-size: 1.4rem;
            }
         @include sp {
@@ -822,8 +822,8 @@ h4 {
       .service__item__text-area {
         padding: 5rem 6.8rem 4.2rem 0;
         
-        @include tablet {
-          padding: 4.5rem 2rem 3.5rem 3rem;
+        @media (max-width: 1030px) {
+          padding: 4.5rem 2rem 3.5rem 0;
         }
 
         @include sp {

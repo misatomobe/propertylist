@@ -71,24 +71,42 @@ button:hover {
 }
 
 .sp-br,
-.pc-br {
+.pc-br,
+.tb-br {
   display: none;
 }
 
 @media (max-width: 765px) {
+  .pc-br {
+    display: none;
+  }
+  .tb-br {
+    display: none;
+  }
   .sp-br {
     display: inline;
   }
+}
+@media (min-width: 766px) and (max-width: 1079px) {
   .pc-br {
+    display: none;
+  }
+  .tb-br {
+    display: inline;
+  }
+  .sp-br {
     display: none;
   }
 }
-@media (min-width: 766px) {
-  .sp-br {
-    display: none;
-  }
+@media (min-width: 1080px) {
   .pc-br {
     display: inline;
+  }
+  .tb-br {
+    display: none;
+  }
+  .sp-br {
+    display: none;
   }
 }
 .no-wrap {
@@ -158,7 +176,7 @@ h4 {
   opacity: 1;
   filter: none;
 }
-@media (max-width: 1030px) {
+@media (min-width: 768px) and (max-width: 1030px) {
   .header {
     padding: 0;
   }
@@ -188,7 +206,7 @@ h4 {
   margin: 0 auto;
   box-sizing: border-box;
 }
-@media (max-width: 1030px) {
+@media (min-width: 768px) and (max-width: 1030px) {
   .header__inner {
     padding: 0 3rem;
   }
@@ -263,7 +281,7 @@ h4 {
 .header__nav ul li a:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
-@media (max-width: 1030px) {
+@media (min-width: 768px) and (max-width: 1030px) {
   .header__nav ul li a {
     font-size: 1.3rem;
   }
@@ -626,8 +644,8 @@ h4 {
 }
 @media (max-width: 1030px) {
   .service__item__text-area {
-    padding: 4.5rem 0 3.5rem 0;
-    padding-left: 1.36rem;
+    padding: 3.5rem 0 3.5rem 0;
+    padding-left: 0.68rem;
   }
 }
 @media (max-width: 767px) {
@@ -650,7 +668,7 @@ h4 {
   line-height: 1.32;
   font-weight: 600;
 }
-@media (max-width: 1030px) {
+@media (min-width: 768px) and (max-width: 1030px) {
   .service__item__title h3 {
     font-size: 1.8rem;
   }
@@ -678,7 +696,7 @@ h4 {
 .service__item__text p {
   font-weight: 600;
 }
-@media (max-width: 1030px) {
+@media (min-width: 768px) and (max-width: 1030px) {
   .service__item__text p {
     font-size: 1.4rem;
   }
@@ -715,11 +733,11 @@ h4 {
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-  padding: 5rem 2rem 4.2rem 4.2rem;
+  padding: 5rem 6.8rem 4.2rem 0;
 }
 @media (max-width: 1030px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-    padding: 4rem 0 3.5rem 3rem;
+    padding: 4.5rem 2rem 3.5rem 0;
   }
 }
 @media (max-width: 767px) {
@@ -1155,6 +1173,11 @@ h4 {
   font-size: 2rem;
   line-height: 1.65;
 }
+@media (min-width: 768px) and (max-width: 1030px) {
+  .company .company-item__name p {
+    font-size: 1.6rem;
+  }
+}
 .company .company-item__address {
   margin-top: 0.7rem;
 }
@@ -1164,6 +1187,11 @@ h4 {
 .company .company-item__tel span {
   font-size: 2.5rem;
   line-height: 1;
+}
+@media (min-width: 768px) and (max-width: 1030px) {
+  .company .company-item__tel span {
+    font-size: 2rem;
+  }
 }
 .company .company-item__tel a {
   margin-left: 0.5rem;
