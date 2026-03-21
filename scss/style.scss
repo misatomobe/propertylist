@@ -734,9 +734,8 @@ h4 {
       position: relative;
       z-index: 2;
 
-      @media (max-width: 1030px) {
-        padding: 3.5rem 0 3.5rem 0;
-        padding-left: calc(6.8rem * 0.1);
+      @include tab-only {
+        padding: 3.5rem 2rem 3.5rem 1rem;
       }
 
       @include sp {
@@ -802,7 +801,6 @@ h4 {
 .service__items {
   > .service__item:nth-of-type(even) {
       flex-direction: row-reverse;
-
       @include sp {
         flex-direction: column;
       }
@@ -813,17 +811,13 @@ h4 {
 
       .service__item__capture {
         text-align: right;
-
-        @include sp {
-          text-align: left;
-        }
       }
 
       .service__item__text-area {
-        padding: 5rem 6.8rem 4.2rem 0;
+        padding: 5rem 6.8rem 4.2rem 2rem;
         
-        @media (max-width: 1030px) {
-          padding: 4.5rem 2rem 3.5rem 0;
+        @include tab-only {
+          padding: 3.5rem 1rem 3.5rem 1rem;
         }
 
         @include sp {
