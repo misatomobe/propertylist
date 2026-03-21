@@ -906,6 +906,11 @@ h4 {
   @include sp {
     margin-top: 1rem;
   }
+  h4 {
+    @include tab-only {
+      font-size: 1.4rem;
+    }
+  }
 }
 
 
