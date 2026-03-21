@@ -181,6 +181,11 @@ h4 {
     padding: 0;
   }
 }
+@media (max-width: 767px) {
+  .header {
+    padding: 0;
+  }
+}
 .header.active {
   background-color: #4D9600;
 }
