@@ -729,7 +729,7 @@ h4 {
   left: 0;
 }
 .service__items > .service__item:nth-of-type(even) .service__item__capture {
-  text-align: right;
+  text-align: left;
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
   padding: 5rem 6.8rem 4.2rem 2rem;
@@ -1622,7 +1622,7 @@ h4 {
     flex-wrap: wrap;
     column-gap: 1.9rem;
     row-gap: 0.3rem;
-    padding: 2rem 0 2.3rem;
+    padding: 2rem 0 2.8rem;
   }
 }
 .footer__nav ul li {
