@@ -1282,6 +1282,11 @@ h4 {
 
     &__address {
       margin-top: 0.7rem;
+      p {
+        @include tab-only {
+          font-size: 1.2rem;
+        }
+      }
     }
 
     &__tel {
@@ -1301,6 +1306,11 @@ h4 {
 
     &__mail {
       margin-top: 1.8rem;
+      p {
+        @include tab-only {
+          font-size: 1.3rem;
+        }
+      }
     }
   }
 }
