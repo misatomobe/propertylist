@@ -1260,13 +1260,15 @@ h4 {
       aspect-ratio: 500 / 262;
       @include sp {
         margin-top: 0;
-        padding: 1.9rem 2rem 1rem;
-        background: $main-color;
-        aspect-ratio: 315 / 202;
+        position: static;
         width: 100%;
+        aspect-ratio: auto;
         height: auto;
-      }
+        z-index: auto;
+        padding: 1.9rem 2rem 1rem;
+        background-color: $main-color;
     }
+  }
 
     &__info-inner {
       position: relative;

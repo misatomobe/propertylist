@@ -1158,11 +1158,13 @@ h4 {
 @media (max-width: 767px) {
   .company .company-item__info {
     margin-top: 0;
-    padding: 1.9rem 2rem 1rem;
-    background: #4D9600;
-    aspect-ratio: 315/202;
+    position: static;
     width: 100%;
+    aspect-ratio: auto;
     height: auto;
+    z-index: auto;
+    padding: 1.9rem 2rem 1rem;
+    background-color: #4D9600;
   }
 }
 .company .company-item__info-inner {
