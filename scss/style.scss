@@ -735,8 +735,8 @@ h4 {
       z-index: 2;
 
       @include tablet {
-        padding: 4.5rem 0 3.5rem 0;
-        padding-left: calc(6.8rem * 0.2);
+        padding: 3.5rem 0 3.5rem 0;
+        padding-left: calc(6.8rem * 0.1);
       }
 
       @include sp {
@@ -820,10 +820,10 @@ h4 {
       }
 
       .service__item__text-area {
-        padding: 5rem 2rem 4.2rem 4.2rem;
+        padding: 5rem 6.8rem 4.2rem 0;
         
         @include tablet {
-          padding: 2.5rem 0 3.5rem 2.5rem;
+          padding: 4.5rem 2rem 3.5rem 3rem;
         }
 
         @include sp {
