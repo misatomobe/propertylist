@@ -122,18 +122,30 @@ button:hover {
 
 // 改行制御
 .sp-br,
-.pc-br {
+.pc-br,
+.tb-br {
   display: none;
 }
 
+// sp
 @media (max-width: 765px) {
-  .sp-br { display: inline; }
   .pc-br { display: none; }
+  .tb-br { display: none; }
+  .sp-br { display: inline; }
 }
 
-@media (min-width: 766px) {
+// タブレット
+@media (min-width: 766px) and (max-width: 1079px) {
+  .pc-br { display: none; }
+  .tb-br { display: inline; }
   .sp-br { display: none; }
+}
+
+// pc
+@media (min-width: 1080px) {
   .pc-br { display: inline; }
+  .tb-br { display: none; }
+  .sp-br { display: none; }
 }
 
 .no-wrap {
@@ -811,7 +823,7 @@ h4 {
         padding: 5rem 2rem 4.2rem 4.2rem;
         
         @include tablet {
-          padding: 4rem 0 3.5rem 3rem;
+          padding: 2.5rem 0 3.5rem 2.5rem;
         }
 
         @include sp {
