@@ -1509,6 +1509,9 @@ h4 {
     row-gap: 1.5rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
+    @include tab-only {
+      font-size: 1.5rem;
+    }
     @include sp {
       font-size: 1.6rem;
       line-height: calc(25 / 16);

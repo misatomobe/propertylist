@@ -1412,6 +1412,11 @@ h4 {
   font-size: 1.8rem;
   line-height: 1.3888888889;
 }
+@media (min-width: 768px) and (max-width: 1030px) {
+  .contact .form-checkbox {
+    font-size: 1.5rem;
+  }
+}
 @media (max-width: 767px) {
   .contact .form-checkbox {
     font-size: 1.6rem;
