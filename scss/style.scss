@@ -735,7 +735,7 @@ h4 {
       z-index: 2;
 
       @include tab-only {
-        padding: 3.5rem 2rem 3.5rem 1rem;
+        padding: 3.5rem 1rem 3.5rem 1rem;
       }
 
       @include sp {
@@ -759,7 +759,7 @@ h4 {
         font-weight: 600;
 
         @include tab-only {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
         }
         @include sp  { 
           font-size: 2rem;
@@ -783,7 +783,7 @@ h4 {
         font-weight: 600;
 
         @include tab-only {
-           font-size: 1.4rem;
+           font-size: 1.3rem;
            }
         @include sp {
            font-size: 1.6rem;

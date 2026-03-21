@@ -644,7 +644,7 @@ h4 {
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .service__item__text-area {
-    padding: 3.5rem 2rem 3.5rem 1rem;
+    padding: 3.5rem 1rem 3.5rem 1rem;
   }
 }
 @media (max-width: 767px) {
@@ -669,7 +669,7 @@ h4 {
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .service__item__title h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 767px) {
@@ -697,7 +697,7 @@ h4 {
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .service__item__text p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 767px) {
