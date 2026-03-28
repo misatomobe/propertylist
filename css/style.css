@@ -275,8 +275,8 @@ h4 {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 3.15rem;
-  width: 100%;
+  bottom: 2.6rem;
+  width: 90%;
   height: 0.1rem;
   background-color: #E3E3E3;
   transform: translateX(-50%) scaleX(0);
