@@ -419,7 +419,7 @@ h4 {
   font-size: 4rem;
   font-weight: 600;
   line-height: 1.75;
-  letter-spacing: 1.2rem;
+  letter-spacing: 0.3em;
   color: #fff;
   text-shadow: 0.4rem 0.2rem 0.2rem rgb(0, 0, 0);
   margin-top: 2rem;
@@ -429,7 +429,7 @@ h4 {
   .mv h2 {
     font-size: 3rem;
     line-height: 2;
-    letter-spacing: 0.81rem;
+    letter-spacing: 0.27em;
   }
 }
 
@@ -476,7 +476,7 @@ h4 {
 .about__catch h2 {
   font-size: 3rem;
   font-weight: 400;
-  letter-spacing: 0.45rem;
+  letter-spacing: 0.15em;
   line-height: 0.6;
   margin: 0;
 }
@@ -506,7 +506,7 @@ h4 {
 .about__text p {
   font-size: 1.7rem;
   margin: 0;
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.47em;
   line-height: 2.8333333333;
   font-weight: 400;
 }

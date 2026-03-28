@@ -503,7 +503,7 @@ h4 {
       font-size: 4rem;
       font-weight: 600;
       line-height: calc(70 / 40);
-      letter-spacing: calc(4rem * 0.3);
+      letter-spacing: 0.3em;
       color: $font-color02;
       text-shadow: 0.4rem 0.2rem 0.2rem rgba(0, 0, 0, 1);
       margin-top: 2rem;
@@ -512,7 +512,7 @@ h4 {
       @include sp {
         font-size: 3rem;
         line-height: calc(60 / 30);
-        letter-spacing: calc(3rem * 0.27);
+        letter-spacing: 0.27em;
       }
     }
   }
@@ -561,7 +561,7 @@ h4 {
     h2 {
       font-size: 3rem;
       font-weight: 400;
-      letter-spacing: 0.45rem;
+      letter-spacing: 0.15em;
       line-height: 0.6;
       margin: 0;
       
@@ -590,7 +590,7 @@ h4 {
     p {
       font-size: 1.7rem;
       margin: 0;
-      letter-spacing: 0.8rem;
+      letter-spacing: 0.47em;
       line-height: calc(51 / 18);
       font-weight: 400;
       
