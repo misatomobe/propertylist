@@ -515,6 +515,18 @@ h4 {
         letter-spacing: 0.27em;
       }
     }
+    .mv_pc-br {
+      display: block;
+      @include sp {
+        display: none;
+      }
+    }
+    .mv_sp-br {
+      display: none;
+      @include sp {
+        display: block;
+      }
+    }
   }
 // =====================================
 // about

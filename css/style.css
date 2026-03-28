@@ -432,6 +432,22 @@ h4 {
     letter-spacing: 0.27em;
   }
 }
+.mv .mv_pc-br {
+  display: block;
+}
+@media (max-width: 767px) {
+  .mv .mv_pc-br {
+    display: none;
+  }
+}
+.mv .mv_sp-br {
+  display: none;
+}
+@media (max-width: 767px) {
+  .mv .mv_sp-br {
+    display: block;
+  }
+}
 
 .about {
   position: relative;
