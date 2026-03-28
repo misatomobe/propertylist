@@ -513,7 +513,7 @@ h4 {
 @media (max-width: 767px) {
   .about__text p {
     font-size: 1.5rem;
-    line-height: 2.6rem;
+    line-height: 1.7;
     letter-spacing: 0.35em;
   }
 }
