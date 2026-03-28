@@ -1217,6 +1217,7 @@ h4 {
 }
 
 .contact {
+  background-color: rgba(77, 150, 0, 0.15);
   padding: 8rem 0 8rem;
 }
 @media (max-width: 767px) {
