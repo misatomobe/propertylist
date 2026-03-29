@@ -1429,6 +1429,7 @@ h4 {
   position: relative;
   font-size: 1.8rem;
   line-height: 1.3888888889;
+  cursor: pointer;
 }
 .contact .form-select select {
   align-items: center;
