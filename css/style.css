@@ -1347,6 +1347,9 @@ h4 {
 .contact__form-block dd .form-textarea {
   height: 20rem;
   padding: 2rem;
+  line-height: 1.6;
+  word-break: break-all;
+  resize: none;
 }
 .contact .form-flex {
   display: flex;
