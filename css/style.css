@@ -1781,6 +1781,15 @@ h4 {
   }
 }
 
+.top-back-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+.top-back-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
 .top-back-btn__icon {
   width: 6.8rem;
   height: 6.8rem;
@@ -1800,11 +1809,11 @@ h4 {
     right: 2rem;
   }
 }
-.top-back-btn__icon__icon {
+.top-back-btn__icon img {
   width: 2.3rem;
 }
 @media (max-width: 767px) {
-  .top-back-btn__icon__icon {
+  .top-back-btn__icon img {
     width: 1.7rem;
   }
 }

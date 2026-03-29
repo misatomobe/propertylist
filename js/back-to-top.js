@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const backToTop = document.getElementById('back-to-top');
+
+  const backToTop = document.querySelector('.top-back-btn');
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
@@ -9,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  backToTop.addEventListener('click', () => {
+  backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
