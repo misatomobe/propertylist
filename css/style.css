@@ -1233,6 +1233,12 @@ h4 {
 .company .company-item__tel a {
   margin-left: 0.5rem;
 }
+@media (min-width: 768px) {
+  .company .company-item__tel a {
+    pointer-events: none;
+    cursor: default;
+  }
+}
 .company .company-item__mail {
   margin-top: 1.8rem;
 }
