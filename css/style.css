@@ -1596,7 +1596,7 @@ h4 {
   display: grid;
   place-content: center;
   border: 0.1rem solid #4D9600;
-  transition: all 0.4s;
+  transition: background-color 0.4s, color 0.4s;
 }
 @media (max-width: 767px) {
   .contact .submit-btn button {
