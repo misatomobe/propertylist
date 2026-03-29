@@ -1791,7 +1791,20 @@ h4 {
   position: fixed;
   bottom: 6rem;
   right: 6rem;
+  z-index: 999;
+}
+@media (max-width: 767px) {
+  .top-back-btn__icon {
+    width: 5rem;
+    height: 5rem;
+    right: 2rem;
+  }
 }
 .top-back-btn__icon__icon {
   width: 2.3rem;
+}
+@media (max-width: 767px) {
+  .top-back-btn__icon__icon {
+    width: 1.7rem;
+  }
 }

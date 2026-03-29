@@ -1858,8 +1858,17 @@ h4 {
     position: fixed;
     bottom: 6rem;
     right: 6rem;
+    z-index: 999;
+    @include sp {
+      width: 5rem;
+      height: 5rem;
+      right: 2rem;
+    }
     &__icon {
       width: 2.3rem;
+      @include sp {
+        width: 1.7rem;
+      }
     }
   }
 }
