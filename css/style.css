@@ -610,6 +610,14 @@ h4 {
     margin-bottom: 0;
   }
 }
+.service__item .service__pc-br {
+  display: block;
+}
+@media (max-width: 767px) {
+  .service__item .service__pc-br {
+    display: none;
+  }
+}
 .service__item__image-area {
   max-width: 65.2%;
   height: auto;
@@ -745,7 +753,7 @@ h4 {
   left: 0;
 }
 .service__items > .service__item:nth-of-type(even) .service__item__capture {
-  text-align: left;
+  text-align: right;
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
   padding: 5rem 6.8rem 4.2rem 2rem;

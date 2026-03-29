@@ -693,6 +693,14 @@ h4 {
         }
       }
 
+      .service__pc-br {
+        display: block;
+        @include sp {
+          display: none;
+        }
+      }
+    
+
     &__image-area {
       max-width: 65.2%;
       height: auto;
@@ -826,7 +834,7 @@ h4 {
       }
 
       .service__item__capture {
-        text-align: left;
+        text-align: right;
       }
 
       .service__item__text-area {
