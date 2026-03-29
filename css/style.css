@@ -1241,6 +1241,12 @@ h4 {
     font-size: 1.3rem;
   }
 }
+.company .company-item__mail a {
+  transition: opacity 0.3s;
+}
+.company .company-item__mail a:hover {
+  opacity: 0.7;
+}
 
 .contact {
   background-color: rgba(77, 150, 0, 0.15);
