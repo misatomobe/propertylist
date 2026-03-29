@@ -1242,7 +1242,7 @@ h4 {
   }
 }
 .company .company-item__mail a {
-  transition: opacity 0.3s;
+  transition: opacity 0.4s;
 }
 .company .company-item__mail a:hover {
   opacity: 0.7;
