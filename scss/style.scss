@@ -1474,6 +1474,7 @@ h4 {
     line-height: calc(25 / 18);
     .radio-item {
       display: flex;
+      cursor: pointer;
       input[type="radio"] {
         & + span {
           display: block;
@@ -1556,6 +1557,7 @@ h4 {
     .checkbox-item {
       display: flex;
       width: 25%;
+      cursor: pointer;
       @include sp {
         width: 50%;
       }

@@ -1387,6 +1387,7 @@ h4 {
 }
 .contact .form-radio .radio-item {
   display: flex;
+  cursor: pointer;
 }
 .contact .form-radio .radio-item input[type=radio] + span {
   display: block;
@@ -1471,6 +1472,7 @@ h4 {
 .contact .form-checkbox .checkbox-item {
   display: flex;
   width: 25%;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .contact .form-checkbox .checkbox-item {
