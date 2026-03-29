@@ -1520,9 +1520,9 @@ h4 {
     position: relative;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
-    cursor: pointer;
     select {
       align-items: center;
+      cursor: pointer;
     }
     @include sp {
       font-size: 1.6rem;
