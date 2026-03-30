@@ -1387,7 +1387,7 @@ h4 {
   &__contents {
   margin-top: 3.5rem;
   @include sp {
-    margin-top: 3.7rem;
+    margin-top: 3.4rem;
   }
 }
 &__text {
@@ -1549,7 +1549,7 @@ h4 {
     &::before {
       content: '';
       width: 2rem;
-      height: 1.6rem;
+      height: 1.2rem;
       background: $main-color;
       position: absolute;
       top: 50%;

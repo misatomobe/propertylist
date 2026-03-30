@@ -1300,7 +1300,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .contact__contents {
-    margin-top: 3.7rem;
+    margin-top: 3.4rem;
   }
 }
 .contact__text p {
@@ -1468,7 +1468,7 @@ h4 {
 .contact .form-select::before {
   content: "";
   width: 2rem;
-  height: 1.6rem;
+  height: 1.2rem;
   background: #4D9600;
   position: absolute;
   top: 50%;
