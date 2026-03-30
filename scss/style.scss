@@ -174,7 +174,7 @@ a {
     font-weight: 400;
     color: $main-color;
     letter-spacing: 0.3em;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
   }
   
   p {
@@ -655,7 +655,7 @@ h4 {
     margin-top: 6.8rem;
 
    @include sp {
-      margin-top: 3.8rem;
+      margin-top: 3.6rem;
     }
   }
 
@@ -769,11 +769,11 @@ h4 {
       @include sp {
         position: static;
         width: 100%;
-        margin-top: 0.5rem;
+        margin-top: 0.6rem;
         aspect-ratio: auto;
         height: auto;
         z-index: auto;
-        padding: 2rem 2rem 1.1rem;
+        padding: 2rem 2rem 1rem;
         background-color: $main-color;
       }
     }
@@ -839,6 +839,9 @@ h4 {
 
       .service__item__capture {
         text-align: right;
+        @include sp {
+          text-align: left;
+        }
       }
 
       .service__item__text-area {
@@ -849,7 +852,7 @@ h4 {
         }
 
         @include sp {
-          padding: 2rem 2rem 1.1rem;
+          padding: 2rem 2rem 1rem;
         }
       }
     }
@@ -1089,13 +1092,13 @@ h4 {
   }
   
   &_contents {
-    margin-top: 6.6rem;
+    margin-top: 6.3rem;
     display: flex;
     justify-content: space-between;
     gap: 4rem;
     
     @include sp {
-      margin-top: 3.8rem;
+      margin-top: 3.5rem;
       flex-direction: column;
       row-gap: 5rem;
     }
@@ -1134,6 +1137,9 @@ h4 {
   }
   &__contents {
     padding: 1.1rem 2rem 2.4rem;
+    @include sp {
+      padding: 1.1rem 2rem 2.5rem;
+    }
   }
   .news-block-item {
     padding: 1.2rem 0;
@@ -1243,7 +1249,7 @@ h4 {
     position: relative;
     @include sp {
       flex-direction: column;
-      row-gap: 1.9rem;
+      row-gap: 1.8rem;
     }
 
     &::before {
@@ -1284,7 +1290,7 @@ h4 {
     &__info {
       flex: 1;
       width: 50%;
-      margin-top: 21.6%;
+      margin-top: 21%;
       padding: 5.5% 4.5% 5.5% 4.5%;
       font-weight: 600;
       color: $font-color02;
@@ -1703,7 +1709,7 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 33.8rem;
+    height: 34rem;
     padding: 8rem 0;
     text-align: center;
     width: 100%;
