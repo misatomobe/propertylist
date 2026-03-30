@@ -1291,7 +1291,7 @@ h4 {
       flex: 1;
       width: 50%;
       margin-top: 21%;
-      padding: 5.5% 4.5% 5.5% 4.5%;
+      padding: 5.7% 4.5% 5.5% 4.5%;
       font-weight: 600;
       color: $font-color02;
       position: relative;
@@ -1352,6 +1352,8 @@ h4 {
     &__mail {
       margin-top: 1.8rem;
       p {
+        display: flex;
+        gap: 1rem;
         @include tab-only {
           font-size: 1.3rem;
         }
@@ -1396,7 +1398,7 @@ h4 {
   }
 }
 &__form-block {
-  margin-top: 7.2rem;
+  margin-top: 7rem;
   @include sp {
     margin-top: 4rem;
   }
