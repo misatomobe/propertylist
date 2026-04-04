@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: "Yu Mincho", "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
+  font-family: "Noto Serif JP", "游明朝", YuMincho, serif;
   font-size: 1.6rem;
   line-height: 1.5625;
   font-weight: 500;
