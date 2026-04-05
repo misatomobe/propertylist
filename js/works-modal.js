@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modalCaption.textContent = img.alt;
 
       modal.classList.add('is-active');
+      updateTopBtn();
     });
   });
 
@@ -30,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalImg.src = '';
     modalCaption.textContent = '';
+
+    updateTopBtn();
   }
 
   modalClose.addEventListener('click', closeModal);
