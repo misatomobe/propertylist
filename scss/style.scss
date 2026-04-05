@@ -1839,6 +1839,7 @@ h4 {
 // トップに戻るボタン
 // =====================================
 .top-back-btn {
+  position: fixed;
   opacity: 0;
   visibility: hidden;
   transform: translateY(30px);
@@ -1860,7 +1861,6 @@ h4 {
     border-radius: 50%;
     display: grid;
     place-content: center;
-    position: fixed;
     bottom: 6rem;
     right: 6rem;
     z-index: 999;
