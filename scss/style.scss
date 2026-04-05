@@ -164,8 +164,8 @@ a {
 
 .fade-up {
   opacity: 0;
-  transform: transLateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: transLateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .fade-up.is-active {
