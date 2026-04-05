@@ -125,6 +125,17 @@ a {
   cursor: pointer;
 }
 
+.fade-up {
+  opacity: 0;
+  transform: transLateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .common-title {
   text-align: center;
 }
@@ -205,7 +216,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .header__inner {
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 }
 .header__logo {
@@ -342,7 +353,7 @@ h4 {
   list-style: none;
   font-size: 1.8rem;
   line-height: 1.8333333333;
-  font-weight: 600;
+  font-weight: 500;
 }
 .sp-nav__lists a {
   color: #fff;
@@ -407,7 +418,7 @@ h4 {
 }
 .mv h2 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.75;
   letter-spacing: 0.3em;
   color: #fff;
@@ -546,7 +557,7 @@ h4 {
   }
 }
 .service {
-  padding: 8rem 8rem 2.9rem 8rem;
+  padding: 8rem 3rem 2.9rem;
 }
 @media (max-width: 767px) {
   .service {
@@ -682,7 +693,7 @@ h4 {
 .service__item__title h3 {
   font-size: 2.5rem;
   line-height: 1.32;
-  font-weight: 600;
+  font-weight: 500;
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .service__item__title h3 {
@@ -710,7 +721,7 @@ h4 {
   }
 }
 .service__item__text p {
-  font-weight: 600;
+  font-weight: 500;
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .service__item__text p {
@@ -777,7 +788,7 @@ h4 {
   }
 }
 .works {
-  padding: 8rem 8rem 9.8rem;
+  padding: 8rem 3rem 9.8rem;
 }
 @media (max-width: 767px) {
   .works {
@@ -967,7 +978,7 @@ h4 {
 }
 
 .news {
-  padding: 8rem;
+  padding: 8rem 3rem;
 }
 @media (max-width: 767px) {
   .news {
@@ -1017,7 +1028,7 @@ h4 {
 .news-block__title h3 {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 600;
+  font-weight: 500;
 }
 .news-block__contents {
   padding: 1.1rem 2rem 2.4rem;
@@ -1070,7 +1081,7 @@ h4 {
 .news-block__link a {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 600;
+  font-weight: 500;
   color: #55A500;
   display: block;
   margin-right: 3.3rem;
@@ -1179,7 +1190,7 @@ h4 {
   width: 50%;
   margin-top: 21%;
   padding: 5.7% 4.5% 5.5% 4.5%;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
   position: relative;
   z-index: 1;
@@ -1259,11 +1270,11 @@ h4 {
 
 .contact {
   background-color: rgba(77, 150, 0, 0.15);
-  padding: 8rem 0 8rem;
+  padding: 8rem 0;
 }
 @media (max-width: 767px) {
   .contact {
-    padding: 5rem 0 5rem;
+    padding: 5rem 0;
   }
 }
 .contact .inner {
@@ -1594,7 +1605,7 @@ h4 {
   background: #4D9600;
   font-size: 2rem;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   display: grid;
   place-content: center;
   border: 0.1rem solid #4D9600;

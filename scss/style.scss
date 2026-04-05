@@ -162,6 +162,17 @@ a {
   cursor: pointer;
 }
 
+.fade-up {
+  opacity: 0;
+  transform: transLateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 // common-title
 .common-title {
@@ -247,7 +258,7 @@ h4 {
     }
 
     @include sp {
-      padding: 0 2rem;
+      padding: 0 3rem;
     }
   }
 
@@ -411,7 +422,7 @@ h4 {
     list-style: none;
     font-size: 1.8rem;
     line-height: calc(33 /18);
-    font-weight: 600;
+    font-weight: 500;
     
     a {
       color: $font-color02;
@@ -488,7 +499,7 @@ h4 {
   
   h2 {
       font-size: 4rem;
-      font-weight: 600;
+      font-weight: 500;
       line-height: calc(70 / 40);
       letter-spacing: 0.3em;
       color: $font-color02;
@@ -626,7 +637,7 @@ h4 {
 // service
 // =====================================
 .service {
-  padding: 8rem 8rem 2.9rem 8rem;
+  padding: 8rem 3rem 2.9rem;
   @include sp {
      padding: 5rem 3rem;
      }
@@ -764,7 +775,7 @@ h4 {
       h3 {
         font-size: 2.5rem;
         line-height: calc(33 / 25);
-        font-weight: 600;
+        font-weight: 500;
 
         @include tab-only {
           font-size: 1.7rem;
@@ -788,7 +799,7 @@ h4 {
       }
       
       p {
-        font-weight: 600;
+        font-weight: 500;
 
         @include tab-only {
            font-size: 1.3rem;
@@ -862,7 +873,7 @@ h4 {
 // works
 // =====================================
 .works {
-  padding: 8rem 8rem 9.8rem;
+  padding: 8rem 3rem 9.8rem;
 
   @include sp {
     padding: 5rem 3rem 4.1rem;
@@ -1066,7 +1077,7 @@ h4 {
 // news
 // =====================================
 .news {
-  padding: 8rem;
+  padding: 8rem 3rem;
   @include sp {
     padding: 5rem 3rem;
   }
@@ -1112,7 +1123,7 @@ h4 {
     h3 {
       font-size: 2rem;
       line-height: calc(33 / 20);
-      font-weight: 600;
+      font-weight: 500;
     }
   }
   &__contents {
@@ -1164,7 +1175,7 @@ h4 {
   a {
     font-size: 2rem;
     line-height: calc(33 / 20);
-    font-weight: 600;
+    font-weight: 500;
     color: $border-color-green;
     display: block;
     margin-right: 3.3rem;
@@ -1270,7 +1281,7 @@ h4 {
       width: 50%;
       margin-top: 21%;
       padding: 5.7% 4.5% 5.5% 4.5%;
-      font-weight: 600;
+      font-weight: 500;
       color: $font-color02;
       position: relative;
       z-index: 1;
@@ -1351,9 +1362,9 @@ h4 {
 // =====================================
 .contact {
   background-color: rgba(77, 150, 0, 0.15);
-  padding: 8rem 0 8rem;
+  padding: 8rem 0;
   @include sp {
-    padding: 5rem 0 5rem;
+    padding: 5rem 0;
   }
   .inner {
     width: 100%;
@@ -1662,7 +1673,7 @@ h4 {
       background: $main-color;
       font-size: 2rem;
       color: #fff;
-      font-weight: 600;
+      font-weight: 500;
       display: grid;
       place-content: center;
       border: 0.1rem solid $main-color;
