@@ -11,7 +11,7 @@ body {
   font-family: "Noto Serif JP", "游明朝", YuMincho, serif;
   font-size: 1.6rem;
   line-height: 1.5625;
-  font-weight: 500;
+  font-weight: 400;
   color: #000;
   letter-spacing: 0;
 }
@@ -131,7 +131,6 @@ a {
 .common-title h2 {
   font-size: 3rem;
   line-height: 1.1;
-  font-weight: 400;
   color: #4D9600;
   letter-spacing: 0.3em;
   margin-bottom: 0.8rem;
@@ -139,7 +138,6 @@ a {
 .common-title p {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 400;
   color: #000;
   letter-spacing: 0.3em;
 }
@@ -229,7 +227,6 @@ h4 {
 .header__logo a {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 500;
   display: flex;
   align-items: center;
   transition: all 0.4s ease;
@@ -246,7 +243,6 @@ h4 {
 .header__logo-text {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 400;
   color: #fff;
 }
 .header__nav ul {
@@ -261,7 +257,6 @@ h4 {
   align-items: center;
   font-size: 1.8rem;
   line-height: 1;
-  font-weight: 500;
   color: #fff;
   text-decoration: none;
   transition: all 0.4s ease;
@@ -357,7 +352,7 @@ h4 {
   list-style: none;
   font-size: 1.8rem;
   line-height: 1.8333333333;
-  font-weight: 400;
+  font-weight: 600;
 }
 .sp-nav__lists a {
   color: #fff;
@@ -496,7 +491,6 @@ h4 {
 }
 .about__catch h2 {
   font-size: 3rem;
-  font-weight: 400;
   letter-spacing: 0.15em;
   line-height: 0.6;
   margin: 0;
@@ -529,7 +523,6 @@ h4 {
   margin: 0;
   letter-spacing: 0.47em;
   line-height: 2.8333333333;
-  font-weight: 400;
 }
 @media (max-width: 767px) {
   .about__text p {
@@ -870,7 +863,7 @@ h4 {
   transition: opacity 0.4s ease;
 }
 
-.works-item__title h4 {
+.works-item__title h3 {
   transition: color 0.4s;
 }
 
@@ -1058,7 +1051,6 @@ h4 {
 .news-block .news-block-item__date time {
   font-size: 1.6rem;
   line-height: 2.0625;
-  font-weight: 500;
   display: inline-block;
   margin-top: 0.2rem;
 }
@@ -1069,7 +1061,6 @@ h4 {
 .news-block .news-block-item__title h4 {
   font-size: 1.8rem;
   line-height: 1.3888888889;
-  font-weight: 500;
 }
 @media (max-width: 767px) {
   .news-block .news-block-item__title h4 {
@@ -1305,7 +1296,6 @@ h4 {
 .contact__text p {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 500;
 }
 .contact__form-block {
   margin-top: 7rem;
@@ -1660,20 +1650,17 @@ h4 {
 .footer__logo a {
   cursor: pointer;
   transition: opacity 0.4s ease;
-}
-.footer__logo a:hover {
-  opacity: 0.7;
-}
-.footer__logo h2 {
   display: inline-block;
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 500;
 }
 @media (max-width: 767px) {
-  .footer__logo h2 {
+  .footer__logo a {
     margin-bottom: 1.8rem;
   }
+}
+.footer__logo a:hover {
+  opacity: 0.7;
 }
 .footer__nav {
   margin-top: 2.8rem;
@@ -1711,7 +1698,6 @@ h4 {
 .footer__nav ul li a {
   font-size: 1.8rem;
   line-height: 1.8333333333;
-  font-weight: 500;
   color: #000;
   transition: opacity 0.4s ease;
   white-space: normal;
@@ -1785,7 +1771,6 @@ h4 {
 .footer__copyright p {
   font-size: 2rem;
   line-height: 1.65;
-  font-weight: 500;
 }
 @media (max-width: 767px) {
   .footer__copyright p {
