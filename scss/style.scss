@@ -70,7 +70,6 @@ body.is-fixed {
   }
 }
 
-
 // =====================================
 // common（共通設定）
 // =====================================
@@ -128,23 +127,23 @@ button:hover {
 
 // sp
 @media (max-width: 765px) {
-  .pc-br { display: none; }
-  .tb-br { display: none; }
-  .sp-br { display: inline; }
+  .sp-br {
+    display: inline;
+  }
 }
 
 // タブレット
 @media (min-width: 766px) and (max-width: 1079px) {
-  .pc-br { display: none; }
-  .tb-br { display: inline; }
-  .sp-br { display: none; }
+  .tb-br { 
+    display: inline;
+  }
 }
 
 // pc
 @media (min-width: 1080px) {
-  .pc-br { display: inline; }
-  .tb-br { display: none; }
-  .sp-br { display: none; }
+  .pc-br { 
+    display: inline;
+  }
 }
 
 .no-wrap {
