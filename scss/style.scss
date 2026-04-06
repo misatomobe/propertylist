@@ -258,7 +258,7 @@ h4 {
     }
 
     @include sp {
-      padding: 0 3rem;
+      padding: 0 2rem;
     }
   }
 
@@ -365,15 +365,16 @@ h4 {
       border-radius: 10px;     /* ← 丸みをつける */
       transition: 0.3s;
     }
-
+    // 中央
     .hamburger-line {
-      top: 42%;
+      top: 50%;
+      transform: translateY(-50%);
     }
-
+    // 上
     .hamburger-line::before {
       top: -1.2rem;
     }
-
+    // 下
     .hamburger-line::after {
       top: 1.2rem;
     }
@@ -384,12 +385,12 @@ h4 {
         background-color: transparent;
       }
       .hamburger-line::before {
-        transform: rotate(45deg) translateX(-0.1rem) translateY(0.1rem);
-        top: 0.2rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
       }
       .hamburger-line::after {
-        transform: rotate(-45deg) translateX(-0.1rem) translateY(-0.1rem);
-        top: 0.2rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
       }
     }
   }
@@ -427,14 +428,8 @@ h4 {
       
       &:hover {
         background-color: $font-color;
-        color: $font-color02;
         opacity: 0.7;
-        @include sp {
-          background: #000;
-          color: #fff;
-        }
       }
-
     }
   }
   
@@ -444,8 +439,6 @@ h4 {
     transform: translateX(0);
   }
 }
-
-
 // =====================================
 // MV
 // =====================================
