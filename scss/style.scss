@@ -531,7 +531,7 @@ h4 {
     @include sp {
       flex-direction: column;
       align-self: center;
-      padding-top: 5rem;
+      justify-content: center;
       display: flex;
     }
   }
@@ -605,7 +605,6 @@ h4 {
         line-height: 1.6;
         letter-spacing: 0.25em;
       }
-
       @media (max-width: 370px) {
         font-size: 1.2rem;
       }
@@ -618,7 +617,11 @@ h4 {
   max-width: 1080px;
   width: 100%;
   margin: 0 auto;
-
+  @include tab-only {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+  }
   @include sp {
     padding-left: 0;
   }

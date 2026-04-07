@@ -439,7 +439,7 @@ h4 {
   .about__contents {
     flex-direction: column;
     align-self: center;
-    padding-top: 5rem;
+    justify-content: center;
     display: flex;
   }
 }
@@ -534,6 +534,13 @@ h4 {
   max-width: 1080px;
   width: 100%;
   margin: 0 auto;
+}
+@media (min-width: 768px) and (max-width: 1030px) {
+  .about__contents__inner {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+  }
 }
 @media (max-width: 767px) {
   .about__contents__inner {
