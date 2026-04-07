@@ -449,7 +449,7 @@ h4 {
 
   &::after {
     content: "";
-    background-color: #00000026;
+    background-color: rgba(0, 0, 0, 0.15);
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -496,7 +496,7 @@ h4 {
       @include sp {
         font-size: 3rem;
         line-height: calc(60 / 30);
-        letter-spacing: 0.27em;
+        margin-top: 1.4rem;
       }
     }
     .mv_pc-br {

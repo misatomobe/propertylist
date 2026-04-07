@@ -359,7 +359,7 @@ h4 {
 }
 .mv::after {
   content: "";
-  background-color: rgba(0, 0, 0, 0.1490196078);
+  background-color: rgba(0, 0, 0, 0.15);
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -402,7 +402,7 @@ h4 {
   .mv h2 {
     font-size: 3rem;
     line-height: 2;
-    letter-spacing: 0.27em;
+    margin-top: 1.4rem;
   }
 }
 .mv .mv_pc-br {
