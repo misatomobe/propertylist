@@ -453,6 +453,11 @@ h4 {
   gap: 4rem;
   margin: 0;
 }
+@media (min-width: 768px) and (max-width: 1030px) {
+  .about__catch {
+    gap: 3rem;
+  }
+}
 @media (max-width: 767px) {
   .about__catch {
     writing-mode: horizontal-tb;
@@ -467,6 +472,13 @@ h4 {
   letter-spacing: 0.15em;
   line-height: 1.18;
   margin: 0;
+}
+@media (min-width: 768px) and (max-width: 1030px) {
+  .about__catch h2 {
+    font-size: 2.8rem;
+    letter-spacing: 0.15em;
+    line-height: 1.18;
+  }
 }
 @media (max-width: 767px) {
   .about__catch h2 {
@@ -496,6 +508,13 @@ h4 {
   margin: 0;
   letter-spacing: 0.4em;
   line-height: 2.68;
+}
+@media (min-width: 768px) and (max-width: 1030px) {
+  .about__text p {
+    font-size: 1.7rem;
+    letter-spacing: 0.4em;
+    line-height: 2.4;
+  }
 }
 @media (max-width: 767px) {
   .about__text p {
