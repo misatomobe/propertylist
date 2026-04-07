@@ -563,7 +563,7 @@ h4 {
   }
 }
 .service__contents {
-  margin-top: 6.8rem;
+  margin-top: 6.7rem;
 }
 @media (max-width: 767px) {
   .service__contents {
@@ -647,7 +647,7 @@ h4 {
   }
 }
 .service__item__capture {
-  margin-top: 2rem;
+  margin-top: 1.8rem;
   text-align: left;
   z-index: 3;
 }
@@ -663,7 +663,7 @@ h4 {
 .service__item__text-area {
   flex: 1;
   margin-top: 14.6rem;
-  padding: 5rem 0 4.2rem 6.8rem;
+  padding: 4.6rem 0 4.2rem 6.8rem;
   color: #fff;
   position: relative;
   z-index: 2;
@@ -701,6 +701,7 @@ h4 {
 @media (max-width: 767px) {
   .service__item__title h3 {
     font-size: 2rem;
+    line-height: 1.1363636364;
     margin-bottom: 1.4rem;
   }
 }
@@ -758,7 +759,7 @@ h4 {
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-  padding: 5rem 6.8rem 4.2rem 2rem;
+  padding: 4.6rem 0 4.2rem 4.1rem;
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {
