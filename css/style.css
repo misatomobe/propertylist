@@ -450,7 +450,7 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 4rem;
   margin: 0;
 }
 @media (max-width: 767px) {
@@ -465,7 +465,7 @@ h4 {
 .about__catch h2 {
   font-size: 3rem;
   letter-spacing: 0.15em;
-  line-height: 0.6;
+  line-height: 1.18;
   margin: 0;
 }
 @media (max-width: 767px) {
@@ -492,16 +492,16 @@ h4 {
   }
 }
 .about__text p {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   margin: 0;
-  letter-spacing: 0.47em;
-  line-height: 2.8333333333;
+  letter-spacing: 0.4em;
+  line-height: 2.68;
 }
 @media (max-width: 767px) {
   .about__text p {
-    font-size: 1.5rem;
-    line-height: 1.7;
-    letter-spacing: 0.35em;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 0.25em;
   }
 }
 @media (max-width: 370px) {
