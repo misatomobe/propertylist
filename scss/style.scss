@@ -1810,13 +1810,13 @@ h4 {
     text-align: center;
     @include sp {
       height: 9.2rem;
+      padding-top: 0.2rem;
     }
     p {
       font-size: 2rem;
       line-height: calc(33 / 20);
       @include sp {
         line-height: calc(25 / 20);
-        padding-top: 0.2rem;
       }
     }
   }

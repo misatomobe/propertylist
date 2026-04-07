@@ -1739,6 +1739,7 @@ h4 {
 @media (max-width: 767px) {
   .footer__copyright {
     height: 9.2rem;
+    padding-top: 0.2rem;
   }
 }
 .footer__copyright p {
@@ -1748,7 +1749,6 @@ h4 {
 @media (max-width: 767px) {
   .footer__copyright p {
     line-height: 1.25;
-    padding-top: 0.2rem;
   }
 }
 
