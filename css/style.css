@@ -1599,6 +1599,7 @@ h4 {
   height: 5rem;
   background: #4D9600;
   font-size: 2rem;
+  line-height: 1.65;
   color: #fff;
   font-weight: 500;
   display: grid;
