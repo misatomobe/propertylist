@@ -1011,7 +1011,7 @@ h4 {
       display: flex;
       justify-content: center;
 
-      img {
+      .modal__img-inner {
         width: 42rem;
         height: 22rem;
         border: 5px solid $font-color02;
@@ -1865,12 +1865,13 @@ h4 {
     right: 6rem;
     z-index: 999;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    position: fixed;
     @include sp {
       width: 5rem;
       height: 5rem;
       right: 2rem;
     }
-    img {
+    &-img {
       width: 2.3rem;
       @include sp {
         width: 1.7rem;
