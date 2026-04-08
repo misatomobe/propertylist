@@ -924,9 +924,9 @@ h4 {
   @include sp {
     margin-top: 1rem;
   }
-  h4 {
+  h3 {
     @include tab-only {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
     }
   }
 }
@@ -1006,24 +1006,18 @@ h4 {
       margin: 0 auto;
       max-width: 100%;
     }
-
-    &-img-wrap {
-      display: flex;
-      justify-content: center;
-
-      modal__img-inner {
+    
+    &-modal__img-inner {
         width: 42rem;
         height: 22rem;
         border: 5px solid $font-color02;
         object-fit: cover;
         display: block;
-
         @include sp {
           width: 100%;
           height: auto;
         }
       }
-    }
 
     &-caption {
       margin-top: 0.9rem;
