@@ -99,7 +99,7 @@ button:hover {
 }
 @media (min-width: 768px) {
   .pc-only {
-    font-display: inline;
+    display: inline;
   }
 }
 
@@ -1080,7 +1080,7 @@ h4 {
 .news-block__link {
   display: flex;
   justify-content: flex-end;
-  margin: 1.8rem 0 0 1.7rem;
+  margin: 2.7rem 0 0.2rem 1.5rem;
 }
 .news-block__link a {
   font-size: 2rem;
@@ -1105,7 +1105,7 @@ h4 {
   height: 0.1rem;
   background-color: #55A500;
   position: absolute;
-  bottom: 0.4rem;
+  bottom: 0;
   left: 0;
 }
 .news-block__link a .arrow span {
