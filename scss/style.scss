@@ -150,6 +150,14 @@ button:hover {
   white-space: nowrap;
 }
 
+.pc-only {
+  display: none;
+  @include pc {
+    font-display: inline;
+  }
+}
+
+
 .sp-only {
   display: none;
   @include sp {
