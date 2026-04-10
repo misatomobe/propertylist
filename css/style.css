@@ -992,8 +992,8 @@ h4 {
 .news_contents {
   margin-top: 6.3rem;
   display: flex;
-  justify-content: space-between;
-  gap: 4rem;
+  justify-content: flex-start;
+  column-gap: 6.5%;
 }
 @media (max-width: 767px) {
   .news_contents {

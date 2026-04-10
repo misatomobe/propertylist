@@ -1087,8 +1087,8 @@ h4 {
   &_contents {
     margin-top: 6.3rem;
     display: flex;
-    justify-content: space-between;
-    gap: 4rem;
+    justify-content: flex-start;
+    column-gap: 6.5%;
     
     @include sp {
       margin-top: 3.5rem;
