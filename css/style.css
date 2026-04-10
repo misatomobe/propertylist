@@ -1075,13 +1075,18 @@ h4 {
 }
 .news-block__link a {
   font-size: 2rem;
-  line-height: 1.65;
+  line-height: 1;
   font-weight: 500;
   color: #55A500;
   display: block;
   margin-right: 3.3rem;
   position: relative;
   transition: transform 0.4s ease;
+}
+@media (max-width: 767px) {
+  .news-block__link a {
+    line-height: 1.65;
+  }
 }
 .news-block__link a:hover {
   transform: translateX(10px);

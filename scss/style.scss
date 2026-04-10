@@ -1168,13 +1168,16 @@ h4 {
   
   a {
     font-size: 2rem;
-    line-height: calc(33 / 20);
+    line-height: 1;
     font-weight: 500;
     color: $border-color-green;
     display: block;
     margin-right: 3.3rem;
     position: relative;
     transition: transform .4s ease;
+    @include sp {
+      line-height: calc(33 / 20);
+    }
     &:hover {
       transform: translateX(10px);
     }
