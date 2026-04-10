@@ -1157,12 +1157,12 @@ h4 {
       h4 {
         font-size: 1.8rem;
         line-height: calc(25 / 18);
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
         @include sp {
-          margin-top: 0;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
-          overflow: hidden;
+          margin-top: 0;         
         }
       }
     } 
