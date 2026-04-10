@@ -903,15 +903,11 @@ h4 {
   column-gap: 4.3%;
   width: 100%;
   justify-content: flex-start;
-}
-
-@include sp {
-  .works__items {
+  @include sp {
     flex-direction: column;
     row-gap: 2.2rem;
   }
 }
-
 .works__item {
   width: calc((100% - (4.3% * 3)) / 4);/* gap 3つ分を引いて4等分 */
   max-width: 100%;
@@ -1074,7 +1070,6 @@ h4 {
   }
 }
 
-
 // =====================================
 // news
 // =====================================
@@ -1089,7 +1084,6 @@ h4 {
     display: flex;
     justify-content: flex-start;
     column-gap: 6.5%;
-    
     @include sp {
       margin-top: 3.5rem;
       flex-direction: column;
@@ -1097,12 +1091,17 @@ h4 {
     }
   }
   &__blocks {
-    width: 100%;
+    width: calc((100% - 6.5%) / 2);// ← gap1つ分引いて2等分
     max-width: 43rem;
+    box-sizing: border-box;
+    flex: 0 0 auto;
     @include sp {
       flex-direction: column;
       row-gap: 5rem;
-      max-width: none;
+      width: 100%;
+      max-width: 100%;
+      flex: 0;
+      box-sizing: 0;
     }
   }
 }

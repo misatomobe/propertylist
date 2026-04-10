@@ -819,13 +819,13 @@ h4 {
   width: 100%;
   justify-content: flex-start;
 }
-
 @media (max-width: 767px) {
   .works__items {
     flex-direction: column;
     row-gap: 2.2rem;
   }
 }
+
 .works__item {
   width: 21.775%; /* gap 3つ分を引いて4等分 */
   max-width: 100%;
@@ -1003,14 +1003,19 @@ h4 {
   }
 }
 .news__blocks {
-  width: 100%;
+  width: 46.75%;
   max-width: 43rem;
+  box-sizing: border-box;
+  flex: 0 0 auto;
 }
 @media (max-width: 767px) {
   .news__blocks {
     flex-direction: column;
     row-gap: 5rem;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
+    flex: 0;
+    box-sizing: 0;
   }
 }
 
