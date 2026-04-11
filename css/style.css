@@ -1048,13 +1048,15 @@ h4 {
   }
 }
 .news-block .news-block-item {
-  padding: 1.2rem 0;
-  display: flex;
-  column-gap: 16%;
   border-bottom: 0.1rem solid #55A500;
 }
+.news-block .news-block-item a {
+  display: flex;
+  column-gap: 16%;
+  padding: 1.2rem 0;
+}
 @media (max-width: 767px) {
-  .news-block .news-block-item {
+  .news-block .news-block-item a {
     column-gap: 1.9rem;
   }
 }

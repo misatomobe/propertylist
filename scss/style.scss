@@ -1134,13 +1134,16 @@ h4 {
     }
   }
   .news-block-item {
-    padding: 1.2rem 0;
-    display: flex;
-    column-gap: 16%;
     border-bottom: 0.1rem solid $border-color-green;
-    @include sp {
+    a {
+      display: flex;
+      column-gap: 16%;
+      padding: 1.2rem 0;
+      @include sp {
       column-gap: 1.9rem;
     }
+  }
+
     &__date {
       time {
         font-size: 1.6rem;
@@ -1168,6 +1171,7 @@ h4 {
   } 
 }
 
+// moreボタン
 .news-block__link {
   display: flex;
   justify-content: flex-end;
