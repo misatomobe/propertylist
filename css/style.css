@@ -1091,17 +1091,17 @@ h4 {
 .news-block__link {
   display: flex;
   justify-content: flex-end;
-  margin: 2.7rem 0 0.2rem 1.5rem;
+  margin: 2.75rem 0 0.2rem 1.5rem;
 }
 .news-block__link a {
   font-size: 2rem;
   line-height: 1;
   font-weight: 500;
   color: #55A500;
-  display: block;
-  margin-right: 3.3rem;
+  display: inline-block;
   position: relative;
   transition: transform 0.4s ease;
+  padding-right: 3.2rem;
 }
 @media (max-width: 767px) {
   .news-block__link a {
