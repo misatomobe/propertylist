@@ -1091,7 +1091,7 @@ h4 {
 .news-block__link {
   display: flex;
   justify-content: flex-end;
-  margin: 2.75rem 0 0.2rem 1.5rem;
+  margin: 2.75rem 0 0.2rem 0;
 }
 .news-block__link a {
   font-size: 2rem;
