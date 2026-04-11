@@ -1345,10 +1345,16 @@ h4 {
       }
       a {
         margin-left: 0.5rem;
+        line-height: 1;
         @include pc {
           pointer-events: none;
           cursor: default;
         }
+      }
+      p {
+        display: flex;
+        align-items: flex-end;
+        line-height: 1;
       }
     }
 
