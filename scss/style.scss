@@ -1128,7 +1128,7 @@ h4 {
     }
   }
   &__contents {
-    padding: 1.1rem 2rem 2.4rem;
+    padding: 1.1rem 2rem 2.5rem;
     @include sp {
       padding: 1.1rem 2rem 2.5rem;
     }
@@ -1221,6 +1221,9 @@ h4 {
         top: -1.2rem;
         right: 1.2rem;
       }
+    }
+    &:hover {
+      transform: translateX(1rem);
     }
   }
 }
