@@ -1421,7 +1421,7 @@ h4 {
   }
   
   dl.checkbox-group {
-    margin-top: 4rem;
+    margin-top: 4.5rem;
     @include sp {
       margin-top: 2.3rem;
       dt {
@@ -1450,7 +1450,7 @@ h4 {
       line-height: calc(25 / 18);
       @include sp {
         font-size: 1.6rem;
-        line-height: calc(25 / 26);
+        line-height: calc(25 / 16);
       }
       &::placeholder {
         color: #A0A0A0;
