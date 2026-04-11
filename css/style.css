@@ -1091,7 +1091,7 @@ h4 {
 .news-block__link {
   display: flex;
   justify-content: flex-end;
-  margin: 2.7rem 0 0.4rem 0;
+  margin: 2.4rem 0 0.4rem 0;
 }
 .news-block__link a {
   font-size: 2rem;
@@ -1116,7 +1116,7 @@ h4 {
   height: 0.1rem;
   background-color: #55A500;
   position: absolute;
-  bottom: 0;
+  bottom: -0.2rem;
   left: 0;
 }
 .news-block__link a .arrow span {
@@ -1137,9 +1137,6 @@ h4 {
   position: absolute;
   top: -1.2rem;
   right: 1.2rem;
-}
-.news-block__link a:hover {
-  transform: translateX(1rem);
 }
 
 .company {

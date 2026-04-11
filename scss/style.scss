@@ -1179,7 +1179,7 @@ h4 {
 .news-block__link {
   display: flex;
   justify-content: flex-end;
-  margin: 2.7rem 0 0.4rem 0;
+  margin: 2.4rem 0 0.4rem 0;
   a {
     font-size: 2rem;
     line-height: 1;
@@ -1200,7 +1200,7 @@ h4 {
       height: 0.1rem;
       background-color: $border-color-green;
       position: absolute;
-      bottom: 0;
+      bottom: -0.2rem;
       left: 0;
       span {
         width: 1.7rem;
@@ -1221,9 +1221,6 @@ h4 {
         top: -1.2rem;
         right: 1.2rem;
       }
-    }
-    &:hover {
-      transform: translateX(1rem);
     }
   }
 }
