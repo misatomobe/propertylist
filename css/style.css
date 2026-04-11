@@ -1503,30 +1503,31 @@ h4 {
 .contact .form-checkbox {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 1.5rem;
+  gap: 1.5rem 2rem;
   font-size: 1.8rem;
   line-height: 1.3888888889;
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .contact .form-checkbox {
     font-size: 1.5rem;
+    gap: 1rem 2rem;
   }
 }
 @media (max-width: 767px) {
   .contact .form-checkbox {
     font-size: 1.6rem;
     line-height: 1.5625;
-    row-gap: 0.5rem;
   }
 }
 .contact .form-checkbox .checkbox-item {
-  display: flex;
-  width: 25%;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
+  flex: 0 0 calc(25% - 2rem);
 }
 @media (max-width: 767px) {
   .contact .form-checkbox .checkbox-item {
-    width: 50%;
+    flex: 0 0 calc(50% - 0.5rem);
   }
 }
 .contact .form-checkbox .checkbox-item input[type=checkbox] + span {

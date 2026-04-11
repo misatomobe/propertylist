@@ -1574,23 +1574,24 @@ h4 {
   .form-checkbox {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 1.5rem;
+    gap: 1.5rem 2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     @include tab-only {
       font-size: 1.5rem;
+      gap: 1rem 2rem;
     }
     @include sp {
       font-size: 1.6rem;
       line-height: calc(25 / 16);
-      row-gap: 0.5rem;
     }
     .checkbox-item {
-      display: flex;
-      width: 25%;
+      display: inline-flex;
+      align-items: center;
       cursor: pointer;
+      flex: 0 0 calc(25% - 2rem);
       @include sp {
-        width: 50%;
+        flex: 0 0 calc(50% - 0.5rem);
       }
       input[type="checkbox"] {
         & + span {
