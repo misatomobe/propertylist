@@ -1587,9 +1587,7 @@ h4 {
       font-size: 1.6rem;
       line-height: calc(25 / 16);
       gap: 0.6rem 0;
-
     }
-
 
     // クリック領域
     .checkbox-item {
@@ -1599,13 +1597,15 @@ h4 {
       min-width: 0;
       input[type="checkbox"] {
         & + span {
-          display: block;
+          display: inline-block;
           padding-left: 4rem;
           position: relative;
           white-space: nowrap;
           @include sp {
-            padding-left: 3rem;
+            padding-left: 2rem;
           }
+
+
           &::before {
             content: '';
             width: 2rem;
