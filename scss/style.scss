@@ -1572,28 +1572,22 @@ h4 {
   }
   // checkbox
   .form-checkbox {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     flex-wrap: wrap;
     gap: 0.5rem 2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     @include tab-only {
+      grid-template-columns: repeat(2, 1fr);
       font-size: 1.5rem;
-      gap: 0.6rem 1.6rem;
+      gap: 0.6rem 0;
     }
     @include sp {
+      grid-template-columns: repeat(2, 1fr);
       font-size: 1.6rem;
       line-height: calc(25 / 16);
-      gap: 0.6rem 1.6rem;
-    }
-    // レイアウト
-    .checkbox-col {
-      flex: 0 0 calc(25% - 2rem);
-      display: flex;
-      align-items: center;
-      @include sp {
-        flex: 0 0 calc(50% - 1.6rem)
-      }
+      gap: 0.6rem 0;
     }
 
     // クリック領域
