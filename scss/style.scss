@@ -1574,7 +1574,6 @@ h4 {
   .form-checkbox {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-    flex-wrap: wrap;
     gap: 0.5rem 2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
@@ -1588,18 +1587,22 @@ h4 {
       font-size: 1.6rem;
       line-height: calc(25 / 16);
       gap: 0.6rem 0;
+
     }
+
 
     // クリック領域
     .checkbox-item {
       display: inline-flex;
       align-items: center;
       cursor: pointer;
+      min-width: 0;
       input[type="checkbox"] {
         & + span {
           display: block;
           padding-left: 4rem;
           position: relative;
+          white-space: nowrap;
           @include sp {
             padding-left: 3rem;
           }

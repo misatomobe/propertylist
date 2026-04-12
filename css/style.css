@@ -1503,7 +1503,6 @@ h4 {
 .contact .form-checkbox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  flex-wrap: wrap;
   gap: 0.5rem 2rem;
   font-size: 1.8rem;
   line-height: 1.3888888889;
@@ -1527,11 +1526,13 @@ h4 {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  min-width: 0;
 }
 .contact .form-checkbox .checkbox-item input[type=checkbox] + span {
   display: block;
   padding-left: 4rem;
   position: relative;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .contact .form-checkbox .checkbox-item input[type=checkbox] + span {
