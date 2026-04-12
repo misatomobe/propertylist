@@ -1527,7 +1527,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .contact .form-checkbox .checkbox-col {
-    flex: 0 0 calc(50% - 1.5rem);
+    flex: 0 0 calc(50% - 1.6rem);
   }
 }
 .contact .form-checkbox .checkbox-item {
