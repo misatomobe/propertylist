@@ -1488,11 +1488,17 @@ h4 {
     dt {
       @include sp {
         width: 9rem;
+      }
+       @media screen and (max-width: 350px) {
+        width: 7rem;
       } 
     }
     .form-radio {
       @include sp {
         column-gap: 4rem;
+      }
+      @media screen and (max-width: 350px) {
+        column-gap: 2rem;
       }
     }
   }

@@ -1424,9 +1424,19 @@ h4 {
     width: 9rem;
   }
 }
+@media screen and (max-width: 350px) {
+  .contact .form-flex.sp-flex dt {
+    width: 7rem;
+  }
+}
 @media (max-width: 767px) {
   .contact .form-flex.sp-flex .form-radio {
     column-gap: 4rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .contact .form-flex.sp-flex .form-radio {
+    column-gap: 2rem;
   }
 }
 .contact .form-radio {
