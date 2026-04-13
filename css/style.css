@@ -1502,10 +1502,10 @@ h4 {
 }
 .contact .form-checkbox {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: 0.5rem 2rem;
   font-size: 1.8rem;
   line-height: 1.3888888889;
+  grid-template-columns: repeat(4, 1fr);
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .contact .form-checkbox {
@@ -1522,6 +1522,11 @@ h4 {
     gap: 0.6rem 0;
   }
 }
+@media screen and (max-width: 350px) {
+  .contact .form-checkbox {
+    font-size: 1.4rem;
+  }
+}
 .contact .form-checkbox .checkbox-item {
   display: inline-flex;
   align-items: center;
@@ -1534,9 +1539,19 @@ h4 {
   position: relative;
   white-space: nowrap;
 }
+@media (min-width: 768px) and (max-width: 1030px) {
+  .contact .form-checkbox .checkbox-item input[type=checkbox] + span {
+    padding-left: 3rem;
+  }
+}
 @media (max-width: 767px) {
   .contact .form-checkbox .checkbox-item input[type=checkbox] + span {
-    padding-left: 2rem;
+    padding-left: 3rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .contact .form-checkbox .checkbox-item input[type=checkbox] + span {
+    padding-left: 2.5rem;
   }
 }
 .contact .form-checkbox .checkbox-item input[type=checkbox] + span::before {

@@ -1573,10 +1573,11 @@ h4 {
   // checkbox
   .form-checkbox {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     gap: 0.5rem 2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
+    // pc(4列)
+    grid-template-columns: repeat(4, 1fr);
     @include tab-only {
       grid-template-columns: repeat(2, 1fr);
       font-size: 1.5rem;
@@ -1587,6 +1588,9 @@ h4 {
       font-size: 1.6rem;
       line-height: calc(25 / 16);
       gap: 0.6rem 0;
+    }
+     @media screen and (max-width: 350px) {
+      font-size: 1.4rem;
     }
 
     // クリック領域
@@ -1601,10 +1605,15 @@ h4 {
           padding-left: 4rem;
           position: relative;
           white-space: nowrap;
-          @include sp {
-            padding-left: 2rem;
+          @include tab-only {
+            padding-left: 3rem;
           }
-
+          @include sp {
+            padding-left: 3rem;
+          }
+          @media screen and (max-width: 350px) {
+            padding-left: 2.5rem;
+          }
 
           &::before {
             content: '';
