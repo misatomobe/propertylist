@@ -670,21 +670,8 @@ h4 {
   }
 
   &__item {
-    position: relative;
     display: flex;
-    align-items: flex-start;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 14.4rem;
-      right: 0;
-      width: 60%;
-      aspect-ratio: 2 / 1;
-      max-width: 50rem;
-      background-color: $main-color;
-      z-index: 1;
-    }
+    align-items: stretch;
 
     &:last-child {
       margin-bottom: 5rem;
@@ -706,10 +693,10 @@ h4 {
       }
     
     &__image-area {
-      max-width: 65.2%;
+      width: 65.2%;
       height: auto;
       position: relative;
-      z-index: 10;
+      z-index: 2;
 
       @include sp {
         width: 100%;
@@ -755,15 +742,15 @@ h4 {
 
     // 緑ボックス
     &__text-area {
-      flex: 1;
-      margin-top: 14.6rem;
-      padding: 4.6rem 0 4.2rem 6.8rem;
+      width: 30%;
+      padding: 1% 1% 1% 1%;
       color: $font-color02;
       position: relative;
-      z-index: 2;
+      z-index: 1;
+      background: $main-color;
 
       @include tab-only {
-        padding: 3.5rem 1rem 3.5rem 1rem;
+        padding: 8% 6%;
       }
 
       @include sp {
@@ -773,7 +760,6 @@ h4 {
         aspect-ratio: auto;
         height: auto;
         z-index: auto;
-        padding: 2rem 2rem 1rem;
         background-color: $main-color;
       }
     }
@@ -844,14 +830,14 @@ h4 {
       }
 
       .service__item__text-area {
-        padding: 4.6rem 0 4.2rem 4.1rem;
+        padding: 2%;
         
         @include tab-only {
-          padding: 3.5rem 1rem 3.5rem 1rem;
+          padding: 2%;
         }
 
         @include sp {
-          padding: 2rem 2rem 1rem;
+          padding: 2%;
         }
       }
     }
@@ -882,22 +868,16 @@ h4 {
 // =====================================
 .works {
   padding: 8rem 3rem 9.8rem;
-
   @include sp {
     padding: 5rem 3rem 4.1rem;
   }
 }
-
 .works__contents {
   margin-top: 7.3rem;
-}
-
-@include sp {
-  .works__contents {
+  @include sp {
     margin-top: 4.1rem;
   }
 }
-
 .works__items {
   display: flex;
   column-gap: 4.3%;
