@@ -1396,6 +1396,7 @@ h4 {
   line-height: 1.6;
   word-break: break-all;
   resize: none;
+  display: block;
 }
 .contact .form-flex {
   display: flex;
