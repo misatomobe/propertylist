@@ -1524,7 +1524,7 @@ h4 {
 }
 @media screen and (max-width: 350px) {
   .contact .form-checkbox {
-    font-size: 1.4rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .contact .form-checkbox .checkbox-item {
@@ -1551,7 +1551,7 @@ h4 {
 }
 @media screen and (max-width: 350px) {
   .contact .form-checkbox .checkbox-item input[type=checkbox] + span {
-    padding-left: 2.5rem;
+    padding-left: 2rem;
   }
 }
 .contact .form-checkbox .checkbox-item input[type=checkbox] + span::before {

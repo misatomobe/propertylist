@@ -1590,7 +1590,7 @@ h4 {
       gap: 0.6rem 0;
     }
      @media screen and (max-width: 350px) {
-      font-size: 1.4rem;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     // クリック領域
@@ -1612,7 +1612,7 @@ h4 {
             padding-left: 3rem;
           }
           @media screen and (max-width: 350px) {
-            padding-left: 2.5rem;
+            padding-left: 2rem;
           }
 
           &::before {
