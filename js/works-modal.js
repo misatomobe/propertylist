@@ -1,40 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modal-img');
-  const modalCaption = document.getElementById('modal-caption');
-  const modalClose = document.getElementById('modal-close');
-  const overlay = modal.querySelector('.modal__overlay');
   const modalLinks = document.querySelectorAll('.works-item__link');
 
   modalLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const img = link.querySelector('.js-modal-image');
+
+      const target = link.dataset.target;
+      const modal = document.getElementById(target);
 
       document.documentElement.classList.add('is-fixed');
       document.body.classList.add('is-fixed');
-
-      modalImg.src = img.dataset.modal;
-      modalImg.alt = img.alt;
-      modalCaption.textContent = img.alt;
 
       modal.classList.add('is-active');
       updateTopBtn();
     });
   });
 
-  function closeModal() {
-    modal.classList.remove('is-active');
+  //閉じる処理
+  const modals = document.querySelectorAll('.modal');
 
-    document.documentElement.classList.remove('is-fixed');
-    document.body.classList.remove('is-fixed');
+  modals.forEach(modal => {
+    const closeBtn = modal.querySelector('.modal__content-close');
+    const overlay = modal.querySelector('.modal__overlay');
 
-    modalImg.src = '';
-    modalCaption.textContent = '';
+    function closeModal() {
+      modal.classList.remove('is-active');
 
-    updateTopBtn();
-  }
+      document.documentElement.classList.remove('is-fixed');
+      document.body.classList.remove('is-fixed');
 
-  modalClose.addEventListener('click', closeModal);
-  overlay.addEventListener('click', closeModal);
+      updateTopBtn();
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+  });
 });
