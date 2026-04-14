@@ -959,17 +959,14 @@ h4 {
     padding: 3rem 1.5rem;
     text-align: left;
   }
-
   &.is-active {
     display: flex;
   }
-
   &__overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
   }
-
   &__content {
     position: relative;
     z-index: 2;
@@ -982,7 +979,6 @@ h4 {
     justify-content: flex-start;
     padding: 1.5rem;
     box-sizing: border-box;
-
     @include sp {
       width: 31.5rem;
       height: auto;
@@ -990,65 +986,71 @@ h4 {
       margin: 0 auto;
       max-width: 100%;
     }
-    
-    &-modal__img-inner {
+  }
+  &__img-inner {
         width: 42rem;
         height: 22rem;
         border: 5px solid $font-color02;
         object-fit: cover;
         display: block;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
         @include sp {
           width: 100%;
           height: auto;
         }
       }
-
-    &-caption {
-      margin-top: 0.9rem;
-      font-size: 1.6rem;
-      line-height: calc(25 / 16);
-      text-align: left;
-      width: 100%;
-
-      @include sp {
-        margin-top: 0.6rem;
-      }
-    }
-
-    &-close {
-      width: 1.5rem;
-      height: 1.5rem;
-      background: #fff;
-      position: absolute;
-      top: 0.7rem;
-      right: 0;
-      cursor: pointer;
-      padding: 0;
-      z-index: 3;
       
-      span {
-        display: block;
+      &__content-caption {
+        margin-top: 0.9rem;
+        font-size: 1.6rem;
+        line-height: calc(25 / 16);
+        text-align: left;
         width: 100%;
-        height: 0.1rem;
-        background-color: $font-color;
+        @include sp {
+          margin-top: 0.6rem;
+        }
+      }
+      &-content-close {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #fff;
         position: absolute;
         top: 0.7rem;
-        left: 0;
-      }
-
-      span:nth-of-type(1){
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-      span:nth-of-type(2) {
-        transform: translate(-50%, -50%) rotate(-45deg);
-      }
-
-      &:hover {
-        color: $main-color;
+        right: 0;
+        cursor: pointer;
+        padding: 0;
+        z-index: 3;
+        
+        span {
+          display: block;
+          width: 100%;
+          height: 0.1rem;
+          background-color: $font-color;
+          position: absolute;
+          top: 0.7rem;
+          left: 0;
+        }
+        
+        span:nth-of-type(1) {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        span:nth-of-type(2) {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        
+        &:hover {
+          color: $main-color;
+        }
       }
     }
-  }
-}
+    .is-fixed {
+      overflow: hidden;
+    }
+
 
 // =====================================
 // news

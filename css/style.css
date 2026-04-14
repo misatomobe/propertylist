@@ -913,15 +913,20 @@ h4 {
     max-width: 100%;
   }
 }
-.modal__content-modal__img-inner {
+.modal__img-inner {
   width: 42rem;
   height: 22rem;
   border: 5px solid #fff;
   object-fit: cover;
   display: block;
 }
+.modal__img-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @media (max-width: 767px) {
-  .modal__content-modal__img-inner {
+  .modal__img-inner {
     width: 100%;
     height: auto;
   }
@@ -938,7 +943,7 @@ h4 {
     margin-top: 0.6rem;
   }
 }
-.modal__content-close {
+.modal-content-close {
   width: 1.5rem;
   height: 1.5rem;
   background: #fff;
@@ -949,7 +954,7 @@ h4 {
   padding: 0;
   z-index: 3;
 }
-.modal__content-close span {
+.modal-content-close span {
   display: block;
   width: 100%;
   height: 0.1rem;
@@ -958,14 +963,18 @@ h4 {
   top: 0.7rem;
   left: 0;
 }
-.modal__content-close span:nth-of-type(1) {
+.modal-content-close span:nth-of-type(1) {
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.modal__content-close span:nth-of-type(2) {
+.modal-content-close span:nth-of-type(2) {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.modal__content-close:hover {
+.modal-content-close:hover {
   color: #4D9600;
+}
+
+.is-fixed {
+  overflow: hidden;
 }
 
 .news {

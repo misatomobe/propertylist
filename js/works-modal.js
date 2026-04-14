@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = link.dataset.target;
       const modal = document.getElementById(target);
 
+      if (!modal) return;
+
       document.documentElement.classList.add('is-fixed');
       document.body.classList.add('is-fixed');
 
       modal.classList.add('is-active');
-      updateTopBtn();
     });
   });
 
@@ -28,11 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.documentElement.classList.remove('is-fixed');
       document.body.classList.remove('is-fixed');
-
-      updateTopBtn();
     }
 
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
   });
 });
