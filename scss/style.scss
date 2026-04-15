@@ -697,10 +697,36 @@ h4 {
       height: auto;
       position: relative;
       z-index: 2;
+      padding-bottom: 5.1rem;
 
       @include sp {
         width: 100%;
         max-width: 100%;
+        padding-bottom: 0;
+      }
+    }
+
+    &__text-bg {
+      position: relative;
+      padding: 15% 4% 14% 21%;
+      width: 100%;
+      background-color: red;
+      @include sp {
+        padding: 2rem 1.5rem;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 34.8%;
+        background: $main-color;
+        z-index: 0;
+      }
+      @include sp {
+        &::before {
+          width: 100%;
+        }
       }
     }
 
@@ -742,16 +768,12 @@ h4 {
 
     // 緑ボックス
     &__text-area {
-      width: 30%;
-      padding: 1% 1% 1% 1%;
+      width: calc(100% - 65.2%);
       color: $font-color02;
       position: relative;
       z-index: 1;
-      background: $main-color;
-
-      @include tab-only {
-        padding: 8% 6%;
-      }
+      display: flex;
+      align-items: flex-end;
 
       @include sp {
         position: static;
@@ -766,6 +788,7 @@ h4 {
 
     &__title {
       position: relative;
+      z-index: 1;
 
       h3 {
         font-size: 2.5rem;
@@ -789,6 +812,7 @@ h4 {
     &__text {
       margin-top: 1.7rem;
       position: relative;
+      z-index: 1;
       @include sp {
         margin-top: 1rem;
       }
