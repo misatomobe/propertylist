@@ -618,6 +618,8 @@ h4 {
   position: relative;
   z-index: 2;
   padding-bottom: 5.1rem;
+  flex-shrink: 1;
+  min-width: 0;
 }
 @media (max-width: 767px) {
   .service__item__image-area {
@@ -690,6 +692,8 @@ h4 {
   z-index: 1;
   display: flex;
   align-items: flex-end;
+  flex-shrink: 1;
+  min-width: 0;
 }
 @media (max-width: 767px) {
   .service__item__text-area {
@@ -713,7 +717,7 @@ h4 {
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .service__item__title h3 {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 }
 @media (max-width: 767px) {
@@ -778,11 +782,12 @@ h4 {
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-  padding: 2%;
+  margin-left: 0;
+  margin-right: -10%;
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-    padding: 2%;
+    width: 34.8%;
   }
 }
 @media (max-width: 767px) {
