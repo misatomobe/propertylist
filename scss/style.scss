@@ -708,9 +708,7 @@ h4 {
 
     &__text-bg {
       position: relative;
-      padding: 15% 4% 14% 21%;
-      width: 100%;
-      background-color: red;
+      padding: 15% 10% 14% 21%;
       @include sp {
         padding: 2rem 1.5rem;
       }
@@ -719,7 +717,8 @@ h4 {
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 34.8%;
+        width: 156%;
+        height: 100%;
         background: $main-color;
         z-index: 0;
       }
