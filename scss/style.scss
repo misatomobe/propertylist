@@ -727,10 +727,11 @@ h4 {
         background: $main-color;
         z-index: 0;
       }
-
       @include sp {
         &::before {
           width: 100%;
+          left: 0;
+          right: 0;
         }
       }
     }
@@ -862,12 +863,13 @@ h4 {
 
       .service__item__text-area {
         margin-left: 0;
-        margin-right: -10%;
+        margin-right: 0;
         @include tab-only {
           width: calc(100% - 65.2%);
         }
         @include sp {
           padding: 2%;
+          margin-right: 0;
         }
       }
 
@@ -878,6 +880,11 @@ h4 {
         right: -56%;
         width: 156%;
         height: 100%;
+        @include sp {
+          left: 0;
+          right: 0;
+          width: 100%;
+        }
       }
         @include sp {
           padding: 2rem 1.5rem;

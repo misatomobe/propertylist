@@ -656,6 +656,8 @@ h4 {
 @media (max-width: 767px) {
   .service__item__text-bg::before {
     width: 100%;
+    left: 0;
+    right: 0;
   }
 }
 .service__item__image {
@@ -795,7 +797,7 @@ h4 {
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-area {
   margin-left: 0;
-  margin-right: -10%;
+  margin-right: 0;
 }
 @media (min-width: 768px) and (max-width: 1030px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {
@@ -805,6 +807,7 @@ h4 {
 @media (max-width: 767px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {
     padding: 2%;
+    margin-right: 0;
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-bg {
@@ -815,6 +818,13 @@ h4 {
   right: -56%;
   width: 156%;
   height: 100%;
+}
+@media (max-width: 767px) {
+  .service__items > .service__item:nth-of-type(even) .service__item__text-bg::before {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-bg {
