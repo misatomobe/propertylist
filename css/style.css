@@ -640,7 +640,7 @@ h4 {
 .service__item__text-bg::before {
   content: "";
   position: absolute;
-  right: 0;
+  left: -56%;
   bottom: 0;
   width: 156%;
   height: 100%;
