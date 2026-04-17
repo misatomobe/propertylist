@@ -635,7 +635,7 @@ h4 {
 }
 .service__item__text-bg {
   position: relative;
-  padding: 15% 10% 14% 21%;
+  padding: 15% 9% 14% 21%;
 }
 @media (max-width: 767px) {
   .service__item__text-bg {
@@ -646,9 +646,9 @@ h4 {
   content: "";
   position: absolute;
   left: -56%;
-  right: auto;
+  right: 0;
   bottom: 0;
-  width: 156%;
+  width: auto;
   height: 100%;
   background: #4D9600;
   z-index: 0;
@@ -811,7 +811,7 @@ h4 {
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-bg {
-  padding: 15% 21% 14% 10%;
+  padding: 15% 21% 14% 9%;
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-bg::before {
   left: auto;
