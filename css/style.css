@@ -356,7 +356,6 @@ h4 {
 }
 .sp-nav.active {
   display: block;
-  background: #4D9600;
   transform: translateX(0);
 }
 
