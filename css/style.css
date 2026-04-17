@@ -636,6 +636,7 @@ h4 {
 .service__item__text-bg {
   position: relative;
   padding: 15% 9% 14% 21%;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .service__item__text-bg {
