@@ -648,7 +648,6 @@ h4 {
   left: -56%;
   right: 0;
   bottom: 0;
-  width: auto;
   height: 100%;
   background: #4D9600;
   z-index: 0;
@@ -811,7 +810,7 @@ h4 {
   }
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-bg {
-  padding: 15% 21% 14% 9%;
+  padding: 15% 24% 14% 11%;
 }
 .service__items > .service__item:nth-of-type(even) .service__item__text-bg::before {
   left: auto;
