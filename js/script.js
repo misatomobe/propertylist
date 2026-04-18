@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==============================
   $('.fv__slider').slick({
     autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 2000;
+    autoplaySpeed: 5000,
+    speed: 2000,
     arrows: false,
   });
 
