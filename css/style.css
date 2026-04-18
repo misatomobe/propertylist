@@ -362,6 +362,17 @@ h4 {
 
 .fv {
   position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.fv::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 .fv__contents {
   width: 100%;
@@ -374,81 +385,36 @@ h4 {
   align-items: center;
   padding-top: 1.8rem;
 }
-.fv__contents h2 {
+.fv h2 {
   font-size: 4rem;
   line-height: 1.75;
   font-weight: 500;
-  letter-spacing: 0.3em;
-  color: #fff;
-}
-
-.mv {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.mv::after {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.15);
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-.mv .splide {
-  position: relative;
-  z-index: 0;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-.mv .splide__track,
-.mv .splide__list,
-.mv .splide__slide {
-  height: 100%;
-}
-.mv .mv__text {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  z-index: 10;
-  pointer-events: none;
-}
-.mv h2 {
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 1.75;
   letter-spacing: 0.3em;
   color: #fff;
   text-shadow: 0.5rem 0.5rem 0.5rem #000;
-  margin-top: 2rem;
   margin-left: 1.1rem;
+  text-align: center;
 }
 @media (max-width: 767px) {
-  .mv h2 {
+  .fv h2 {
     font-size: 3rem;
     line-height: 2;
     margin-top: 1.4rem;
   }
 }
-.mv .mv_pc-br {
+.fv .fv__pc-br {
   display: block;
 }
 @media (max-width: 767px) {
-  .mv .mv_pc-br {
+  .fv .fv__pc-br {
     display: none;
   }
 }
-.mv .mv_sp-br {
+.fv .fv__sp-br {
   display: none;
 }
 @media (max-width: 767px) {
-  .mv .mv_sp-br {
+  .fv .fv__sp-br {
     display: block;
   }
 }
