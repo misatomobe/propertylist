@@ -1,57 +1,168 @@
-'use strict'; 
+'use strict';
 
-// Splide
-new Splide( '.splide',{
-	autoplay: true,
-	interval: 3000,
-	speed: 2000,
-	type: "loop",
-	arrows: false,
-	pagination: false,
-} ).mount();
+document.addEventListener('DOMContentLoaded', () => {
 
-// ヘッダー背景色
-const header = document.querySelector('.header');
-const about = document.querySelector('#about');
-
-header.style.transition = 'background-color 0.4s';
-
-window.addEventListener('scroll', () => {
-	const aboutPosition = about.offsetTop; // ← ★ ABOUTセクションの位置を取得
-	const scrollY = window.scrollY;
-	
-	if (window.scrollY > 0) {
-		header.style.backgroundColor = 'rgba(77, 150, 0, 0.7)';
-		header.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
-	} else {
-		header.style.backgroundColor = 'transparent';
-		header.style.boxShadow = 'none';
-	}
-});
+  // ==============================
+  // Slick
+  // ==============================
+  $('.autoplay').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
 
 
-// ==============================
-// スクロールアニメーション（何度でも再生）
-// ==============================
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeUps = document.querySelectorAll(".fade-up");
+  // ==============================
+  // ハンバーガーメニュー
+  // ==============================
+  const hamburger = document.querySelector('.hamburger');
+  const spNav = document.querySelector('.sp-nav');
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("on");
-        } else {
-          entry.target.classList.remove("on");
-        }
+  if (hamburger && spNav) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      spNav.classList.toggle('active');
+    });
+  }
+
+
+  // ==============================
+  // ヘッダー背景（about到達）
+  // ==============================
+  const header = document.querySelector('.header');
+  const aboutSection = document.querySelector('#about');
+
+  if (header && aboutSection) {
+    window.addEventListener('scroll', () => {
+      const headerHeight = header.offsetHeight;
+      const aboutTop = aboutSection.offsetTop - headerHeight;
+
+      if (window.scrollY >= aboutTop) {
+        header.classList.add('is-colored');
+      } else {
+        header.classList.remove('is-colored');
+      }
+    });
+  }
+
+
+  // ==============================
+  // ロゴクリックでトップへ
+  // ==============================
+  const logoLink = document.querySelector('.header__logo a');
+
+  if (logoLink) {
+    logoLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
-    },
-    {
-      root: null,
-      threshold: 0.1,
-      rootMargin: "0px 0px -10% 0px"
-    }
-  );
+    });
+  }
 
-  fadeUps.forEach((el) => observer.observe(el));
+
+  // ==============================
+  // SPナビクリックで閉じる
+  // ==============================
+  const spNavLinks = document.querySelectorAll('.sp-nav a');
+
+  spNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (spNav && hamburger) {
+        spNav.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  });
+
+
+  // ==============================
+  // モーダル
+  // ==============================
+  const modalLinks = document.querySelectorAll('.works-item__link');
+
+  modalLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const target = link.dataset.target;
+      const modal = document.getElementById(target);
+
+      if (!modal) return;
+
+      document.documentElement.classList.add('is-fixed');
+      document.body.classList.add('is-fixed');
+
+      modal.classList.add('is-active');
+    });
+  });
+
+  const modals = document.querySelectorAll('.modal');
+
+  modals.forEach(modal => {
+    const closeBtn = modal.querySelector('.modal__content-close');
+    const overlay = modal.querySelector('.modal__overlay');
+
+    function closeModal() {
+      modal.classList.remove('is-active');
+
+      document.documentElement.classList.remove('is-fixed');
+      document.body.classList.remove('is-fixed');
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+  });
+
+
+  // ==============================
+  // トップへ戻るボタン
+  // ==============================
+  const topBtn = document.querySelector('.top-back-btn');
+  const footer = document.querySelector('footer');
+  const modal = document.querySelector('.modal');
+
+  function updateTopBtn() {
+    if (!topBtn || !footer) return;
+
+    const scrollY = window.scrollY;
+    const fvHeight = window.innerHeight;
+    const footerTop = footer.offsetTop;
+
+    if (modal && modal.classList.contains('is-active')) {
+      topBtn.classList.remove('show');
+      return;
+    }
+
+    if (scrollY > fvHeight && scrollY < footerTop - 50) {
+      topBtn.classList.add('show');
+    } else {
+      topBtn.classList.remove('show');
+    }
+  }
+
+  window.addEventListener('scroll', updateTopBtn);
+  window.addEventListener('load', updateTopBtn);
+
+
+  // ==============================
+  // フェードアップ
+  // ==============================
+  const elements = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-active');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -40% 0px"
+  });
+
+  elements.forEach(el => observer.observe(el));
+
 });

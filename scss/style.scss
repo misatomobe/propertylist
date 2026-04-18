@@ -448,6 +448,33 @@ h4 {
   }
 }
 // =====================================
+// FV
+// =====================================
+.fv {
+  position: relative;
+  &__contents {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.8rem;
+    h2 {
+      font-size: 4rem;
+      line-height: calc(70 / 40);
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      color: $font-color02;
+    }
+  }
+}
+
+
+
+// =====================================
 // MV
 // =====================================
 .mv {

@@ -360,6 +360,28 @@ h4 {
   transform: translateX(0);
 }
 
+.fv {
+  position: relative;
+}
+.fv__contents {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.8rem;
+}
+.fv__contents h2 {
+  font-size: 4rem;
+  line-height: 1.75;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  color: #fff;
+}
+
 .mv {
   position: relative;
   width: 100%;
