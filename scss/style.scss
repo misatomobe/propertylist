@@ -473,7 +473,8 @@ h4 {
     justify-content: center;
     align-items: center;
     padding-top: 1.8rem;
-  }
+    z-index: 2;
+    inset: 0;
     h2 {
       font-size: 4rem;
       line-height: calc(70 / 40);
@@ -489,6 +490,8 @@ h4 {
         margin-top: 1.4rem;
       }
     }
+  }
+
     .fv__pc-br {
       display: block;
       @include sp {

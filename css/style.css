@@ -384,8 +384,10 @@ h4 {
   justify-content: center;
   align-items: center;
   padding-top: 1.8rem;
+  z-index: 2;
+  inset: 0;
 }
-.fv h2 {
+.fv__contents h2 {
   font-size: 4rem;
   line-height: 1.75;
   font-weight: 500;
@@ -396,7 +398,7 @@ h4 {
   text-align: center;
 }
 @media (max-width: 767px) {
-  .fv h2 {
+  .fv__contents h2 {
     font-size: 3rem;
     line-height: 2;
     margin-top: 1.4rem;
