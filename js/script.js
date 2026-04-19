@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==============================
 // ==============================
 // ヘッダー背景
 // ==============================
@@ -121,32 +120,41 @@ $(window).on('scroll', function () {
   // ==============================
   // トップへ戻るボタン
   // ==============================
-  const topBtn = document.querySelector('.top-back-btn');
-  const footer = document.querySelector('footer');
-  const modal = document.querySelector('.modal');
+// ==============================
+// トップへ戻るボタン
+// ==============================
+const topBtn = document.querySelector('.top-back-btn');
+const modal = document.querySelector('.modal');
 
-  function updateTopBtn() {
-    if (!topBtn || !footer) return;
+function updateTopBtn() {
+  if (!topBtn) return;
 
-    const scrollY = window.scrollY;
-    const fvHeight = window.innerHeight;
-    const footerTop = footer.offsetTop;
+  // 1. 現在のスクロール量を取得
+  const scrollY = window.scrollY;
 
-    if (modal && modal.classList.contains('is-active')) {
-      topBtn.classList.remove('show');
-      return;
-    }
+  // 2. 判定基準（FVの高さ ＝ ブラウザの表示領域の高さ）
+  const fvHeight = window.innerHeight;
 
-    if (scrollY > fvHeight && scrollY < footerTop - 50) {
-      topBtn.classList.add('show');
-    } else {
-      topBtn.classList.remove('show');
-    }
+  // 【重要】もしFVに特定のID（#fvなど）があるなら、その高さを正確に測る方法もあります
+  // const fvHeight = document.querySelector('#fv').offsetHeight;
+
+  // モーダルが開いている時は無条件で非表示
+  if (modal && modal.classList.contains('is-active')) {
+    topBtn.classList.remove('show');
+    return;
   }
 
-  window.addEventListener('scroll', updateTopBtn);
-  window.addEventListener('load', updateTopBtn);
+  // スクロール量がFVの高さを超えたら表示
+  if (scrollY > fvHeight) {
+    topBtn.classList.add('show');
+  } else {
+    topBtn.classList.remove('show');
+  }
+}
 
+// イベント登録
+window.addEventListener('scroll', updateTopBtn);
+window.addEventListener('load', updateTopBtn);
 
   // ==============================
   // フェードアップ

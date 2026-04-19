@@ -181,6 +181,11 @@ a {
   transform: translateY(0);
 }
 
+body.is-fixed .top-back-btn {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none;
+}
 
 // common-title
 .common-title {
@@ -1904,10 +1909,16 @@ h4 {
 // =====================================
 .top-back-btn {
   position: fixed;
-  opacity: 0;
+  bottom: 6rem;
+  right: 6rem;
+  z-index: 999;
+  opacity: 1;
   visibility: hidden;
-  transform: translateY(30px);
+  transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  @include sp {
+      right: 2rem;
+    }   
   &.show {
     opacity: 1;
     visibility: visible;
@@ -1925,15 +1936,10 @@ h4 {
     border-radius: 50%;
     display: grid;
     place-content: center;
-    bottom: 6rem;
-    right: 6rem;
-    z-index: 999;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    position: fixed;
     @include sp {
       width: 5rem;
       height: 5rem;
-      right: 2rem;
     }
     &-img {
       width: 2.3rem;
