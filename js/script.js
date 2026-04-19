@@ -26,25 +26,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   // ==============================
-  // ヘッダー背景（about到達）
-  // ==============================
-  const header = document.querySelector('.header');
-  const aboutSection = document.querySelector('#about');
+// ==============================
+// ヘッダー背景
+// ==============================
+$(window).on('scroll', function () {
+  const $header = $('.header');
+  const $about = $('#about');
 
-  if (header && aboutSection) {
-    window.addEventListener('scroll', () => {
-      const headerHeight = header.offsetHeight;
-      const aboutTop = aboutSection.offsetTop - headerHeight;
+  if (!$header.length || !$about.length) return;
 
-      if (window.scrollY >= aboutTop) {
-        header.classList.add('is-colored');
-      } else {
-        header.classList.remove('is-colored');
-      }
-    });
+  const headerHeight = $header.outerHeight();
+  const aboutPos = $about.offset().top - headerHeight;
+  const scrollTop = $(this).scrollTop();
+
+  if (scrollTop >= aboutPos) {
+    $header.addClass('is-colored');
+  } else {
+    $header.removeClass('is-colored');
   }
+});
 
 
   // ==============================

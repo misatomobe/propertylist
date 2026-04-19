@@ -179,11 +179,7 @@ h4 {
   background-color: #4D9600;
 }
 .header.is-colored {
-  background-color: #4D9600 !important; /* ← 強制的に緑にする */
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  backdrop-filter: none !important;
-  filter: none !important;
+  background-color: #4D9600;
 }
 @media (max-width: 767px) {
   .header {
@@ -272,6 +268,13 @@ h4 {
   .header__nav ul li a {
     font-size: 1.3rem;
   }
+}
+.header.change .is-colored {
+  background-color: #4D9600 !important; /* ← 強制的に緑にする */
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  backdrop-filter: none !important;
+  filter: none !important;
 }
 .header__hamburger {
   position: relative;

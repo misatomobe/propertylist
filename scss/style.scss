@@ -240,11 +240,7 @@ h4 {
   
   //  スクロール後に追加されるクラス
   &.is-colored {
-    background-color: $main-color !important; /* ← 強制的に緑にする */
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-    backdrop-filter: none !important;
-    filter: none !important;
+    background-color: $main-color;
   }
   
   @include sp {
@@ -338,6 +334,17 @@ h4 {
         } 
       }
     }
+  }
+}
+
+// changeクラスが付いた場合
+&.change {
+  .is-colored {
+    background-color: $main-color !important; /* ← 強制的に緑にする */
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+    backdrop-filter: none !important;
+    filter: none !important;
   }
 }
 
