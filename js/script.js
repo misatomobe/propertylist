@@ -116,45 +116,29 @@ $(window).on('scroll', function () {
     if (overlay) overlay.addEventListener('click', closeModal);
   });
 
-
-  // ==============================
-  // トップへ戻るボタン
-  // ==============================
 // ==============================
 // トップへ戻るボタン
 // ==============================
-const topBtn = document.querySelector('.top-back-btn');
-const modal = document.querySelector('.modal');
+$(window).scroll(function(){
 
-function updateTopBtn() {
-  if (!topBtn) return;
-
-  // 1. 現在のスクロール量を取得
-  const scrollY = window.scrollY;
-
-  // 2. 判定基準（FVの高さ ＝ ブラウザの表示領域の高さ）
-  const fvHeight = window.innerHeight;
-
-  // 【重要】もしFVに特定のID（#fvなど）があるなら、その高さを正確に測る方法もあります
-  // const fvHeight = document.querySelector('#fv').offsetHeight;
-
-  // モーダルが開いている時は無条件で非表示
-  if (modal && modal.classList.contains('is-active')) {
-    topBtn.classList.remove('show');
-    return;
-  }
-
-  // スクロール量がFVの高さを超えたら表示
-  if (scrollY > fvHeight) {
-    topBtn.classList.add('show');
+  // aboutセクションにきたらheaderにchangeクラスがつく
+  const aboutPos = $('.about').offset().top
+  const scrollTop = $(this).scrollTop()
+  const headerHeight = $('.header').outerHeight();
+  
+    // console.log(aboutPos)
+  if(scrollTop > aboutPos) {
+    $('.header').addClass('change')
   } else {
-    topBtn.classList.remove('show');
+    $('.header').removeClass('change')
   }
-}
-
-// イベント登録
-window.addEventListener('scroll', updateTopBtn);
-window.addEventListener('load', updateTopBtn);
+  // トップに戻るボタン
+  if(scrollTop > 100) {
+    $('.top-back-btn').addClass('show')
+  } else {
+    $('.top-back-btn').removeClass('show')
+  }
+})
 
   // ==============================
   // フェードアップ
