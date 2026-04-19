@@ -133,7 +133,7 @@ $(window).scroll(function(){
     $('.header').removeClass('change')
   }
   // トップに戻るボタン
-  if(scrollTop > 250) {
+  if(scrollTop > 100) {
     $('.top-back-btn').addClass('show')
   } else {
     $('.top-back-btn').removeClass('show')
