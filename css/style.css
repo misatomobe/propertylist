@@ -407,21 +407,16 @@ h4 {
     margin-top: 1.4rem;
   }
 }
-.fv .fv__pc-br {
-  display: block;
-}
-@media (max-width: 767px) {
-  .fv .fv__pc-br {
-    display: none;
-  }
-}
-.fv .fv__sp-br {
+.fv__sp-br {
   display: none;
 }
 @media (max-width: 767px) {
-  .fv .fv__sp-br {
-    display: block;
+  .fv__sp-br {
+    display: inline !important;
   }
+}
+.fv__pc-br {
+  display: inline;
 }
 
 .about {

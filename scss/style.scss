@@ -498,20 +498,16 @@ h4 {
       }
     }
   }
-
-    .fv__pc-br {
-      display: block;
-      @include sp {
-        display: none; 
-      }
-    }
-    .fv__sp-br {
-      display: none;
-      @include sp {
-        display: block;
-      }
+  &__sp-br {
+    display: none;
+    @include sp {
+      display: inline !important;
     }
   }
+  &__pc-br {
+    display: inline;
+  }
+}
 
 // =====================================
 // about
