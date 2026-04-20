@@ -132,7 +132,7 @@ $(window).scroll(function(){
   }
 
   // トップに戻るボタン
-  if(scrollTop > aboutPos - headerHeight - 400) { // ← ここ変更
+  if(scrollTop > aboutPos - headerHeight - 400) {
     $('.top-back-btn').addClass('show')
   } else {
     $('.top-back-btn').removeClass('show')
