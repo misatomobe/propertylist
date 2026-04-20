@@ -1914,7 +1914,6 @@ h4 {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   @include sp {
       right: 2rem;
@@ -1923,11 +1922,6 @@ h4 {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-  }
-  &.hide {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(30px);
   }
   &__icon {
     width: 6.8rem;

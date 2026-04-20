@@ -121,20 +121,18 @@ $(window).on('scroll', function () {
 // ==============================
 $(window).scroll(function(){
 
-  // aboutセクションにきたらheaderにchangeクラスがつく
   const aboutPos = $('.about').offset().top
   const scrollTop = $(this).scrollTop()
   const headerHeight = $('.header').outerHeight();
-  const fvHeight = $(window).height();
-  
-    // console.log(aboutPos)
+
   if(scrollTop > aboutPos) {
     $('.header').addClass('change')
   } else {
     $('.header').removeClass('change')
   }
+
   // トップに戻るボタン
-  if(scrollTop > fvHeight - headerHeight) {
+  if(scrollTop > aboutPos - headerHeight - 400) { // ← ここ変更
     $('.top-back-btn').addClass('show')
   } else {
     $('.top-back-btn').removeClass('show')
