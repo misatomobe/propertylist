@@ -125,6 +125,7 @@ $(window).scroll(function(){
   const aboutPos = $('.about').offset().top
   const scrollTop = $(this).scrollTop()
   const headerHeight = $('.header').outerHeight();
+  const fvHeight = $(window).height();
   
     // console.log(aboutPos)
   if(scrollTop > aboutPos) {
@@ -133,7 +134,7 @@ $(window).scroll(function(){
     $('.header').removeClass('change')
   }
   // トップに戻るボタン
-  if(scrollTop > 100) {
+  if(scrollTop > fvHeight - headerHeight) {
     $('.top-back-btn').addClass('show')
   } else {
     $('.top-back-btn').removeClass('show')
