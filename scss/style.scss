@@ -1271,18 +1271,24 @@ h4 {
     display: flex;
     align-items: flex-end;
     position: relative;
+    width: 100%;
     @include sp {
       flex-direction: column;
       row-gap: 1.8rem;
     }
-
+    &__map-wrap {
+      padding-bottom: 5.1rem;
+      @include sp {
+        padding-bottom: 0;
+      }
+    }
     &__map {
       width: 100%;
       max-width: 60rem;
+      height: auto;
       position: relative;
       z-index: 3;
       aspect-ratio: 3 / 2;
-      
       @include sp {
         width: 100%;
         max-width: 100%;
@@ -1308,13 +1314,12 @@ h4 {
       @include sp {
         width: 100%;
         max-width: 100%;
-        padding-bottom: 0;
       }
     }
 
     &__info-inner {
       position: relative;
-      padding: 15% 9% 14% 21%;
+      padding: 20% 9% 20% 21%;
       width: 100%;
       z-index: 1;
       @include sp {

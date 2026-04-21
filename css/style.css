@@ -1216,6 +1216,7 @@ h4 {
   display: flex;
   align-items: flex-end;
   position: relative;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .company .company-item {
@@ -1223,9 +1224,18 @@ h4 {
     row-gap: 1.8rem;
   }
 }
+.company .company-item__map-wrap {
+  padding-bottom: 5.1rem;
+}
+@media (max-width: 767px) {
+  .company .company-item__map-wrap {
+    padding-bottom: 0;
+  }
+}
 .company .company-item__map {
   width: 100%;
   max-width: 60rem;
+  height: auto;
   position: relative;
   z-index: 3;
   aspect-ratio: 3/2;
@@ -1256,12 +1266,11 @@ h4 {
   .company .company-item__info {
     width: 100%;
     max-width: 100%;
-    padding-bottom: 0;
   }
 }
 .company .company-item__info-inner {
   position: relative;
-  padding: 15% 9% 14% 21%;
+  padding: 20% 9% 20% 21%;
   width: 100%;
   z-index: 1;
 }
