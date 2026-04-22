@@ -1306,7 +1306,7 @@ h4 {
         display: block;
       }
     }
-    // 右側：緑のボックスエリア/ 
+    // 右側：緑のボックスエリア 
     &__info {
       width: calc(100% - 65.2%);
       height: auto;
@@ -1358,17 +1358,14 @@ h4 {
     }
 
     &__address {
-      margin-top: 0.7rem;
-      p {
-        @include tab-only {
-          font-size: 1rem;
-        }
+      margin-top: 0.8rem;
+      @include tab-only {
+        font-size: 1rem;
       }
     }
 
     &__tel {
       margin-top: 1.3rem;
-
       span {
         font-size: 2.5rem;
         line-height: 1;
