@@ -1256,7 +1256,7 @@ h4 {
 // company
 // =====================================
 .company {
-  padding: 8rem 3rem 7rem;
+  padding: 8rem 3rem;
   @include sp {
     padding: 5rem 3rem;
   }
@@ -1324,7 +1324,7 @@ h4 {
 
     &__info-inner {
       position: relative;
-      padding: 15% 9% 14% 21%;
+      padding: 14% 9% 14% 12%;
       width: 100%;
       z-index: 1;
       @include sp {
