@@ -1168,8 +1168,8 @@ h4 {
   height: 0.1rem;
   background-color: #55A500;
   position: absolute;
-  bottom: -0.2rem;
-  left: 0;
+  bottom: -0.5rem;
+  right: 0;
 }
 .news-block__link a .arrow span {
   width: 1.7rem;
