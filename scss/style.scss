@@ -639,7 +639,7 @@ h4 {
 // service
 // =====================================
 .service {
-  padding: 8rem 3rem 2.9rem;
+  padding: 8rem 3rem 3.1rem;
   @include sp {
      padding: 5rem 3rem;
      }
@@ -708,7 +708,7 @@ h4 {
       padding: 15% 9% 14% 21%;
       width: 100%;
       @include sp {
-        padding: 2rem 1.5rem;
+        padding: 2rem 2rem 1.2rem;
       }
       &::before {
         content: "";
@@ -799,8 +799,8 @@ h4 {
         }
 
         @include sp  { 
-          font-size: 1.7rem;
-          line-height: calc(25/ 22);
+          font-size: 2rem;
+          line-height: calc(25/ 20);
           margin-bottom: 1.4rem;
         }
         @include sp-small  { 
@@ -823,7 +823,7 @@ h4 {
           font-size: 1.2rem;
         }
         @include sp {
-           font-size: 1.5rem;
+           font-size: 1.6rem;
            }
         @include sp-small {
            font-size:
@@ -861,7 +861,6 @@ h4 {
           width: calc(100% - 65.2%);
         }
         @include sp {
-          padding: 2%;
           margin-right: 0;
         }
       }
@@ -880,7 +879,7 @@ h4 {
         }
       }
         @include sp {
-          padding: 2rem 1.5rem;
+          padding: 2rem 2rem 1.2rem;
         }
       }
 
@@ -913,9 +912,9 @@ h4 {
   }
 }
 .works__contents {
-  margin-top: 7.3rem;
+  margin-top: 6.7rem;
   @include sp {
-    margin-top: 4.1rem;
+    margin-top: 3.7rem;
   }
 }
 .works__items {
@@ -925,7 +924,7 @@ h4 {
   justify-content: flex-start;
   @include sp {
     flex-direction: column;
-    row-gap: 2.2rem;
+    row-gap: 2rem;
   }
 }
 .works__item {
@@ -1102,12 +1101,12 @@ h4 {
   }
   
   &_contents {
-    margin-top: 6.3rem;
+    margin-top: 6.5rem;
     display: flex;
     justify-content: flex-start;
     column-gap: 6.5%;
     @include sp {
-      margin-top: 3.5rem;
+      margin-top: 3.8rem;
       flex-direction: column;
       row-gap: 5rem;
     }
@@ -1152,7 +1151,7 @@ h4 {
   &__contents {
     padding: 1.1rem 2rem 2.5rem;
     @include sp {
-      padding: 1.1rem 2rem 2.5rem;
+      padding: 1.1rem 2rem 2.5rem 2rem;
     }
   }
   .news-block-item {
@@ -1163,7 +1162,7 @@ h4 {
       padding: 1.2rem 0;
       transition: transform .4s ease;
       @include sp {
-      column-gap: 1.9rem;
+      column-gap: 1.3rem;
     }
     &:hover {
       opacity: 0.7;

@@ -557,7 +557,7 @@ h4 {
   }
 }
 .service {
-  padding: 8rem 3rem 2.9rem;
+  padding: 8rem 3rem 3.1rem;
 }
 @media (max-width: 767px) {
   .service {
@@ -633,7 +633,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .service__item__text-bg {
-    padding: 2rem 1.5rem;
+    padding: 2rem 2rem 1.2rem;
   }
 }
 .service__item__text-bg::before {
@@ -728,8 +728,8 @@ h4 {
 }
 @media (max-width: 767px) {
   .service__item__title h3 {
-    font-size: 1.7rem;
-    line-height: 1.1363636364;
+    font-size: 2rem;
+    line-height: 1.25;
     margin-bottom: 1.4rem;
   }
 }
@@ -758,7 +758,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .service__item__text p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 350px) {
@@ -799,7 +799,6 @@ h4 {
 }
 @media (max-width: 767px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-area {
-    padding: 2%;
     margin-right: 0;
   }
 }
@@ -821,7 +820,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .service__items > .service__item:nth-of-type(even) .service__item__text-bg {
-    padding: 2rem 1.5rem;
+    padding: 2rem 2rem 1.2rem;
   }
 }
 
@@ -849,11 +848,11 @@ h4 {
 }
 
 .works__contents {
-  margin-top: 7.3rem;
+  margin-top: 6.7rem;
 }
 @media (max-width: 767px) {
   .works__contents {
-    margin-top: 4.1rem;
+    margin-top: 3.7rem;
   }
 }
 
@@ -866,7 +865,7 @@ h4 {
 @media (max-width: 767px) {
   .works__items {
     flex-direction: column;
-    row-gap: 2.2rem;
+    row-gap: 2rem;
   }
 }
 
@@ -1043,14 +1042,14 @@ h4 {
   }
 }
 .news_contents {
-  margin-top: 6.3rem;
+  margin-top: 6.5rem;
   display: flex;
   justify-content: flex-start;
   column-gap: 6.5%;
 }
 @media (max-width: 767px) {
   .news_contents {
-    margin-top: 3.5rem;
+    margin-top: 3.8rem;
     flex-direction: column;
     row-gap: 5rem;
   }
@@ -1097,7 +1096,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .news-block__contents {
-    padding: 1.1rem 2rem 2.5rem;
+    padding: 1.1rem 2rem 2.5rem 2rem;
   }
 }
 .news-block .news-block-item {
@@ -1111,7 +1110,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .news-block .news-block-item a {
-    column-gap: 1.9rem;
+    column-gap: 1.3rem;
   }
 }
 .news-block .news-block-item a:hover {
