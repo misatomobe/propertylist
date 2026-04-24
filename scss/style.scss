@@ -1770,7 +1770,7 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 34rem;
+    height: 33.8rem;
     padding: 8.1rem 0;
     text-align: center;
     width: 100%;
@@ -1804,7 +1804,7 @@ h4 {
 
 
   &__nav {
-    margin-top: 2.3rem;
+    margin-top: 2.8rem;
     width: 100%;
     max-width: 72.2rem;
     @include sp {
@@ -1813,7 +1813,7 @@ h4 {
     ul {
       display: flex;
       justify-content: center;
-      column-gap: 5rem;
+      column-gap: 5.1rem;
       row-gap: 0.8rem;
       @include sp {
         flex-wrap: wrap;
@@ -1850,7 +1850,7 @@ h4 {
     }
   }
   &__sns {
-    margin-top: 2.6rem;
+    margin-top: 2.8rem;
     @include sp {
       margin-top: 0;
     }
