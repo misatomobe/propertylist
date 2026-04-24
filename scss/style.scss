@@ -655,7 +655,7 @@ h4 {
   &__items {
     display: flex;
     flex-direction: column;
-    row-gap: 8rem;
+    row-gap: 8.1rem;
 
     @include sp {
       row-gap: 5rem;
@@ -1422,7 +1422,7 @@ h4 {
     }
   }
   &__contents {
-  margin-top: 3.5rem;
+  margin-top: 3.3rem;
   @include sp {
     margin-top: 3.4rem;
   }
@@ -1771,7 +1771,7 @@ h4 {
     align-items: center;
     justify-content: center;
     height: 34rem;
-    padding: 8rem 0;
+    padding: 8.1rem 0;
     text-align: center;
     width: 100%;
     @include sp {
@@ -1804,7 +1804,7 @@ h4 {
 
 
   &__nav {
-    margin-top: 2.8rem;
+    margin-top: 2.3rem;
     width: 100%;
     max-width: 72.2rem;
     @include sp {
