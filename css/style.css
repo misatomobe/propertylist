@@ -1001,7 +1001,6 @@ h4 {
 .modal__content-close {
   width: 1.5rem;
   height: 1.5rem;
-  background: #fff;
   position: absolute;
   top: 0.7rem;
   right: -0.1rem;
@@ -1011,7 +1010,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .modal__content-close {
-    right: 0rem;
+    right: -0.2rem;
   }
 }
 .modal__content-close span {
