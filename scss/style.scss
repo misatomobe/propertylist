@@ -1029,7 +1029,6 @@ h4 {
   &__img-inner {
         width: 42rem;
         height: 22rem;
-        border: 5px solid $font-color02;
         object-fit: cover;
         display: block;
         img {
@@ -1059,7 +1058,7 @@ h4 {
         background: #fff;
         position: absolute;
         top: 0.7rem;
-        right: 0;
+        right: -0.1rem;
         cursor: pointer;
         padding: 0;
         z-index: 3;
