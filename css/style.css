@@ -1758,7 +1758,14 @@ h4 {
     padding: 5rem 3rem;
   }
 }
+.footer__inner {
+  max-width: 72.2rem;
+  margin: 0 auto;
+  width: 100%;
+}
 .footer__logo {
+  width: 100%;
+  margin: 0 auto;
   padding-bottom: 2.8rem;
   border-bottom: 1px solid #000;
   text-align: center;
@@ -1785,8 +1792,6 @@ h4 {
 }
 .footer__nav {
   margin-top: 2.8rem;
-  width: 100%;
-  max-width: 72.2rem;
 }
 @media (max-width: 767px) {
   .footer__nav {
@@ -1898,6 +1903,9 @@ h4 {
   .footer__copyright p {
     line-height: 1.25;
   }
+}
+.footer__copyright .copy-left {
+  margin-right: 1em;
 }
 
 .top-back-btn {

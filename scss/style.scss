@@ -1778,9 +1778,15 @@ h4 {
       height: auto;
       padding: 5rem 3rem;
     }
-
+  }
+  &__inner {
+    max-width: 72.2rem;
+    margin: 0 auto;
+    width: 100%;
   }
   &__logo {
+    width: 100%;
+    margin: 0 auto;
     padding-bottom: 2.8rem;
     border-bottom: 1px solid $font-color;
     text-align: center;
@@ -1805,8 +1811,6 @@ h4 {
 
   &__nav {
     margin-top: 2.8rem;
-    width: 100%;
-    max-width: 72.2rem;
     @include sp {
       margin-top: 0.3rem;
     }
@@ -1903,6 +1907,9 @@ h4 {
       @include sp {
         line-height: calc(25 / 20);
       }
+    }
+    .copy-left {
+      margin-right: 1em;
     }
   }
 }
