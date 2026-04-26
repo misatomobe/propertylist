@@ -1021,7 +1021,7 @@ h4 {
     @include sp {
       width: 31.5rem;
       height: auto;
-      padding: 2rem 2rem 1.7rem;
+      padding: 2rem 2rem 1.5rem;
       margin: 0 auto;
       max-width: 100%;
     }
@@ -1049,7 +1049,7 @@ h4 {
         text-align: left;
         width: 100%;
         @include sp {
-          margin-top: 0.6rem;
+          margin-top: 0.8rem;
         }
       }
       &__content-close {
@@ -1062,6 +1062,9 @@ h4 {
         cursor: pointer;
         padding: 0;
         z-index: 3;
+        @include sp {
+          right: 0rem;
+        }
         
         span {
           display: block;
