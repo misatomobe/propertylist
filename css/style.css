@@ -1415,7 +1415,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .contact__contents {
-    margin-top: 3.4rem;
+    margin-top: 3rem;
   }
 }
 .contact__text p {
@@ -1435,7 +1435,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .contact__form-block dl:not(:first-of-type) {
-    margin-top: 3rem;
+    margin-top: 2.8rem;
   }
 }
 .contact__form-block dl.checkbox-group {
@@ -1443,7 +1443,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .contact__form-block dl.checkbox-group {
-    margin-top: 2.3rem;
+    margin-top: 3rem;
   }
   .contact__form-block dl.checkbox-group dt {
     font-size: 2rem;
@@ -1503,7 +1503,7 @@ h4 {
 }
 .contact .form-flex dd {
   flex: 1;
-  margin-top: 0;
+  margin-top: 0.3rem;
 }
 @media (max-width: 767px) {
   .contact .form-flex.sp-flex {

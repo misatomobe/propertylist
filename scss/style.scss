@@ -1447,7 +1447,7 @@ h4 {
   &__contents {
   margin-top: 3.3rem;
   @include sp {
-    margin-top: 3.4rem;
+    margin-top: 3rem;
   }
 }
 &__text {
@@ -1464,14 +1464,14 @@ h4 {
   dl:not(:first-of-type) {
     margin-top: 5rem;
     @include sp {
-      margin-top: 3rem;
+      margin-top: 2.8rem;
     }
   }
   
   dl.checkbox-group {
     margin-top: 5rem;
     @include sp {
-      margin-top: 2.3rem;
+      margin-top: 3rem;
       dt {
         font-size: 2rem;
         line-height: calc(27 / 20);
@@ -1527,7 +1527,7 @@ h4 {
   }
   dd {
     flex: 1;
-    margin-top: 0;
+    margin-top: 0.3rem;
   }
   &.sp-flex {
     @include sp {
