@@ -1343,6 +1343,12 @@ h4 {
     margin-top: 1rem;
   }
 }
+.company .company-item__tel .tel-label {
+  font-size: 1.6rem;
+  line-height: 1;
+  align-items: flex-end;
+  display: inline-block;
+}
 .company .company-item__tel span {
   font-size: 2.5rem;
   line-height: 1;
