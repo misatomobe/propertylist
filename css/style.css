@@ -240,8 +240,9 @@ h4 {
 .header__nav ul {
   display: flex;
   align-items: center;
-  column-gap: 3.3rem;
+  column-gap: 3.2rem;
   color: #fff;
+  margin-right: 0.3rem;
 }
 .header__nav ul li a {
   height: 8rem;
