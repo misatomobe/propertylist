@@ -1238,7 +1238,7 @@ h4 {
 @media (max-width: 767px) {
   .company .company-item {
     flex-direction: column;
-    row-gap: 1.8rem;
+    row-gap: 2.1rem;
   }
 }
 .company .company-item__map-area {
@@ -1266,6 +1266,7 @@ h4 {
     width: 100%;
     max-width: 100%;
     aspect-ratio: 315/300;
+    min-height: 31.5rem;
   }
 }
 .company .company-item__map iframe {
@@ -1297,7 +1298,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .company .company-item__info-inner {
-    padding: 2rem 1.5rem;
+    padding: 1.9rem 1.5rem 1.4rem 2rem;
   }
 }
 .company .company-item__info-inner::before {
@@ -1336,6 +1337,11 @@ h4 {
 }
 .company .company-item__tel {
   margin-top: 1.3rem;
+}
+@media (max-width: 767px) {
+  .company .company-item__tel {
+    margin-top: 1rem;
+  }
 }
 .company .company-item__tel span {
   font-size: 2.5rem;

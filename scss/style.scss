@@ -1285,7 +1285,7 @@ h4 {
     width: 100%;
     @include sp {
       flex-direction: column;
-      row-gap: 1.8rem;
+      row-gap: 2.1rem;
     }
     // 左側：地図
     &__map-area {
@@ -1309,6 +1309,7 @@ h4 {
         width: 100%;
         max-width: 100%;
         aspect-ratio: 315 / 300;
+        min-height: 31.5rem;
       }
 
       iframe {
@@ -1339,7 +1340,7 @@ h4 {
       width: 100%;
       z-index: 1;
       @include sp {
-        padding: 2rem 1.5rem;
+        padding: 1.9rem 1.5rem 1.4rem 2rem;
       }
       &::before {
         content: "";
@@ -1377,6 +1378,9 @@ h4 {
 
     &__tel {
       margin-top: 1.3rem;
+      @include sp {
+        margin-top: 1rem;
+      }
       span {
         font-size: 2.5rem;
         line-height: 1;
