@@ -1823,7 +1823,7 @@ h4 {
       font-size: 2rem;
       line-height: calc(33 / 20);
       @include sp {
-        margin-bottom: 1.8rem;
+        margin-bottom: 2rem;
       }
       &:hover {
         opacity: 0.7;
@@ -1843,9 +1843,9 @@ h4 {
       row-gap: 0.8rem;
       @include sp {
         flex-wrap: wrap;
-        column-gap: 1.9rem;
-        row-gap: 0.3rem;
-        padding: 2rem 0 2.8rem;
+        column-gap: 2.1rem;
+        row-gap: 0.5rem;
+        padding: 1.5rem 0 2.8rem;
       }
       li {
         text-align: center;
@@ -1878,7 +1878,7 @@ h4 {
   &__sns {
     margin-top: 2.8rem;
     @include sp {
-      margin-top: 0;
+      margin-top: 0.3rem;
     }
     ul {
       display: flex;

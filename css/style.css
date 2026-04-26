@@ -1815,7 +1815,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__logo a {
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
   }
 }
 .footer__logo a:hover {
@@ -1838,9 +1838,9 @@ h4 {
 @media (max-width: 767px) {
   .footer__nav ul {
     flex-wrap: wrap;
-    column-gap: 1.9rem;
-    row-gap: 0.3rem;
-    padding: 2rem 0 2.8rem;
+    column-gap: 2.1rem;
+    row-gap: 0.5rem;
+    padding: 1.5rem 0 2.8rem;
   }
 }
 .footer__nav ul li {
@@ -1880,7 +1880,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__sns {
-    margin-top: 0;
+    margin-top: 0.3rem;
   }
 }
 .footer__sns ul {
