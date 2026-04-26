@@ -1095,7 +1095,7 @@ h4 {
   font-weight: 500;
 }
 .news-block__contents {
-  padding: 1.1rem 2rem 2.5rem;
+  padding: 1.1rem 2rem 2.8rem;
 }
 @media (max-width: 767px) {
   .news-block__contents {
@@ -1712,7 +1712,7 @@ h4 {
   text-indent: -1em;
 }
 .contact .submit-btn {
-  margin-top: 8rem;
+  margin-top: 7.9rem;
   display: flex;
   justify-content: center;
 }
