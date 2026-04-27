@@ -1411,19 +1411,14 @@ h4 {
   }
 }
 .contact__contents {
-  margin-top: 3.3rem;
-}
-@media (max-width: 767px) {
-  .contact__contents {
-    margin-top: 3rem;
-  }
+  margin-top: 3rem;
 }
 .contact__text p {
   font-size: 2rem;
   line-height: 1.65;
 }
 .contact__form-block {
-  margin-top: 6.5rem;
+  margin-top: 6.9rem;
 }
 @media (max-width: 767px) {
   .contact__form-block {
@@ -1439,7 +1434,7 @@ h4 {
   }
 }
 .contact__form-block dl.checkbox-group {
-  margin-top: 5rem;
+  margin-top: 4.9rem;
 }
 @media (max-width: 767px) {
   .contact__form-block dl.checkbox-group {
