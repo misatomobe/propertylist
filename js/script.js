@@ -1,66 +1,160 @@
-'use strict'; 
+'use strict';
 
-// Splide
-new Splide( '.splide',{
-	autoplay: true,
-	interval: 3000,
-	speed: 2000,
-	type: "loop",
-	arrows: false,
-	pagination: false,
-} ).mount();
+document.addEventListener('DOMContentLoaded', () => {
 
-// ヘッダー背景色
-const header = document.querySelector('.header');
-const about = document.querySelector('#about');
-
-header.style.transition = 'background-color 0.4s';
-
-window.addEventListener('scroll', () => {
-	const aboutPosition = about.offsetTop; // ← ★ ABOUTセクションの位置を取得
-	const scrollY = window.scrollY;
-	
-	if (window.scrollY > 0) {
-		header.style.backgroundColor = 'rgba(77, 150, 0, 0.7)';
-		header.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
-	} else {
-		header.style.backgroundColor = 'transparent';
-		header.style.boxShadow = 'none';
-	}
-});
-
-// ==============================
-// スクロールアニメーション
-// ==============================
-// ==============================
-// スクロールアニメーション（何度でも再生）
-// ==============================
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeUps = document.querySelectorAll(".fade-up");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("on");
-        } else {
-          entry.target.classList.remove("on");
-        }
-      });
-    },
-    {
-      root: null,
-      threshold: 0.1,
-      rootMargin: "0px 0px -10% 0px"
-    }
-  );
-
-  fadeUps.forEach((el) => observer.observe(el));
-});
-
-// ▼ セレクトバーの矢印アイコン回転
-document.querySelectorAll('.custom-select select').forEach(select => {
-  select.addEventListener('click', () => {
-    select.parentElement.classList.toggle('open');
+  // ==============================
+  // Slick
+  // ==============================
+  $('.fv__slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 3000,
+    arrows: false,
   });
+
+
+  // ==============================
+  // ハンバーガーメニュー
+  // ==============================
+  const hamburger = document.querySelector('.hamburger');
+  const spNav = document.querySelector('.sp-nav');
+
+  if (hamburger && spNav) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      spNav.classList.toggle('active');
+    });
+  }
+
+// ==============================
+// ヘッダー背景
+// ==============================
+$(window).on('scroll', function () {
+  const $header = $('.header');
+  const $about = $('#about');
+
+  if (!$header.length || !$about.length) return;
+
+  const headerHeight = $header.outerHeight();
+  const aboutPos = $about.offset().top - headerHeight;
+  const scrollTop = $(this).scrollTop();
+
+  if (scrollTop >= aboutPos) {
+    $header.addClass('is-colored');
+  } else {
+    $header.removeClass('is-colored');
+  }
+});
+
+
+  // ==============================
+  // ロゴクリックでトップへ
+  // ==============================
+  const logoLink = document.querySelector('.header__logo a');
+
+  if (logoLink) {
+    logoLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+
+  // ==============================
+  // SPナビクリックで閉じる
+  // ==============================
+  const spNavLinks = document.querySelectorAll('.sp-nav a');
+
+  spNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (spNav && hamburger) {
+        spNav.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  });
+
+
+  // ==============================
+  // モーダル
+  // ==============================
+  const modalLinks = document.querySelectorAll('.works-item__link');
+
+  modalLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const target = link.dataset.target;
+      const modal = document.getElementById(target);
+
+      if (!modal) return;
+
+      document.documentElement.classList.add('is-fixed');
+      document.body.classList.add('is-fixed');
+
+      modal.classList.add('is-active');
+    });
+  });
+
+  const modals = document.querySelectorAll('.modal');
+
+  modals.forEach(modal => {
+    const closeBtn = modal.querySelector('.modal__content-close');
+    const overlay = modal.querySelector('.modal__overlay');
+
+    function closeModal() {
+      modal.classList.remove('is-active');
+
+      document.documentElement.classList.remove('is-fixed');
+      document.body.classList.remove('is-fixed');
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+  });
+
+// ==============================
+// トップへ戻るボタン
+// ==============================
+$(window).scroll(function(){
+
+  const aboutPos = $('.about').offset().top
+  const scrollTop = $(this).scrollTop()
+  const headerHeight = $('.header').outerHeight();
+
+  if(scrollTop > aboutPos) {
+    $('.header').addClass('change')
+  } else {
+    $('.header').removeClass('change')
+  }
+
+  // トップに戻るボタン
+  if(scrollTop > aboutPos - headerHeight - 400) {
+    $('.top-back-btn').addClass('show')
+  } else {
+    $('.top-back-btn').removeClass('show')
+  }
+})
+
+  // ==============================
+  // フェードアップ
+  // ==============================
+  const elements = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-active');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -40% 0px"
+  });
+
+  elements.forEach(el => observer.observe(el));
+
 });

@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>株式会社北村建設興業 | 安心・安全な住まいを提供します</title>
     <meta name="description" content="株式会社北村建設興業は新築工事、リフォームやリノベーション、都市開発・計画のご提案や施工工事を承ります。">
     <meta name="keywords" content="建設業, 土木工事, 建築工事, 土地探し, リフォーム, リノベーション, 都市計画, 都市開発, 公共施設, 安全, 安心, 地域密着, 地元, 高品質, 工事一式, 施工, 設計, 入札">
     <meta name="robots" content="noindex">
+    <!-- フォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
     <!-- ファビコン -->
     <link rel="icon" href="./images/favicon.png" type="image/png">
-    <!-- splide.css cdn -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- splide.js cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
-    <script src="./js/header.js" defer></script>
-    <script src="./js/script.js" defer></script>
-    <script src="./js/works-modal.js" defer></script>
-    <script src="./js/back-to-top.js" defer></script>
+    <!-- JSはここにまとめる -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
     <!-- ↓container↓ -->
@@ -34,7 +35,7 @@
                         </span>
                     </a>
                 </h1>
-            <div class="header__nav pc">
+                <div class="header__nav pc">
                     <nav>
                         <ul class="header-nav__lists">
                             <li><a href="#about">ABOUT</a></li>
@@ -72,39 +73,35 @@
         <!-- main -->
         <main>
             <div class="main">
-            
-        <!-- mv -->
-        <div class="mv">
-                <div class="splide" role="group" aria-label="実績写真">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <picture>
-                                    <source srcset="./images/FirstView_01.jpg" media="(min-width: 768px)">
-                                    <img src="./images/SP_FirstView-1.jpg" alt="実績写真01">
-                                </picture>
-                            </li>
-                            <li class="splide__slide">
-                                <picture>
-                                 <source srcset="./images/FirstView_02.jpg" media="(min-width: 768px)">
-                                    <img src="./images/SP_FirstView-2.jpg" alt="実績写真02">   
-                                </picture>
-                            </li>
-                            <li class="splide__slide">
-                                <picture>
-                                 <source srcset="./images/FirstView_03.jpg" media="(min-width: 768px)">
-                                 <img src="./images/SP_FirstView-3.jpg" alt="実績写真03">   
-                                </picture>
-                            </li>
-                        </ul>
+                <!-- fv -->
+                <div class="fv">
+                    <div class="fv__slider">
+                        <div class="fv__slider-item">
+                            <picture>
+                                <source srcset="./images/firstview_01.jpg" media="(min-width: 768px)">
+                                <img src="./images/sp_firstview-1.jpg" alt="永遠も。瞬間も。あなたと共に。">
+                            </picture>
+                        </div>
+
+                        <div class="fv__slider-item">
+                            <picture>
+                                <source srcset="./images/firstview_02.jpg" media="(min-width: 768px)">
+                                <img src="./images/sp_firstview-2.jpg" alt="永遠も。瞬間も。あなたと共に。">
+                            </picture>
+                        </div>
+
+                        <div class="fv__slider-item">
+                            <picture>
+                                <source srcset="./images/firstview_03.jpg" media="(min-width: 768px)">
+                                <img src="./images/sp_firstview-3.jpg" alt="永遠も。瞬間も。あなたと共に。">
+                            </picture>
+                        </div>                        
+                    </div>
+                    <div class="fv__contents">
+                        <h2>永遠も。<br class="fv__sp-br">瞬間も。<br class="fv__pc-br">あなたと共に。</h2>
                     </div>
                 </div>
-                <div class="mv__text">
-                    <h2>永遠も。<br class="mv_sp-br">瞬間も。<br class="mv_sp-br"><br class="mv_pc-br">あなたと共に。
-                    </h2>
-                </div>
-            </div>
-         
+                         
          <!-- about（ご挨拶） -->
          <section id="about" class="about fade-up">
             <div class="inner__about">
@@ -117,23 +114,23 @@
                     </div>
                     <div class="about__contents">
                         <div class="about__contents__inner">
-                        <div class="about__catch">
-                            <h2>伝統とイマを繋ぐ</h2>
+                            <div class="about__catch">
+                                <h2>伝統とイマを繋ぐ</h2>
                             
-                            <div class="about__text">
-                                <p>古来から伝わる伝統文化<br>
-                                    昔からそこにある材料<br>
-                                    その土地に長い間かけて<br>
-                                    最適化してきた<br>
-                                    たくさんのヒントを<br>
-                                    イマを生きる私たちの<br>
-                                    心地よさに取り入れ<br>
-                                    新たな技術革新を<br>
-                                    起こし続ける会社です
-                                </p> 
-                            </div>                           
+                                <div class="about__text">
+                                    <p>古来から伝わる伝統文化<br>
+                                        昔からそこにある材料<br>
+                                        その土地に長い間かけて<br>
+                                        最適化してきた<br>
+                                        たくさんのヒントを<br>
+                                        イマを生きる私たちの<br>
+                                        心地よさに取り入れ<br>
+                                        新たな技術革新を<br>
+                                        起こし続ける会社です
+                                    </p> 
+                                </div>                           
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -142,7 +139,7 @@
         <!-- ↓service(サービス)↓ -->
          <section id="service" class="service section-bg fade-up">
           <div class="inner">
-                    <div class="service__title common-title">
+                    <div class="common-title">
                         <h2>SERVICE</h2>
                         <p>サービス</p>
                     </div>
@@ -154,8 +151,8 @@
                                 <div class="service__item__image-area">
                                     <div class="service__item__image">
                                         <picture>
-                                            <source media="(min-width: 768px)" srcset="./images/PC_SERVICE_01.jpg">
-                                            <img src="./images/SP_SERVICE_01.jpg" alt="新築（土地探し〜建築）">
+                                            <source media="(min-width: 768px)" srcset="./images/pc_service_01.jpg">
+                                            <img src="./images/sp_service_01.jpg" alt="新築（土地探し〜建築）">
                                         </picture>
                                     </div>
                                     <!-- キャプション（画像の下 / 左揃え） -->
@@ -166,11 +163,13 @@
 
                                 <!-- 緑のボックス -->
                                 <div class="service__item__text-area">
-                                    <div class="service__item__title">
-                                        <h3>新築<br class="service__pc-br">（土地探し〜建築）</h3>
-                                    </div>
-                                    <div class="service__item__text">
-                                        <p>土地探しから建築、施工まで<br>サポートいたします。<br>風水的観点からもご提案。</p>
+                                    <div class="service__item__text-bg">
+                                        <div class="service__item__title">
+                                            <h3>新築<br class="service__pc-br">（土地探し〜建築）</h3>
+                                        </div>
+                                        <div class="service__item__text">
+                                            <p>土地探しから建築、施工まで<br>サポートいたします。<br>風水的観点からもご提案。</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -180,8 +179,8 @@
                                 <div class="service__item__image-area">
                                     <div class="service__item__image">
                                         <picture>
-                                            <source media="(min-width: 768px)" srcset="./images/PC_SERVICE_02.jpg">
-                                            <img src="./images/SP_SERVICE_02.jpg" alt="リフォームリノベーション">
+                                            <source media="(min-width: 768px)" srcset="./images/pc_service_02.jpg">
+                                            <img src="./images/sp_service_02.jpg" alt="リフォームリノベーション">
                                         </picture>
                                     </div>
                                     <!-- キャプション（画像の下 / 左揃え） -->
@@ -192,11 +191,13 @@
 
                                 <!-- 緑のボックス -->
                                 <div class="service__item__text-area">
-                                    <div class="service__item__title">
-                                        <h3>リフォーム<br>リノベーション</h3>
-                                    </div>
-                                    <div class="service__item__text">
-                                        <p>温かみと雰囲気をそのままに<br>住み心地、使い心地を<br>追求しご提供いたします。</p>
+                                    <div class="service__item__text-bg">
+                                        <div class="service__item__title">
+                                            <h3>リフォーム<br>リノベーション</h3>
+                                        </div>
+                                        <div class="service__item__text">
+                                            <p>温かみと雰囲気をそのままに<br>住み心地、使い心地を<br>追求しご提供いたします。</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -206,8 +207,8 @@
                                 <div class="service__item__image-area">
                                     <div class="service__item__image">
                                         <picture>
-                                            <source media="(min-width: 768px)" srcset="./images/PC_SERVICE_03.jpg">
-                                            <img src="./images/SP_SERVICE_03.jpg" alt="都市計画〜開発公共施設">
+                                            <source media="(min-width: 768px)" srcset="./images/pc_service_03.jpg">
+                                            <img src="./images/sp_service_03.jpg" alt="都市計画〜開発公共施設">
                                         </picture>
                                     </div>
                                     <!-- キャプション（画像の下 / 左揃え） -->
@@ -218,13 +219,15 @@
 
                                 <!-- 緑のボックス -->
                                 <div class="service__item__text-area">
-                                    <div class="service__item__title">
-                                        <h3>都市計画〜開発<br>公共施設</h3>
+                                    <div class="service__item__text-bg">
+                                        <div class="service__item__title">
+                                            <h3>都市計画〜開発<br>公共施設</h3>
+                                        </div>
+                                        <div class="service__item__text">
+                                            <p>都市計画から都市開発まで<br>ご提案いたします。<br>公共施設もさらに居心地良く。</p>
+                                        </div>
                                     </div>
-                                    <div class="service__item__text">
-                                        <p>都市計画から都市開発まで<br>ご提案いたします。<br>公共施設もさらに居心地良く。</p>
-                                    </div>
-                                </div>
+                                </div>    
                             </div>
 
                         </div>
@@ -237,108 +240,106 @@
             <section id="works" class="works fade-up">
                 <div class="inner">
                     <div class="common-title">
-                        <div class="title-icon">
-                            <h2>WORKS</h2>
-                            <p>施工事例</p>
-                        </div>
+                        <h2>WORKS</h2>
+                        <p>施工事例</p>
                     </div>
                     <div class="works__contents">
                         <div class="works__items">
                             
                             <!-- works01（施工事例01） -->
                             <div class="works__item works-item">
-                                <a href="#" class="works-item__link">
+                                <a href="#" class="works-item__link" data-target="modal01">
                                     <div class="works-item__image">
                                         <picture>
                                             <source media="(min-width: 768px)" srcset="./images/PC_WORKS_01.jpg">
                                             <img
-                                            src="./images/SP_WORKS_01.jpg"
+                                            src="./images/sp_works_01.jpg"
                                             alt="【新築】長崎県T.O様自宅"
-                                            data-modal="./images/PC_WORKS_modal_01.jpg"
+                                            data-modal="./images/pc_works_modal_01.jpg"
                                             class="js-modal-image"
                                             >
                                         </picture>
                                     </div>
                                     <div class="works-item__title">
-                                        <h4>【新築】<br class="pc-br">長崎県T.O様自宅</h4>
+                                        <h3>【新築】<br class="pc-only">長崎県T.O様自宅</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <!-- works02（施工事例02） -->
                             <div class="works__item works-item">
-                                <a href="#" class="works-item__link">
+                                <a href="#" class="works-item__link" data-target="modal02">
                                     <div class="works-item__image">
                                         <picture>
                                             <source  media="(min-width: 768px)" srcset="./images/PC_WORKS_02.jpg">
                                             <img
-                                            src="./images/SP_WORKS_02.jpg"
+                                            src="./images/sp_works_02.jpg"
                                             alt="【リノベーション】京都府カトリック丹波教会"
-                                            data-modal="./images/PC_WORKS_modal_02.jpg"
+                                            data-modal="./images/pc_works_modal_02.jpg"
                                             class="js-modal-image"
                                             >
                                         </picture>
                                     </div>
                                     <div class="works-item__title">
-                                        <h4>【リノベーション】<br>京都府カトリック丹波教会</h4>
+                                        <h3>【リノベーション】<br>京都府カトリック丹波教会</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <!-- works03（施工事例03） -->
                             <div class="works__item works-item">
-                                <a href="#" class="works-item__link">
+                                <a href="#" class="works-item__link" data-target="modal03">
                                     <div class="works-item__image">
                                         <picture>
-                                            <source  media="(min-width: 768px)" srcset="./images/PC_WORKS_03.jpg">
+                                            <source  media="(min-width: 768px)" srcset="./images/pc_works_03.jpg">
                                             <img
-                                            src="./images/SP_WORKS_03.jpg"
+                                            src="./images/sp_works_03.jpg"
                                             alt="【新築】東京都A.F様自宅兼事務所"
-                                            data-modal="./images/PC_WORKS_modal_03.jpg"
+                                            data-modal="./images/pc_works_modal_03.jpg"
                                             class="js-modal-image"
                                             >
                                         </picture>
                                     </div>
                                     <div class="works-item__title">
-                                        <h4>【新築】<br>東京都A.F様自宅兼事務所</h4>
+                                        <h3>【新築】<br>東京都A.F様自宅兼事務所</h3>
                                     </div>
                                 </a>
                             </div>
                             
                             <!-- works04（施工事例04） -->
                             <div class="works__item works-item">
-                                <a href="#" class="works-item__link">
+                                <a href="#" class="works-item__link" data-target="modal04">
                                     <div class="works-item__image">
                                         <picture>
-                                            <source  media="(min-width: 768px)" srcset="./images/PC_WORKS_04.jpg">
+                                            <source  media="(min-width: 768px)" srcset="./images/pc_works_04.jpg">
                                             <img
-                                            src="./images/SP_WORKS_04.jpg"
+                                            src="./images/sp_works_04.jpg"
                                             alt="【都市開発】山形県銀山温泉協同組合"
-                                            data-modal="./images/PC_WORKS_modal_04.jpg"
+                                            data-modal="./images/pc_works_modal_04.jpg"
                                             class="js-modal-image"
                                             >
                                         </picture>
                                     </div>
                                     <div class="works-item__title">
-                                        <h4>【都市開発】<br>山形県銀山温泉協同組合</h4>
+                                        <h3>【都市開発】<br>山形県銀山温泉協同組合</h3>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </section>
             <!-- ↑works(施工事例)↑ -->
             
             <!-- ↓news（お知らせ）↓ -->
              <section id="news" class="news section-bg fade-up">
                 <div class="inner">
-                    <div class="news__title common-title">
+                    <div class="common-title">
                         <h2>NEWS</h2>
                         <p>お知らせ</p>
                     </div>
-                    <div class="news_contents">
-                        
+                    <div class="news_contents"> 
                         <!-- お知らせ -->
                         <div class="news__blocks">
                             <div class="news__block news-block">
@@ -346,98 +347,104 @@
                                     <h3>お知らせ</h3>
                                 </div>
                                 <div class="news-block__contents">
-                                    <div class="news-block__items">
+                                    <ul class="news-block__items">
+                                        <li class="news-block-item">
+                                            <a href="#">
+                                                <div class="news-block-item__date">
+                                                    <time datetime="2026-04-04">0000.00</time>
+                                                </div>
+                                                <div class="news-block-item__title">
+                                                    <h4>公式Instagram、<br class="fv__sp-br">YouTubeはじめました。</h4>
+                                                </div>
+                                            </a>
+                                        </li>
 
-                                        <a href="" class="news-block__item news-block-item">
-                                            <div class="news-block-item__date">
-                                                <time>0000.00</time>
-                                            </div>
-                                            <div class="news-block-item__title">
-                                                <h4>公式Instagram、YouTubeはじめました。</h4>
-                                            </div>                                           
-                                        </a>
-                                            
-                                        <a href="" class="news-block__item news-block-item">
-                                            <div class="news-block-item__date">
-                                                <time>0000.00</time>
-                                            </div>
-                                            <div class="news-block-item__title">
-                                                <h4>非住宅 木造建築フェアに出展します。</h4>
-                                            </div>                                           
-                                        </a>
-                                            
-                                        <a href="" class="news-block__item news-block-item">
-                                            <div class="news-block-item__date">
-                                                <time>0000.00</time>
-                                            </div>
-                                            <div class="news-block-item__title">
-                                                <h4>公式ホームページがリニューアルしました。</h4>
-                                            </div>                                           
-                                        </a>
-                                    </div>
-                                    
+                                        <li class="news-block-item">
+                                            <a href="#">
+                                                <div class="news-block-item__date">
+                                                    <time datetime="2026-04-04">0000.00</time>
+                                                </div>
+                                                <div class="news-block-item__title">
+                                                    <h4>非住宅 木造建築フェアに出展します。</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li class="news-block-item">
+                                            <a href="#">
+                                                <div class="news-block-item__date">
+                                                    <time datetime="2026-04-04">0000.00</time>
+                                                </div>
+                                                <div class="news-block-item__title">
+                                                    <h4>公式ホームページがリニューアルしました。</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <div class="news-block__link">
                                         <a href="#">
                                             <span>more</span>
                                             <span class="arrow">
-                                            <span></span>
+                                                <span></span>
                                             </span>
                                         </a>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- ↑お知らせ↑ -->
 
-                        <!-- ↓ブログ↓ -->
+                        <!-- ブログ -->
                         <div class="news__blocks">
                             <div class="news__block news-block">
                                 <div class="news-block__title">
                                     <h3>ブログ</h3>
                                 </div>
                                 <div class="news-block__contents">
-                                    <div class="news-block__items">
+                                    <ul class="news-block__items">
+                                        <li class="news-block-item">
+                                            <a href="#">
+                                                <div class="news-block-item__date">
+                                                    <time datetime="2026-04-04">0000.00</time>
+                                                </div>
+                                                <div class="news-block-item__title">
+                                                    <h4>あけましておめでとうございます。〜会長から社員まで〜</h4>
+                                                </div>
+                                            </a>
+                                        </li>
 
-                                        <a href="" class="news-block__item news-block-item">
-                                            <div class="news-block-item__date">
-                                                <time>0000.00</time>
-                                            </div>
-                                            <div class="news-block-item__title">
-                                                <h4>あけましておめでとうございます。〜会長から社員まで〜</h4>
-                                            </div>                                           
-                                        </a>
-                                            
-                                        <a href="" class="news-block__item news-block-item">
-                                            <div class="news-block-item__date">
-                                                <time>0000.00</time>
-                                            </div>
-                                            <div class="news-block-item__title">
-                                                <h4>【検証】土地と人に相性はあるのか？</h4>
-                                            </div>                                           
-                                        </a>
-                                            
-                                        <a href="" class="news-block__item news-block-item">
-                                            <div class="news-block-item__date">
-                                                <time>0000.00</time>
-                                            </div>
-                                            <div class="news-block-item__title">
-                                                <h4>弊社創業初の入社式が行われました。</h4>
-                                            </div>                                           
-                                        </a>
-                                    </div>
-                                    
+                                        <li class="news-block-item">
+                                            <a href="#">
+                                                <div class="news-block-item__date">
+                                                    <time datetime="2026-04-04">0000.00</time>
+                                                </div>
+                                                <div class="news-block-item__title">
+                                                    <h4>【検証】土地と人に相性はあるのか？</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li class="news-block-item">
+                                            <a href="#">
+                                                <div class="news-block-item__date">
+                                                    <time datetime="2026-04-04">0000.00</time>
+                                                </div>
+                                                <div class="news-block-item__title">
+                                                    <h4>弊社創業初の入社式が行われました。</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <div class="news-block__link">
                                         <a href="#">
                                             <span>more</span>
                                             <span class="arrow">
-                                            <span></span>
+                                                <span></span>
                                             </span>
                                         </a>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- ↑ブログ↑ -->
                     </div>
                 </div>
             </section>
@@ -446,39 +453,48 @@
             <!-- ↓company（会社概要）↓ -->
             <section id="company" class="company fade-up">
                 <div class="inner">
-                    <div class="company__title common-title">
+                    <div class="common-title">
                         <h2>COMPANY</h2>
                         <p>会社概要</p>
                     </div>
                     
                     <div class="company__contents">
                         <div class="company__item company-item">
-                            <div class="company-item__map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.2444322055485!2d129.83646707512332!3d32.81228788218367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356aad0ae40d2583%3A0xc715da862d399c4e!2z44CSODUyLTgwNjUg6ZW35bSO55yM6ZW35bSO5biC5qiq5bC-77yR5LiB55uu77yV4oiS77yT77yW!5e0!3m2!1sja!2sjp!4v1712467806288!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="株式会社北村建設興業 の所在地マップ"></iframe>
+
+                            <!-- 地図エリア -->
+                            <div class="company-item__map-area">
+                                <div class="company-item__map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.2444322055485!2d129.83646707512332!3d32.81228788218367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356aad0ae40d2583%3A0xc715da862d399c4e!2z44CSODUyLTgwNjUg6ZW35bSO55yM6ZW35bSO5biC5qiq5bC-77yR5LiB55uu77yV4oiS77yT77yW!5e0!3m2!1sja!2sjp!4v1712467806288!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="株式会社北村建設興業 の所在地マップ"></iframe>
+                                </div>
                             </div>
-                            
+
                             <!-- 緑のボックス -->
                             <div class="company-item__info">
-                                <div class="company-item__info-inner">
-                                    <div class="company-item__name">
-                                        <p>株式会社 北村建設興業</p>
+                                    <div class="company-item__info-inner">
+                                        <div class="company-item__name">
+                                            <p>株式会社 北村建設興業</p>
+                                        </div>
+                                        <div class="company-item__address">
+                                            <address>
+                                                〒852-8065<br>
+                                                長崎県長崎市横尾○丁目○-○
+                                            </address>                                        
+                                        </div>
+                                        <div class="company-item__tel">
+                                            <p>
+                                                <span class="tel-label">TEL</span>
+                                                <a href="tel:000-0000-0000">
+                                                    <span>000-000-0000</span>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="company-item__mail">
+                                            <p>
+                                                Mail
+                                                <a href="mailto:info@example.com" class="ib-span">info@example.com</a>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="company-item__address">
-                                        <p>〒852-8065<br>
-                                            長崎県長崎市横尾○丁目○-○</p>
-                                    </div>
-                                    <div class="company-item__tel">
-                                        <p>
-                                            TEL<a href="tel:000-0000-0000"><span>000-000-0000</span></a>
-                                        </p>
-                                    </div>
-                                    <div class="company-item__mail">
-                                        <p>
-                                            Mail
-                                            <a href="mailto:info@example.com" class="ib-span">info@example.com</a>
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
                         </div>              
                     </div>
@@ -489,7 +505,7 @@
             <!-- ↓contact（コンタクト）↓ -->
             <section id="contact" class="contact section-bg fade-up">
                 <div class="inner">
-                    <div class="contact__title common-title">
+                    <div class="common-title">
                         <h2>CONTACT</h2>
                         <p>お問い合わせ</p>
                     </div>
@@ -555,39 +571,39 @@
                                 <!-- チェックボックス -->
                                 <dl class="checkbox-group">
                                     <dt>何を見て当社HPを知りましたか？ (複数回答可)　*</dt>
-                                    <dd class="form-checkbox">
-                                        <label class="checkbox-item">
-                                            <input type="checkbox" name="how-know" value="インターネット">
-                                            <span>インターネット</span>
-                                        </label>
-                                        <label class="checkbox-item">
-                                            <input type="checkbox" name="how-know" value="チラシ">
-                                            <span>チラシ</span>
-                                        </label>
-                                        <label class="checkbox-item">
-                                            <input type="checkbox" name="how-know" value="住宅展示場">
-                                            <span>住宅展示場</span>
-                                        </label>
-                                        <label class="checkbox-item">
-                                            <input type="checkbox" name="square-check" value="看板">
-                                            <span>看板</span>
-                                        </label>
-                                        <label class="checkbox-item">
-                                            <input type="checkbox" name="square-check" value="各種SNS">
-                                            <span>各種SNS</span>
-                                        </label>
-                                        <label class="checkbox-item">
-                                            <input type="checkbox" name="square-check" value="紹介">
-                                            <span>紹介</span>
-                                        </label>
-                                        <label class="checkbox-item">
-                                            <input type="checkbox" name="square-check" value="通りがかり">
-                                            <span>通りがかり</span>
-                                        </label>
-                                        <label class="checkbox-item">
-                                            <input type="checkbox" name="square-check" value="その他">
-                                            <span>その他</span>
-                                        </label>
+                                    <dd class="form-checkbox">                                        
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="how-know" value="インターネット">
+                                                <span>インターネット</span>
+                                            </label>                                                                               
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="how-know" value="チラシ">
+                                                <span>チラシ</span>
+                                            </label>                                                                                
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="how-know" value="住宅展示場">
+                                                <span>住宅展示場</span>
+                                            </label>                                        
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="square-check" value="看板">
+                                                <span>看板</span>
+                                            </label>                                       
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="square-check" value="各種SNS">
+                                                <span>各種SNS</span>
+                                            </label>                                        
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="square-check" value="紹介">
+                                                <span>紹介</span>
+                                            </label>                                        
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="square-check" value="通りがかり">
+                                                <span>通りがかり</span>
+                                            </label>                                        
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="square-check" value="その他">
+                                                <span>その他</span>
+                                            </label>
                                     </dd>
                                 </dl>
                                 <!-- 個人情報保護方針 -->
@@ -649,12 +665,14 @@
 
                                                     <h3>プライバシーポリシーに関するお問合せ先</h3>
                                                     <p>弊社の個人情報の取扱いに関するお問合せは、下記までお問い合せください。</p>
-
-                                                    <p>社名   株式会社北村建設興業</p>
-                                                    <p>住所   長崎県長崎市横尾○丁目○-○</p>    
-                                                    <p>電話   000-000-0000</p>    
-                                                    <p>FAX    000-000-0000</p>    
-                                                    <p>メールアドレス	info@example.com</p> 
+                                                    <address>
+                                                        <p>社名   株式会社北村建設興業</p>
+                                                        <p>住所   長崎県長崎市横尾○丁目○-○</p>    
+                                                        <p>電話   000-000-0000</p>    
+                                                        <p>FAX    000-000-0000</p>    
+                                                        <p>メールアドレス	info@example.com</p>
+                                                    </address>
+                                                     
                                                 </div>
                                             </div>
                                         </div>
@@ -677,9 +695,9 @@
             <div  class="footer__main">
                 <div class="footer__inner">
                     <div class="footer__logo">
-                        <h2>
-                            <a href="#">株式会社 北村建設興業</a>
-                        </h2>
+                        <a href="#" aria-label="株式会社 北村建設興業 トップへ戻る">
+                            株式会社 北村建設興業
+                        </a>
                     </div>
                     <div class="footer__nav">
                         <nav>
@@ -709,28 +727,28 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                    <div class="twitter" aria-label="Twitter">
+                                    <div class="twitter">
                                         <img src="./images/icon-twitter.svg" alt="twitter">
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="facebook" aria-label="facebook">
+                                    <div class="facebook">
                                         <img src="./images/icon-facebook.svg" alt="facebook">
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="youtube" aria-label="youtube">
+                                    <div class="youtube">
                                         <img src="./images/icon-youtube.svg" alt="youtube">
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="instagram" aria-label="instagram">
+                                    <div class="instagram">
                                         <img src="./images/icon-instagram.svg" alt="instagram">
                                     </div>
                                 </a>
@@ -740,7 +758,11 @@
                 </div>
             </div>
             <div class="footer__copyright">
-                <p>©︎Copyright0000　<br class="sp-only">kitamurakensetukogyo</p>
+                <p>
+                    <span class="copy-left">©︎Copyright0000</span>
+                    <br class="sp-only">
+                    kitamurakensetukogyo
+                </p>
             </div>
         </footer>
         <!-- ↑footer（フッター）↑ -->
@@ -748,28 +770,75 @@
         <!-- トップに戻るボタン -->
         <a href="#" class="top-back-btn">
             <div class="top-back-btn__icon">
-                <img src="./images/icon-to-top.svg" alt="arrow">
+                <div class="top-back-btn__icon-img">
+                    <img src="./images/icon-to-top.svg" alt="arrow">
+                </div>
             </div>
         </a>
 
-        <!-- ↓モーダルウィンドウ↓ -->
-        <div class="modal" id="modal">
-            <div class="modal__overlay"></div>
-            
-            <div class="modal__content">
-                <button class="modal__content-close" id="modal-close" aria-label="閉じる">
-                    <span></span>
-                    <span></span>
-                </button>
-                    <div class="modal__img-wrap">
-                        <img src="" alt="" id="modal-img">
-                    </div>
-                    <p id="modal-caption" class="modal__content-caption"></p>           
-            </div>
-        </div>
-        <!-- ↑モーダルウィンドウ↑ -->
-
     <!-- ↑container↑ -->    
     </div>
+    <!-- ↓モーダルウィンドウ↓ -->
+                <!-- modal01 -->
+                <div class="modal" id="modal01">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content">
+                        <button class="modal__content-close" aria-label="閉じる">
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="modal__img-inner">
+                            <img src="images/pc_works_modal_01.jpg" alt="【新築】長崎県T.O様自宅">
+                        </div>
+                        <p class="modal__content-caption">【新築】長崎県T.O様自宅</p>           
+                    </div>
+                </div>
+
+                <!-- modal02 -->
+                <div class="modal" id="modal02">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content">
+                        <button class="modal__content-close" aria-label="閉じる">
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="modal__img-inner">
+                            <img src="images/pc_works_modal_02.jpg" alt="【リノベーション】京都府カトリック丹波教会">
+                        </div>
+                        <p class="modal__content-caption">【リノベーション】京都府カトリック丹波教会</p>           
+                    </div>
+                </div>
+
+                <!-- modal03 -->
+                <div class="modal" id="modal03">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content">
+                        <button class="modal__content-close" aria-label="閉じる">
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="modal__img-inner">
+                            <img src="images/pc_works_modal_03.jpg" alt="【新築】東京都A.F様自宅件事務所">
+                        </div>
+                        <p class="modal__content-caption">【新築】東京都A.F様自宅件事務所</p>           
+                    </div>
+                </div>
+
+                <!-- modal04 -->
+                <div class="modal" id="modal04">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content">
+                        <button class="modal__content-close" aria-label="閉じる">
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="modal__img-inner">
+                            <img src="images/pc_works_modal_04.jpg" alt="【都市開発】山形県銀山温泉協同組合">
+                        </div>
+                        <p class="modal__content-caption">【都市開発】山形県銀山温泉協同組合</p>           
+                    </div>
+                </div> 
+                <!-- ↑モーダルウィンドウ↑ -->
+
 </body>
 </html>
