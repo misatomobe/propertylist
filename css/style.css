@@ -1946,17 +1946,22 @@ h4 {
   transition:
     opacity 0.5s ease,
     transform 0.5s ease,
-    visibility 0s linear 0.5s;
+    visibility 0s linear 0.5s; /* 消える時だけ遅延 */
 }
 @media (max-width: 767px) {
   .top-back-btn {
     right: 2rem;
   }
 }
+/* 表示 */
 .top-back-btn.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0s;
 }
 .top-back-btn__icon {
   width: 6.8rem;
