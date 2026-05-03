@@ -119,25 +119,31 @@ $(window).on('scroll', function () {
 // ==============================
 // トップへ戻るボタン
 // ==============================
-$(window).scroll(function(){
+$(window).on('scroll', function() {
 
-  const aboutPos = $('.about').offset().top
-  const scrollTop = $(this).scrollTop()
-  const headerHeight = $('.header').outerHeight();
+  const scrollTop = $(this).scrollTop();
 
-  if(scrollTop > aboutPos) {
-    $('.header').addClass('change')
+  // ヘッダー色変更
+  const aboutPos = $('.about').offset().top;
+
+  if (scrollTop > aboutPos) {
+    $('.header').addCl);
   } else {
-    $('.header').removeClass('change')
+    $('.header').removeClass('change');
   }
 
-  // トップに戻るボタン
-  if(scrollTop > aboutPos - headerHeight - 400) {
-    $('.top-back-btn').addClass('show')
+  // ==============================
+  // FV基準
+  // ==============================
+  const fvBottom = $('.fv').get(0).getBoundingClientRect().bottom + scrollTop;
+
+  if (scrollTop > fvBottom) {
+    $('.top-back-btn').addClass('show');
   } else {
-    $('.top-back-btn').removeClass('show')
+    $('.top-back-btn').removeClass('show');
   }
-})
+
+});
 
   // ==============================
   // フェードアップ
