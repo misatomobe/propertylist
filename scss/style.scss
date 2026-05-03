@@ -970,11 +970,15 @@ h4 {
   }
 }
 
+.works-item__image {
+  width: 100%;
+  transition: opacity 0.4s ease;
+}
+
 .works-item__image img {
   width: 100%;
-  height: 100%;
+  display: block;
   object-fit: cover;
-  transition: opacity 0.4s ease;
 }
 
 .works-item__title h3 {
