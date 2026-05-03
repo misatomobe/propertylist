@@ -714,6 +714,9 @@ h4 {
       position: relative;
       padding: 15% 9% 13% 21%;
       width: 100%;
+      @include tab-only {
+        padding: 15% 8% 13% 12%;
+      }
       @include sp {
         padding: 2rem 2rem 1.2rem;
       }
@@ -827,7 +830,7 @@ h4 {
       p {
         font-weight: 500;
         @include tab-only {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
         }
         @include sp {
            font-size: 1.6rem;
@@ -874,6 +877,9 @@ h4 {
 
       .service__item__text-bg {
         padding: 15% 21% 13% 12%;
+        @include tab-only {
+          padding: 15% 12% 13% 8%;
+        }
         &::before {
         left: auto;
         right: -56%;
