@@ -262,8 +262,8 @@ h4 {
     margin: 0 auto;
     box-sizing: border-box;
     
-    @include tab-only  {
-      padding: 0 3rem;
+    @include tab-only {
+      padding: 0 2rem;
     }
 
     @include sp {
