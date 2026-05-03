@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: "Noto Serif JP", "游明朝", YuMincho, serif;
+  font-family: "Yu Mincho", "游明朝", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
   font-size: 1.6rem;
   line-height: calc(25 /16);
   font-weight: 400;
@@ -302,9 +302,8 @@ h4 {
   ul {
     display: flex;
     align-items: center;
-    column-gap: 3.2rem;
+    column-gap: 3.1rem;
     color: $font-color02;
-    margin-right: 0.3rem;
     li {
       a {
         height: 8rem;
@@ -1942,14 +1941,15 @@ h4 {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
   @include sp {
       right: 2rem;
     }   
   &.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
   }
   &__icon {
     width: 6.8rem;
