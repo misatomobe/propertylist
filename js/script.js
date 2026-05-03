@@ -122,22 +122,21 @@ $(window).on('scroll', function () {
 $(window).on('scroll', function() {
 
   const scrollTop = $(this).scrollTop();
-
-  // ヘッダー色変更
   const aboutPos = $('.about').offset().top;
 
+  // ヘッダー色変更
   if (scrollTop > aboutPos) {
-    $('.header').addCl);
+    $('.header').addClass('change');
   } else {
     $('.header').removeClass('change');
   }
 
   // ==============================
-  // FV基準
+  // トップへ戻るボタン（FV基準に修正）
   // ==============================
-  const fvBottom = $('.fv').get(0).getBoundingClientRect().bottom + scrollTop;
+  const fvBottom = $('.fv').offset().top + $('.fv').outerHeight();
 
-  if (scrollTop > fvBottom) {
+  if (scrollTop > fvBottom - 50) {
     $('.top-back-btn').addClass('show');
   } else {
     $('.top-back-btn').removeClass('show');
