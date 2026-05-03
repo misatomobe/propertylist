@@ -126,21 +126,21 @@ button:hover {
 }
 
 // sp
-@media (max-width: 765px) {
+@media (max-width: 767px) {
   .sp-br {
     display: inline;
   }
 }
 
 // タブレット
-@media (min-width: 766px) and (max-width: 1079px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .tb-br { 
     display: inline;
   }
 }
 
 // pc
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
   .pc-br { 
     display: inline;
   }
@@ -952,7 +952,7 @@ h4 {
   }
   h3 {
     @include tab-only {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
   }
 }
