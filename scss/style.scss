@@ -712,7 +712,7 @@ h4 {
 
     &__text-bg {
       position: relative;
-      padding: 15% 9% 14% 21%;
+      padding: 15% 9% 13% 21%;
       width: 100%;
       @include sp {
         padding: 2rem 2rem 1.2rem;
@@ -873,7 +873,7 @@ h4 {
       }
 
       .service__item__text-bg {
-        padding: 15% 21% 14% 9%;
+        padding: 15% 21% 13% 12%;
         &::before {
         left: auto;
         right: -56%;
