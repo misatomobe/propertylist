@@ -282,8 +282,12 @@ h4 {
     line-height: calc(20 / 20);
     display: flex;
     align-items: center;
-    transition: all 0.4s ease;
+    transition: opacity 0.4s ease;
     height: 100%;
+
+    &:hover {
+      opacity: 0.7;
+    }
 
     @include sp {
       line-height: calc(33 / 20);
