@@ -278,7 +278,6 @@ h4 {
   }
 }
 .header.change .is-colored {
-  background-color: #4D9600 !important; /* ← 強制的に緑にする */
   opacity: 1 !important;
   mix-blend-mode: normal !important;
   backdrop-filter: none !important;
