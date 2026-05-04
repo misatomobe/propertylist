@@ -1134,7 +1134,7 @@ h4 {
 }
 .news-block .news-block-item a {
   display: flex;
-  column-gap: 16%;
+  column-gap: 17%;
   padding: 1.2rem 0;
   transition: opacity 0.6s ease;
 }
@@ -1150,7 +1150,7 @@ h4 {
   font-size: 1.6rem;
   line-height: 2.0625;
   display: inline-block;
-  margin-top: 0.1rem;
+  align-items: flex-start;
 }
 .news-block .news-block-item__title {
   flex: 1;

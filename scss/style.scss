@@ -1181,7 +1181,7 @@ h4 {
     border-bottom: 0.1rem solid $border-color-green;
     a {
       display: flex;
-      column-gap: 16%;
+      column-gap: 17%;
       padding: 1.2rem 0;
       transition: opacity 0.6s ease;
       @include sp {
@@ -1197,7 +1197,7 @@ h4 {
         font-size: 1.6rem;
         line-height: calc(33 / 16);
         display: inline-block;
-        margin-top: 0.1rem;
+        align-items: flex-start;
       }
     }
     &__title {
