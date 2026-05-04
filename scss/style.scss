@@ -1669,6 +1669,7 @@ h4 {
     .checkbox-col {
       display: flex;
       justify-content: flex-start;
+      width: fit-content;
     }
     // クリック領域
     .checkbox-item {

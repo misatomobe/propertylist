@@ -1655,6 +1655,7 @@ h4 {
 .contact .form-checkbox .checkbox-col {
   display: flex;
   justify-content: flex-start;
+  width: fit-content;
 }
 .contact .form-checkbox .checkbox-item {
   display: inline-flex;
