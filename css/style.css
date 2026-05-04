@@ -1265,7 +1265,7 @@ h4 {
 }
 .company .company-item__map-area {
   width: 65.2%;
-  padding-bottom: 6.1rem;
+  padding-bottom: 5.7rem;
   position: relative;
   z-index: 3;
 }
@@ -1314,7 +1314,7 @@ h4 {
 }
 .company .company-item__info-inner {
   position: relative;
-  padding: 14% 9% 15% 12%;
+  padding: 16% 9% 13% 12%;
   width: 100%;
   z-index: 1;
 }
