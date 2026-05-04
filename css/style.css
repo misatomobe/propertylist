@@ -1244,7 +1244,7 @@ h4 {
   }
 }
 .company__contents {
-  margin-top: 6.8rem;
+  margin-top: 6.7rem;
 }
 @media (max-width: 767px) {
   .company__contents {
@@ -1265,7 +1265,7 @@ h4 {
 }
 .company .company-item__map-area {
   width: 65.2%;
-  padding-bottom: 5.7rem;
+  padding-bottom: 6.1rem;
   position: relative;
   z-index: 3;
 }
