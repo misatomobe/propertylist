@@ -1314,7 +1314,7 @@ h4 {
 }
 .company .company-item__info-inner {
   position: relative;
-  padding: 16% 9% 13% 12%;
+  padding: 15% 9% 13% 12%;
   width: 100%;
   z-index: 1;
 }
@@ -1381,7 +1381,7 @@ h4 {
   }
 }
 .company .company-item__tel a {
-  margin-left: 0.5rem;
+  margin-left: 0.6rem;
   line-height: 1;
 }
 @media (min-width: 1024px) {
@@ -1396,11 +1396,11 @@ h4 {
   line-height: 1;
 }
 .company .company-item__mail {
-  margin-top: 1.8rem;
+  margin-top: 2rem;
 }
 .company .company-item__mail p {
   display: flex;
-  gap: 1rem;
+  gap: 1.7rem;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .company .company-item__mail p {

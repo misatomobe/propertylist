@@ -1353,7 +1353,7 @@ h4 {
 
     &__info-inner {
       position: relative;
-      padding: 16% 9% 13% 12%;
+      padding: 15% 9% 13% 12%;
       width: 100%;
       z-index: 1;
       @include sp {
@@ -1413,7 +1413,7 @@ h4 {
         }
       }
       a {
-        margin-left: 0.5rem;
+        margin-left: 0.6rem;
         line-height: 1;
         @include pc {
           pointer-events: none;
@@ -1428,10 +1428,10 @@ h4 {
     }
 
     &__mail {
-      margin-top: 1.8rem;
+      margin-top: 2rem;
       p {
         display: flex;
-        gap: 1rem;
+        gap: 1.7rem;
         @include tab-only {
           font-size: 1.3rem;
         }
