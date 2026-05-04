@@ -1232,10 +1232,11 @@ h4 {
     line-height: 1;
     font-weight: 500;
     color: $border-color-green;
-    display: inline-block;
+    display: block;
     position: relative;
     transition: transform .7s ease;
-    padding-right: 3.2rem;
+    padding: 0.1rem 0 0 0;
+    margin-right: 3.3rem;
     @include sp {
       line-height: calc(33 / 20);
     }
@@ -1248,7 +1249,7 @@ h4 {
       background-color: $border-color-green;
       position: absolute;
       bottom: -0.5rem;
-      right: 0;
+      left: 0;
       @include sp {
         bottom: 0.1rem;
       }

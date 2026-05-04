@@ -1185,10 +1185,11 @@ h4 {
   line-height: 1;
   font-weight: 500;
   color: #55A500;
-  display: inline-block;
+  display: block;
   position: relative;
   transition: transform 0.7s ease;
-  padding-right: 3.2rem;
+  padding: 0.1rem 0 0 0;
+  margin-right: 3.3rem;
 }
 @media (max-width: 767px) {
   .news-block__link a {
@@ -1204,7 +1205,7 @@ h4 {
   background-color: #55A500;
   position: absolute;
   bottom: -0.5rem;
-  right: 0;
+  left: 0;
 }
 @media (max-width: 767px) {
   .news-block__link a .arrow {
