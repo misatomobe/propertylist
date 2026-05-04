@@ -1472,12 +1472,12 @@ h4 {
   }
 }
 &__form-block {
-  margin-top: 6.9rem;
+  margin-top: 7rem;
   @include sp {
     margin-top: 3.7rem;
   }
   dl:not(:first-of-type) {
-    margin-top: 4.85rem;
+    margin-top: 5rem;
     @include sp {
       margin-top: 2.8rem;
     }
@@ -1500,10 +1500,6 @@ h4 {
   }
 
   dd {
-    margin-top: 1rem;
-    @include sp {
-      margin-top: 0;
-    }
     .form-control {
       width: 100%;
       height: 5rem;
@@ -1534,6 +1530,12 @@ h4 {
       display: block;
     }
   }
+}
+.message-area,
+.privacy-area {
+  dd {
+    margin-top: 1.1rem;
+  }
 } 
 .form-flex {
   display: flex;
@@ -1546,7 +1548,6 @@ h4 {
   }
   dd {
     flex: 1;
-    margin-top: 0.3rem;
   }
   &.sp-flex {
     @include sp {
@@ -1568,6 +1569,9 @@ h4 {
         column-gap: 2rem;
       }
     }
+  }
+  &:not(:first-of-type) {
+    margin-top: 5rem;
   }
 }
   // radio
@@ -1650,6 +1654,7 @@ h4 {
     gap: 1.5rem 0.2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
+    margin-top: 1rem;
     // pc(4列)
     grid-template-columns: repeat(4, 1fr);
     @include tab-only {
