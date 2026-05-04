@@ -1187,7 +1187,7 @@ h4 {
   color: #55A500;
   display: inline-block;
   position: relative;
-  transition: transform 0.4s ease;
+  transition: transform 0.7s ease;
   padding-right: 3.2rem;
 }
 @media (max-width: 767px) {
