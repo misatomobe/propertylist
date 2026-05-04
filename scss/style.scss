@@ -1290,7 +1290,7 @@ h4 {
   }
 
   &__contents {
-    margin-top: 6.8rem;
+    margin-top: 6.2rem;
     @include sp {
       margin-top: 2rem;
     }
@@ -1307,7 +1307,7 @@ h4 {
     // 左側：地図
     &__map-area {
       width: 65.2%;
-      padding-bottom: 5.7rem;
+      padding-bottom: 6.5rem;
       position: relative;
       z-index: 3;
       @include sp {
@@ -1388,7 +1388,7 @@ h4 {
     }
 
     &__address {
-      margin-top: 0.8rem;
+      margin-top: 0.6rem;
       @include tab-only {
         font-size: 1rem;
       }
