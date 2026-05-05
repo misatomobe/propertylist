@@ -1659,8 +1659,6 @@ h4 {
     grid-template-columns: repeat(4, 1fr);
     @include tab-only {
       grid-template-columns: repeat(2, 1fr);
-      font-size: 1.5rem;
-      gap: 0.6rem 0;
     }
     @include sp {
       grid-template-columns: repeat(2, 1fr);
@@ -1668,8 +1666,8 @@ h4 {
       line-height: calc(25 / 16);
       gap: 0.6rem 0;
     }
-     @media screen and (max-width: 350px) {
-      grid-template-columns: repeat(2, 1fr);
+     @media screen and (max-width: 365px) {
+      grid-template-columns: 1fr;
     }
     .checkbox-col {
       display: flex;
@@ -1692,9 +1690,6 @@ h4 {
           }
           @include sp {
             padding-left: 3rem;
-          }
-          @media screen and (max-width: 350px) {
-            padding-left: 2rem;
           }
 
           &::before {
