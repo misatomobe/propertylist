@@ -1975,7 +1975,6 @@ h4 {
 .top-back-btn.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
 }
 .top-back-btn__icon {
   width: 6.8rem;
