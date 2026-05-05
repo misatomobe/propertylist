@@ -1644,7 +1644,7 @@ h4 {
     gap: 0.6rem 0;
   }
 }
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 360px) {
   .contact .form-checkbox {
     grid-template-columns: 1fr;
   }
