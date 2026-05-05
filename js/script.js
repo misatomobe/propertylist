@@ -139,7 +139,11 @@ function updateTopBtn() {
   const fvBottom = fv.getBoundingClientRect().bottom;
 
   // 表示タイミング調整用
-  const triggerOffset = 100;
+  let triggerOffset = 100; // SP・タブレット
+
+  if (window.innerWidth >= 1024) {
+    triggerOffset = 250; // PC
+  }
 
   if (
     fvBottom < window.innerHeight - triggerOffset &&
