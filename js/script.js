@@ -119,30 +119,43 @@ $(window).on('scroll', function () {
 // ==============================
 // トップへ戻るボタン
 // ==============================
-$(window).on('scroll', function() {
+const topBtn = document.querySelector('.top-back-btn');
+const footer = document.querySelector('footer');
+const fv = document.querySelector('.fv');
+const modal = document.querySelector('.modal');
 
-  const scrollTop = $(this).scrollTop();
-  const aboutPos = $('.about').offset().top;
+function updateTopBtn() {
+  if (!topBtn || !footer || !fv) return;
 
-  // ヘッダー色変更
-  if (scrollTop > aboutPos) {
-    $('.header').addClass('change');
-  } else {
-    $('.header').removeClass('change');
+  const footerTop = footer.offsetTop;
+
+  // モーダル開いてる時は非表示
+  if (modal && modal.classList.contains('is-active')) {
+    topBtn.classList.remove('show');
+    return;
   }
 
-  // ==============================
-  // トップへ戻るボタン（FV基準に修正）
-  // ==============================
-  const fvBottom = $('.fv').offset().top + $('.fv').outerHeight();
+  // FVの下端の位置（画面基準）
+  const fvBottom = fv.getBoundingClientRect().bottom;
 
-  if (scrollTop > fvBottom - 50) {
-    $('.top-back-btn').addClass('show');
+  // 表示タイミング調整用
+  const triggerOffset = 100;
+
+  if (
+    fvBottom < window.innerHeight - triggerOffset &&
+    window.scrollY < footerTop - 50
+  ) {
+    topBtn.classList.add('show');
   } else {
-    $('.top-back-btn').removeClass('show');
+    topBtn.classList.remove('show');
   }
+}
 
-});
+// イベント
+window.addEventListener('scroll', updateTopBtn);
+window.addEventListener('load', updateTopBtn);
+window.addEventListener('resize', updateTopBtn);
+
 
   // ==============================
   // フェードアップ
