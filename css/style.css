@@ -1816,7 +1816,7 @@ h4 {
 .footer__logo {
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 2.8rem;
+  padding-bottom: 2.5rem;
   border-bottom: 1px solid #000;
   text-align: center;
 }
@@ -1955,7 +1955,7 @@ h4 {
   }
 }
 .footer__copyright .copy-left {
-  margin-right: 1em;
+  margin-right: 0.5rem;
 }
 
 .top-back-btn {
