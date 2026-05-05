@@ -1965,7 +1965,7 @@ h4 {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+  transition: all 0.3s ease;
 }
 @media (max-width: 767px) {
   .top-back-btn {
@@ -1975,6 +1975,7 @@ h4 {
 .top-back-btn.show {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
 .top-back-btn__icon {
   width: 6.8rem;

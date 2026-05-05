@@ -142,7 +142,7 @@ function updateTopBtn() {
   let triggerOffset = 100; // SP・タブレット
 
   if (window.innerWidth >= 1024) {
-    triggerOffset = 250; // PC
+    triggerOffset = 150; // PC
   }
 
   if (
