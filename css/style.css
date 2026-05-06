@@ -1880,7 +1880,6 @@ h4 {
 @media (max-width: 767px) {
   .footer__logo a:hover {
     opacity: 1;
-    transform: none;
   }
 }
 .footer__nav {
@@ -1923,15 +1922,16 @@ h4 {
   display: block;
   text-align: center;
 }
-@media (hover: hover) and (pointer: fine) {
-  .footer__nav ul li a a:hover {
-    opacity: 0.7;
-  }
+.footer__nav ul li a:hover {
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .footer__nav ul li a {
     padding: 0 0.49rem;
     white-space: nowrap;
+  }
+  .footer__nav ul li a:hover {
+    opacity: 1;
   }
 }
 @media (max-width: 350px) {
@@ -1965,10 +1965,14 @@ h4 {
   width: 2.8rem;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
-@media (hover: hover) and (pointer: fine) {
-  .footer__sns ul li a a:hover {
-    opacity: 0.7;
-    transform: scale(1.2);
+.footer__sns ul li a:hover {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+@media (max-width: 767px) {
+  .footer__sns ul li a:hover {
+    opacity: 1;
+    transform: none;
   }
 }
 .footer__sns ul li a .twitter,

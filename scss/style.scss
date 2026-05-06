@@ -1877,7 +1877,6 @@ h4 {
       @include sp {
         &:hover {
           opacity: 1;
-          transform: none;
         }
       }
     }
@@ -1913,14 +1912,15 @@ h4 {
           white-space: normal;
           display: block;
           text-align: center;
-          @media (hover: hover) and (pointer: fine) {
-            a:hover {
-              opacity: 0.7;
-            }
+          &:hover {
+            opacity: 0.7;
           }
           @include sp {
             padding: 0 0.49rem;
             white-space: nowrap;
+            &:hover {
+              opacity: 1;
+            }
           }
           @include sp-small {
             font-size: 1.5rem;
@@ -1949,13 +1949,16 @@ h4 {
           align-items: center;
           width: 2.8rem;
           transition: opacity 0.4s ease, transform 0.4s ease;
-
-          @media (hover: hover) and (pointer: fine) {
-            a:hover {
+          &:hover {
               opacity: 0.7;
               transform: scale(1.2);
             }
-          }
+            @include sp {
+              &:hover {
+                opacity: 1;
+                transform: none;
+              }
+            }
           .twitter,
           .facebook,
           .youtube,
