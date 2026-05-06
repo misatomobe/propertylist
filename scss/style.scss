@@ -1424,6 +1424,7 @@ h4 {
       a {
         margin-left: 0.6rem;
         line-height: 1;
+
         @include pc {
           pointer-events: none;
           cursor: default;
