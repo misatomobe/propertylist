@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- JSはここにまとめる -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/script.js"></script>
     <!-- slick -->
@@ -26,7 +26,7 @@
     <div id="container">
 
         <!-- header -->
-        <header class="header is-colored">
+        <header class="header">
             <div class="header__inner">
                 <h1 class="header__logo">
                     <a href="/">
@@ -103,7 +103,7 @@
                 </div>
                          
          <!-- about（ご挨拶） -->
-         <section id="about" class="about fade-up">
+         <section id="about" class="about">
             <div class="inner__about">
                 <div class="about__image">
                     <div class="about__title">
@@ -113,7 +113,7 @@
                         </picture>
                     </div>
                     <div class="about__contents">
-                        <div class="about__contents__inner">
+                        <div class="about__contents__inner fade-up">
                             <div class="about__catch">
                                 <h2>伝統とイマを繋ぐ</h2>
                             
@@ -137,8 +137,8 @@
         </section>
          
         <!-- ↓service(サービス)↓ -->
-         <section id="service" class="service section-bg fade-up">
-          <div class="inner">
+         <section id="service" class="service section-bg">
+          <div class="inner fade-up">
                     <div class="common-title">
                         <h2>SERVICE</h2>
                         <p>サービス</p>
@@ -237,8 +237,8 @@
             <!-- ↑service(サービス)↑ -->
              
             <!-- works(施工事例) -->
-            <section id="works" class="works fade-up">
-                <div class="inner">
+            <section id="works" class="works">
+                <div class="inner fade-up">
                     <div class="common-title">
                         <h2>WORKS</h2>
                         <p>施工事例</p>
@@ -331,10 +331,72 @@
                 
             </section>
             <!-- ↑works(施工事例)↑ -->
+             
+            <!-- ↓モーダルウィンドウ↓ -->
+            <!-- modal01 -->
+            <div class="modal" id="modal01">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                    <button class="modal__content-close" aria-label="閉じる">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="modal__img-inner">
+                        <img src="images/pc_works_modal_01.jpg" alt="【新築】長崎県T.O様自宅">
+                    </div>
+                     <p class="modal__content-caption">【新築】長崎県T.O様自宅</p>           
+                </div>
+            </div>
+
+            <!-- modal02 -->
+            <div class="modal" id="modal02">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                    <button class="modal__content-close" aria-label="閉じる">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="modal__img-inner">
+                        <img src="images/pc_works_modal_02.jpg" alt="【リノベーション】京都府カトリック丹波教会">
+                    </div>
+                    <p class="modal__content-caption">【リノベーション】京都府カトリック丹波教会</p>           
+                </div>
+            </div>
+
+            <!-- modal03 -->
+            <div class="modal" id="modal03">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                    <button class="modal__content-close" aria-label="閉じる">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="modal__img-inner">
+                        <img src="images/pc_works_modal_03.jpg" alt="【新築】東京都A.F様自宅件事務所">
+                    </div>
+                    <p class="modal__content-caption">【新築】東京都A.F様自宅兼事務所</p>           
+                </div>
+            </div>
+
+            <!-- modal04 -->
+            <div class="modal" id="modal04">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                    <button class="modal__content-close" aria-label="閉じる">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="modal__img-inner">
+                        <img src="images/pc_works_modal_04.jpg" alt="【都市開発】山形県銀山温泉協同組合">
+                    </div>
+                    <p class="modal__content-caption">【都市開発】山形県銀山温泉協同組合</p>           
+                </div>
+            </div> 
+            <!-- ↑モーダルウィンドウ↑ -->
             
             <!-- ↓news（お知らせ）↓ -->
-             <section id="news" class="news section-bg fade-up">
-                <div class="inner">
+             <section id="news" class="news section-bg">
+                <div class="inner fade-up">
                     <div class="common-title">
                         <h2>NEWS</h2>
                         <p>お知らせ</p>
@@ -451,8 +513,8 @@
             <!-- ↑news（お知らせ）↑ -->
              
             <!-- ↓company（会社概要）↓ -->
-            <section id="company" class="company fade-up">
-                <div class="inner">
+            <section id="company" class="company">
+                <div class="inner fade-up">
                     <div class="common-title">
                         <h2>COMPANY</h2>
                         <p>会社概要</p>
@@ -471,40 +533,42 @@
                             <!-- 緑のボックス -->
                             <div class="company-item__info">
                                     <div class="company-item__info-inner">
-                                        <div class="company-item__name">
-                                            <p>株式会社 北村建設興業</p>
-                                        </div>
-                                        <div class="company-item__address">
-                                            <address>
-                                                〒852-8065<br>
-                                                長崎県長崎市横尾○丁目○-○
-                                            </address>                                        
-                                        </div>
-                                        <div class="company-item__tel">
-                                            <p>
-                                                <span class="tel-label">TEL</span>
-                                                <a href="tel:000-0000-0000">
-                                                    <span>000-000-0000</span>
-                                                </a>
-                                            </p>
-                                        </div>
-                                        <div class="company-item__mail">
-                                            <p>
-                                                Mail
-                                                <a href="mailto:info@example.com" class="ib-span">info@example.com</a>
-                                            </p>
-                                        </div>
+                                        <address class="company-item__contact-list">
+                                            <div class="company-item__name">
+                                                <p>株式会社 北村建設興業</p>
+                                            </div>                                       
+                                            <div class="company-item__address">
+                                                <p>
+                                                    〒852-8065<br>
+                                                    長崎県長崎市横尾○丁目○-○
+                                                </p>                                        
+                                            </div>
+                                            <div class="company-item__tel">
+                                                <p>
+                                                    <span class="tel-label">TEL</span>
+                                                    <a href="tel:000-0000-0000">
+                                                        <span>000-000-0000</span>
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <div class="company-item__mail">
+                                                <p>
+                                                    Mail
+                                                    <a href="mailto:info@example.com" class="ib-span">info@example.com</a>
+                                                </p>
+                                            </div>
+                                        </address>                                        
                                     </div>
-                            </div>
-                        </div>              
+                                </div>
+                            </div>              
+                        </div>
                     </div>
-                </div>
             </section>
             <!-- ↑company（会社概要）↑ -->
              
             <!-- ↓contact（コンタクト）↓ -->
-            <section id="contact" class="contact section-bg fade-up">
-                <div class="inner">
+            <section id="contact" class="contact section-bg">
+                <div class="inner fade-up">
                     <div class="common-title">
                         <h2>CONTACT</h2>
                         <p>お問い合わせ</p>
@@ -571,39 +635,55 @@
                                 <!-- チェックボックス -->
                                 <dl class="checkbox-group">
                                     <dt>何を見て当社HPを知りましたか？ (複数回答可)　*</dt>
-                                    <dd class="form-checkbox">                                        
+                                    <dd class="form-checkbox">
+                                        <div class="checkbox-col">
                                             <label class="checkbox-item">
                                                 <input type="checkbox" name="how-know" value="インターネット">
                                                 <span>インターネット</span>
-                                            </label>                                                                               
+                                            </label> 
+                                        </div> 
+                                        <div class="checkbox-col">
                                             <label class="checkbox-item">
                                                 <input type="checkbox" name="how-know" value="チラシ">
                                                 <span>チラシ</span>
-                                            </label>                                                                                
+                                            </label>
+                                        </div> 
+                                        <div class="checkbox-col">
                                             <label class="checkbox-item">
                                                 <input type="checkbox" name="how-know" value="住宅展示場">
                                                 <span>住宅展示場</span>
-                                            </label>                                        
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-col">
                                             <label class="checkbox-item">
                                                 <input type="checkbox" name="square-check" value="看板">
                                                 <span>看板</span>
-                                            </label>                                       
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-col">
                                             <label class="checkbox-item">
                                                 <input type="checkbox" name="square-check" value="各種SNS">
                                                 <span>各種SNS</span>
-                                            </label>                                        
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-col">
                                             <label class="checkbox-item">
                                                 <input type="checkbox" name="square-check" value="紹介">
                                                 <span>紹介</span>
-                                            </label>                                        
+                                            </label> 
+                                        </div>
+                                        <div class="checkbox-col">
                                             <label class="checkbox-item">
                                                 <input type="checkbox" name="square-check" value="通りがかり">
                                                 <span>通りがかり</span>
-                                            </label>                                        
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-col">
                                             <label class="checkbox-item">
                                                 <input type="checkbox" name="square-check" value="その他">
                                                 <span>その他</span>
                                             </label>
+                                        </div>                                            
                                     </dd>
                                 </dl>
                                 <!-- 個人情報保護方針 -->
@@ -778,67 +858,6 @@
 
     <!-- ↑container↑ -->    
     </div>
-    <!-- ↓モーダルウィンドウ↓ -->
-                <!-- modal01 -->
-                <div class="modal" id="modal01">
-                    <div class="modal__overlay"></div>
-                    <div class="modal__content">
-                        <button class="modal__content-close" aria-label="閉じる">
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <div class="modal__img-inner">
-                            <img src="images/pc_works_modal_01.jpg" alt="【新築】長崎県T.O様自宅">
-                        </div>
-                        <p class="modal__content-caption">【新築】長崎県T.O様自宅</p>           
-                    </div>
-                </div>
-
-                <!-- modal02 -->
-                <div class="modal" id="modal02">
-                    <div class="modal__overlay"></div>
-                    <div class="modal__content">
-                        <button class="modal__content-close" aria-label="閉じる">
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <div class="modal__img-inner">
-                            <img src="images/pc_works_modal_02.jpg" alt="【リノベーション】京都府カトリック丹波教会">
-                        </div>
-                        <p class="modal__content-caption">【リノベーション】京都府カトリック丹波教会</p>           
-                    </div>
-                </div>
-
-                <!-- modal03 -->
-                <div class="modal" id="modal03">
-                    <div class="modal__overlay"></div>
-                    <div class="modal__content">
-                        <button class="modal__content-close" aria-label="閉じる">
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <div class="modal__img-inner">
-                            <img src="images/pc_works_modal_03.jpg" alt="【新築】東京都A.F様自宅件事務所">
-                        </div>
-                        <p class="modal__content-caption">【新築】東京都A.F様自宅件事務所</p>           
-                    </div>
-                </div>
-
-                <!-- modal04 -->
-                <div class="modal" id="modal04">
-                    <div class="modal__overlay"></div>
-                    <div class="modal__content">
-                        <button class="modal__content-close" aria-label="閉じる">
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <div class="modal__img-inner">
-                            <img src="images/pc_works_modal_04.jpg" alt="【都市開発】山形県銀山温泉協同組合">
-                        </div>
-                        <p class="modal__content-caption">【都市開発】山形県銀山温泉協同組合</p>           
-                    </div>
-                </div> 
-                <!-- ↑モーダルウィンドウ↑ -->
-
+    
 </body>
 </html>

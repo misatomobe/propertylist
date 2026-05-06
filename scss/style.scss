@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: "Noto Serif JP", "游明朝", YuMincho, serif;
+  font-family: "Yu Mincho", "游明朝", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
   font-size: 1.6rem;
   line-height: calc(25 /16);
   font-weight: 400;
@@ -51,14 +51,14 @@ body.is-fixed {
 
 // PCサイズ
 @mixin pc {
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     @content;
   }
 }
 
 // タブレットサイズ
 @mixin tab-only {
-  @media (min-width: 768px) and (max-width: 1030px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     @content;
   }
 }
@@ -126,21 +126,21 @@ button:hover {
 }
 
 // sp
-@media (max-width: 765px) {
+@media (max-width: 767px) {
   .sp-br {
     display: inline;
   }
 }
 
 // タブレット
-@media (min-width: 766px) and (max-width: 1079px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .tb-br { 
     display: inline;
   }
 }
 
 // pc
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
   .pc-br { 
     display: inline;
   }
@@ -172,7 +172,7 @@ a {
 
 .fade-up {
   opacity: 0;
-  transform: transLateY(40px);
+  transform: translateY(40px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
@@ -262,8 +262,8 @@ h4 {
     margin: 0 auto;
     box-sizing: border-box;
     
-    @include tab-only  {
-      padding: 0 3rem;
+    @include tab-only {
+      padding: 0 2rem;
     }
 
     @include sp {
@@ -281,9 +281,15 @@ h4 {
     font-size: 2rem;
     line-height: calc(20 / 20);
     display: flex;
-    align-items: center;
-    transition: all 0.4s ease;
+    align-items: center;    
     height: 100%;
+
+    @include pc {
+      transition: opacity 0.4s ease;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
 
     @include sp {
       line-height: calc(33 / 20);
@@ -302,9 +308,8 @@ h4 {
   ul {
     display: flex;
     align-items: center;
-    column-gap: 3.2rem;
+    column-gap: 3.1rem;
     color: $font-color02;
-    margin-right: 0.3rem;
     li {
       a {
         height: 8rem;
@@ -345,7 +350,6 @@ h4 {
 // changeクラスが付いた場合
 &.change {
   .is-colored {
-    background-color: $main-color !important; /* ← 強制的に緑にする */
     opacity: 1 !important;
     mix-blend-mode: normal !important;
     backdrop-filter: none !important;
@@ -357,6 +361,10 @@ h4 {
 &__hamburger {
   position: relative;
   z-index: 9999;
+  display: none;
+  @include sp {
+    display: block;
+  }
   
   .hamburger {
     position: fixed;
@@ -437,19 +445,14 @@ h4 {
     list-style: none;
     font-size: 1.8rem;
     line-height: calc(33 /18);
-    font-weight: 500;
+    font-weight: 600;
     
     a {
       color: $font-color02;
       text-decoration: none;
       display: block;
       padding: 1.2rem 0 1.3rem 2rem;
-      transition: background-color 0.3s ease, opacity 0.3s ease;
-      
-      &:hover {
-        background-color: $font-color;
-        opacity: 0.7;
-      }
+      transition: none;
     }
   }
   
@@ -640,7 +643,7 @@ h4 {
 // service
 // =====================================
 .service {
-  padding: 8rem 3rem 3.1rem;
+  padding: 8rem 2rem 3.1rem;
   @include sp {
      padding: 5rem 3rem;
      }
@@ -706,8 +709,11 @@ h4 {
 
     &__text-bg {
       position: relative;
-      padding: 15% 9% 14% 21%;
+      padding: 15% 9% 13% 21%;
       width: 100%;
+      @include tab-only {
+        padding: 15% 8% 13% 12%;
+      }
       @include sp {
         padding: 2rem 2rem 1.2rem;
       }
@@ -746,6 +752,7 @@ h4 {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        display: block;
       }
       @include sp {
          aspect-ratio: auto;
@@ -821,7 +828,7 @@ h4 {
       p {
         font-weight: 500;
         @include tab-only {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
         }
         @include sp {
            font-size: 1.6rem;
@@ -867,7 +874,10 @@ h4 {
       }
 
       .service__item__text-bg {
-        padding: 15% 21% 14% 9%;
+        padding: 15% 21% 13% 12%;
+        @include tab-only {
+          padding: 15% 12% 13% 8%;
+        }
         &::before {
         left: auto;
         right: -56%;
@@ -907,7 +917,7 @@ h4 {
 // works
 // =====================================
 .works {
-  padding: 8rem 3rem 9.8rem;
+  padding: 8rem 2rem 9.8rem;
   @include sp {
     padding: 5rem 3rem 4.1rem;
   }
@@ -920,7 +930,7 @@ h4 {
 }
 .works__items {
   display: flex;
-  column-gap: 4.3%;
+  column-gap: calc(40 / 880 * 100%);
   width: 100%;
   justify-content: flex-start;
   @include sp {
@@ -942,7 +952,7 @@ h4 {
 }
 
 .works-item__title {
-  margin-top: 1.9rem;
+  margin-top: 2rem;
   text-align: left;
 
   @include sp {
@@ -950,7 +960,7 @@ h4 {
   }
   h3 {
     @include tab-only {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
   }
 }
@@ -959,24 +969,41 @@ h4 {
   display: block;
   text-decoration: none;
   color: inherit;
+}
 
-  &:hover .works-item__image {
-    opacity: 0.7;
-  }
-  &:hover .works-item__title h4 {
-    color: $main-color;
-  }
+.works-item__image {
+  width: 100%;
+  transition: opacity 0.4s ease;
 }
 
 .works-item__image img {
   width: 100%;
-  height: 100%;
+  display: block;
   object-fit: cover;
-  transition: opacity 0.4s ease;
+  &:hover {
+    opacity: 0.7;
+   }
+}
+@include sp {
+  .works-item__image img {
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .works-item__title h3 {
   transition: color 0.4s;
+  &:hover {
+    color: $main-color;
+  }
+}
+@include sp {
+  .works-item__title h3 {
+    &:hover {
+      color: inherit;
+    }
+  }
 }
 
 // =====================================
@@ -1102,13 +1129,13 @@ h4 {
 // news
 // =====================================
 .news {
-  padding: 8rem 3rem;
+  padding: 8rem 2rem;
   @include sp {
     padding: 5rem 3rem;
   }
   
   &_contents {
-    margin-top: 6.5rem;
+    margin-top: 6.6rem;
     display: flex;
     justify-content: flex-start;
     column-gap: 6.5%;
@@ -1165,14 +1192,19 @@ h4 {
     border-bottom: 0.1rem solid $border-color-green;
     a {
       display: flex;
-      column-gap: 16%;
+      column-gap: 17%;
       padding: 1.2rem 0;
-      transition: transform .4s ease;
+      transition: opacity 0.6s ease;
       @include sp {
       column-gap: 1.3rem;
     }
     &:hover {
       opacity: 0.7;
+    }
+    @include sp {
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -1181,7 +1213,7 @@ h4 {
         font-size: 1.6rem;
         line-height: calc(33 / 16);
         display: inline-block;
-        margin-top: 0.1rem;
+        align-items: flex-start;
       }
     }
     &__title {
@@ -1216,15 +1248,21 @@ h4 {
     line-height: 1;
     font-weight: 500;
     color: $border-color-green;
-    display: inline-block;
+    display: block;
     position: relative;
-    transition: transform .4s ease;
-    padding-right: 3.2rem;
+    transition: transform .7s ease;
+    padding: 0.1rem 0 0 0;
+    margin-right: 3.3rem;
     @include sp {
       line-height: calc(33 / 20);
     }
     &:hover {
       transform: translateX(10px);
+    }
+    @include sp {
+      &:hover {
+        transform: none;
+      }
     }
     .arrow {
       width: 8rem;
@@ -1232,7 +1270,7 @@ h4 {
       background-color: $border-color-green;
       position: absolute;
       bottom: -0.5rem;
-      right: 0;
+      left: 0;
       @include sp {
         bottom: 0.1rem;
       }
@@ -1259,6 +1297,11 @@ h4 {
     &:hover {
       transform: translateX(1rem);
     }
+    @include sp {
+      &:hover {
+        transform: none;
+      }
+    }
   }
 }
 
@@ -1267,13 +1310,13 @@ h4 {
 // company
 // =====================================
 .company {
-  padding: 8rem 3rem;
+  padding: 8rem 2rem;
   @include sp {
     padding: 5rem 3rem;
   }
 
   &__contents {
-    margin-top: 6.8rem;
+    margin-top: 6.7rem;
     @include sp {
       margin-top: 2rem;
     }
@@ -1285,7 +1328,7 @@ h4 {
     width: 100%;
     @include sp {
       flex-direction: column;
-      row-gap: 2.1rem;
+      row-gap: 1.9rem;
     }
     // 左側：地図
     &__map-area {
@@ -1336,11 +1379,11 @@ h4 {
 
     &__info-inner {
       position: relative;
-      padding: 14% 9% 14% 12%;
+      padding: 15% 9% 13% 12%;
       width: 100%;
       z-index: 1;
       @include sp {
-        padding: 1.9rem 1.5rem 1.4rem 2rem;
+        padding: 1.9rem 1.5rem 1.2rem 2rem;
       }
       &::before {
         content: "";
@@ -1361,7 +1404,8 @@ h4 {
       }
     }
 
-    &__name p {
+  &__name
+     p {
       font-size: 2rem;
       line-height: calc(33 / 20);
       @include tab-only {
@@ -1395,8 +1439,9 @@ h4 {
         }
       }
       a {
-        margin-left: 0.5rem;
+        margin-left: 0.6rem;
         line-height: 1;
+
         @include pc {
           pointer-events: none;
           cursor: default;
@@ -1410,10 +1455,10 @@ h4 {
     }
 
     &__mail {
-      margin-top: 1.8rem;
+      margin-top: 2rem;
       p {
         display: flex;
-        gap: 1rem;
+        gap: 1.7rem;
         @include tab-only {
           font-size: 1.3rem;
         }
@@ -1423,6 +1468,9 @@ h4 {
       }
       a:hover {
         opacity: 0.7;
+        @include sp {
+          opacity: unset;
+        }
       }
     }
   }
@@ -1445,7 +1493,7 @@ h4 {
     }
   }
   &__contents {
-  margin-top: 3rem;
+  margin-top: 3.2rem;
 }
 &__text {
   p {
@@ -1454,14 +1502,14 @@ h4 {
   }
 }
 &__form-block {
-  margin-top: 6.9rem;
+  margin-top: 7rem;
   @include sp {
     margin-top: 4rem;
   }
   dl:not(:first-of-type) {
-    margin-top: 4.9rem;
+    margin-top: 5rem;
     @include sp {
-      margin-top: 2.8rem;
+      margin-top: 3rem;
     }
   }
   
@@ -1482,10 +1530,6 @@ h4 {
   }
 
   dd {
-    margin-top: 1rem;
-    @include sp {
-      margin-top: 0;
-    }
     .form-control {
       width: 100%;
       height: 5rem;
@@ -1501,6 +1545,10 @@ h4 {
         color: #A0A0A0;
         font-size: 1.8rem;
         line-height: calc(25 / 18);
+        @include sp {
+          font-size: 1.6rem;
+          line-height: calc(25 / 16);
+        }
       }
     }
     .form-textarea {
@@ -1510,6 +1558,15 @@ h4 {
       word-break: break-all;
       resize: none;
       display: block;
+    }
+  }
+}
+.message-area,
+.privacy-area {
+  dd {
+    margin-top: 1.1rem;
+    @include sp {
+      margin-top: 0;
     }
   }
 } 
@@ -1524,7 +1581,6 @@ h4 {
   }
   dd {
     flex: 1;
-    margin-top: 0.3rem;
   }
   &.sp-flex {
     @include sp {
@@ -1545,6 +1601,12 @@ h4 {
       @media screen and (max-width: 350px) {
         column-gap: 2rem;
       }
+    }
+  }
+  &:not(:first-of-type) {
+    margin-top: 5rem;
+    @include sp {
+      margin-top: 3rem;
     }
   }
 }
@@ -1628,12 +1690,14 @@ h4 {
     gap: 1.5rem 0.2rem;
     font-size: 1.8rem;
     line-height: calc(25 / 18);
+    margin-top: 1rem;
+    @include sp {
+      margin-top: 0;
+    }
     // pc(4列)
     grid-template-columns: repeat(4, 1fr);
     @include tab-only {
       grid-template-columns: repeat(2, 1fr);
-      font-size: 1.5rem;
-      gap: 0.6rem 0;
     }
     @include sp {
       grid-template-columns: repeat(2, 1fr);
@@ -1641,10 +1705,14 @@ h4 {
       line-height: calc(25 / 16);
       gap: 0.6rem 0;
     }
-     @media screen and (max-width: 350px) {
-      grid-template-columns: repeat(2, 1fr);
+     @media screen and (max-width: 360px) {
+      grid-template-columns: 1fr;
     }
-
+    .checkbox-col {
+      display: flex;
+      justify-content: flex-start;
+      width: fit-content;
+    }
     // クリック領域
     .checkbox-item {
       display: inline-flex;
@@ -1656,15 +1724,11 @@ h4 {
           display: inline-block;
           padding-left: 4rem;
           position: relative;
-          white-space: nowrap;
           @include tab-only {
             padding-left: 3rem;
           }
           @include sp {
             padding-left: 3rem;
-          }
-          @media screen and (max-width: 350px) {
-            padding-left: 2rem;
           }
 
           &::before {
@@ -1751,11 +1815,11 @@ h4 {
   }
   // submit-btn
   .submit-btn {
-    margin-top: 7.9rem;
+    margin-top: 8rem;
     display: flex;
     justify-content: center;
     @include sp {
-      margin-top: 5rem;
+      margin-top: 4.8rem;
     }
     button {
       width: 30rem;
@@ -1775,6 +1839,12 @@ h4 {
       &:hover {
         background: #fff;
         color: $main-color;
+      }
+      @include sp {
+        &:hover {
+          background: $main-color;
+          color: #fff;
+        }
       }
     }
   }
@@ -1807,7 +1877,7 @@ h4 {
   &__logo {
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 2.8rem;
+    padding-bottom: 2.5rem;
     border-bottom: 1px solid $font-color;
     text-align: center;
     @include sp {
@@ -1824,6 +1894,11 @@ h4 {
       }
       &:hover {
         opacity: 0.7;
+      }
+      @include sp {
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
@@ -1864,6 +1939,9 @@ h4 {
           @include sp {
             padding: 0 0.49rem;
             white-space: nowrap;
+            &:hover {
+              opacity: 1;
+            }
           }
           @include sp-small {
             font-size: 1.5rem;
@@ -1892,11 +1970,16 @@ h4 {
           align-items: center;
           width: 2.8rem;
           transition: opacity 0.4s ease, transform 0.4s ease;
-
           &:hover {
-            transform: scale(1.2);
-            opacity: 0.7;
-          }
+              opacity: 0.7;
+              transform: scale(1.2);
+            }
+            @include sp {
+              &:hover {
+                opacity: 1;
+                transform: none;
+              }
+            }
           .twitter,
           .facebook,
           .youtube,
@@ -1928,7 +2011,7 @@ h4 {
       }
     }
     .copy-left {
-      margin-right: 1em;
+      margin-right: 0.5rem;
     }
   }
 }
@@ -1942,14 +2025,13 @@ h4 {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
   @include sp {
       right: 2rem;
     }   
   &.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
   }
   &__icon {
     width: 6.8rem;
@@ -1958,7 +2040,7 @@ h4 {
     border-radius: 50%;
     display: grid;
     place-content: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease;
     @include sp {
       width: 5rem;
       height: 5rem;
@@ -1970,7 +2052,13 @@ h4 {
       }
     }
     &:hover {
-      transform: translateY(-4px);
+      opacity: 0.7;
+    }
+    @include sp {
+      &:hover {
+        opacity: 1;
+        transform: none;
+      }
     }
   }
 }

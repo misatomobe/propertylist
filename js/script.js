@@ -119,25 +119,47 @@ $(window).on('scroll', function () {
 // ==============================
 // トップへ戻るボタン
 // ==============================
-$(window).scroll(function(){
+const topBtn = document.querySelector('.top-back-btn');
+const footer = document.querySelector('footer');
+const fv = document.querySelector('.fv');
+const modal = document.querySelector('.modal');
 
-  const aboutPos = $('.about').offset().top
-  const scrollTop = $(this).scrollTop()
-  const headerHeight = $('.header').outerHeight();
+function updateTopBtn() {
+  if (!topBtn || !footer || !fv) return;
 
-  if(scrollTop > aboutPos) {
-    $('.header').addClass('change')
-  } else {
-    $('.header').removeClass('change')
+  const footerTop = footer.offsetTop;
+
+  // モーダル開いてる時は非表示
+  if (modal && modal.classList.contains('is-active')) {
+    topBtn.classList.remove('show');
+    return;
   }
 
-  // トップに戻るボタン
-  if(scrollTop > aboutPos - headerHeight - 400) {
-    $('.top-back-btn').addClass('show')
-  } else {
-    $('.top-back-btn').removeClass('show')
+  // FVの下端の位置（画面基準）
+  const fvBottom = fv.getBoundingClientRect().bottom;
+
+  // 表示タイミング調整用
+  let triggerOffset = 100; // SP・タブレット
+
+  if (window.innerWidth >= 1024) {
+    triggerOffset = 200; // PC
   }
-})
+
+  if (
+    fvBottom < window.innerHeight - triggerOffset &&
+    window.scrollY < footerTop - 50
+  ) {
+    topBtn.classList.add('show');
+  } else {
+    topBtn.classList.remove('show');
+  }
+}
+
+// イベント
+window.addEventListener('scroll', updateTopBtn);
+window.addEventListener('load', updateTopBtn);
+window.addEventListener('resize', updateTopBtn);
+
 
   // ==============================
   // フェードアップ
