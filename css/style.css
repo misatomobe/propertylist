@@ -1829,6 +1829,12 @@ h4 {
   background: #fff;
   color: #4D9600;
 }
+@media (max-width: 767px) {
+  .contact .submit-btn button:hover {
+    background: #4D9600;
+    color: #fff;
+  }
+}
 
 .footer__main {
   background-color: #fff;

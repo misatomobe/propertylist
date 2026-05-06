@@ -1823,6 +1823,12 @@ h4 {
         background: #fff;
         color: $main-color;
       }
+      @include sp {
+        &:hover {
+          background: $main-color;
+          color: #fff;
+        }
+      }
     }
   }
 }
