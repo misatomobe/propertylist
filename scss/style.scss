@@ -1190,6 +1190,11 @@ h4 {
     &:hover {
       opacity: 0.7;
     }
+    @include sp {
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
     &__date {
@@ -1280,6 +1285,11 @@ h4 {
     }
     &:hover {
       transform: translateX(1rem);
+    }
+    @include sp {
+      &:hover {
+        transform: none;
+      }
     }
   }
 }
