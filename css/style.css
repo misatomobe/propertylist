@@ -1210,6 +1210,11 @@ h4 {
 .news-block__link a:hover {
   transform: translateX(10px);
 }
+@media (max-width: 767px) {
+  .news-block__link a:hover {
+    transform: none;
+  }
+}
 .news-block__link a .arrow {
   width: 8rem;
   height: 0.1rem;
@@ -1423,6 +1428,11 @@ h4 {
 }
 .company .company-item__mail a:hover {
   opacity: 0.7;
+}
+@media (max-width: 767px) {
+  .company .company-item__mail a:hover {
+    opacity: unset;
+  }
 }
 
 .contact {

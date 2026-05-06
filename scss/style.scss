@@ -1247,6 +1247,11 @@ h4 {
     &:hover {
       transform: translateX(10px);
     }
+    @include sp {
+      &:hover {
+        transform: none;
+      }
+    }
     .arrow {
       width: 8rem;
       height: 0.1rem;
@@ -1445,6 +1450,9 @@ h4 {
       }
       a:hover {
         opacity: 0.7;
+        @include sp {
+          opacity: unset;
+        }
       }
     }
   }
