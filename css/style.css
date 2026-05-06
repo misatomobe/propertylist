@@ -1885,6 +1885,12 @@ h4 {
 .footer__logo a:hover {
   opacity: 0.7;
 }
+@media (max-width: 767px) {
+  .footer__logo a:hover {
+    opacity: 1;
+    transform: none;
+  }
+}
 .footer__nav {
   margin-top: 2.8rem;
 }
@@ -1925,8 +1931,10 @@ h4 {
   display: block;
   text-align: center;
 }
-.footer__nav ul li a:hover {
-  opacity: 0.7;
+@media (hover: hover) and (pointer: fine) {
+  .footer__nav ul li a a:hover {
+    opacity: 0.7;
+  }
 }
 @media (max-width: 767px) {
   .footer__nav ul li a {
@@ -1965,9 +1973,11 @@ h4 {
   width: 2.8rem;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
-.footer__sns ul li a:hover {
-  transform: scale(1.2);
-  opacity: 0.7;
+@media (hover: hover) and (pointer: fine) {
+  .footer__sns ul li a a:hover {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
 }
 .footer__sns ul li a .twitter,
 .footer__sns ul li a .facebook,
@@ -2049,6 +2059,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .top-back-btn__icon:hover {
-    opacity: unset;
+    opacity: 1;
+    transform: none;
   }
 }

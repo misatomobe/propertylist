@@ -1878,6 +1878,12 @@ h4 {
       &:hover {
         opacity: 0.7;
       }
+      @include sp {
+        &:hover {
+          opacity: 1;
+          transform: none;
+        }
+      }
     }
   }
 
@@ -1911,8 +1917,10 @@ h4 {
           white-space: normal;
           display: block;
           text-align: center;
-          &:hover {
-            opacity: 0.7;
+          @media (hover: hover) and (pointer: fine) {
+            a:hover {
+              opacity: 0.7;
+            }
           }
           @include sp {
             padding: 0 0.49rem;
@@ -1946,9 +1954,11 @@ h4 {
           width: 2.8rem;
           transition: opacity 0.4s ease, transform 0.4s ease;
 
-          &:hover {
-            transform: scale(1.2);
-            opacity: 0.7;
+          @media (hover: hover) and (pointer: fine) {
+            a:hover {
+              opacity: 0.7;
+              transform: scale(1.2);
+            }
           }
           .twitter,
           .facebook,
@@ -2023,8 +2033,11 @@ h4 {
     }
     &:hover {
       opacity: 0.7;
-      @include sp {
-        opacity: unset;
+    }
+    @include sp {
+      &:hover {
+        opacity: 1;
+        transform: none;
       }
     }
   }
