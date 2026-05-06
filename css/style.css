@@ -565,7 +565,7 @@ h4 {
   }
 }
 .service {
-  padding: 8rem 3rem 3.1rem;
+  padding: 8rem 2rem 3.1rem;
 }
 @media (max-width: 767px) {
   .service {
@@ -858,7 +858,7 @@ h4 {
   }
 }
 .works {
-  padding: 8rem 3rem 9.8rem;
+  padding: 8rem 2rem 9.8rem;
 }
 @media (max-width: 767px) {
   .works {
@@ -1067,7 +1067,7 @@ h4 {
 }
 
 .news {
-  padding: 8rem 3rem;
+  padding: 8rem 2rem;
 }
 @media (max-width: 767px) {
   .news {
@@ -1244,7 +1244,7 @@ h4 {
 }
 
 .company {
-  padding: 8rem 3rem;
+  padding: 8rem 2rem;
 }
 @media (max-width: 767px) {
   .company {
