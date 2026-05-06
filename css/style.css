@@ -877,7 +877,7 @@ h4 {
 
 .works__items {
   display: flex;
-  column-gap: 4.3%;
+  column-gap: 4.5454545455%;
   width: 100%;
   justify-content: flex-start;
 }

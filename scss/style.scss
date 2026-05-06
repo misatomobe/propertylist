@@ -930,7 +930,7 @@ h4 {
 }
 .works__items {
   display: flex;
-  column-gap: 4.3%;
+  column-gap: calc(40 / 880 * 100%);
   width: 100%;
   justify-content: flex-start;
   @include sp {
