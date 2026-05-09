@@ -284,7 +284,6 @@ h4 {
     align-items: center;    
     height: 100%;
     @include sp {
-      line-height: calc(33 / 20);
       height: 5rem;
     }
 
@@ -300,6 +299,9 @@ h4 {
   font-size: 2rem;
   line-height: 1;
   color: $font-color02;
+  @include sp {
+    line-height: calc(33 / 20);
+  }
 }
 }
 

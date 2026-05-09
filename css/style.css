@@ -227,7 +227,6 @@ h4 {
 }
 @media (max-width: 767px) {
   .header__logo a {
-    line-height: 1.65;
     height: 5rem;
   }
 }
@@ -243,6 +242,11 @@ h4 {
   font-size: 2rem;
   line-height: 1;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .header__logo-text {
+    line-height: 1.65;
+  }
 }
 .header__nav ul {
   display: flex;
