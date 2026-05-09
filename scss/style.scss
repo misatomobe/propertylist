@@ -283,17 +283,16 @@ h4 {
     display: flex;
     align-items: center;    
     height: 100%;
+    @include sp {
+      line-height: calc(33 / 20);
+      height: 5rem;
+    }
 
     @include pc {
       transition: opacity 0.4s ease;
       &:hover {
         opacity: 0.7;
       }
-    }
-
-    @include sp {
-      line-height: calc(33 / 20);
-      height: 5rem;
     }
 }
 

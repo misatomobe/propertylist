@@ -225,18 +225,18 @@ h4 {
   align-items: center;
   height: 100%;
 }
+@media (max-width: 767px) {
+  .header__logo a {
+    line-height: 1.65;
+    height: 5rem;
+  }
+}
 @media (min-width: 1024px) {
   .header__logo a {
     transition: opacity 0.4s ease;
   }
   .header__logo a:hover {
     opacity: 0.7;
-  }
-}
-@media (max-width: 767px) {
-  .header__logo a {
-    line-height: 1.65;
-    height: 5rem;
   }
 }
 .header__logo-text {
