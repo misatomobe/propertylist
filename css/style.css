@@ -262,7 +262,7 @@ h4 {
   line-height: 1;
   color: #fff;
   text-decoration: none;
-  transition: all 0.4s ease;
+  transition: opacity 0.4s ease;
   position: relative;
 }
 .header__nav ul li a::after {
