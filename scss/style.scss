@@ -223,21 +223,12 @@ h4 {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  padding: 0 8rem;
   top: 0;
   left: 0;
   z-index: 1000;
   transition: background-color 0.4s ease;
   opacity: 1;
   filter: none;  
-
-  @include tab-only {
-    padding: 0;
-  }
-
-   @include sp {
-    padding: 0;
-   }
  
   &.active {
     background-color: $main-color;
@@ -261,14 +252,7 @@ h4 {
     align-items: center;
     margin: 0 auto;
     box-sizing: border-box;
-    
-    @include tab-only {
-      padding: 0 2rem;
-    }
-
-    @include sp {
-      padding: 0 2rem;
-    }
+    padding: 0 2rem;
   }
 
 &__logo {
@@ -644,7 +628,7 @@ h4 {
 // service
 // =====================================
 .service {
-  padding: 8rem 2rem 3.1rem;
+  padding: 8rem 3rem 3.1rem;
   @include sp {
      padding: 5rem 3rem;
      }
@@ -958,11 +942,6 @@ h4 {
 
   @include sp {
     margin-top: 1rem;
-  }
-  h3 {
-    @include tab-only {
-      font-size: 1.4rem;
-    }
   }
 }
 
