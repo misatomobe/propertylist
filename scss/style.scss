@@ -951,38 +951,33 @@ h4 {
   color: inherit;
 }
 
+  @include pc {
+    .works-item__link:hover .works-item__image {
+        opacity: 0.7;
+      }
+      .works-item__link:hover .works-item__title h3 {
+        color: $main-color;
+      }
+    }
+
 .works-item__image {
   width: 100%;
-  transition: opacity 0.4s ease;
-}
-
-.works-item__image img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  &:hover {
-    opacity: 0.7;
-   }
-}
-@include sp {
-  .works-item__image img {
-    &:hover {
-      opacity: 1;
-    }
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
   }
 }
 
-.works-item__title h3 {
-  transition: color 0.4s;
-  &:hover {
-    color: $main-color;
+.works-item__title {
+  margin-top: 2rem;
+  text-align: left;
+  @include sp {
+    margin-top: 1rem;
   }
-}
-@include sp {
-  .works-item__title h3 {
-    &:hover {
-      color: inherit;
-    }
+  h3 {
+    transition: color 0.4s ease;
   }
 }
 
