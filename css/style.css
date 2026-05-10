@@ -1663,7 +1663,7 @@ h4 {
     margin-top: 0;
     font-size: 1.6rem;
     line-height: 1.5625;
-    gap: 0.6rem 0;
+    gap: 0.5rem 0;
     grid-template-columns: repeat(auto-fit, minmax(13.8rem, 1fr));
   }
 }
