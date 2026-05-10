@@ -1200,8 +1200,8 @@ h4 {
 }
 .news-block__link a .arrow {
   width: 8rem;
-  height: 0.1rem;
-  background-color: #55A500;
+  /* ▼ 変更点1: 高さを 1.8rem に指定（親コンテナ化） */
+  height: 1.8rem;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1211,23 +1211,30 @@ h4 {
     bottom: 0.1rem;
   }
 }
+.news-block__link a .arrow {
+  /* ▼ 変更点2: もともと .arrow が持っていた「底面の横線」をボーダーで表現 */
+  border-bottom: 0.1rem solid #55A500;
+}
 .news-block__link a .arrow span {
   width: 1.7rem;
   height: 0.1rem;
   background-color: #55A500;
   position: absolute;
   right: 0;
-  top: 0;
+  /* ▼ 変更点3: .arrow の高さが変わったため、斜め線の位置を調整（底辺基準に） */
+  bottom: 0;
   transform: rotate(45deg);
   transform-origin: right center;
 }
 .news-block__link a .arrow::before {
   content: "";
   width: 0.1rem;
-  height: 1.8rem;
+  /* ▼ 変更点4: 指示通り高さを 100% に */
+  height: 100%;
   background-color: #55A500;
   position: absolute;
-  top: -1.2rem;
+  /* ▼ 変更点5: .arrow（高さ1.8rem）の中にぴったり収まるよう上部を0.4remに */
+  top: 0.4rem;
   right: 1.2rem;
 }
 .news-block__link a:hover {
