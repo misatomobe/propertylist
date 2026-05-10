@@ -295,6 +295,9 @@ h4 {
     align-items: center;
     column-gap: 3.1rem;
     color: $font-color02;
+    @include tab-only {
+      column-gap: 2.5rem;
+    }
     li {
       a {
         height: 8rem;
@@ -319,11 +322,9 @@ h4 {
           transform-origin: left;
           transition: transform 0.7s ease;
         }
-
         &:hover::after {
           transform: translateX(-50%) scaleX(1);
         }
-
         @include tab-only  {
           font-size: 1.3rem;
         } 
@@ -902,7 +903,7 @@ h4 {
 // works
 // =====================================
 .works {
-  padding: 8rem 2rem 9.8rem;
+  padding: 8rem 3rem 9.8rem;
   @include sp {
     padding: 5rem 3rem 4.1rem;
   }
@@ -1104,7 +1105,7 @@ h4 {
 // news
 // =====================================
 .news {
-  padding: 8rem 2rem;
+  padding: 8rem 3rem;
   @include sp {
     padding: 5rem 3rem;
   }
@@ -1289,7 +1290,7 @@ h4 {
 // company
 // =====================================
 .company {
-  padding: 8rem 2rem;
+  padding: 8rem 3rem;
   @include sp {
     padding: 5rem 3rem;
   }
@@ -1466,7 +1467,8 @@ h4 {
   }
   .inner {
     width: 100%;
-    padding: 0 6rem;
+    max-width: 86rem;
+    padding: 0 3rem;
     @include sp {
       padding: 0 3rem;
     }
@@ -1834,7 +1836,7 @@ h4 {
     align-items: center;
     justify-content: center;
     height: 33.8rem;
-    padding: 8.1rem 0;
+    padding: 8.1rem 3rem;
     text-align: center;
     width: 100%;
     @include sp {
@@ -1886,6 +1888,9 @@ h4 {
       justify-content: center;
       column-gap: 5.1rem;
       row-gap: 0.8rem;
+      @include tab-only {
+      column-gap: 4rem;
+      }
       @include sp {
         flex-wrap: wrap;
         column-gap: 2.1rem;

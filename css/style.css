@@ -234,6 +234,11 @@ h4 {
   column-gap: 3.1rem;
   color: #fff;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__nav ul {
+    column-gap: 2.5rem;
+  }
+}
 .header__nav ul li a {
   height: 8rem;
   display: flex;
@@ -842,7 +847,7 @@ h4 {
   }
 }
 .works {
-  padding: 8rem 2rem 9.8rem;
+  padding: 8rem 3rem 9.8rem;
 }
 @media (max-width: 767px) {
   .works {
@@ -1054,7 +1059,7 @@ h4 {
 }
 
 .news {
-  padding: 8rem 2rem;
+  padding: 8rem 3rem;
 }
 @media (max-width: 767px) {
   .news {
@@ -1247,7 +1252,7 @@ h4 {
 }
 
 .company {
-  padding: 8rem 2rem;
+  padding: 8rem 3rem;
 }
 @media (max-width: 767px) {
   .company {
@@ -1441,7 +1446,8 @@ h4 {
 }
 .contact .inner {
   width: 100%;
-  padding: 0 6rem;
+  max-width: 86rem;
+  padding: 0 3rem;
 }
 @media (max-width: 767px) {
   .contact .inner {
@@ -1824,7 +1830,7 @@ h4 {
   align-items: center;
   justify-content: center;
   height: 33.8rem;
-  padding: 8.1rem 0;
+  padding: 8.1rem 3rem;
   text-align: center;
   width: 100%;
 }
@@ -1884,6 +1890,11 @@ h4 {
   justify-content: center;
   column-gap: 5.1rem;
   row-gap: 0.8rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer__nav ul {
+    column-gap: 4rem;
+  }
 }
 @media (max-width: 767px) {
   .footer__nav ul {
