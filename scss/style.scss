@@ -1230,6 +1230,7 @@ h4 {
     @include sp {
       line-height: calc(33 / 20);
     }
+  
     &:hover {
       transform: translateX(10px);
     }
@@ -1283,7 +1284,6 @@ h4 {
     }
   }
 }
-
 
 // =====================================
 // company
