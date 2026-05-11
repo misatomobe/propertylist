@@ -29,17 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==============================
 // ヘッダー背景
 // ==============================
-$(window).on('scroll', function () {
+$(window).on('scroll load resize', function () {
   const $header = $('.header');
-  const $about = $('#about');
+  const $fv = $('.fv');
 
-  if (!$header.length || !$about.length) return;
+  if (!$header.length || !$fv.length) return;
 
-  const headerHeight = $header.outerHeight();
-  const aboutPos = $about.offset().top - headerHeight;
+  // ① FVの高さを取得
+  const fvHeight = $fv.outerHeight();
+  
+  // ② 画面の上端の位置（スクロール量）を取得
   const scrollTop = $(this).scrollTop();
 
-  if (scrollTop >= aboutPos) {
+  // 画面の上端が、FVを完全に通り過ぎたら（FVが画面から消えたら）背景色を変更
+  if (scrollTop > fvHeight) {
     $header.addClass('is-colored');
   } else {
     $header.removeClass('is-colored');
