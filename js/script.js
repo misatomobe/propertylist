@@ -125,41 +125,30 @@ const fv = document.querySelector('.fv');
 const modal = document.querySelector('.modal');
 
 function updateTopBtn() {
-  if (!topBtn || !footer || !fv) return;
+  // 必要な要素が揃っていない場合は処理を抜ける
+  if (!topBtn || !fv) return;
 
-  const footerTop = footer.offsetTop;
-
-  // モーダル開いてる時は非表示
+  // モーダル表示中は最優先で非表示にする
   if (modal && modal.classList.contains('is-active')) {
     topBtn.classList.remove('show');
     return;
   }
 
-  // FVの下端の位置（画面基準）
-  const fvBottom = fv.getBoundingClientRect().bottom;
+  // ① FVの高さを取得
+  const fvHeight = fv.offsetHeight;
 
-  // 表示タイミング調整用
-  let triggerOffset = 100; // SP・タブレット
-
-  if (window.innerWidth >= 1024) {
-    triggerOffset = 200; // PC
-  }
-
-  if (
-    fvBottom < window.innerHeight - triggerOffset &&
-    window.scrollY < footerTop - 50
-  ) {
+  // ② スクロール量が①（FVの高さ）を超えたら表示
+  if (window.scrollY > fvHeight) {
     topBtn.classList.add('show');
   } else {
     topBtn.classList.remove('show');
   }
 }
 
-// イベント
+// イベントリスナーの登録
 window.addEventListener('scroll', updateTopBtn);
 window.addEventListener('load', updateTopBtn);
 window.addEventListener('resize', updateTopBtn);
-
 
   // ==============================
   // フェードアップ
@@ -174,7 +163,7 @@ window.addEventListener('resize', updateTopBtn);
     });
   }, {
     threshold: 0.1,
-    rootMargin: "0px 0px -10% 0px"
+    rootMargin: "0px 0px -5% 0px"
   });
 
   elements.forEach(el => observer.observe(el));
