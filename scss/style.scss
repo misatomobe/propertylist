@@ -1208,7 +1208,7 @@ h4 {
   justify-content: flex-end;
   margin: 2.4rem 0 0 0;
   @include sp {
-    margin: 1.7rem 0 0 0;
+    margin: 1.8rem 0 0 0;
   }
   a {
     font-size: 2rem;
@@ -1233,23 +1233,31 @@ h4 {
     }
     .arrow {
       width: 8rem;
-      /* ▼ 変更点1: 高さを 1.8rem に指定（親コンテナ化） */
       height: 1.8rem;
       position: absolute;
       bottom: 0;
       left: 0;
-      @include sp {
-        bottom: 0.1rem;
+
+      // 下線部分
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.1rem;
+        background-color: $border-color-green;
       }
-      /* ▼ 変更点2: もともと .arrow が持っていた「底面の横線」をボーダーで表現 */
-      border-bottom: 0.1rem solid $border-color-green;
+      @include sp {
+        bottom: 0.7rem;
+      }
+      
       span {
         width: 1.7rem;
         height: 0.1rem;
         background-color: $border-color-green;
         position: absolute;
         right: 0;
-        /* ▼ 変更点3: .arrow の高さが変わったため、斜め線の位置を調整（底辺基準に） */
         bottom: 0;
         transform: rotate(45deg);
         transform-origin: right center;
@@ -1257,11 +1265,9 @@ h4 {
       &::before {
         content: '';
         width: 0.1rem;
-        /* ▼ 変更点4: 指示通り高さを 100% に */
         height: 100%;
         background-color: $border-color-green;
         position: absolute;
-        /* ▼ 変更点5: .arrow（高さ1.8rem）の中にぴったり収まるよう上部を0.4remに */
         top: 0.4rem;
         right: 1.2rem;
       }
