@@ -136,7 +136,7 @@ function updateTopBtn() {
     return;
   }
 
-  // ① FVの高さを取得
+  // ①FVの高さを取得
   const fvHeight = fv.offsetHeight;
 
   // ② スクロール量が①（FVの高さ）を超えたら表示

@@ -1696,9 +1696,6 @@ h4 {
           padding-left: 4rem;
           position: relative;
           white-space: nowrap;
-          @include tab-only {
-            padding-left: 3rem;
-          }
           @include sp {
             padding-left: 3rem;
           }
