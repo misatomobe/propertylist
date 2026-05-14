@@ -1037,12 +1037,12 @@ h4 {
         height: 1.5rem;
         position: absolute;
         top: 0.7rem;
-        right: -0.1rem;
+        right: 0.7rem;
         cursor: pointer;
         padding: 0;
         z-index: 3;
         @include sp {
-          right: -0.2rem;
+          right: 0.4rem;
         }
         
         span {
@@ -1051,8 +1051,8 @@ h4 {
           height: 0.1rem;
           background-color: $font-color;
           position: absolute;
-          top: 0.7rem;
-          left: 0;
+          top: 50%;
+          left: 50%;
         }
         
         span:nth-of-type(1) {
