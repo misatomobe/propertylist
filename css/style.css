@@ -670,9 +670,6 @@ h4 {
     aspect-ratio: auto;
   }
 }
-.service__item__image img {
-  object-fit: cover;
-}
 @media (max-width: 767px) {
   .service__item__image {
     aspect-ratio: auto;
@@ -978,7 +975,6 @@ h4 {
   width: 42rem;
   height: 22rem;
   object-fit: cover;
-  display: block;
 }
 @media (max-width: 767px) {
   .modal__img-inner {

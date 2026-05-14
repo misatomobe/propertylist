@@ -732,10 +732,6 @@ h4 {
       @include tab-only {
         aspect-ratio: auto;
       }
-
-      img {
-        object-fit: cover;
-      }
       @include sp {
          aspect-ratio: auto;
         }
@@ -1021,7 +1017,6 @@ h4 {
         width: 42rem;
         height: 22rem;
         object-fit: cover;
-        display: block;
         @include sp {
           width: 100%;
           height: auto;
