@@ -1165,7 +1165,7 @@ h4 {
     }
     &__title {
       flex: 1;
-      margin-top: 0.7rem;
+      padding-top: 0.7rem;
       
       h4 {
         font-size: 1.8rem;
@@ -1175,7 +1175,7 @@ h4 {
         -webkit-line-clamp: 2;
         overflow: hidden;
         @include sp {
-          margin-top: 0;         
+          padding-top: 0;         
         }
       }
     } 
