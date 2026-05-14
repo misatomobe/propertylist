@@ -954,12 +954,11 @@ h4 {
   z-index: 2;
   background: #fff;
   width: 45rem;
-  height: 27.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 0.7rem 1.5rem;
   box-sizing: border-box;
 }
 @media (max-width: 767px) {
@@ -983,7 +982,7 @@ h4 {
   }
 }
 .modal__content-caption {
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
   font-size: 1.6rem;
   line-height: 1.5625;
   text-align: left;
