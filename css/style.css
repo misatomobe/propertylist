@@ -1436,11 +1436,11 @@ h4 {
   line-height: 1.65;
 }
 .contact__form-block {
-  margin-top: 7rem;
+  padding-top: 7rem;
 }
 @media (max-width: 767px) {
   .contact__form-block {
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 }
 .contact__form-block dl:not(:first-of-type) {
@@ -1835,7 +1835,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__logo a {
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 }
 .footer__logo a:hover {
@@ -1868,7 +1868,7 @@ h4 {
 @media (max-width: 767px) {
   .footer__nav ul {
     flex-wrap: wrap;
-    column-gap: 2.1rem;
+    column-gap: 2.1rcem;
     row-gap: 0.5rem;
     padding: 1.5rem 0 2.8rem;
   }
