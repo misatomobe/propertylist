@@ -1430,18 +1430,18 @@ h4 {
 }
 .contact__contents {
   margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+@media (max-width: 767px) {
+  .contact__contents {
+    gap: 4rem;
+  }
 }
 .contact__text p {
   font-size: 2rem;
   line-height: 1.65;
-}
-.contact__form-block {
-  padding-top: 7rem;
-}
-@media (max-width: 767px) {
-  .contact__form-block {
-    padding-top: 4rem;
-  }
 }
 .contact__form-block dl:not(:first-of-type) {
   margin-top: 5rem;
