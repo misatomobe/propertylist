@@ -1649,13 +1649,13 @@ h4 {
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     margin-top: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16.6rem, 1fr));
     @include sp {
       margin-top: 0;
       font-size: 1.6rem;
       line-height: calc(25 / 16);
       gap: 0.5rem 0;
-      grid-template-columns: repeat(auto-fit, minmax(13.8rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
 
     .checkbox-col {

@@ -1636,7 +1636,7 @@ h4 {
   font-size: 1.8rem;
   line-height: 1.3888888889;
   margin-top: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16.6rem, 1fr));
 }
 @media (max-width: 767px) {
   .contact .form-checkbox {
@@ -1644,7 +1644,7 @@ h4 {
     font-size: 1.6rem;
     line-height: 1.5625;
     gap: 0.5rem 0;
-    grid-template-columns: repeat(auto-fit, minmax(13.8rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   }
 }
 .contact .form-checkbox .checkbox-col {
