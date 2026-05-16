@@ -1138,6 +1138,7 @@ h4 {
     border-bottom: 0.1rem solid $border-color-green;
     a {
       display: flex;
+      align-items: flex-start;
       column-gap: 17%;
       padding: 1.2rem 0;
       transition: opacity 0.6s ease;
@@ -1165,7 +1166,6 @@ h4 {
     &__title {
       flex: 1;
       padding-top: 0.7rem;
-      
       h4 {
         font-size: 1.8rem;
         line-height: calc(25 / 18);
@@ -1173,9 +1173,6 @@ h4 {
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
-        @include sp {
-          padding-top: 0;         
-        }
       }
     } 
   } 

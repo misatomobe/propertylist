@@ -1104,6 +1104,7 @@ h4 {
 }
 .news-block .news-block-item a {
   display: flex;
+  align-items: flex-start;
   column-gap: 17%;
   padding: 1.2rem 0;
   transition: opacity 0.6s ease;
@@ -1138,11 +1139,6 @@ h4 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-}
-@media (max-width: 767px) {
-  .news-block .news-block-item__title h4 {
-    padding-top: 0;
-  }
 }
 
 .news-block__link {
