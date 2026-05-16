@@ -189,6 +189,11 @@ h4 {
   align-items: center;
   box-sizing: border-box;
 }
+@media (max-width: 767px) {
+  .header__inner {
+    padding-inline: 2rem;
+  }
+}
 .header__logo {
   margin: 0;
   height: 100%;
