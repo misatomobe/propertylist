@@ -1802,7 +1802,7 @@ h4 {
 @media (max-width: 767px) {
   .footer__main {
     height: auto;
-    padding: 5rem 3rem 5.3rem;
+    padding: 5rem 3rem 5.1rem;
   }
 }
 .footer__inner {
@@ -1819,7 +1819,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__logo {
-    padding-bottom: 1.9rem;
+    padding-bottom: 1.8rem;
   }
 }
 .footer__logo a {
@@ -1842,7 +1842,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__nav {
-    margin: 1.8rem 0 2.8rem;
+    margin: 1.8rem 0 3rem;
   }
 }
 .footer__nav ul {
