@@ -1832,7 +1832,7 @@ h4 {
     border-bottom: 1px solid $font-color;
     text-align: center;
     @include sp {
-      padding-bottom: 0;
+      padding-bottom: 2rem;
     }
     a {
       cursor: pointer;
@@ -1840,9 +1840,6 @@ h4 {
       display: inline-block;
       font-size: 2rem;
       line-height: calc(33 / 20);
-      @include sp {
-        padding-bottom: 2rem;
-      }
       &:hover {
         opacity: 0.7;
       }
@@ -1857,8 +1854,7 @@ h4 {
   &__nav {
     margin-top: 2.8rem;
     @include sp {
-      margin-top: 0.3rem;
-      padding: 1.5rem 0 2.8rem;
+      margin: 1.8rem 0 2.8rem;
     }
     ul {
       display: flex;
@@ -1872,7 +1868,6 @@ h4 {
         flex-wrap: wrap;
         column-gap: 2.1rem;
         row-gap: 0.5rem;
-
       }
       li {
         text-align: center;

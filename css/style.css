@@ -1823,7 +1823,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__logo {
-    padding-bottom: 0;
+    padding-bottom: 2rem;
   }
 }
 .footer__logo a {
@@ -1832,11 +1832,6 @@ h4 {
   display: inline-block;
   font-size: 2rem;
   line-height: 1.65;
-}
-@media (max-width: 767px) {
-  .footer__logo a {
-    padding-bottom: 2rem;
-  }
 }
 .footer__logo a:hover {
   opacity: 0.7;
@@ -1851,8 +1846,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__nav {
-    margin-top: 0.3rem;
-    padding: 1.5rem 0 2.8rem;
+    margin: 1.8rem 0 2.8rem;
   }
 }
 .footer__nav ul {
