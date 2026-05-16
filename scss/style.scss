@@ -1811,7 +1811,7 @@ h4 {
     width: 100%;
     @include sp {
       height: auto;
-      padding: 5rem 3rem;
+      padding: 5rem 3rem 5.3rem;
     }
   }
   &__inner {
@@ -1826,7 +1826,7 @@ h4 {
     border-bottom: 1px solid $font-color;
     text-align: center;
     @include sp {
-      padding-bottom: 2rem;
+      padding-bottom: 1.9rem;
     }
     a {
       cursor: pointer;
