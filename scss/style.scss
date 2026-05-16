@@ -1201,7 +1201,7 @@ h4 {
     }
   
     &:hover {
-      transform: translateX(10px);
+      transform: translateX(1rem);
     }
     @include sp {
       &:hover {
@@ -1248,9 +1248,6 @@ h4 {
         transform: rotate(45deg);
         transform-origin: right center;
       }
-    }
-    &:hover {
-      transform: translateX(1rem);
     }
     @include sp {
       &:hover {

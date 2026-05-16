@@ -1168,7 +1168,7 @@ h4 {
   }
 }
 .news-block__link a:hover {
-  transform: translateX(10px);
+  transform: translateX(1rem);
 }
 @media (max-width: 767px) {
   .news-block__link a:hover {
@@ -1214,9 +1214,6 @@ h4 {
   bottom: 0;
   transform: rotate(45deg);
   transform-origin: right center;
-}
-.news-block__link a:hover {
-  transform: translateX(1rem);
 }
 @media (max-width: 767px) {
   .news-block__link a:hover {
