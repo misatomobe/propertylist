@@ -1852,6 +1852,7 @@ h4 {
 @media (max-width: 767px) {
   .footer__nav {
     margin-top: 0.3rem;
+    padding: 1.5rem 0 2.8rem;
   }
 }
 .footer__nav ul {
@@ -1868,9 +1869,8 @@ h4 {
 @media (max-width: 767px) {
   .footer__nav ul {
     flex-wrap: wrap;
-    column-gap: 2.1rcem;
+    column-gap: 2.1rem;
     row-gap: 0.5rem;
-    padding: 1.5rem 0 2.8rem;
   }
 }
 .footer__nav ul li {

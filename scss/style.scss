@@ -1858,6 +1858,7 @@ h4 {
     margin-top: 2.8rem;
     @include sp {
       margin-top: 0.3rem;
+      padding: 1.5rem 0 2.8rem;
     }
     ul {
       display: flex;
@@ -1869,9 +1870,9 @@ h4 {
       }
       @include sp {
         flex-wrap: wrap;
-        column-gap: 2.1rcem;
+        column-gap: 2.1rem;
         row-gap: 0.5rem;
-        padding: 1.5rem 0 2.8rem;
+
       }
       li {
         text-align: center;
