@@ -896,7 +896,7 @@ h4 {
 .works {
   padding: 8rem 3rem 9.8rem;
   @include sp {
-    padding: 5rem 3rem 4.1rem;
+    padding: 5rem 3rem 4.3rem;
   }
 }
 .works__contents {
@@ -1086,9 +1086,9 @@ h4 {
     justify-content: flex-start;
     column-gap: 6.5%;
     @include sp {
-      margin-top: 3.8rem;
+      margin-top: 3.6rem;
       flex-direction: column;
-      row-gap: 4.8rem;
+      row-gap: 4.9rem;
     }
   }
   &__blocks {
@@ -1131,7 +1131,7 @@ h4 {
   &__contents {
     padding: 1.1rem 2rem 2.8rem;
     @include sp {
-      padding: 1.1rem 2rem 2.2rem 2rem;
+      padding: 1.1rem 2rem 2rem 2rem;
     }
   }
   .news-block-item {
@@ -1390,7 +1390,7 @@ h4 {
         }
       }
       a {
-        margin-left: 0.6rem;
+        margin: 0.2rem 0 0 0.6rem;
         line-height: 1;
 
         @include pc {

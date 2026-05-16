@@ -848,7 +848,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .works {
-    padding: 5rem 3rem 4.1rem;
+    padding: 5rem 3rem 4.3rem;
   }
 }
 
@@ -1049,9 +1049,9 @@ h4 {
 }
 @media (max-width: 767px) {
   .news_contents {
-    margin-top: 3.8rem;
+    margin-top: 3.6rem;
     flex-direction: column;
-    row-gap: 4.8rem;
+    row-gap: 4.9rem;
   }
 }
 .news__blocks {
@@ -1096,7 +1096,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .news-block__contents {
-    padding: 1.1rem 2rem 2.2rem 2rem;
+    padding: 1.1rem 2rem 2rem 2rem;
   }
 }
 .news-block .news-block-item {
@@ -1367,7 +1367,7 @@ h4 {
   }
 }
 .company .company-item__tel a {
-  margin-left: 0.6rem;
+  margin: 0.2rem 0 0 0.6rem;
   line-height: 1;
 }
 @media (min-width: 1024px) {
