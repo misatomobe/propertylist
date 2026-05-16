@@ -1110,7 +1110,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .news-block .news-block-item a {
-    column-gap: 1.3rem;
+    column-gap: 1.5rem;
   }
 }
 .news-block .news-block-item a:hover {
