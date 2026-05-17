@@ -219,9 +219,6 @@ h4 {
   width: 100%;
   height: 8rem;
   background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -229,7 +226,6 @@ h4 {
   transition: background-color 0.4s ease;
   opacity: 1;
   filter: none;  
- 
   &.active {
     background-color: $main-color;
   }
@@ -244,15 +240,18 @@ h4 {
   }
   
   &__inner {
-    max-width: 960px;
+    max-width: calc(960px + 2rem);
     width: 100%;
     height: 100%;
+    margin: 0 auto;
+    padding-inline: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
     box-sizing: border-box;
-    padding: 0 2rem;
+    @include sp {
+      padding-inline: 2rem;
+    }
   }
 
 &__logo {
@@ -468,14 +467,15 @@ h4 {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1.8rem;
     z-index: 2;
-    inset: 0;
+    transform: translate(0.7rem, 1rem);
+    @include sp {
+      transform: translate(0.6rem, 0.9rem);
+    }
     h2 {
       font-size: 4rem;
       line-height: calc(70 / 40);
@@ -483,14 +483,12 @@ h4 {
       letter-spacing: 0.3em;
       color: $font-color02;
       text-shadow: 0.5rem 0.5rem 0.5rem #000;
-      margin-left: 1.1rem;
       text-align: center;
       @include sp {
         font-size: 3rem;
         line-height: calc(60 / 30);
-        margin-top: -0.6rem;
       }
-    }
+    } 
   }
   &__sp-br {
     display: none;
@@ -733,13 +731,6 @@ h4 {
       @include tab-only {
         aspect-ratio: auto;
       }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
       @include sp {
          aspect-ratio: auto;
         }
@@ -905,7 +896,7 @@ h4 {
 .works {
   padding: 8rem 3rem 9.8rem;
   @include sp {
-    padding: 5rem 3rem 4.1rem;
+    padding: 5rem 3rem 4.3rem;
   }
 }
 .works__contents {
@@ -956,11 +947,6 @@ h4 {
 .works-item__image {
   width: 100%;
   transition: opacity 0.4s ease;
-  img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-  }
 }
 .works-item__title {
   margin-top: 2rem;
@@ -1011,12 +997,11 @@ h4 {
     z-index: 2;
     background: $font-color02;
     width: 45rem;
-    height: 27.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0.7rem;
     box-sizing: border-box;
     @include sp {
       width: 31.5rem;
@@ -1030,12 +1015,6 @@ h4 {
         width: 42rem;
         height: 22rem;
         object-fit: cover;
-        display: block;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
         @include sp {
           width: 100%;
           height: auto;
@@ -1043,7 +1022,7 @@ h4 {
       }
       
       &__content-caption {
-        margin-top: 0.9rem;
+        margin-top: 0.8rem;
         font-size: 1.6rem;
         line-height: calc(25 / 16);
         text-align: left;
@@ -1057,12 +1036,12 @@ h4 {
         height: 1.5rem;
         position: absolute;
         top: 0.7rem;
-        right: -0.1rem;
+        right: 0.7rem;
         cursor: pointer;
         padding: 0;
         z-index: 3;
         @include sp {
-          right: -0.2rem;
+          right: 0.4rem;
         }
         
         span {
@@ -1071,8 +1050,8 @@ h4 {
           height: 0.1rem;
           background-color: $font-color;
           position: absolute;
-          top: 0.7rem;
-          left: 0;
+          top: 50%;
+          left: 50%;
         }
         
         span:nth-of-type(1) {
@@ -1107,9 +1086,9 @@ h4 {
     justify-content: flex-start;
     column-gap: 6.5%;
     @include sp {
-      margin-top: 3.8rem;
+      margin-top: 3.6rem;
       flex-direction: column;
-      row-gap: 4.8rem;
+      row-gap: 4.9rem;
     }
   }
   &__blocks {
@@ -1152,18 +1131,19 @@ h4 {
   &__contents {
     padding: 1.1rem 2rem 2.8rem;
     @include sp {
-      padding: 1.1rem 2rem 2.2rem 2rem;
+      padding: 1.1rem 2rem 2rem 2rem;
     }
   }
   .news-block-item {
     border-bottom: 0.1rem solid $border-color-green;
     a {
       display: flex;
+      align-items: flex-start;
       column-gap: 17%;
       padding: 1.2rem 0;
       transition: opacity 0.6s ease;
       @include sp {
-      column-gap: 1.3rem;
+      column-gap: 1.5rem;
     }
     &:hover {
       opacity: 0.7;
@@ -1185,8 +1165,7 @@ h4 {
     }
     &__title {
       flex: 1;
-      margin-top: 0.7rem;
-      
+      padding-top: 0.7rem;
       h4 {
         font-size: 1.8rem;
         line-height: calc(25 / 18);
@@ -1194,9 +1173,6 @@ h4 {
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
-        @include sp {
-          margin-top: 0;         
-        }
       }
     } 
   } 
@@ -1206,11 +1182,12 @@ h4 {
 .news-block__link {
   display: flex;
   justify-content: flex-end;
-  margin: 2.4rem 0 0 0;
+  margin: 2.3rem 0 0 0;
   @include sp {
-    margin: 1.7rem 0 0 0;
+    margin: 1.8rem 0 0 0;
   }
   a {
+    width: 8rem;
     font-size: 2rem;
     line-height: 1;
     font-weight: 500;
@@ -1224,7 +1201,7 @@ h4 {
     }
   
     &:hover {
-      transform: translateX(10px);
+      transform: translateX(1rem);
     }
     @include sp {
       &:hover {
@@ -1232,7 +1209,7 @@ h4 {
       }
     }
     .arrow {
-      width: 8rem;
+      width: 100%;
       height: 1.8rem;
       position: absolute;
       bottom: 0;
@@ -1253,6 +1230,15 @@ h4 {
       }
       
       span {
+        width: 0.1rem;
+        height: 100%;
+        background-color: $border-color-green;
+        position: absolute;
+        top: 0.45rem;
+        right: 1.1rem;
+      }
+      &::before {
+        content: '';
         width: 1.7rem;
         height: 0.1rem;
         background-color: $border-color-green;
@@ -1262,18 +1248,6 @@ h4 {
         transform: rotate(45deg);
         transform-origin: right center;
       }
-      &::before {
-        content: '';
-        width: 0.1rem;
-        height: 100%;
-        background-color: $border-color-green;
-        position: absolute;
-        top: 0.4rem;
-        right: 1.2rem;
-      }
-    }
-    &:hover {
-      transform: translateX(1rem);
     }
     @include sp {
       &:hover {
@@ -1416,7 +1390,7 @@ h4 {
         }
       }
       a {
-        margin-left: 0.6rem;
+        margin: 0.2rem 0 0 0.6rem;
         line-height: 1;
 
         @include pc {
@@ -1472,6 +1446,12 @@ h4 {
   }
   &__contents {
   margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  @include sp {
+    gap: 4rem;
+  }
 }
 &__text {
   p {
@@ -1480,10 +1460,6 @@ h4 {
   }
 }
 &__form-block {
-  margin-top: 7rem;
-  @include sp {
-    margin-top: 4rem;
-  }
   dl:not(:first-of-type) {
     margin-top: 5rem;
     @include sp {
@@ -1669,13 +1645,13 @@ h4 {
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     margin-top: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16.6rem, 1fr));
     @include sp {
       margin-top: 0;
       font-size: 1.6rem;
       line-height: calc(25 / 16);
       gap: 0.5rem 0;
-      grid-template-columns: repeat(auto-fit, minmax(13.8rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
 
     .checkbox-col {
@@ -1835,7 +1811,7 @@ h4 {
     width: 100%;
     @include sp {
       height: auto;
-      padding: 5rem 3rem;
+      padding: 5rem 3rem 5.1rem;
     }
   }
   &__inner {
@@ -1850,7 +1826,7 @@ h4 {
     border-bottom: 1px solid $font-color;
     text-align: center;
     @include sp {
-      padding-bottom: 0;
+      padding-bottom: 1.8rem;
     }
     a {
       cursor: pointer;
@@ -1858,9 +1834,6 @@ h4 {
       display: inline-block;
       font-size: 2rem;
       line-height: calc(33 / 20);
-      @include sp {
-        margin-bottom: 2rem;
-      }
       &:hover {
         opacity: 0.7;
       }
@@ -1875,7 +1848,7 @@ h4 {
   &__nav {
     margin-top: 2.8rem;
     @include sp {
-      margin-top: 0.3rem;
+      margin: 1.8rem 0 3rem;
     }
     ul {
       display: flex;
@@ -1889,7 +1862,6 @@ h4 {
         flex-wrap: wrap;
         column-gap: 2.1rem;
         row-gap: 0.5rem;
-        padding: 1.5rem 0 2.8rem;
       }
       li {
         text-align: center;
