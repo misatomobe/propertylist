@@ -1160,7 +1160,7 @@ h4 {
   display: block;
   position: relative;
   transition: transform 0.7s ease;
-  padding: 0.1rem 3.3rem 0.5rem 0;
+  padding: 0.1rem 3.3rem 1.1rem 0;
 }
 @media (max-width: 767px) {
   .news-block__link a {
@@ -1179,14 +1179,14 @@ h4 {
   width: 100%;
   height: 1.8rem;
   position: absolute;
-  bottom: 0;
+  bottom: 0.15rem;
   left: 0;
 }
 .news-block__link a .arrow::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0.7rem;
   width: 100%;
   height: 0.1rem;
   background-color: #55A500;
@@ -1201,7 +1201,7 @@ h4 {
   height: 100%;
   background-color: #55A500;
   position: absolute;
-  top: 0.45rem;
+  bottom: 0;
   right: 1.1rem;
 }
 .news-block__link a .arrow::before {
@@ -1211,7 +1211,7 @@ h4 {
   background-color: #55A500;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 0.7rem;
   transform: rotate(45deg);
   transform-origin: right center;
 }
