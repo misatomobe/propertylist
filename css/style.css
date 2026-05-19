@@ -665,6 +665,9 @@ h4 {
   z-index: 2;
   aspect-ratio: 2/1;
   height: auto;
+}
+.service__item__image img {
+  height: 100%;
   object-fit: cover;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -975,13 +978,16 @@ h4 {
 .modal__img-inner {
   width: 42rem;
   height: 22rem;
-  object-fit: cover;
 }
 @media (max-width: 767px) {
   .modal__img-inner {
     width: 100%;
     height: auto;
   }
+}
+.modal__img-inner img {
+  height: 100%;
+  object-fit: cover;
 }
 .modal__content-caption {
   margin-top: 0.8rem;
