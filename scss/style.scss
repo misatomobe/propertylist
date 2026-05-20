@@ -1202,6 +1202,7 @@ h4 {
     position: relative;
     transition: transform .7s ease;
     padding: 0.1rem 3.3rem 1.1rem 0;
+    white-space: nowrap;
     @include sp {
       line-height: calc(33 / 20);
     }
