@@ -1350,7 +1350,7 @@ h4 {
   }
 }
 .company .company-item__tel {
-  margin-top: 1.3rem;
+  margin-top: 1rem;
 }
 @media (max-width: 767px) {
   .company .company-item__tel {
@@ -1756,7 +1756,7 @@ h4 {
   text-indent: -1em;
 }
 .contact .submit-btn {
-  margin-top: 7.8rem;
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
 }
@@ -1971,7 +1971,12 @@ h4 {
   }
 }
 .footer__copyright .copy-left {
-  margin-right: 0.5rem;
+  margin-right: 1.4rem;
+}
+@media (max-width: 767px) {
+  .footer__copyright .copy-left {
+    margin-right: 0;
+  }
 }
 
 .top-back-btn {
