@@ -1957,7 +1957,6 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__copyright {
-    height: 9.2rem;
     padding-top: 0.2rem;
   }
 }
