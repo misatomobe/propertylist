@@ -1152,7 +1152,7 @@ h4 {
 .news-block__link {
   display: flex;
   justify-content: flex-end;
-  margin: 2.3rem 0 0 0;
+  margin: 2.4rem 0 0 0;
 }
 @media (max-width: 767px) {
   .news-block__link {
