@@ -1236,9 +1236,6 @@ h4 {
         height: 0.1rem;
         background-color: $border-color-green;
       }
-      @include sp {
-        bottom: 0;
-      }
       
       span {
         width: 0.1rem;

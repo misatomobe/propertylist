@@ -1201,11 +1201,6 @@ h4 {
   height: 0.1rem;
   background-color: #55A500;
 }
-@media (max-width: 767px) {
-  .news-block__link a .arrow {
-    bottom: 0;
-  }
-}
 .news-block__link a .arrow span {
   width: 0.1rem;
   height: 100%;
