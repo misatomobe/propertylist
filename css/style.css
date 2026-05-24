@@ -1251,7 +1251,7 @@ h4 {
 @media (max-width: 767px) {
   .company .company-item {
     flex-direction: column;
-    row-gap: 1.9rem;
+    row-gap: 2.1rem;
   }
 }
 .company .company-item__map-area {
@@ -1353,7 +1353,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .company .company-item__tel {
-    margin-top: 1rem;
+    margin-top: 1.3rem;
   }
 }
 .company .company-item__tel p {

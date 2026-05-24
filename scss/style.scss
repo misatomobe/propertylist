@@ -1287,7 +1287,7 @@ h4 {
     width: 100%;
     @include sp {
       flex-direction: column;
-      row-gap: 1.9rem;
+      row-gap: 2.1rem;
     }
     // 左側：地図
     &__map-area {
@@ -1382,7 +1382,7 @@ h4 {
     &__tel {
       margin-top: 1.4rem;
       @include sp {
-        margin-top: 1rem;
+        margin-top: 1.3rem;
       }
       p {
         display: flex;
