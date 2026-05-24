@@ -1387,7 +1387,6 @@ h4 {
       .tel-label {
         font-size: 1.6rem;
         line-height: 1;
-        align-items: flex-end;
         display: inline-block;
       }
       span {
@@ -1398,7 +1397,6 @@ h4 {
         }
       }
       a {
-        margin: 0.2rem 0 0 0.6rem;
         line-height: 1;
 
         @include pc {
