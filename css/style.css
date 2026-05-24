@@ -1104,7 +1104,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .news-block__contents {
-    padding: 1.1rem 2rem 1.2rem 2rem;
+    padding: 1.1rem 2rem 2rem 2rem;
   }
 }
 .news-block .news-block-item {
@@ -1168,12 +1168,13 @@ h4 {
   display: block;
   position: relative;
   transition: transform 0.7s ease;
-  padding: 0.1rem 3.3rem 1.1rem 0;
+  padding: 0 3.3rem 1.1rem 0;
   white-space: nowrap;
 }
 @media (max-width: 767px) {
   .news-block__link a {
     line-height: 1.65;
+    padding: 0 3.3rem 0.4rem 0;
   }
 }
 .news-block__link a:hover {
@@ -1202,7 +1203,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .news-block__link a .arrow {
-    bottom: 0.7rem;
+    bottom: 0;
   }
 }
 .news-block__link a .arrow span {

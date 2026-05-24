@@ -1140,7 +1140,7 @@ h4 {
   &__contents {
     padding: 1.1rem 2rem 2rem;
     @include sp {
-      padding: 1.1rem 2rem 1.2rem 2rem;
+      padding: 1.1rem 2rem 2rem 2rem;
     }
   }
   .news-block-item {
@@ -1198,16 +1198,17 @@ h4 {
   a {
     width: 8rem;
     font-size: 2rem;
-    line-height: 1;
+    line-height: calc(20 / 20);
     font-weight: 600;
     color: $border-color-green;
     display: block;
     position: relative;
     transition: transform .7s ease;
-    padding: 0.1rem 3.3rem 1.1rem 0;
+    padding: 0 3.3rem 1.1rem 0;
     white-space: nowrap;
     @include sp {
       line-height: calc(33 / 20);
+      padding: 0 3.3rem 0.4rem 0;
     }
   
     &:hover {
@@ -1236,7 +1237,7 @@ h4 {
         background-color: $border-color-green;
       }
       @include sp {
-        bottom: 0.7rem;
+        bottom: 0;
       }
       
       span {
