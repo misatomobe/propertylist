@@ -1298,7 +1298,7 @@ h4 {
   z-index: 2;
   flex-shrink: 1;
   min-width: 0;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
 }
 @media (max-width: 767px) {
