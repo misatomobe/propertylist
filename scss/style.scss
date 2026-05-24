@@ -1380,39 +1380,38 @@ h4 {
     }
 
     &__tel {
-      margin-top: 1rem;
+      margin-top: 1.4rem;
       @include sp {
         margin-top: 1rem;
-      }
-      .tel-label {
-        font-size: 1.6rem;
-        line-height: 1;
-        display: inline-block;
-      }
-      span {
-        font-size: 2.5rem;
-        line-height: 1;
-        @include tab-only {
-          font-size: 2rem;
-        }
-      }
-      a {
-        line-height: 1;
-
-        @include pc {
-          pointer-events: none;
-          cursor: default;
-        }
       }
       p {
         display: flex;
         align-items: flex-end;
         line-height: 1;
+        gap: 0.6rem;
+      }
+      .tel-label {
+        font-size: 1.6rem;
+        line-height: calc(25 / 16);
+      }
+      a {
+        line-height: 1;
+        @include pc {
+          pointer-events: none;
+          cursor: default;
+        }
+        span {
+          font-size: 2.5rem;
+          line-height: 1;
+          @include tab-only {
+            font-size: 2rem;
+          }
+        }
       }
     }
 
     &__mail {
-      margin-top: 2rem;
+      margin-top: 1.7rem;
       p {
         display: flex;
         gap: 1.7rem;

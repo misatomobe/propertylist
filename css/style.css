@@ -1349,26 +1349,22 @@ h4 {
   }
 }
 .company .company-item__tel {
-  margin-top: 1rem;
+  margin-top: 1.4rem;
 }
 @media (max-width: 767px) {
   .company .company-item__tel {
     margin-top: 1rem;
   }
 }
+.company .company-item__tel p {
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+  gap: 0.6rem;
+}
 .company .company-item__tel .tel-label {
   font-size: 1.6rem;
-  line-height: 1;
-  display: inline-block;
-}
-.company .company-item__tel span {
-  font-size: 2.5rem;
-  line-height: 1;
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .company .company-item__tel span {
-    font-size: 2rem;
-  }
+  line-height: 1.5625;
 }
 .company .company-item__tel a {
   line-height: 1;
@@ -1379,13 +1375,17 @@ h4 {
     cursor: default;
   }
 }
-.company .company-item__tel p {
-  display: flex;
-  align-items: flex-end;
+.company .company-item__tel a span {
+  font-size: 2.5rem;
   line-height: 1;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .company .company-item__tel a span {
+    font-size: 2rem;
+  }
+}
 .company .company-item__mail {
-  margin-top: 2rem;
+  margin-top: 1.7rem;
 }
 .company .company-item__mail p {
   display: flex;
