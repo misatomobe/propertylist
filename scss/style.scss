@@ -781,7 +781,6 @@ h4 {
       h3 {
         font-size: 2.5rem;
         line-height: calc(33 / 25);
-        font-weight: 500;
         @include tab-only {
           font-size: 1.8rem;
         }
@@ -806,7 +805,6 @@ h4 {
       }
       
       p {
-        font-weight: 500;
         @include tab-only {
           font-size: 1.4rem;
         }
@@ -818,6 +816,11 @@ h4 {
             1.4rem;
         }
       }
+    }
+    /* Demibold */
+    &__title h3,
+    &__text p {
+      font-weight: 600;
     }
   }
 }
@@ -1131,13 +1134,13 @@ h4 {
     h3 {
       font-size: 2rem;
       line-height: calc(33 / 20);
-      font-weight: 500;
+      font-weight: 600;
     }
   }
   &__contents {
     padding: 1.1rem 2rem 2rem;
     @include sp {
-      padding: 1.1rem 2rem 1.2rem 2rem;
+      padding: 1.1rem 2rem 2rem 2rem;
     }
   }
   .news-block-item {
@@ -1188,23 +1191,24 @@ h4 {
 .news-block__link {
   display: flex;
   justify-content: flex-end;
-  margin: 2.3rem 0 0 0;
+  margin: 2.4rem 0 0 0;
   @include sp {
     margin: 1.8rem 0 0 0;
   }
   a {
     width: 8rem;
     font-size: 2rem;
-    line-height: 1;
-    font-weight: 500;
+    line-height: calc(20 / 20);
+    font-weight: 600;
     color: $border-color-green;
     display: block;
     position: relative;
     transition: transform .7s ease;
-    padding: 0.1rem 3.3rem 1.1rem 0;
+    padding: 0 3.3rem 1.1rem 0;
     white-space: nowrap;
     @include sp {
       line-height: calc(33 / 20);
+      padding: 0 3.3rem 0.4rem 0;
     }
   
     &:hover {
@@ -1231,9 +1235,6 @@ h4 {
         width: 100%;
         height: 0.1rem;
         background-color: $border-color-green;
-      }
-      @include sp {
-        bottom: 0.7rem;
       }
       
       span {
@@ -1286,7 +1287,7 @@ h4 {
     width: 100%;
     @include sp {
       flex-direction: column;
-      row-gap: 1.9rem;
+      row-gap: 2.1rem;
     }
     // 左側：地図
     &__map-area {
@@ -1327,7 +1328,7 @@ h4 {
       z-index: 2;
       flex-shrink: 1;
       min-width: 0;
-      font-weight: 500;
+      font-weight: 600;
       color: $font-color02;
       @include sp {
         width: 100%;
@@ -1379,41 +1380,38 @@ h4 {
     }
 
     &__tel {
-      margin-top: 1rem;
+      margin-top: 1.4rem;
       @include sp {
-        margin-top: 1rem;
-      }
-      .tel-label {
-        font-size: 1.6rem;
-        line-height: 1;
-        align-items: flex-end;
-        display: inline-block;
-      }
-      span {
-        font-size: 2.5rem;
-        line-height: 1;
-        @include tab-only {
-          font-size: 2rem;
-        }
-      }
-      a {
-        margin: 0.2rem 0 0 0.6rem;
-        line-height: 1;
-
-        @include pc {
-          pointer-events: none;
-          cursor: default;
-        }
+        margin-top: 1.3rem;
       }
       p {
         display: flex;
         align-items: flex-end;
         line-height: 1;
+        gap: 0.6rem;
+      }
+      .tel-label {
+        font-size: 1.6rem;
+        line-height: calc(25 / 16);
+      }
+      a {
+        line-height: 1;
+        @include pc {
+          pointer-events: none;
+          cursor: default;
+        }
+        span {
+          font-size: 2.5rem;
+          line-height: 1;
+          @include tab-only {
+            font-size: 2rem;
+          }
+        }
       }
     }
 
     &__mail {
-      margin-top: 2rem;
+      margin-top: 1.7rem;
       p {
         display: flex;
         gap: 1.7rem;
@@ -1780,7 +1778,7 @@ h4 {
       font-size: 2rem;
       line-height: calc(33 / 20);
       color: #fff;
-      font-weight: 500;
+      font-weight: 600;
       display: grid;
       place-content: center;
       border: 0.1rem solid $main-color;
