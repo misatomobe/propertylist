@@ -979,7 +979,7 @@ h4 {
   align-items: center;
   justify-content: center;
   z-index: 20000;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.502);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -1900,7 +1900,7 @@ h4 {
     }
   }
   &__sns {
-    margin-top: 2.8rem;
+    margin-top: 3.2rem;
     @include sp {
       margin-top: 3.1rem;
     }
@@ -1933,7 +1933,7 @@ h4 {
           .facebook,
           .youtube,
           .instagram {
-            width: 2.6rem;
+            width: 2.8rem;
           }
         }
       }
