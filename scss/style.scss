@@ -696,7 +696,7 @@ h4 {
       padding: 15% 9% 13% 21%;
       width: 100%;
       @include tab-only {
-        padding: 15% 8% 13% 12%;
+        padding: 15% 6% 13% 12%;
       }
       @include sp {
         padding: 2rem 2rem 1.2rem;
@@ -979,7 +979,7 @@ h4 {
   align-items: center;
   justify-content: center;
   z-index: 20000;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.502);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -1747,6 +1747,9 @@ h4 {
         }
         &:not(:first-of-type) {
           margin-top: 3.1rem;
+          @include sp {
+            margin-top: 3.3rem;
+          }
         }
       }
       p {
@@ -1816,7 +1819,7 @@ h4 {
     width: 100%;
     @include sp {
       height: auto;
-      padding: 5rem 3rem 5.1rem;
+      padding: 5rem 3rem 4.9rem;
     }
   }
   &__inner {
@@ -1827,7 +1830,7 @@ h4 {
   &__logo {
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2.7rem;
     border-bottom: 1px solid $font-color;
     text-align: center;
     @include sp {
@@ -1851,7 +1854,7 @@ h4 {
   }
 
   &__nav {
-    margin-top: 2.8rem;
+    margin-top: 2.6rem;
     @include sp {
       margin-top: 1.9rem;
     }
@@ -1900,7 +1903,7 @@ h4 {
     }
   }
   &__sns {
-    margin-top: 2.8rem;
+    margin-top: 3.1rem;
     @include sp {
       margin-top: 3.1rem;
     }
@@ -1933,7 +1936,7 @@ h4 {
           .facebook,
           .youtube,
           .instagram {
-            width: 2.6rem;
+            width: 2.8rem;
           }
         }
       }
@@ -1977,6 +1980,9 @@ h4 {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
   @include sp {
       right: 2rem;
     }   
