@@ -633,7 +633,7 @@ h4 {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .service__item__text-bg {
-    padding: 15% 8% 13% 12%;
+    padding: 15% 6% 13% 12%;
   }
 }
 @media (max-width: 767px) {
@@ -934,7 +934,7 @@ h4 {
   align-items: center;
   justify-content: center;
   z-index: 20000;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.502);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -1736,7 +1736,7 @@ h4 {
   }
 }
 .contact .privacy-policy__contents h3:not(:first-of-type) {
-  margin-top: 3.1rem;
+  margin-top: 3.5rem;
 }
 .contact .privacy-policy__contents p {
   font-size: 1.8rem;
@@ -1805,7 +1805,7 @@ h4 {
 @media (max-width: 767px) {
   .footer__main {
     height: auto;
-    padding: 5rem 3rem 5.1rem;
+    padding: 5rem 3rem 4.9rem;
   }
 }
 .footer__inner {
@@ -1902,7 +1902,7 @@ h4 {
   }
 }
 .footer__sns {
-  margin-top: 2.8rem;
+  margin-top: 3.2rem;
 }
 @media (max-width: 767px) {
   .footer__sns {
@@ -1941,7 +1941,7 @@ h4 {
 .footer__sns ul li a .facebook,
 .footer__sns ul li a .youtube,
 .footer__sns ul li a .instagram {
-  width: 2.6rem;
+  width: 2.8rem;
 }
 .footer__copyright {
   width: 100%;
