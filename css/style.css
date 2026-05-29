@@ -1736,7 +1736,12 @@ h4 {
   }
 }
 .contact .privacy-policy__contents h3:not(:first-of-type) {
-  margin-top: 3.5rem;
+  margin-top: 3.1rem;
+}
+@media (max-width: 767px) {
+  .contact .privacy-policy__contents h3:not(:first-of-type) {
+    margin-top: 3.3rem;
+  }
 }
 .contact .privacy-policy__contents p {
   font-size: 1.8rem;
@@ -1816,7 +1821,7 @@ h4 {
 .footer__logo {
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2.7rem;
   border-bottom: 1px solid #000;
   text-align: center;
 }
@@ -1902,7 +1907,7 @@ h4 {
   }
 }
 .footer__sns {
-  margin-top: 3.2rem;
+  margin-top: 3.1rem;
 }
 @media (max-width: 767px) {
   .footer__sns {
