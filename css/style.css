@@ -1743,19 +1743,15 @@ h4 {
     margin-top: 3.3rem;
   }
 }
-.contact .privacy-policy__contents p {
+.contact .privacy-policy__contents p, .contact .privacy-policy__contents li {
   font-size: 1.8rem;
   line-height: 1.7222222222;
 }
 @media (max-width: 767px) {
-  .contact .privacy-policy__contents p {
+  .contact .privacy-policy__contents p, .contact .privacy-policy__contents li {
     font-size: 1.6rem;
     line-height: 2.0625;
   }
-}
-.contact .privacy-policy__contents li {
-  padding-left: 1rem;
-  text-indent: -1em;
 }
 .contact .submit-btn {
   margin-top: 8rem;
