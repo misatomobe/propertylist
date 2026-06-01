@@ -1753,6 +1753,14 @@ h4 {
     line-height: 2.0625;
   }
 }
+.contact .privacy-policy__contents address {
+  margin-top: 3.1rem;
+}
+@media (max-width: 767px) {
+  .contact .privacy-policy__contents address {
+    margin-top: 3.3rem;
+  }
+}
 .contact .submit-btn {
   margin-top: 8rem;
   display: flex;
