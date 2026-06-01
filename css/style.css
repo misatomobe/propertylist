@@ -1167,7 +1167,7 @@ h4 {
   color: #55A500;
   display: block;
   position: relative;
-  transition: transform 0.7s ease;
+  transition: transform 0.4s ease;
   padding: 0 3.3rem 1.1rem 0;
   white-space: nowrap;
 }
