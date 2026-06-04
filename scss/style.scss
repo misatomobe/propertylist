@@ -1752,14 +1752,6 @@ h4 {
           }
         }
       }
-      ul:first-of-type {
-        li:first-of-type {
-          margin-top: 3.1rem;
-          @include sp {
-            margin-top: 3.3rem;
-          }
-        }
-      }
       p, li {
         font-size: 1.8rem;
         line-height: calc(31 / 18);
@@ -1773,6 +1765,12 @@ h4 {
         @include sp {
           margin-top: 3.3rem;
         }
+      }
+    }
+    &__list {
+      margin-top: 3.1rem;
+      @include sp {
+        margin-top: 3.3rem;
       }
     }
   }
