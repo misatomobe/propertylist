@@ -376,7 +376,9 @@ h4 {
       height: 0.4rem;
       background: $main-color;
       border-radius: 10px;     /* ← 丸みをつける */
-      transition: 0.4s ease;
+      transition: top 0.4s ease,
+                  transform 0.4s ease,
+                  background-color 0.4s ease;
     }
     // 中央
     .hamburger-line {
