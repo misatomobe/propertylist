@@ -1203,7 +1203,7 @@ h4 {
     color: $border-color-green;
     display: block;
     position: relative;
-    transition: transform .7s ease;
+    transition: transform 0.4s ease;
     padding: 0 3.3rem 1.1rem 0;
     white-space: nowrap;
     @include sp {
@@ -1752,7 +1752,15 @@ h4 {
           }
         }
       }
-      p {
+      ul:first-of-type {
+        li:first-of-type {
+          margin-top: 3.1rem;
+          @include sp {
+            margin-top: 3.3rem;
+          }
+        }
+      }
+      p, li {
         font-size: 1.8rem;
         line-height: calc(31 / 18);
         @include sp {
@@ -1760,9 +1768,11 @@ h4 {
           line-height: calc(33 / 16);
         }
       }
-      li {
-        padding-left: 1rem;
-        text-indent: -1em;
+      address {
+        margin-top: 3.1rem;
+        @include sp {
+          margin-top: 3.3rem;
+        }
       }
     }
   }

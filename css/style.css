@@ -1167,7 +1167,7 @@ h4 {
   color: #55A500;
   display: block;
   position: relative;
-  transition: transform 0.7s ease;
+  transition: transform 0.4s ease;
   padding: 0 3.3rem 1.1rem 0;
   white-space: nowrap;
 }
@@ -1743,19 +1743,31 @@ h4 {
     margin-top: 3.3rem;
   }
 }
-.contact .privacy-policy__contents p {
+.contact .privacy-policy__contents ul:first-of-type li:first-of-type {
+  margin-top: 3.1rem;
+}
+@media (max-width: 767px) {
+  .contact .privacy-policy__contents ul:first-of-type li:first-of-type {
+    margin-top: 3.3rem;
+  }
+}
+.contact .privacy-policy__contents p, .contact .privacy-policy__contents li {
   font-size: 1.8rem;
   line-height: 1.7222222222;
 }
 @media (max-width: 767px) {
-  .contact .privacy-policy__contents p {
+  .contact .privacy-policy__contents p, .contact .privacy-policy__contents li {
     font-size: 1.6rem;
     line-height: 2.0625;
   }
 }
-.contact .privacy-policy__contents li {
-  padding-left: 1rem;
-  text-indent: -1em;
+.contact .privacy-policy__contents address {
+  margin-top: 3.1rem;
+}
+@media (max-width: 767px) {
+  .contact .privacy-policy__contents address {
+    margin-top: 3.3rem;
+  }
 }
 .contact .submit-btn {
   margin-top: 8rem;
