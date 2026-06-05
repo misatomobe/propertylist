@@ -262,7 +262,7 @@ h4 {
   background-color: #E3E3E3;
   transform: translateX(-50%) scaleX(0);
   transform-origin: left;
-  transition: transform 0.7s ease;
+  transition: transform 0.4s ease;
 }
 .header__nav ul li a:hover::after {
   transform: translateX(-50%) scaleX(1);
@@ -312,7 +312,7 @@ h4 {
   height: 0.4rem;
   background: #4D9600;
   border-radius: 10px; /* ← 丸みをつける */
-  transition: 0.3s;
+  transition: 0.4s ease;
 }
 .header__hamburger .hamburger .hamburger-line {
   top: 50%;
@@ -1115,7 +1115,7 @@ h4 {
   align-items: flex-start;
   column-gap: 17%;
   padding: 1.2rem 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.4s ease;
 }
 @media (max-width: 767px) {
   .news-block .news-block-item a {
@@ -1743,14 +1743,6 @@ h4 {
     margin-top: 3.3rem;
   }
 }
-.contact .privacy-policy__contents ul:first-of-type li:first-of-type {
-  margin-top: 3.1rem;
-}
-@media (max-width: 767px) {
-  .contact .privacy-policy__contents ul:first-of-type li:first-of-type {
-    margin-top: 3.3rem;
-  }
-}
 .contact .privacy-policy__contents p, .contact .privacy-policy__contents li {
   font-size: 1.8rem;
   line-height: 1.7222222222;
@@ -1766,6 +1758,14 @@ h4 {
 }
 @media (max-width: 767px) {
   .contact .privacy-policy__contents address {
+    margin-top: 3.3rem;
+  }
+}
+.contact .privacy-policy__list {
+  margin-top: 3.1rem;
+}
+@media (max-width: 767px) {
+  .contact .privacy-policy__list {
     margin-top: 3.3rem;
   }
 }

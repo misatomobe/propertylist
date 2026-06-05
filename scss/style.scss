@@ -319,7 +319,7 @@ h4 {
           background-color: $scrollbar-color02;
           transform: translateX(-50%) scaleX(0);
           transform-origin: left;
-          transition: transform 0.7s ease;
+          transition: transform 0.4s ease;
         }
         &:hover::after {
           transform: translateX(-50%) scaleX(1);
@@ -376,7 +376,9 @@ h4 {
       height: 0.4rem;
       background: $main-color;
       border-radius: 10px;     /* ← 丸みをつける */
-      transition: 0.3s;
+      transition: top 0.4s ease,
+                  transform 0.4s ease,
+                  background-color 0.4s ease;
     }
     // 中央
     .hamburger-line {
@@ -1150,7 +1152,7 @@ h4 {
       align-items: flex-start;
       column-gap: 17%;
       padding: 1.2rem 0;
-      transition: opacity 0.6s ease;
+      transition: opacity 0.4s ease;
       @include sp {
       column-gap: 1.5rem;
     }
@@ -1752,14 +1754,6 @@ h4 {
           }
         }
       }
-      ul:first-of-type {
-        li:first-of-type {
-          margin-top: 3.1rem;
-          @include sp {
-            margin-top: 3.3rem;
-          }
-        }
-      }
       p, li {
         font-size: 1.8rem;
         line-height: calc(31 / 18);
@@ -1773,6 +1767,12 @@ h4 {
         @include sp {
           margin-top: 3.3rem;
         }
+      }
+    }
+    &__list {
+      margin-top: 3.1rem;
+      @include sp {
+        margin-top: 3.3rem;
       }
     }
   }
