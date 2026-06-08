@@ -345,6 +345,7 @@ h4 {
   transform: translateX(100%);
   transition: transform 0.4s ease;
   z-index: 2000;
+  background: #4D9600;
 }
 .sp-nav__lists {
   margin: 0;
@@ -363,7 +364,6 @@ h4 {
 }
 .sp-nav.active {
   display: block;
-  background: #4D9600;
   transform: translateX(0);
 }
 
